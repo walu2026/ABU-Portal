@@ -1,0 +1,39 @@
+name: ABU Aktualitäten – täglich aktualisieren
+
+on:
+  schedule:
+    # Täglich um 06:00 Uhr (UTC+1 = 07:00 Schweizer Zeit)
+    - cron: '0 5 * * *'
+    # Freitags zusätzlich Wochensammlung um 07:00
+    - cron: '0 6 * * 5'
+  workflow_dispatch:  # manuell auslösen möglich
+
+jobs:
+  update-aktualitaeten:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Abhängigkeiten installieren
+        run: |
+          pip install anthropic feedparser requests
+
+      - name: Aktualitäten generieren
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python .github/scripts/generate_aktualitaeten.py
+
+      - name: aktualitaeten.json committen und pushen
+        run: |
+          git config user.name "ABU-Bot"
+          git config user.email "bot@abu-portal.ch"
+          git add aktualitaeten.json
+          git diff --staged --quiet || git commit -m "🗞 Aktualitäten aktualisiert $(date '+%d.%m.%Y %H:%M')"
+          git push
