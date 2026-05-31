@@ -1,6 +1,69 @@
 {
   "2": [
     {
+      "id": "art-20260531-03",
+      "date": "31.05.",
+      "title": "Falsche Inflationserwartungen und der «kranke Mann Europas»",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/falsche-inflationserwartungen-und-der-kranke-mann-europas-ld.10008506",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Falsche Inflationserwartungen und der «kranke Mann Europas»»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Demokraten haben die Wahlen 2024 auch wegen der «Eggflation» verloren. Und die deutsche Regierun"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260531-04",
+      "date": "31.05.",
+      "title": "Oldtimer sehen alt aus: Die neue Generation von Autofans steht auf Youngtimer",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/oldtimer-sehen-alt-aus-die-neue-generation-von-autofans-steht-auf-youngtimer-ld.10008091",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Würdet ihr euer Geld eher in ein altes Auto von 1920 oder in einen coolen BMW aus den 1970ern investieren – und warum?"
+        },
+        {
+          "phase": "TH",
+          "text": "Der Artikel zeigt, wie Wertveränderungen entstehen: nicht alle alten Dinge werden teurer, sondern nur jene, die Nachfrage haben. Lernende verstehen hier den Zusammenhang zwischen Angebot, Nachfrage und Wertentwicklung als Grundlage für finanzielle Entscheidungen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert zwei Autotypen aus verschiedenen Jahrzehnten und vergleicht ihre aktuellen Marktwerte. Erstellt eine kurze Begründung, warum der eine mehr wert ist als der andere – und was das über eure eigenen Kaufentscheidungen aussagt."
+        }
+      ]
+    },
+    {
+      "id": "art-20260531-06",
+      "date": "30.05.",
+      "title": "Geheime «tax holidays» und die 10-Millionen-Schweiz: So fördern Kantone Firmenansiedelungen – und die Zuwanderung",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/geheime-tax-holidays-und-die-10-millionen-schweiz-so-foerdern-kantone-firmenansiedelungen-und-die-zuwanderung-ld.10007809",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Geheime «tax holidays» und die 10-Millionen-Schweiz: So fördern Kantone Firmenansiedelungen – und die Zuwanderung»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Hinter verschlossenen Rathaustüren befreien die Kantonsregierungen ausgewählte Konzerne von den Steu"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260530-03",
       "date": "29.05.",
       "title": "Markus Blocher fürchtet sich vor Überkapazitäten in der Pharmabranche – der Aktienkurs fällt stark",
@@ -18,6 +81,29 @@
         {
           "phase": "UE",
           "text": "Recherchiert: Was kostet es, eine pharmazeutische Fabrik zu bauen? Berechnet dann, wie lange Blocher die Investition amortisieren muss, wenn plötzlich weniger Produkte verkauft werden – nutzt dafür realistische Zahlen."
+        }
+      ]
+    }
+  ],
+  "3": [
+    {
+      "id": "art-20260531-01",
+      "date": "31.05.",
+      "title": "Der Anarchokapitalist Peter Thiel hat endlich eine Heimat gefunden – beim Anarchokapitalisten Javier Milei",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/anarcho-kapitalist-peter-thiel-hat-endlich-eine-heimat-gefunden-beim-anarcho-kapitalisten-javier-milei-ld.10008827",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Würdest du dein Leben komplett verändern und in ein anderes Land ziehen, wenn du dich dort 'sicherer' fühlen würdest – und was bedeutet 'Sicherheit' für deine Gesundheit?"
+        },
+        {
+          "phase": "TH",
+          "text": "Psychische Gesundheit wird durch Faktoren wie Zugehörigkeitsgefühl, Sicherheit und Lebenszufriedenheit beeinflusst. Menschen treffen Lebensentscheidungen basierend auf ihrem subjektiven Wohlbefinden – was zeigt, wie eng Psyche, Umfeld und Lebensqualität zusammenhängen."
+        },
+        {
+          "phase": "UE",
+          "text": "Erstelle eine Mindmap: Welche Faktoren (Familie, Freunde, finanzielle Sicherheit, Umwelt, Freiheit etc.) braucht *du* persönlich, um dich gesund und wohl zu fühlen? Vergleicht eure Ergebnisse – wo gibt es Unterschiede?"
         }
       ]
     }
@@ -47,6 +133,48 @@
   ],
   "5": [
     {
+      "id": "art-20260531-00",
+      "date": "31.05.",
+      "title": "Sind SpaceX-Aktien attraktiv? Die Antwort hängt ganz davon ab, in welchem Jahr nach dem Börsengang man sie kauft",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/sind-spacex-aktien-attraktiv-die-antwort-haengt-ganz-davon-ab-in-welchem-jahr-nach-dem-boersengang-man-sie-kauft-ld.10009177",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Sind SpaceX-Aktien attraktiv? Die Antwort hängt ganz davon ab, in welchem Jahr nach dem Börsengang man sie kauft»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Wer den Kursverlauf der Tesla-Titel kennt, weiss, dass auch der SpaceX-Kurs extrem volatil sein wird"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260531-05",
+      "date": "30.05.",
+      "title": "Wende im Fall Vincenz? Neu aufgetauchte Dokumente werfen Fragen auf",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wende-im-fall-vincenz-neu-aufgetauchte-dokumente-werfen-fragen-auf-ld.10008824",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Wende im Fall Vincenz? Neu aufgetauchte Dokumente werfen Fragen auf»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Im August soll der Berufungsprozess gegen den ehemaligen Raiffeisen-Chef Pierin Vincenz und seinen G"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260530-06",
       "date": "29.05.",
       "title": "Elon, der Allmächtige: Musk plant offenbar eine Fusion von Tesla und SpaceX",
@@ -70,7 +198,28 @@
   ],
   "6": [
     {
-      "id": "art-20260530-00",
+      "id": "art-20260531-02",
+      "date": "31.05.",
+      "title": "Pannen und drohende Finanzprobleme: Jetzt hofft Skyguide auf Staatsgelder",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/pannen-und-drohende-finanzprobleme-jetzt-hofft-skyguide-auf-staatsgelder-ld.10008763",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Pannen und drohende Finanzprobleme: Jetzt hofft Skyguide auf Staatsgelder»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Am Mittwoch ist es bei der Flugsicherung erneut zu einer IT-Panne gekommen. Tiefgreifende technische"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260531-07",
       "date": "30.05.",
       "title": "Jeff Bezos will der Hälfte der Amerikaner die Steuern erlassen – und wird trotzdem angefeindet",
       "source": "NZZ",
@@ -78,20 +227,20 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn ein Milliardär den armen Menschen Steuern schenkt, sollte man ihn dann nicht als Held feiern?"
+          "text": "Wenn ein Super-Reicher Millionen von normalen Menschen Steuern sparen würde – warum sind manche Leute dann trotzdem wütend auf ihn?"
         },
         {
           "phase": "TH",
-          "text": "Dieses Beispiel zeigt den Konflikt zwischen individueller Vermögensverteilung und strukturellen wirtschaftlichen Machtverhältnissen. Lernende verstehen, dass gute Absichten nicht automatisch zu gerechten Lösungen führen und dass Reichtum politische Macht bedeutet."
+          "text": "Der Artikel zeigt den Konflikt zwischen Arm und Reich in modernen Gesellschaften und wie Vermögensverteilung politisch und emotional aufgeladen ist. Lernende erkennen, dass wirtschaftliche Entscheidungen von Milliardären gesellschaftliche Machtverhältnisse widerspiegeln und in Demokratien umstritten sind."
         },
         {
           "phase": "UE",
-          "text": "Recherchiert: Wie viel Steuern zahlt Amazon als Unternehmen? Vergleicht das mit Bezos' Steuererlass-Angebot und erklärt in 5 Sätzen, warum manche Menschen das kritisieren."
+          "text": "Recherchiert: Was verdient ein durchschnittlicher Amerikaner pro Jahr, und wie viel Vermögen hat Bezos? Erstellt eine Visualisierung (Grafik, Schaubild oder Vergleich) und diskutiert: Ist es fair, wenn eine Person so viel mehr besitzt als Millionen andere?"
         }
       ]
     },
     {
-      "id": "art-20260530-01",
+      "id": "art-20260531-08",
       "date": "30.05.",
       "title": "Sorgen über die sorglosen Märkte: Droht in der Schweiz und in Deutschland im Winter wieder eine gefährliche Gasknappheit?",
       "source": "NZZ",
