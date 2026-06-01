@@ -1,6 +1,69 @@
 {
   "2": [
     {
+      "id": "art-20260601-00",
+      "date": "01.06.",
+      "title": "Referenzzinssatz bleibt bei 1,25 Prozent",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/referenzzinssatz-bleibt-bei-125-prozent-ld.10009278",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Referenzzinssatz bleibt bei 1,25 Prozent»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der hypothekarische Referenzzinssatz verharrt weiter auf dem Tiefstand. Mieterinnen und Mieter in de"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260601-02",
+      "date": "01.06.",
+      "title": "Schweizer Wohnungen werden immer kleiner – die Möbel ebenso: Händler wie Ikea und Pfister passen sich an",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/schweizer-wohnungen-werden-immer-kleiner-die-moebel-ebenso-haendler-wie-ikea-und-pfister-passen-sich-an-ld.10008740",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Schweizer Wohnungen werden immer kleiner – die Möbel ebenso: Händler wie Ikea und Pfister passen sich an»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Konsumenten setzen zunehmend auf kompakte Multifunktionsmöbel und optimieren so ihre schrumpfende Wo"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260601-03",
+      "date": "01.06.",
+      "title": "Die Rückkehr der Inflationsangst: Der festgefahrene Iran-Krieg wird zur wirtschaftlichen Dauerbelastung",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-rueckkehr-der-inflationsangst-der-festgefahrene-iran-krieg-wird-zur-wirtschaftlichen-dauerbelastung-ld.10008654",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Die Rückkehr der Inflationsangst: Der festgefahrene Iran-Krieg wird zur wirtschaftlichen Dauerbelastung»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Hoffnung war gross, der Iran-Krieg sei nur ein kurzer Schock. Doch die Angebotsengpässe halten a"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260531-03",
       "date": "31.05.",
       "title": "Falsche Inflationserwartungen und der «kranke Mann Europas»",
@@ -87,7 +150,7 @@
   ],
   "3": [
     {
-      "id": "art-20260531-01",
+      "id": "art-20260601-07",
       "date": "31.05.",
       "title": "Der Anarchokapitalist Peter Thiel hat endlich eine Heimat gefunden – beim Anarchokapitalisten Javier Milei",
       "source": "NZZ",
@@ -95,15 +158,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Würdest du dein Leben komplett verändern und in ein anderes Land ziehen, wenn du dich dort 'sicherer' fühlen würdest – und was bedeutet 'Sicherheit' für deine Gesundheit?"
+          "text": "Würdest du dein ganzes Leben ändern und in ein anderes Land ziehen, wenn du dort gesünder und sicherer leben könntest – und was würde dir dabei am meisten fehlen?"
         },
         {
           "phase": "TH",
-          "text": "Psychische Gesundheit wird durch Faktoren wie Zugehörigkeitsgefühl, Sicherheit und Lebenszufriedenheit beeinflusst. Menschen treffen Lebensentscheidungen basierend auf ihrem subjektiven Wohlbefinden – was zeigt, wie eng Psyche, Umfeld und Lebensqualität zusammenhängen."
+          "text": "Gesundheit ist nicht nur körperlich, sondern auch psychisch und sozial (WHO-Definition). Die Wahl des Wohnorts beeinflusst unsere Gesundheit durch Sicherheit, Stress, soziale Kontakte und Lebensqualität."
         },
         {
           "phase": "UE",
-          "text": "Erstelle eine Mindmap: Welche Faktoren (Familie, Freunde, finanzielle Sicherheit, Umwelt, Freiheit etc.) braucht *du* persönlich, um dich gesund und wohl zu fühlen? Vergleicht eure Ergebnisse – wo gibt es Unterschiede?"
+          "text": "Recherchiert: Welche 3 Faktoren machen Buenos Aires für Thiel attraktiv, und welche 3 Gesundheitsrisiken könnten dort trotzdem entstehen? Erstellt eine Pro-Contra-Liste für einen Umzug ins Ausland aus Gesundheitssicht."
         }
       ]
     }
@@ -133,7 +196,28 @@
   ],
   "5": [
     {
-      "id": "art-20260531-00",
+      "id": "art-20260601-05",
+      "date": "31.05.",
+      "title": "Lara Warner war einst eine der mächtigsten Managerinnen der Schweiz. Bald könnte die ehemalige CS-Bankerin erneut vor Gericht stehen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/lara-warner-war-einst-eine-der-maechtigsten-managerinnen-der-schweiz-nun-koennte-die-ehemalige-cs-bankerin-bald-erneut-vor-gericht-stehen-ld.10009215",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Lara Warner war einst eine der mächtigsten Managerinnen der Schweiz. Bald könnte die ehemalige CS-Bankerin erneut vor Gericht stehen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die frühere Risikomanagerin der Credit Suisse wurde wegen ihrer Rolle im Moçambique-Skandal angeklag"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260601-06",
       "date": "31.05.",
       "title": "Sind SpaceX-Aktien attraktiv? Die Antwort hängt ganz davon ab, in welchem Jahr nach dem Börsengang man sie kauft",
       "source": "NZZ",
@@ -198,7 +282,28 @@
   ],
   "6": [
     {
-      "id": "art-20260531-02",
+      "id": "art-20260601-01",
+      "date": "01.06.",
+      "title": "Explosive Stimmung in Asien und Afrika: Die Folgen des Iran-Kriegs werden für die Menschen zur existenziellen Bedrohung",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/explosive-stimmung-in-asien-und-afrika-die-folgen-des-iran-kriegs-werden-fuer-die-menschen-zur-existenziellen-bedrohung-ld.10008901",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Explosive Stimmung in Asien und Afrika: Die Folgen des Iran-Kriegs werden für die Menschen zur existenziellen Bedrohung»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Dieselpreise haben sich verdoppelt, Beamte haben nur noch eine Vier-Tage-Woche, die Garküchen si"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260601-08",
       "date": "31.05.",
       "title": "Pannen und drohende Finanzprobleme: Jetzt hofft Skyguide auf Staatsgelder",
       "source": "NZZ",
