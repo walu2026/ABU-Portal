@@ -1,7 +1,28 @@
 {
   "2": [
     {
-      "id": "art-20260601-00",
+      "id": "art-20260602-01",
+      "date": "02.06.",
+      "title": "In der südspanischen Provinz Almería züchten Tausende von Bauern unser Gemüse – zum Teil unter prekären Bedingungen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/plastikmeer-auch-coop-und-edeka-beziehen-gemuese-aus-almeria-ld.10007490",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «In der südspanischen Provinz Almería züchten Tausende von Bauern unser Gemüse – zum Teil unter prekären Bedingungen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Über ein Drittel des Gemüses, das in der EU und in der Schweiz verzehrt wird, stammt aus südspanisch"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260602-04",
       "date": "01.06.",
       "title": "Referenzzinssatz bleibt bei 1,25 Prozent",
       "source": "NZZ",
@@ -22,7 +43,7 @@
       ]
     },
     {
-      "id": "art-20260601-02",
+      "id": "art-20260602-06",
       "date": "01.06.",
       "title": "Schweizer Wohnungen werden immer kleiner – die Möbel ebenso: Händler wie Ikea und Pfister passen sich an",
       "source": "NZZ",
@@ -196,7 +217,28 @@
   ],
   "5": [
     {
-      "id": "art-20260601-05",
+      "id": "art-20260602-02",
+      "date": "02.06.",
+      "title": "Ist die Zuwanderung schuld an der Wohnungsnot? Eine Beweisaufnahme",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/ist-die-zuwanderung-schuld-an-der-wohnungsnot-eine-beweisaufnahme-ld.10007428",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Ist die Zuwanderung schuld an der Wohnungsnot? Eine Beweisaufnahme»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die SVP macht die hohen Mieten zu einem Argument für ihre 10-Millionen-Initiative. Die Anklage gegen"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260602-09",
       "date": "31.05.",
       "title": "Lara Warner war einst eine der mächtigsten Managerinnen der Schweiz. Bald könnte die ehemalige CS-Bankerin erneut vor Gericht stehen",
       "source": "NZZ",
@@ -204,15 +246,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Lara Warner war einst eine der mächtigsten Managerinnen der Schweiz. Bald könnte die ehemalige CS-Bankerin erneut vor Gericht stehen»?"
+          "text": "Sollte eine Person, die in einem großen Unternehmen an der Spitze stand, stärker zur Rechenschaft gezogen werden als andere, wenn etwas schiefgeht?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die frühere Risikomanagerin der Credit Suisse wurde wegen ihrer Rolle im Moçambique-Skandal angeklag"
+          "text": "Verantwortung und Rechenschaftspflicht sind zentrale Pfeiler unseres Zusammenlebens – besonders für Personen in Machtpositionen. Der Artikel zeigt, wie der Rechtsstaat versucht, Machtverhältnisse zu überprüfen und Gerechtigkeit herzustellen."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Recherchiert: Was ist ein Skandal? Warum war der Moçambique-Skandal bei der CS ein Problem? Notiert in Stichworten, welche Vertrauenspersonen betroffen waren und wer damit Schaden erlitten hat."
         }
       ]
     },
@@ -282,7 +324,28 @@
   ],
   "6": [
     {
-      "id": "art-20260601-01",
+      "id": "art-20260602-00",
+      "date": "02.06.",
+      "title": "Heute Longines, morgen Jaeger-LeCoultre: Prominente werben schamlos für alles Mögliche. Was bringt das den Unternehmen?",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/heute-longines-morgen-jaeger-lecoultre-prominente-werben-schamlos-fuer-alles-moegliche-was-bringt-das-den-unternehmen-ld.10008688",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Heute Longines, morgen Jaeger-LeCoultre: Prominente werben schamlos für alles Mögliche. Was bringt das den Unternehmen?»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Eine Sängerin für Nespresso, ein Skifahrer für Electrolux und ein Schauspieler für gleich zwei rival"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260602-05",
       "date": "01.06.",
       "title": "Explosive Stimmung in Asien und Afrika: Die Folgen des Iran-Kriegs werden für die Menschen zur existenziellen Bedrohung",
       "source": "NZZ",
@@ -290,15 +353,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Explosive Stimmung in Asien und Afrika: Die Folgen des Iran-Kriegs werden für die Menschen zur existenziellen Bedrohung»?"
+          "text": "Wenn der Benzinpreis sich verdoppelt – welche Menschen in deinem Umfeld würden am meisten leiden?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Dieselpreise haben sich verdoppelt, Beamte haben nur noch eine Vier-Tage-Woche, die Garküchen si"
+          "text": "Lernziel: Verstehen, wie globale politische Konflikte durch Energiepreise lokale Lebensrealitäten verändern. Das Konzept der Verflechtung zeigt, dass wirtschaftliche Krisen in einem Land schnell andere Länder und Menschen treffen."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Erstelle eine Mind-Map: Welche Bereiche des täglichen Lebens (Mobilität, Arbeit, Nahrung, Freizeit) werden durch höhere Energiepreise beeinflusst? Ordne sie nach: betrifft mich direkt / betrifft andere / betrifft beide."
         }
       ]
     },
@@ -379,6 +442,29 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: In Tirol steht Europas letzte Penicillin-Produktion. Ihr Fortbestehen hängt davon ab, wie viel das ö"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    }
+  ],
+  "7": [
+    {
+      "id": "art-20260602-03",
+      "date": "01.06.",
+      "title": "Nvidia drängt mit KI-Chips in den Markt für Windows-Notebooks",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/nvidia-draengt-mit-ki-chips-in-den-markt-fuer-windows-notebooks-ld.10009297",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Nvidia drängt mit KI-Chips in den Markt für Windows-Notebooks»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der Chiphersteller drängt in den PC-Markt und nimmt damit Intel und AMD direkt ins Visier. Die Visio"
         },
         {
           "phase": "UE",
