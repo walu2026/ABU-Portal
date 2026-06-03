@@ -1,7 +1,7 @@
 {
   "2": [
     {
-      "id": "art-20260602-01",
+      "id": "art-20260603-07",
       "date": "02.06.",
       "title": "In der südspanischen Provinz Almería züchten Tausende von Bauern unser Gemüse – zum Teil unter prekären Bedingungen",
       "source": "NZZ",
@@ -194,6 +194,27 @@
   ],
   "4": [
     {
+      "id": "art-20260603-01",
+      "date": "03.06.",
+      "title": "Wirtschaftsstandort Schweiz: Das Parlament will die Unternehmen entlasten",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaftsstandort-schweiz-ein-fast-perfekter-auftakt-in-die-sommersession-ld.10009391",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn die Schweiz Steuern für grosse Firmen senkt – wer zahlt dann am Ende für Schulen, Strassen und Spitäler?"
+        },
+        {
+          "phase": "TH",
+          "text": "Hier zeigt sich das Spannungsfeld zwischen Wirtschaftsstandort und Gemeinwohl: Staaten konkurrieren um Investitionen durch tiefe Steuern, müssen aber gleichzeitig ihre öffentlichen Aufgaben finanzieren. Lernende verstehen, dass politische Entscheidungen immer Gewinner und Verlierer haben."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche drei Steuern zahlen Unternehmen in der Schweiz? Notiert, wofür der Kanton diese Steuereinnahmen braucht – und überlegt, was passiert, wenn diese sinken."
+        }
+      ]
+    },
+    {
       "id": "art-20260530-08",
       "date": "28.05.",
       "title": "Der Pharmakonzern Bristol Myers Squibb investiert Millionen in eine neue Schweizer Fabrik. Doch künftig fliesst das Geld in die USA",
@@ -216,6 +237,48 @@
     }
   ],
   "5": [
+    {
+      "id": "art-20260603-03",
+      "date": "03.06.",
+      "title": "Dunkle Wolken am KMU-Horizont: «Die Schweiz steht früh auf, aber erwacht spät»",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/dunkle-wolken-am-kmu-horizont-die-schweiz-steht-frueh-auf-aber-erwacht-spaet-ld.10009281",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Dunkle Wolken am KMU-Horizont: «Die Schweiz steht früh auf, aber erwacht spät»»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Stimmung unter den Unternehmen ist so pessimistisch wie seit dem Jahr 2021 nicht mehr. Laut dem "
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260603-08",
+      "date": "02.06.",
+      "title": "Tatort Wohnungsmarkt: Ist die Zuwanderung schuld an den hohen Mieten? Eine Beweisaufnahme",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/ist-die-zuwanderung-schuld-an-der-wohnungsnot-eine-beweisaufnahme-ld.10007428",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Tatort Wohnungsmarkt: Ist die Zuwanderung schuld an den hohen Mieten? Eine Beweisaufnahme»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die SVP macht die hohen Mieten zu einem Argument für ihre 10-Millionen-Initiative. Die Anklage gegen"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260602-02",
       "date": "02.06.",
@@ -324,7 +387,49 @@
   ],
   "6": [
     {
-      "id": "art-20260602-00",
+      "id": "art-20260603-00",
+      "date": "03.06.",
+      "title": "Die USA künden 10 Prozent Zölle für die EU und 12,5 Prozent für die Schweiz an – Trump baut die Drohkulisse wieder auf",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-usa-kuenden-10-prozent-zoelle-fuer-die-eu-und-125-prozent-fuer-die-schweiz-an-trump-baut-die-drohkulisse-wieder-auf-ld.10009626",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Die USA künden 10 Prozent Zölle für die EU und 12,5 Prozent für die Schweiz an – Trump baut die Drohkulisse wieder auf»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Nach den Zöllen ist vor den Zöllen. Nachdem das Oberste Gericht der USA frühere Zölle für illegal er"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260603-04",
+      "date": "02.06.",
+      "title": "KURZMELDUNGEN - Wirtschaft: Raumfahrtfirma Axiom Space eröffnet Tochtergesellschaft in Luzern +++ Unicredit steigert Commerzbank-Anteil auf über ein Drittel",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-die-neusten-meldungen-ld.10006777",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Raumfahrtfirma Axiom Space eröffnet Tochtergesellschaft in Luzern +++ Unicredit steigert Commerzbank-Anteil auf über ein Drittel»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die neusten Meldungen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260603-06",
       "date": "02.06.",
       "title": "Heute Longines, morgen Jaeger-LeCoultre: Prominente werben schamlos für alles Mögliche. Was bringt das den Unternehmen?",
       "source": "NZZ",
@@ -452,7 +557,7 @@
   ],
   "7": [
     {
-      "id": "art-20260602-03",
+      "id": "art-20260603-09",
       "date": "01.06.",
       "title": "Nvidia drängt mit KI-Chips in den Markt für Windows-Notebooks",
       "source": "NZZ",
