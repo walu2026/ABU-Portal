@@ -272,7 +272,7 @@ window.onload = function() {
     a.className = 'file-card' + (url ? '' : ' not-linked');
     a.style.setProperty('--tc', d.tc);
     a.href = url || '#';
-    if (url) { a.target = '_self'; }
+    if (url) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
     a.innerHTML = `
       <div class="file-icon ${f.cls}">${f.icon}</div>
       <div class="file-body">
