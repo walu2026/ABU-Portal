@@ -1,6 +1,27 @@
 {
   "2": [
     {
+      "id": "art-20260604-07",
+      "date": "03.06.",
+      "title": "Die OECD sieht Gefahren für die globale Wirtschaft: Der Iran-Krieg erhöht das Risiko einer Rezession",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-oecd-sieht-gefahren-fuer-die-globale-wirtschaft-der-iran-krieg-erhoeht-das-risiko-einer-rezession-ld.10009652",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn Kriege in der Welt teurer machen, was passiert dann mit deinem Taschengeld oder deinem ersten Lohn?"
+        },
+        {
+          "phase": "TH",
+          "text": "Schüler verstehen, wie globale politische Ereignisse die Inflation beeinflussen und damit ihre persönliche Kaufkraft ändern. Sie lernen den Zusammenhang zwischen Weltpolitik, Wirtschaft und ihrem eigenen Portemonnaie."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere drei Produkte, die du regelmäßig kaufst (z.B. Kaffee, Handy-Abo, Kleidung). Notiere die heutigen Preise und überlege: Um wie viel Prozent müssten sie steigen, damit du es dir nicht mehr leisten kannst?"
+        }
+      ]
+    },
+    {
       "id": "art-20260603-07",
       "date": "02.06.",
       "title": "In der südspanischen Provinz Almería züchten Tausende von Bauern unser Gemüse – zum Teil unter prekären Bedingungen",
@@ -238,6 +259,27 @@
   ],
   "5": [
     {
+      "id": "art-20260604-09",
+      "date": "03.06.",
+      "title": "Ökonomen fordern mehr Wahlfreiheit bei der Rente. Wer später in Rente geht, soll niedrigere Beiträge zahlen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/oekonomen-fordern-mehr-wahlfreiheit-bei-der-rente-wer-spaeter-in-rente-geht-soll-niedrige-beitraege-zahlen-ld.10009678",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Sollte jede Person selbst entscheiden dürfen, wann sie in Rente geht – auch wenn das bedeutet, weniger Geld zu bekommen?"
+        },
+        {
+          "phase": "TH",
+          "text": "Das Konzept der individuellen Wahlfreiheit steht in Spannung zur Solidarität in der Altersvorsorge. Die Lernenden erkennen, dass wirtschaftliche Reformen immer zwischen persönlicher Freiheit und gesellschaftlicher Verantwortung abwägen müssen."
+        },
+        {
+          "phase": "UE",
+          "text": "Erstellt eine Pro-Contra-Liste: Welche Vorteile und Risiken hat es, wenn Menschen selbst über ihren Renteneintritt entscheiden können? Berücksichtigt auch junge Menschen, die später arbeiten müssen."
+        }
+      ]
+    },
+    {
       "id": "art-20260603-03",
       "date": "03.06.",
       "title": "Dunkle Wolken am KMU-Horizont: «Die Schweiz steht früh auf, aber erwacht spät»",
@@ -387,6 +429,69 @@
   ],
   "6": [
     {
+      "id": "art-20260604-00",
+      "date": "04.06.",
+      "title": "Elon Musk strebt beim Börsengang von SpaceX eine Bewertung von 1,8 Billionen Dollar an – und spielt einmal mehr nach eigenen Regeln",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/elon-musk-strebt-beim-boersengang-von-spacex-eine-bewertung-von-18-billionen-dollar-an-und-spielt-einmal-mehr-nach-eigenen-regeln-ld.10009810",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Elon Musk strebt beim Börsengang von SpaceX eine Bewertung von 1,8 Billionen Dollar an – und spielt einmal mehr nach eigenen Regeln»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Beim IPO von SpaceX setzt Elon Musk neue Massstäbe. Doch die spektakulärste Zahl könnte am Ende sein"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260604-01",
+      "date": "04.06.",
+      "title": "T-Shirts, Tomaten, Solarmodule: Vor allem in Asien ist Zwangsarbeit weit verbreitet",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/t-shirts-tomaten-solarmodule-vor-allem-in-asien-ist-zwangsarbeit-weit-verbreitet-ld.10009633",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn dein T-Shirt nur 10 Franken kostet – wer hat dann dafür bezahlt, dass es so billig ist?"
+        },
+        {
+          "phase": "TH",
+          "text": "Das Lernziel ist das Verstehen von globalen Lieferketten und deren ethischen Implikationen. Lernende sollen erkennen, dass Konsum in der Schweiz direkt mit Arbeitsbedingungen in anderen Ländern verknüpft ist."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche Produkte aus eurem persönlichen Alltag (Kleidung, Elektronik, Lebensmittel) könnten aus Asien stammen? Erstellt eine Liste und überlegt, auf welchen Etiketten ihr die Herkunftsangaben findet."
+        }
+      ]
+    },
+    {
+      "id": "art-20260604-02",
+      "date": "04.06.",
+      "title": "Europa fürchtet Trumps «kill switch» und will sich von den amerikanischen Tech-Giganten befreien",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/europa-fuerchtet-trumps-kill-switch-und-will-sich-von-den-amerikanischen-tech-giganten-befreien-ld.10009611",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Europa fürchtet Trumps «kill switch» und will sich von den amerikanischen Tech-Giganten befreien»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der Kontinent ist bei allen IT-Dienstleistungen stark von den USA abhängig. Die EU schlägt Massnahme"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260603-00",
       "date": "03.06.",
       "title": "Die USA künden 10 Prozent Zölle für die EU und 12,5 Prozent für die Schweiz an – Trump baut die Drohkulisse wieder auf",
@@ -526,27 +631,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Ein Ende des Iran-Kriegs und eine Öffnung der Strasse von Hormuz sind nicht absehbar. Die Energiepre"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260530-02",
-      "date": "30.05.",
-      "title": "Alpenfestung für Antibiotika: Wie eine Sandoz-Fabrik die Marktmacht der Chinesen spürt",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/alpenfestung-fuer-antibiotika-wie-eine-sandoz-fabrik-die-marktmacht-der-chinesen-spuert-ld.10008479",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Alpenfestung für Antibiotika: Wie eine Sandoz-Fabrik die Marktmacht der Chinesen spürt»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: In Tirol steht Europas letzte Penicillin-Produktion. Ihr Fortbestehen hängt davon ab, wie viel das ö"
         },
         {
           "phase": "UE",
