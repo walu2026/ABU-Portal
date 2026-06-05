@@ -1,5 +1,49 @@
 {
+  "1": [
+    {
+      "id": "art-20260605-06",
+      "date": "04.06.",
+      "title": "Panikverkäufe bei Partners Group: Das «Saubermann-Image» der Zuger Beteiligungsgesellschaft leidet",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/panikverkaeufe-bei-partners-group-das-saubermann-image-der-zuger-beteiligungsgesellschaft-leidet-ld.10009815",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Panikverkäufe bei Partners Group: Das «Saubermann-Image» der Zuger Beteiligungsgesellschaft leidet»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Aktie von Partners Group verlor am Mittwoch 16 Prozent an Wert. Die Private-Equity-Gesellschaft "
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    }
+  ],
   "2": [
+    {
+      "id": "art-20260605-00",
+      "date": "05.06.",
+      "title": "Die EU will mehr Lohngleichheit zwischen Mann und Frau, doch die Mitgliedsländer spielen nicht mit",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-eu-will-mehr-lohngleichheit-zwischen-mann-und-frau-doch-die-mitgliedslaender-spielen-nicht-mit-ld.10009838",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Die EU will mehr Lohngleichheit zwischen Mann und Frau, doch die Mitgliedsländer spielen nicht mit»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Unternehmen sollen viel mehr Lohndaten offenlegen als bisher. Ziel einer entsprechenden Richtlinie i"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260604-07",
       "date": "03.06.",
@@ -215,6 +259,27 @@
   ],
   "4": [
     {
+      "id": "art-20260605-02",
+      "date": "05.06.",
+      "title": "Der Iran-Krieg ist lukrativ: Schweizer Rohstoffriesen wie Trafigura und Glencore verdienen prächtig",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/iran-krieg-schweizer-rohstoffhaendler-wie-trafigura-und-glencore-steigern-gewinn-ld.10009849",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Der Iran-Krieg ist lukrativ: Schweizer Rohstoffriesen wie Trafigura und Glencore verdienen prächtig»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Knappes Öl, begehrtes Öl: Trafigura erzielt eines der besten Halbjahresergebnisse. Doch wird die Kri"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260603-01",
       "date": "03.06.",
       "title": "Wirtschaftsstandort Schweiz: Das Parlament will die Unternehmen entlasten",
@@ -258,6 +323,69 @@
     }
   ],
   "5": [
+    {
+      "id": "art-20260605-03",
+      "date": "05.06.",
+      "title": "New York verfällt dem Knicks-Fieber: Warum Basketball-Tickets plötzlich 7000 Dollar kosten",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/new-york-verfaellt-dem-knicks-fieber-warum-basketball-tickets-ploetzlich-7000-dollar-kosten-ld.10009912",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «New York verfällt dem Knicks-Fieber: Warum Basketball-Tickets plötzlich 7000 Dollar kosten»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Basketballer der New York Knicks könnten die erste grosse Sporttrophäe seit Jahren in die amerik"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260605-04",
+      "date": "05.06.",
+      "title": "INTERVIEW - «Wir wollen nicht überall verfügbar sein», sagt der Modechef des legendären Hauses Chanel",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/chanel-modechef-wir-wollen-nicht-ueberall-verfuegbar-sein-ld.10007256",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «INTERVIEW - «Wir wollen nicht überall verfügbar sein», sagt der Modechef des legendären Hauses Chanel»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Bruno Pavlovsky, der Chef des Modebereichs von Chanel, erklärt, wie das Luxushaus Wachstum, Preise u"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260605-05",
+      "date": "04.06.",
+      "title": "Donald Trump Jr. zeigt sich bei seinem Auftritt in Zürich als Sprachrohr des Vaters. Für die Schweiz könnte dies ein Vorteil sein",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/donald-trump-jr-zeigt-sich-bei-seinem-auftritt-in-zuerich-als-sprachrohr-des-vaters-fuer-die-schweiz-koennte-dies-ein-vorteil-sein-ld.10009702",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Kann es klug sein, wenn ein Land den Sohn eines Politikers besser behandelt als den Politiker selbst, um Konflikte zu lösen?"
+        },
+        {
+          "phase": "TH",
+          "text": "Hier zeigt sich, wie Staaten durch informelle Kanäle und persönliche Beziehungen Konflikte regeln – ein wichtiger Teil von Diplomatie. Lernende erkennen, dass politische Entscheidungen nicht nur in offiziellen Meetings fallen, sondern auch durch strategische Beziehungspflege beeinflusst werden."
+        },
+        {
+          "phase": "UE",
+          "text": "Analysiert: Welche Vorteile und Risiken hat es für die Schweiz, eine 'Charmeoffensive' statt direkter Verhandlungen zu nutzen? Notiert drei Pro- und drei Contra-Argumente."
+        }
+      ]
+    },
     {
       "id": "art-20260604-09",
       "date": "03.06.",
@@ -404,32 +532,32 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260530-06",
-      "date": "29.05.",
-      "title": "Elon, der Allmächtige: Musk plant offenbar eine Fusion von Tesla und SpaceX",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/elon-der-allmaechtige-musk-plant-offenbar-eine-fusion-von-tesla-und-spacex-ld.10008823",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Elon, der Allmächtige: Musk plant offenbar eine Fusion von Tesla und SpaceX»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Nach dem SpaceX-Börsengang könnte so ein Konglomerat mit einem Wert von über 3 Billionen Dollar ents"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "6": [
     {
-      "id": "art-20260604-00",
+      "id": "art-20260605-01",
+      "date": "05.06.",
+      "title": "KURZMELDUNGEN - Wirtschaft: KI-Unternehmen Anthropic schlägt Pause im KI-Wettbewerb vor",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-die-neusten-meldungen-ld.10006777",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Sollten wir im Wettrüsten um künstliche Intelligenz einfach weitermachen wie bisher, oder braucht es Regeln – auch wenn das uns selbst bremst?"
+        },
+        {
+          "phase": "TH",
+          "text": "Das Lernziel behandelt die Balance zwischen Fortschritt und Verantwortung in der globalisierten Wirtschaft. Lernende verstehen, dass nicht alle Unternehmen nur Gewinnmaximierung verfolgen, sondern auch ethische und gesellschaftliche Risiken berücksichtigen können."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche Risiken nennt Anthropic für den unkontrollierten KI-Wettbewerb? Notiert drei Punkte und überlegt, welche Folgen diese für euren Beruf haben könnten."
+        }
+      ]
+    },
+    {
+      "id": "art-20260605-07",
       "date": "04.06.",
       "title": "Elon Musk strebt beim Börsengang von SpaceX eine Bewertung von 1,8 Billionen Dollar an – und spielt einmal mehr nach eigenen Regeln",
       "source": "NZZ",
@@ -437,20 +565,20 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Elon Musk strebt beim Börsengang von SpaceX eine Bewertung von 1,8 Billionen Dollar an – und spielt einmal mehr nach eigenen Regeln»?"
+          "text": "Würde es dich interessieren, für ein Unternehmen zu arbeiten, das von einer Person allein so viele Entscheidungen trifft wie Elon Musk bei SpaceX?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Beim IPO von SpaceX setzt Elon Musk neue Massstäbe. Doch die spektakulärste Zahl könnte am Ende sein"
+          "text": "Unternehmensführung und Machtkonzentration: Hier zeigt sich, wie Gründer durch Kontrolle über Unternehmen und Vermögen gesellschaftliche Macht ausüben können. Dies illustriert das Spannungsfeld zwischen privatem Vermögen und öffentlicher Verantwortung."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Recherchiert: Welche Vor- und Nachteile hat es, wenn eine Person wie Elon Musk so viele verschiedene Unternehmen (Tesla, SpaceX, X) kontrolliert? Haltet eure Argumente in einer Pro-Contra-Tabelle fest."
         }
       ]
     },
     {
-      "id": "art-20260604-01",
+      "id": "art-20260605-08",
       "date": "04.06.",
       "title": "T-Shirts, Tomaten, Solarmodule: Vor allem in Asien ist Zwangsarbeit weit verbreitet",
       "source": "NZZ",
@@ -458,15 +586,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn dein T-Shirt nur 10 Franken kostet – wer hat dann dafür bezahlt, dass es so billig ist?"
+          "text": "Was denkst du zu: «T-Shirts, Tomaten, Solarmodule: Vor allem in Asien ist Zwangsarbeit weit verbreitet»?"
         },
         {
           "phase": "TH",
-          "text": "Das Lernziel ist das Verstehen von globalen Lieferketten und deren ethischen Implikationen. Lernende sollen erkennen, dass Konsum in der Schweiz direkt mit Arbeitsbedingungen in anderen Ländern verknüpft ist."
+          "text": "Dieser Artikel zeigt: Wer seinen Markt nicht ausreichend vor Gütern schützt, die von Zwangsarbeitern hergestellt werden, m"
         },
         {
           "phase": "UE",
-          "text": "Recherchiert: Welche Produkte aus eurem persönlichen Alltag (Kleidung, Elektronik, Lebensmittel) könnten aus Asien stammen? Erstellt eine Liste und überlegt, auf welchen Etiketten ihr die Herkunftsangaben findet."
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     },
@@ -614,27 +742,6 @@
         {
           "phase": "UE",
           "text": "Recherchiert: Was verdient ein durchschnittlicher Amerikaner pro Jahr, und wie viel Vermögen hat Bezos? Erstellt eine Visualisierung (Grafik, Schaubild oder Vergleich) und diskutiert: Ist es fair, wenn eine Person so viel mehr besitzt als Millionen andere?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260531-08",
-      "date": "30.05.",
-      "title": "Sorgen über die sorglosen Märkte: Droht in der Schweiz und in Deutschland im Winter wieder eine gefährliche Gasknappheit?",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/sorgen-ueber-die-sorglosen-maerkte-droht-in-der-schweiz-und-in-deutschland-im-winter-wieder-eine-gefaehrliche-gasknappheit-ld.10008832",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Sorgen über die sorglosen Märkte: Droht in der Schweiz und in Deutschland im Winter wieder eine gefährliche Gasknappheit?»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Ein Ende des Iran-Kriegs und eine Öffnung der Strasse von Hormuz sind nicht absehbar. Die Energiepre"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     }
