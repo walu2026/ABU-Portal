@@ -24,7 +24,7 @@
   ],
   "2": [
     {
-      "id": "art-20260605-00",
+      "id": "art-20260606-07",
       "date": "05.06.",
       "title": "Die EU will mehr Lohngleichheit zwischen Mann und Frau, doch die Mitgliedsländer spielen nicht mit",
       "source": "NZZ",
@@ -32,15 +32,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Die EU will mehr Lohngleichheit zwischen Mann und Frau, doch die Mitgliedsländer spielen nicht mit»?"
+          "text": "Würdet ihr es fair finden, wenn zwei Personen die gleiche Arbeit machen, aber eine davon weniger Lohn erhält – nur weil sie eine Frau ist?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Unternehmen sollen viel mehr Lohndaten offenlegen als bisher. Ziel einer entsprechenden Richtlinie i"
+          "text": "Die Lohngleichheit ist ein zentrales Thema der Lohnfairness und Geschlechtergerechtigkeit. Lernende verstehen, dass Transparenz (Offenlegung von Lohndaten) ein wichtiges Werkzeug ist, um Diskriminierung sichtbar zu machen und zu bekämpfen."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Recherchiert: Was verdienen verschiedene Berufe in der Schweiz nach Geschlecht? Nutzt lohngleichheit.ch oder ähnliche Tools und haltet fest, in welchen Branchen es die grössten Unterschiede gibt."
         }
       ]
     },
@@ -259,6 +259,48 @@
   ],
   "4": [
     {
+      "id": "art-20260606-03",
+      "date": "06.06.",
+      "title": "Die KI-Euphorie macht den Schweizer Industriekonzern Huber + Suhner zum Börsenstar",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/huber-suhner-ki-und-datenzentren-treiben-aktienkurs-an-ld.10009515",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Die KI-Euphorie macht den Schweizer Industriekonzern Huber + Suhner zum Börsenstar»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der Aktienkurs von Huber + Suhner ist allein seit Jahresbeginn um über 80 Prozent gestiegen. Die Ost"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260606-09",
+      "date": "05.06.",
+      "title": "Schweizer Rohstoffriesen wie Trafigura und Glencore verdienen prächtig am Iran-Krieg",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/iran-krieg-schweizer-rohstoffhaendler-wie-trafigura-und-glencore-steigern-gewinn-ld.10009849",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Schweizer Rohstoffriesen wie Trafigura und Glencore verdienen prächtig am Iran-Krieg»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Knappes Öl ist begehrtes Öl: Der Rohstoffhändler Trafigura erzielt eines seiner besten Halbjahreserg"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260605-02",
       "date": "05.06.",
       "title": "Der Iran-Krieg ist lukrativ: Schweizer Rohstoffriesen wie Trafigura und Glencore verdienen prächtig",
@@ -323,6 +365,48 @@
     }
   ],
   "5": [
+    {
+      "id": "art-20260606-00",
+      "date": "06.06.",
+      "title": "«Eco on the rocks»: Macht Zuwanderung die Schweiz reicher – oder nur voller?",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/eco-on-the-rocks-macht-zuwanderung-die-schweiz-reicher-oder-nur-voller-ld.10010158",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn die Schweiz immer mehr Menschen anzieht – werden wir dann alle reicher, oder einfach nur enger zusammengepfercht?"
+        },
+        {
+          "phase": "TH",
+          "text": "Das Lernziel ist das Verständnis von Zielkonflikten in der Gesellschaft: Wirtschaftswachstum vs. Lebensqualität, individuelle Interessen vs. Gemeinwohl. Lernende erkennen, dass politische Fragen nicht einfach «richtig» oder «falsch» sind, sondern von unterschiedlichen Wertvorstellungen abhängen."
+        },
+        {
+          "phase": "UE",
+          "text": "Erstellt eine Tabelle mit zwei Spalten: «Argumente für mehr Zuwanderung» und «Argumente für weniger Zuwanderung». Sammelt mindestens 4 Argumente pro Seite und notiert darunter, welche Bevölkerungsgruppe dieses Argument vermutlich vertritt."
+        }
+      ]
+    },
+    {
+      "id": "art-20260606-01",
+      "date": "06.06.",
+      "title": "Trotz Aktienabsturz: Banken stellen sich hinter Partners Group und Private Equity",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/trotz-aktien-absturz-banken-stellen-sich-hinter-partners-group-und-private-equity-ld.10010020",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn eine bekannte Finanzfirma Probleme hat – sollten alle ihre Kunden sofort das Geld abziehen, oder ist Vertrauen wichtiger?"
+        },
+        {
+          "phase": "TH",
+          "text": "Das Lernziel zeigt, wie wirtschaftliche Vertrauensbeziehungen und gegenseitige Abhängigkeiten in der Gesellschaft funktionieren. Lernende verstehen, dass stabile Beziehungen oft wichtiger sind als kurzfristige Angstreaktionen."
+        },
+        {
+          "phase": "UE",
+          "text": "Rollenspiel: Ihr seid Kundenberater. Ein nervöser Kunde will sein Geld aus der Partners Group abziehen. Versucht, mit Argumenten zu zeigen, warum Stabilität und Vertrauen wichtig sind – ohne zu lügen."
+        }
+      ]
+    },
     {
       "id": "art-20260605-03",
       "date": "05.06.",
@@ -490,51 +574,72 @@
           "text": "Recherchiert: Was ist ein Skandal? Warum war der Moçambique-Skandal bei der CS ein Problem? Notiert in Stichworten, welche Vertrauenspersonen betroffen waren und wer damit Schaden erlitten hat."
         }
       ]
-    },
-    {
-      "id": "art-20260601-06",
-      "date": "31.05.",
-      "title": "Sind SpaceX-Aktien attraktiv? Die Antwort hängt ganz davon ab, in welchem Jahr nach dem Börsengang man sie kauft",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/sind-spacex-aktien-attraktiv-die-antwort-haengt-ganz-davon-ab-in-welchem-jahr-nach-dem-boersengang-man-sie-kauft-ld.10009177",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Sind SpaceX-Aktien attraktiv? Die Antwort hängt ganz davon ab, in welchem Jahr nach dem Börsengang man sie kauft»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Wer den Kursverlauf der Tesla-Titel kennt, weiss, dass auch der SpaceX-Kurs extrem volatil sein wird"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260531-05",
-      "date": "30.05.",
-      "title": "Wende im Fall Vincenz? Neu aufgetauchte Dokumente werfen Fragen auf",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wende-im-fall-vincenz-neu-aufgetauchte-dokumente-werfen-fragen-auf-ld.10008824",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Wende im Fall Vincenz? Neu aufgetauchte Dokumente werfen Fragen auf»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Im August soll der Berufungsprozess gegen den ehemaligen Raiffeisen-Chef Pierin Vincenz und seinen G"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "6": [
+    {
+      "id": "art-20260606-02",
+      "date": "06.06.",
+      "title": "«Realitätsfern» und «scheingenau»: Der US-Handelsbeauftragte liest den Ökonomen die Leviten – und bricht eine Lanze für Zölle",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/realitaetsfern-und-scheingenau-der-us-handelsbeauftragte-liest-den-oekonomen-die-leviten-und-bricht-eine-lanze-fuer-zoelle-ld.10009672",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn Produkte billiger wären, wenn sie hier statt in Asien hergestellt würden – würde das euch interessieren, auch wenn sie dann teurer sind?"
+        },
+        {
+          "phase": "TH",
+          "text": "Der Artikel zeigt den Konflikt zwischen Globalisierung (billige Importe) und nationaler Wirtschaftspolitik (Zölle zum Schutz). Lernende erkennen, dass wirtschaftliche Entscheidungen politische Wertungen sind, nicht nur rationale Kalkulationen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert ein Produkt, das ihr regelmässig nutzt (Handy, Kleidung, Lebensmittel): Wo wird es hergestellt, was würde ein 25%-Zoll kosten, wer profitiert/verliert? Erstellt ein einseitiges Faktenblatt."
+        }
+      ]
+    },
+    {
+      "id": "art-20260606-04",
+      "date": "06.06.",
+      "title": "Fast jeder neue Fed-Chef musste schwere Börsen-Crashs meistern. Auch für Kevin Warsh ist die Gefahr einer Krise sehr real",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/fast-jeder-neue-fed-chef-musste-schwere-boersen-crashs-meistern-auch-fuer-kevin-warsh-ist-die-gefahr-einer-krise-sehr-real-ld.10009454",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Fast jeder neue Fed-Chef musste schwere Börsen-Crashs meistern. Auch für Kevin Warsh ist die Gefahr einer Krise sehr real»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die US-Notenbank ist regelmässig mit grossen Marktturbulenzen konfrontiert. Alan Greenspan hatte den"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260606-06",
+      "date": "05.06.",
+      "title": "DIE NEUESTEN ENTWICKLUNGEN - Zollverhandlungen Schweiz-USA: Schweiz verhandelt trotz neuen Zusatzzöllen weiter",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/zollschock-fuer-die-schweiz-antworten-auf-die-wichtigsten-fragen-ld.1896220",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «DIE NEUESTEN ENTWICKLUNGEN - Zollverhandlungen Schweiz-USA: Schweiz verhandelt trotz neuen Zusatzzöllen weiter»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Nach schwierigen Verhandlungen mit den USA liegen die US-Zölle auf Schweizer Importgüter seit Mitte "
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260605-01",
       "date": "05.06.",
@@ -681,72 +786,30 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260602-05",
-      "date": "01.06.",
-      "title": "Explosive Stimmung in Asien und Afrika: Die Folgen des Iran-Kriegs werden für die Menschen zur existenziellen Bedrohung",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/explosive-stimmung-in-asien-und-afrika-die-folgen-des-iran-kriegs-werden-fuer-die-menschen-zur-existenziellen-bedrohung-ld.10008901",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn der Benzinpreis sich verdoppelt – welche Menschen in deinem Umfeld würden am meisten leiden?"
-        },
-        {
-          "phase": "TH",
-          "text": "Lernziel: Verstehen, wie globale politische Konflikte durch Energiepreise lokale Lebensrealitäten verändern. Das Konzept der Verflechtung zeigt, dass wirtschaftliche Krisen in einem Land schnell andere Länder und Menschen treffen."
-        },
-        {
-          "phase": "UE",
-          "text": "Erstelle eine Mind-Map: Welche Bereiche des täglichen Lebens (Mobilität, Arbeit, Nahrung, Freizeit) werden durch höhere Energiepreise beeinflusst? Ordne sie nach: betrifft mich direkt / betrifft andere / betrifft beide."
-        }
-      ]
-    },
-    {
-      "id": "art-20260601-08",
-      "date": "31.05.",
-      "title": "Pannen und drohende Finanzprobleme: Jetzt hofft Skyguide auf Staatsgelder",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/pannen-und-drohende-finanzprobleme-jetzt-hofft-skyguide-auf-staatsgelder-ld.10008763",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Pannen und drohende Finanzprobleme: Jetzt hofft Skyguide auf Staatsgelder»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Am Mittwoch ist es bei der Flugsicherung erneut zu einer IT-Panne gekommen. Tiefgreifende technische"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260531-07",
-      "date": "30.05.",
-      "title": "Jeff Bezos will der Hälfte der Amerikaner die Steuern erlassen – und wird trotzdem angefeindet",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/jeff-bezos-will-der-haelfte-der-amerikaner-die-steuern-erlassen-und-wird-trotzdem-angefeindet-ld.10009065",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn ein Super-Reicher Millionen von normalen Menschen Steuern sparen würde – warum sind manche Leute dann trotzdem wütend auf ihn?"
-        },
-        {
-          "phase": "TH",
-          "text": "Der Artikel zeigt den Konflikt zwischen Arm und Reich in modernen Gesellschaften und wie Vermögensverteilung politisch und emotional aufgeladen ist. Lernende erkennen, dass wirtschaftliche Entscheidungen von Milliardären gesellschaftliche Machtverhältnisse widerspiegeln und in Demokratien umstritten sind."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Was verdient ein durchschnittlicher Amerikaner pro Jahr, und wie viel Vermögen hat Bezos? Erstellt eine Visualisierung (Grafik, Schaubild oder Vergleich) und diskutiert: Ist es fair, wenn eine Person so viel mehr besitzt als Millionen andere?"
-        }
-      ]
     }
   ],
   "7": [
+    {
+      "id": "art-20260606-05",
+      "date": "06.06.",
+      "title": "Dieser Mann will Deutschland zum KI-Weltmeister machen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/dieser-mann-will-deutschland-zum-ki-weltmeister-machen-ld.10009077",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn ein ehemaliger Waschmaschinen-Verkäufer plötzlich entscheidet, sein Land zu verändern – was hätte dich bewogen, einen so radikalen Karriereschritt zu machen?"
+        },
+        {
+          "phase": "TH",
+          "text": "Karrierewechsel und berufliche Neuorientierung sind möglich und können durch gesellschaftliche Veränderungen (hier: Digitalisierung) ausgelöst werden. Dieses Beispiel zeigt, dass die eigene Zukunftsgestaltung nicht linear verläuft und dass Fachkompetenz in einem Bereich transferierbar ist."
+        },
+        {
+          "phase": "UE",
+          "text": "Erstelle ein Porträt einer Person aus deinem Umfeld, die ihre berufliche Richtung gewechselt hat, und analysiere, welche Fähigkeiten sie vom alten zum neuen Job mitgenommen hat."
+        }
+      ]
+    },
     {
       "id": "art-20260603-09",
       "date": "01.06.",
