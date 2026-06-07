@@ -24,6 +24,27 @@
   ],
   "2": [
     {
+      "id": "art-20260607-02",
+      "date": "07.06.",
+      "title": "Gleichstellung neu denken: Nicht jede Ungleichheit ist ungerecht",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/gleichstellung-neu-denken-nicht-jede-ungleichheit-ist-ungerecht-ld.10009535",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Gleichstellung neu denken: Nicht jede Ungleichheit ist ungerecht»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Lohnunterschiede zwischen Mann und Frau zeigen sich besonders eindrücklich bei Müttern und Vätern. W"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260606-07",
       "date": "05.06.",
       "title": "Die EU will mehr Lohngleichheit zwischen Mann und Frau, doch die Mitgliedsländer spielen nicht mit",
@@ -211,27 +232,6 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260530-03",
-      "date": "29.05.",
-      "title": "Markus Blocher fürchtet sich vor Überkapazitäten in der Pharmabranche – der Aktienkurs fällt stark",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/bachem-und-dottikon-schenken-sich-im-ringen-um-fachkraefte-nichts-ld.10009064",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn ein reicher Unternehmer wie Markus Blocher nervös wird, sollten wir dann auch nervös werden – oder ist das nur sein Problem?"
-        },
-        {
-          "phase": "TH",
-          "text": "Das Konzept von Angebot und Nachfrage zeigt sich hier konkret: Zu viele Fabriken (Überkapazitäten) führen zu Preisdruck und fallenden Aktienkursen. Lernende erkennen, dass auch grosse Investitionen ein Risiko bergen und der Markt Entscheidungen erzwingt."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Was kostet es, eine pharmazeutische Fabrik zu bauen? Berechnet dann, wie lange Blocher die Investition amortisieren muss, wenn plötzlich weniger Produkte verkauft werden – nutzt dafür realistische Zahlen."
-        }
-      ]
     }
   ],
   "3": [
@@ -258,6 +258,69 @@
     }
   ],
   "4": [
+    {
+      "id": "art-20260607-03",
+      "date": "07.06.",
+      "title": "Historischer Glücksfall für Hausbesitzer: Die Bevölkerungszunahme lässt Vermögen explodieren",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/historischer-gluecksfall-fuer-hausbesitzer-die-bevoelkerungszunahme-laesst-vermoegen-explodieren-ld.10009517",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Historischer Glücksfall für Hausbesitzer: Die Bevölkerungszunahme lässt Vermögen explodieren»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Seit der Einführung der Personenfreizügigkeit boomt der Schweizer Immobilienmarkt. Wer rechtzeitig k"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260607-05",
+      "date": "06.06.",
+      "title": "«Wir sind die Musterschüler»: Schweizer Firmen haben bereits 27 Milliarden in den USA investiert",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wir-sind-die-musterschueler-schweizer-firmen-haben-bereits-27-milliarden-in-den-usa-investiert-ld.10009847",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: ««Wir sind die Musterschüler»: Schweizer Firmen haben bereits 27 Milliarden in den USA investiert»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Schweiz erfüllt ihre Versprechen gegenüber den USA. Ob es etwas nützt, ist ungewiss. Die Trump-A"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260607-06",
+      "date": "06.06.",
+      "title": "Die Entstehung der «Lex On»: Der Sportartikelhersteller drohte der Schweiz mit einer Staatshaftungsklage",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-entstehung-der-lex-on-der-sportartikelhersteller-drohte-der-schweiz-mit-einer-staatshaftungsklage-ld.10009456",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Die Entstehung der «Lex On»: Der Sportartikelhersteller drohte der Schweiz mit einer Staatshaftungsklage»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: On setzte die Behörden massiv unter Druck, um weiterhin das Schweizerkreuz verwenden zu dürfen. Vert"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260606-03",
       "date": "06.06.",
@@ -366,7 +429,49 @@
   ],
   "5": [
     {
-      "id": "art-20260606-00",
+      "id": "art-20260607-01",
+      "date": "07.06.",
+      "title": "Konkurrenz in der Art-Familie: Bleibt die wichtigste Kunstmesse in Basel, oder wandert sie nach Paris ab?",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/konkurrenz-in-der-art-familie-bleibt-die-wichtigste-kunstmesse-in-basel-oder-wandert-sie-nach-paris-ab-ld.10009658",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Konkurrenz in der Art-Familie: Bleibt die wichtigste Kunstmesse in Basel, oder wandert sie nach Paris ab?»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Nach zwei schwierigen Jahren wächst der Kunstmarkt wieder. Aussteller und Sammler strömen kommende W"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260607-08",
+      "date": "06.06.",
+      "title": "Kari Voutilainen baut nur siebzig Uhren im Jahr – und nimmt keine Bestellungen mehr an",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/kari-voutilainen-baut-nur-70-uhren-im-jahr-und-nimmt-keine-bestellungen-mehr-an-ld.10009788",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Kari Voutilainen baut nur siebzig Uhren im Jahr – und nimmt keine Bestellungen mehr an»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Auf einem Felssporn hoch über dem Val-de-Travers entstehen einige der begehrtesten Uhren der Welt. D"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260607-09",
       "date": "06.06.",
       "title": "«Eco on the rocks»: Macht Zuwanderung die Schweiz reicher – oder nur voller?",
       "source": "NZZ",
@@ -374,15 +479,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn die Schweiz immer mehr Menschen anzieht – werden wir dann alle reicher, oder einfach nur enger zusammengepfercht?"
+          "text": "Was denkst du zu: ««Eco on the rocks»: Macht Zuwanderung die Schweiz reicher – oder nur voller?»?"
         },
         {
           "phase": "TH",
-          "text": "Das Lernziel ist das Verständnis von Zielkonflikten in der Gesellschaft: Wirtschaftswachstum vs. Lebensqualität, individuelle Interessen vs. Gemeinwohl. Lernende erkennen, dass politische Fragen nicht einfach «richtig» oder «falsch» sind, sondern von unterschiedlichen Wertvorstellungen abhängen."
+          "text": "Dieser Artikel zeigt: Die Initiative «Keine 10-Millionen-Schweiz» will die Einwanderung und Bevölkerung deckeln. Im wirtsc"
         },
         {
           "phase": "UE",
-          "text": "Erstellt eine Tabelle mit zwei Spalten: «Argumente für mehr Zuwanderung» und «Argumente für weniger Zuwanderung». Sammelt mindestens 4 Argumente pro Seite und notiert darunter, welche Bevölkerungsgruppe dieses Argument vermutlich vertritt."
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     },
@@ -532,21 +637,23 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
+    }
+  ],
+  "6": [
     {
-      "id": "art-20260602-02",
-      "date": "02.06.",
-      "title": "Ist die Zuwanderung schuld an der Wohnungsnot? Eine Beweisaufnahme",
+      "id": "art-20260607-00",
+      "date": "07.06.",
+      "title": "Der Gen-Z-Flüsterer aus Vevey: Der Nestlé-Chef Philipp Navratil verordnet seinem Konzern eine Verjüngungskur",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/ist-die-zuwanderung-schuld-an-der-wohnungsnot-eine-beweisaufnahme-ld.10007428",
+      "url": "https://www.nzz.ch/wirtschaft/der-gen-z-fluesterer-aus-vevey-nestle-chef-philipp-navratil-verordnet-seinem-konzern-eine-verjuengungskur-ld.10010057",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Ist die Zuwanderung schuld an der Wohnungsnot? Eine Beweisaufnahme»?"
+          "text": "Was denkst du zu: «Der Gen-Z-Flüsterer aus Vevey: Der Nestlé-Chef Philipp Navratil verordnet seinem Konzern eine Verjüngungskur»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die SVP macht die hohen Mieten zu einem Argument für ihre 10-Millionen-Initiative. Die Anklage gegen"
+          "text": "Dieser Artikel zeigt: Nestlé übernimmt den Trinkmahlzeiten-Anbieter Yfood aus Deutschland. Der Zukauf zeigt, wie der Chef "
         },
         {
           "phase": "UE",
@@ -555,28 +662,47 @@
       ]
     },
     {
-      "id": "art-20260602-09",
-      "date": "31.05.",
-      "title": "Lara Warner war einst eine der mächtigsten Managerinnen der Schweiz. Bald könnte die ehemalige CS-Bankerin erneut vor Gericht stehen",
+      "id": "art-20260607-04",
+      "date": "07.06.",
+      "title": "Abschied vom Autoland? In vielen deutschen Werken geht die Angst um",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/lara-warner-war-einst-eine-der-maechtigsten-managerinnen-der-schweiz-nun-koennte-die-ehemalige-cs-bankerin-bald-erneut-vor-gericht-stehen-ld.10009215",
+      "url": "https://www.nzz.ch/wirtschaft/abschied-vom-autoland-in-vielen-deutschen-werken-geht-die-angst-um-ld.10009395",
       "varianten": [
         {
           "phase": "E",
-          "text": "Sollte eine Person, die in einem großen Unternehmen an der Spitze stand, stärker zur Rechenschaft gezogen werden als andere, wenn etwas schiefgeht?"
+          "text": "Was denkst du zu: «Abschied vom Autoland? In vielen deutschen Werken geht die Angst um»?"
         },
         {
           "phase": "TH",
-          "text": "Verantwortung und Rechenschaftspflicht sind zentrale Pfeiler unseres Zusammenlebens – besonders für Personen in Machtpositionen. Der Artikel zeigt, wie der Rechtsstaat versucht, Machtverhältnisse zu überprüfen und Gerechtigkeit herzustellen."
+          "text": "Dieser Artikel zeigt: Zu teuer und zu wenig ausgelastet: Viele Autofabriken in Deutschland sind kaum noch wettbewerbsfähig"
         },
         {
           "phase": "UE",
-          "text": "Recherchiert: Was ist ein Skandal? Warum war der Moçambique-Skandal bei der CS ein Problem? Notiert in Stichworten, welche Vertrauenspersonen betroffen waren und wer damit Schaden erlitten hat."
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    }
-  ],
-  "6": [
+    },
+    {
+      "id": "art-20260607-07",
+      "date": "06.06.",
+      "title": "Babymilch-Skandal: Nach dem Tod eines St. Galler Säuglings drohten in der Schweiz halb leere Regale",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/babymilch-skandal-nach-dem-tod-eines-st-galler-saeuglings-drohten-in-der-schweiz-halb-leere-regale-ld.10009326",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Babymilch-Skandal: Nach dem Tod eines St. Galler Säuglings drohten in der Schweiz halb leere Regale»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: In der Affäre um verunreinigte Säuglingsnahrung reagierte der Lebensmittelkonzern Danone sehr zögerl"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260606-02",
       "date": "06.06.",
@@ -717,69 +843,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Der Kontinent ist bei allen IT-Dienstleistungen stark von den USA abhängig. Die EU schlägt Massnahme"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260603-00",
-      "date": "03.06.",
-      "title": "Die USA künden 10 Prozent Zölle für die EU und 12,5 Prozent für die Schweiz an – Trump baut die Drohkulisse wieder auf",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-usa-kuenden-10-prozent-zoelle-fuer-die-eu-und-125-prozent-fuer-die-schweiz-an-trump-baut-die-drohkulisse-wieder-auf-ld.10009626",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Die USA künden 10 Prozent Zölle für die EU und 12,5 Prozent für die Schweiz an – Trump baut die Drohkulisse wieder auf»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Nach den Zöllen ist vor den Zöllen. Nachdem das Oberste Gericht der USA frühere Zölle für illegal er"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260603-04",
-      "date": "02.06.",
-      "title": "KURZMELDUNGEN - Wirtschaft: Raumfahrtfirma Axiom Space eröffnet Tochtergesellschaft in Luzern +++ Unicredit steigert Commerzbank-Anteil auf über ein Drittel",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-die-neusten-meldungen-ld.10006777",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Raumfahrtfirma Axiom Space eröffnet Tochtergesellschaft in Luzern +++ Unicredit steigert Commerzbank-Anteil auf über ein Drittel»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die neusten Meldungen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260603-06",
-      "date": "02.06.",
-      "title": "Heute Longines, morgen Jaeger-LeCoultre: Prominente werben schamlos für alles Mögliche. Was bringt das den Unternehmen?",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/heute-longines-morgen-jaeger-lecoultre-prominente-werben-schamlos-fuer-alles-moegliche-was-bringt-das-den-unternehmen-ld.10008688",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Heute Longines, morgen Jaeger-LeCoultre: Prominente werben schamlos für alles Mögliche. Was bringt das den Unternehmen?»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Eine Sängerin für Nespresso, ein Skifahrer für Electrolux und ein Schauspieler für gleich zwei rival"
         },
         {
           "phase": "UE",
