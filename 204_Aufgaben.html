@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>204 – Aufgaben wählen</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --accent:#8e44ad; --g9:#111827; --g7:#374151; --g5:#6B7280; --g3:#D1D5DB; --g1:#F3F4F6; }
+  *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'DM Sans',sans-serif; background:#F0F2F5; color:var(--g7); min-height:100vh; }
+  .wrap { max-width:680px; margin:0 auto; padding:2rem 1.5rem 5rem; }
+  .back-btn { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; color:var(--g5); text-decoration:none; margin-bottom:1.75rem; transition:color .15s; }
+  .back-btn:hover { color:var(--g9); }
+  .d-header { border-radius:14px; overflow:hidden; margin-bottom:1.75rem; display:grid; grid-template-columns:5px 1fr; box-shadow:0 2px 12px rgba(0,0,0,0.07); background:white; }
+  .d-stripe { background:var(--accent); }
+  .d-head-body { padding:20px 22px; display:flex; align-items:flex-start; gap:14px; }
+  .d-big-num { font-family:'Barlow Condensed',sans-serif; font-size:60px; font-weight:800; line-height:1; opacity:.15; flex-shrink:0; min-width:56px; color:var(--accent); }
+  .d-label { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:3px; }
+  .d-title { font-family:'Barlow Condensed',sans-serif; font-size:26px; font-weight:800; text-transform:uppercase; color:var(--g9); line-height:1.1; margin-bottom:4px; }
+  .d-desc { font-size:12px; color:var(--g5); line-height:1.5; }
+  .no-ue-banner { display:flex; align-items:center; gap:12px; padding:12px 16px; background:#FFFBEB; border:1px solid #FDE68A; border-radius:10px; margin-bottom:1.5rem; font-size:12px; color:#92400E; line-height:1.5; }
+  .no-ue-banner span { font-size:22px; flex-shrink:0; }
+  .toggle-bar { display:flex; gap:6px; margin-bottom:1.25rem; }
+  .toggle-btn { display:flex; align-items:center; gap:6px; padding:7px 14px; border-radius:8px; border:1.5px solid var(--g3); background:white; font-size:12px; font-weight:600; color:var(--g5); cursor:pointer; transition:all .15s; }
+  .toggle-btn.active { background:var(--accent); border-color:var(--accent); color:white; }
+  .toggle-btn:hover:not(.active) { border-color:var(--accent); color:var(--accent); }
+  .section-label { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--g5); margin:0 0 8px 2px; }
+
+  /* Lernziel-Zeilen: nur Display, kein Hover-Effekt auf die Zeile */
+  .lz-list { display:flex; flex-direction:column; gap:7px; margin-bottom:1.75rem; }
+  .lz-row { display:grid; grid-template-columns:4px 48px 1fr 12px; align-items:stretch; background:white; border-radius:10px; border:1px solid var(--g3); overflow:hidden; }
+  .lz-inactive { opacity:.5; }
+  .lz-bar { background:var(--fc, var(--accent)); }
+  .lz-inactive .lz-bar { background:var(--g3); }
+  .lz-num { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px 0; border-right:1px solid var(--g3); background:#FAFAFA; gap:3px; }
+  .lz-num-digit { font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:800; line-height:1; color:var(--fc, var(--accent)); }
+  .lz-inactive .lz-num-digit { color:var(--g5); }
+  .lz-fach { font-size:8px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; color:var(--fc, var(--accent)); opacity:.75; }
+  .lz-body { padding:10px 13px; }
+  .lz-title { font-size:13px; font-weight:600; color:var(--g9); margin-bottom:3px; }
+  .lz-ziel { font-size:11px; color:var(--g5); line-height:1.45; margin-bottom:8px; }
+  .lz-pills { display:flex; flex-wrap:wrap; gap:5px; }
+  .lz-arrow { display:flex; align-items:center; font-size:10px; color:var(--g3); padding-right:4px; }
+
+  /* Pills: jede ein Link */
+  .a-pill { font-size:11px; font-weight:500; padding:4px 10px; border-radius:20px; background:var(--g1); color:var(--g5); border:1px solid var(--g3); white-space:nowrap; }
+  .a-pill-link { text-decoration:none; transition:all .15s; cursor:pointer; }
+  .a-pill-link:hover { background:var(--accent); color:white; border-color:var(--accent); transform:translateY(-1px); box-shadow:0 2px 6px rgba(0,0,0,.12); }
+  .a-pill-none { background:#FEF3C7; color:#92400E; border-color:#FDE68A; font-style:italic; }
+
+  /* Aufgaben-Nr-Liste */
+  .a-list { display:flex; flex-direction:column; gap:5px; margin-bottom:1.75rem; }
+  .a-row { display:grid; grid-template-columns:4px 52px 1fr 28px; align-items:stretch; background:white; border-radius:9px; border:1px solid var(--g3); overflow:hidden; text-decoration:none; color:inherit; transition:box-shadow .15s, transform .15s; }
+  .a-row:hover { transform:translateX(3px); box-shadow:0 2px 10px rgba(0,0,0,.07); border-color:#cbd5e1; }
+  .a-bar { background:var(--accent); }
+  .a-code { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:8px 4px; border-right:1px solid var(--g3); background:#FAFAFA; gap:2px; }
+  .a-code-id { font-family:'Barlow Condensed',sans-serif; font-size:16px; font-weight:800; line-height:1; color:var(--accent); }
+  .a-code-lz { font-size:8px; font-weight:600; color:var(--g5); opacity:.7; }
+  .a-body { padding:9px 13px; display:flex; flex-direction:column; justify-content:center; }
+  .a-title { font-size:13px; font-weight:600; color:var(--g9); margin-bottom:1px; }
+  .a-type { display:inline-flex; align-items:center; gap:3px; font-size:9px; font-weight:600; padding:1px 6px; border-radius:10px; margin-top:3px; width:fit-content; background:#EDE9FE; color:#5B21B6; }
+  .a-arrow { display:flex; align-items:center; justify-content:center; font-size:14px; color:var(--g3); transition:all .15s; }
+  .a-row:hover .a-arrow { color:var(--accent); transform:translateX(2px); }
+  .empty-hint { padding:20px; text-align:center; font-size:13px; color:var(--g5); background:white; border-radius:10px; border:1px dashed var(--g3); }
+
+  .ls-inactive-list { display:flex; flex-direction:column; gap:6px; margin-bottom:2rem; }
+  .ls-inactive { display:grid; grid-template-columns:4px 52px 1fr; align-items:stretch; background:white; border-radius:10px; border:1px solid var(--g3); overflow:hidden; opacity:.5; }
+  .ls-inactive-bar { background:var(--g3); }
+  .ls-inactive-code { display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:800; color:var(--g5); background:#FAFAFA; border-right:1px solid var(--g3); min-width:52px; }
+  .ls-inactive-body { padding:10px 14px; }
+  .ls-inactive-title { font-size:13px; font-weight:600; color:var(--g9); }
+  .ls-inactive-hint { font-size:11px; color:var(--g5); margin-top:1px; }
+  .hidden { display:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back-btn" href="javascript:history.back()">← Zurück zur Übersicht</a>
+  <div class="d-header">
+    <div class="d-stripe"></div>
+    <div class="d-head-body">
+      <div class="d-big-num">204</div>
+      <div>
+        <div class="d-label">Thema 2 · Mein Geld · Übungen</div>
+        <div class="d-title">Investition &amp; Finanzierung</div>
+        <div class="d-desc">Grössere Anschaffungen planen und finanzieren</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-ue-banner"><span>🔜</span><div><strong>Interaktive Übungen folgen</strong><br>Für dieses Unterkapitel werden die HTML-Übungen noch aufgeschaltet.</div></div>
+  <div class="toggle-bar">
+    <button class="toggle-btn active" id="btnLz" onclick="showView('lz')">📚 Nach Lernzielen</button>
+    <button class="toggle-btn" id="btnA"  onclick="showView('a')">🔢 Nach Aufgaben-Nr.</button>
+  </div>
+
+  <div id="viewLz">
+    <div class="section-label">SLP-Lernziele – Kapitel 204</div>
+    <div class="lz-list">
+      <div class="lz-row lz-inactive" style="--fc:#8e44ad">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">1</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Anschaffungsplanung</div>
+          <div class="lz-ziel">Ich plane eine grössere Anschaffung systematisch.</div>
+          <div class="lz-pills"><span class="a-pill a-pill-none">Noch keine interaktiven Übungen</span></div>
+        </div>
+        <div class="lz-arrow">–</div>
+      </div>
+      <div class="lz-row lz-inactive" style="--fc:#8e44ad">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">2</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Kreditarten</div>
+          <div class="lz-ziel">Ich vergleiche Kreditformen und beurteile deren Kosten.</div>
+          <div class="lz-pills"><span class="a-pill a-pill-none">Noch keine interaktiven Übungen</span></div>
+        </div>
+        <div class="lz-arrow">–</div>
+      </div>
+      <div class="lz-row lz-inactive" style="--fc:#8e44ad">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">3</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Verschuldungsrisiko</div>
+          <div class="lz-ziel">Ich erkläre Ursachen und Folgen von Überschuldung.</div>
+          <div class="lz-pills"><span class="a-pill a-pill-none">Noch keine interaktiven Übungen</span></div>
+        </div>
+        <div class="lz-arrow">–</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="viewA" class="hidden">
+    <div class="section-label">Alle interaktiven Übungen – Kapitel 204</div>
+    <div class="a-list"><div class="empty-hint">🔜 Noch keine interaktiven Übungen verfügbar.</div>
+    </div>
+  </div>
+
+  <div class="section-label">Weitere Unterkapitel – Thema 2</div>
+  <div class="ls-inactive-list">
+    <div class="ls-inactive">
+      <div class="ls-inactive-bar"></div>
+      <div class="ls-inactive-code">201</div>
+      <div class="ls-inactive-body">
+        <div class="ls-inactive-title">Budget &amp; Zahlungsverkehr</div>
+        <div class="ls-inactive-hint">→ 201 Lohn &amp; Geld</div>
+      </div>
+    </div>
+    <div class="ls-inactive">
+      <div class="ls-inactive-bar"></div>
+      <div class="ls-inactive-code">202</div>
+      <div class="ls-inactive-body">
+        <div class="ls-inactive-title">Konsum &amp; Beeinflussung</div>
+        <div class="ls-inactive-hint">→ 202 Konsum</div>
+      </div>
+    </div>
+    <div class="ls-inactive">
+      <div class="ls-inactive-bar"></div>
+      <div class="ls-inactive-code">203</div>
+      <div class="ls-inactive-body">
+        <div class="ls-inactive-title">Einkaufen &amp; Verträge</div>
+        <div class="ls-inactive-hint">→ 203 Kaufvertrag</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function showView(v) {
+  document.getElementById('viewLz').classList.toggle('hidden', v !== 'lz');
+  document.getElementById('viewA').classList.toggle('hidden',  v !== 'a');
+  document.getElementById('btnLz').classList.toggle('active',  v === 'lz');
+  document.getElementById('btnA').classList.toggle('active',   v === 'a');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A8 – Gesundheit / Sprichwörter / Wohlergehen-Zuordnung – Selbstkontrolle</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,600;0,8..60,700;1,8..60,300&family=JetBrains+Mono:wght@400;600&display=swap');
+  :root{
+    --bg:#f3f2f6;--paper:#fafaf9;--ink:#1a1a1e;--ink-light:#54546a;
+    --rule:#c8c8d8;--accent:#5a3e8a;--accent-light:#f0ecfb;
+    --gold:#b8860b;--green:#1a5c2a;--green-light:#eaf5ec;
+    --red:#8b1a1a;--red-light:#faeaea;
+    --correct-border:#2a7a3a;--wrong-border:#c0392b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--bg);color:var(--ink);min-height:100vh;}
+  .top-bar{background:var(--accent);color:white;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.25);}
+  .top-bar h1{font-size:15px;font-weight:600;flex:1;min-width:180px;}
+  .name-wrap{display:flex;align-items:center;gap:8px;}
+  .name-wrap label{font-size:13px;opacity:.8;font-family:'JetBrains Mono',monospace;}
+  .name-wrap input{padding:6px 10px;border-radius:5px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:white;font-size:13px;width:175px;}
+  .name-wrap input::placeholder{color:rgba(255,255,255,.45);font-style:italic;}
+  .name-wrap input:focus{outline:none;border-color:#c8aaff;}
+  .btn{padding:7px 16px;border-radius:5px;border:none;font-size:13px;font-weight:600;cursor:pointer;font-family:'JetBrains Mono',monospace;transition:all .18s;white-space:nowrap;}
+  .btn-check{background:var(--gold);color:white;}
+  .btn-reset{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-pdf{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-download{background:#1a5c8a;color:white;font-weight:700;}
+  .score-banner{display:none;background:var(--accent);color:white;text-align:center;padding:10px;font-family:'JetBrains Mono',monospace;font-size:14px;}
+  .score-banner.visible{display:block;}
+  .worksheet{max-width:860px;margin:28px auto;background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--accent);box-shadow:0 4px 24px rgba(0,0,0,.09);padding:40px 44px 48px;}
+  .task-id{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.08em;margin-bottom:4px;}
+  .task-title{font-size:17px;font-weight:600;margin-bottom:26px;border-bottom:2px solid var(--accent);padding-bottom:10px;}
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin:28px 0 14px;}
+  .free-text{width:100%;padding:8px 10px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:14px;color:var(--ink);background:var(--paper);resize:vertical;min-height:70px;}
+  .free-text:focus{outline:none;border-color:var(--accent);}
+  .solution-badge{display:none;margin-top:5px;font-size:11.5px;font-family:'JetBrains Mono',monospace;padding:3px 8px;border-radius:3px;font-weight:600;word-break:break-word;}
+  .solution-badge.correct{display:block;background:var(--green-light);color:var(--green);border:1px solid var(--correct-border);}
+  .solution-badge.wrong{display:block;background:var(--red-light);color:var(--red);border:1px solid var(--wrong-border);}
+  .solution-badge.hint{display:block;background:var(--accent-light);color:var(--accent);border:1px solid #a88ad4;}
+  .match-table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;}
+  .match-table thead th{background:var(--accent);color:white;padding:8px 12px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;}
+  .match-table tbody tr{border-bottom:1px solid var(--rule);}
+  .match-table tbody tr:nth-child(even) td{background:#f5f4f9;}
+  .match-table tbody td{padding:9px 12px;vertical-align:middle;}
+  .match-table select{width:100%;padding:4px 6px;border:1.5px solid var(--rule);border-radius:4px;background:var(--paper);font-family:'Source Serif 4',serif;font-size:13px;cursor:pointer;}
+  .correct-sel{border-color:var(--correct-border)!important;background:var(--green-light)!important;}
+  .wrong-sel{border-color:var(--wrong-border)!important;background:var(--red-light)!important;}
+  .info-footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-light);font-family:'JetBrains Mono',monospace;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+  @media print{
+    body{background:white;padding:1.6cm 2cm!important;}
+    .top-bar{display:none;}.score-banner{display:none!important;}
+    .worksheet{box-shadow:none;border:none;margin:0;padding:0;max-width:100%;}
+    .solution-badge{display:none!important;}
+    @page{margin:0;size:A4 portrait;}
+  }
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <h1>🏥 A8 – Gesundheit / Sprichwörter / Wohlergehen-Zuordnung</h1>
+  <div class="name-wrap"><label>Name:</label><input type="text" id="studentName" placeholder="Vor- und Nachname"/></div>
+  <button class="btn btn-download" onclick="downloadFile()" id="btnDownload">💾 Speichern</button>
+  <button class="btn btn-check" onclick="checkAll()">✓ Überprüfen</button>
+  <button class="btn btn-pdf" onclick="printAsPDF()">🖨 Als PDF</button>
+  <button class="btn btn-reset" onclick="resetAll()">↺ Reset</button>
+</div>
+<div class="score-banner" id="scoreBanner"></div>
+<div class="score-banner" id="resetConfirmBanner" style="background:#7a1a1a;"></div>
+<div class="worksheet">
+  <div class="task-id">THEMA 3 · RISIKO & GESUNDHEIT · KAPITEL 4</div>
+  <div class="task-title">A8 – Gesundheit / Sprichwörter / Wohlergehen-Zuordnung</div>
+
+  <div class="section-label">A6 – Was bedeutet Gesundheit für Sie?</div>
+  <p style="font-size:15px;margin-bottom:12px;">Notieren Sie Stichworte, was Gesundheit für Sie persönlich im Alltag bedeutet.</p>
+  <textarea class="free-text" id="a6" rows="4" placeholder="Für mich bedeutet Gesundheit..."></textarea>
+  <div class="solution-badge" id="bA6"></div>
+
+  <div class="section-label" style="margin-top:28px;">A7 – Sprichwörter zum Thema Gesundheit</div>
+  <p style="font-size:15px;margin-bottom:12px;">Recherchieren Sie und notieren Sie verschiedene Sprichwörter.</p>
+  <textarea class="free-text" id="a7" rows="4" placeholder="1. ... / 2. ... / 3. ..."></textarea>
+  <div class="solution-badge" id="bA7"></div>
+
+  <div class="section-label" style="margin-top:28px;">A8 – Drei Bereiche des Wohlergehens zuordnen</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px;">
+    <div style="background:var(--accent);color:white;padding:10px 14px;border-radius:5px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;">A – Körperliches Wohlergehen</div>
+    <div style="background:var(--accent);color:white;padding:10px 14px;border-radius:5px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;">B – Geistiges Wohlergehen</div>
+    <div style="background:var(--accent);color:white;padding:10px 14px;border-radius:5px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;">C – Soziales Wohlergehen</div>
+  </div>
+  <table class="match-table">
+    <thead><tr><th style="width:75%;">Beschreibung</th><th>A / B / C</th></tr></thead>
+    <tbody><tr>
+  <td style="font-size:13px;">1. Selbstsicherheit in der Kommunikation</td>
+  <td>
+    <select id="w0">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW0"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">2. Gesunde Ernährung: Obst, Gemüse, Fisch, wenig Fleisch, Eier, Milch, Kartoffeln, Hülsenfrüchte usw.</td>
+  <td>
+    <select id="w1">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW1"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">3. Konfliktfähigkeit und Bereitschaft zur Versöhnung</td>
+  <td>
+    <select id="w2">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW2"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">4. Ausreichende körperliche Bewegung an der frischen Luft (Sport, Spiel, Arbeit), keine Überanstrengungen</td>
+  <td>
+    <select id="w3">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW3"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">5. Erlebnisse mit Erinnerungswert</td>
+  <td>
+    <select id="w4">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW4"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">6. Geliebt werden und selbst lieben können</td>
+  <td>
+    <select id="w5">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW5"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">7. Fasten: z. B. Ernährung mit Gemüse, Obst, Hülsenfrüchten</td>
+  <td>
+    <select id="w6">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW6"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">8. Sich als wertvoll empfinden; Selbstachtung, Selbstvertrauen; Erfolg und Anerkennung privat und am Arbeitsplatz</td>
+  <td>
+    <select id="w7">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW7"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">9. Gesicherte Umwelt: Kleidung, Unterkunft, Wärme, Schutz vor Gefahren</td>
+  <td>
+    <select id="w8">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW8"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">10. Genug Schlaf, Zeiten der Ruhe, Entspannung, keine Hetze</td>
+  <td>
+    <select id="w9">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW9"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">11. Verbundenheit zu Partnerin oder Partner, Freunden, Nachbarn</td>
+  <td>
+    <select id="w10">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW10"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">12. Gute Arbeitsbedingungen, keine dauernde Überforderung</td>
+  <td>
+    <select id="w11">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW11"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">13. Vertrauen in andere Personen</td>
+  <td>
+    <select id="w12">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW12"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">14. Wissen um die eigenen Rechte im Umgang mit Behörden und Fachpersonen</td>
+  <td>
+    <select id="w13">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW13"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">15. Sicherheit: Gefühl der Geborgenheit, Religion, Lebenssinn; politische und wirtschaftliche Sicherheit</td>
+  <td>
+    <select id="w14">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW14"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">16. Freiheit: Gedankenfreiheit, Redefreiheit, Berufswahl, Partnerwahl</td>
+  <td>
+    <select id="w15">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW15"></div>
+  </td>
+</tr><tr>
+  <td style="font-size:13px;">17. Soziale Unterstützung zur Bewältigung von Problemen</td>
+  <td>
+    <select id="w16">
+      <option value="">—</option>
+      <option value="A">A – Körperlich</option>
+      <option value="B">B – Geistig</option>
+      <option value="C">C – Sozial</option>
+    </select>
+    <div class="solution-badge" id="bW16"></div>
+  </td>
+</tr></tbody>
+  </table>
+<div class="info-footer"><span>THEMA 3 · RISIKO & GESUNDHEIT · KAPITEL 4</span><span id="footerName"></span></div>
+</div>
+<script>
+const FILENAME='A8_Wohlergehen';
+
+var WC=["C", "A", "B", "A", "B", "B", "A", "B", "A", "A", "B", "C", "C", "C", "B", "B", "C"];var WL=["Soziales Wohlergehen", "K\u00f6rperliches Wohlergehen", "Geistiges Wohlergehen", "K\u00f6rperliches Wohlergehen", "Geistiges Wohlergehen", "Geistiges Wohlergehen", "K\u00f6rperliches Wohlergehen", "Geistiges Wohlergehen", "K\u00f6rperliches Wohlergehen", "K\u00f6rperliches Wohlergehen", "Geistiges Wohlergehen", "Soziales Wohlergehen", "Soziales Wohlergehen", "Soziales Wohlergehen", "Geistiges Wohlergehen", "Geistiges Wohlergehen", "Soziales Wohlergehen"];
+var L6={"a6": "Individuelle L\u00f6sung \u2013 z.B. ausreichend Schlaf, gesunde Ern\u00e4hrung, Bewegung, gute soziale Kontakte, wenig Stress.", "a7": "Beispiele: \u00abGesundheit ist der gr\u00f6sste Reichtum.\u00bb / \u00abGesundheit sch\u00e4tzt man erst, wenn man krank ist.\u00bb / \u00abDer Mensch ist, was er isst.\u00bb / \u00abAllein die Menge macht das Gift.\u00bb"};
+function checkAll(){
+  var c=0,t=0;
+  Object.keys(L6).forEach(function(id){
+    var bm={a6:'bA6',a7:'bA7'};
+    var el=document.getElementById(id);var b=document.getElementById(bm[id]);
+    if(el&&el.value.trim()&&b){b.className='solution-badge hint';b.textContent='📋 '+L6[id];}
+    else if(b) b.className='solution-badge';
+  });
+  WC.forEach(function(ans,i){
+    var el=document.getElementById('w'+i);var b=document.getElementById('bW'+i);
+    if(!el||el.value===''){if(b)b.className='solution-badge';return;}
+    t++;var ok=el.value===ans;
+    el.className=ok?'correct-sel':'wrong-sel';
+    if(b){b.className='solution-badge '+(ok?'correct':'wrong');
+    b.textContent=ok?('✔ '+ans+' – '+WL[i]):('✘ Lösung: '+ans+' – '+WL[i]);}
+    if(ok)c++;
+  });
+  document.getElementById('scoreBanner').className='score-banner visible';
+  document.getElementById('scoreBanner').textContent=t?('✓ A8: '+c+' von '+t+' korrekt; offene Aufgaben: Musterlösungen eingeblendet'):'⚠️ Bitte Antworten eintragen.';
+}
+function doReset(){
+  ['a6','a7'].forEach(function(id){var e=document.getElementById(id);if(e)e.value='';});
+  for(var i=0;i<17;i++){var e=document.getElementById('w'+i);if(e){e.value='';e.className='';}}
+  document.querySelectorAll('.solution-badge').forEach(b=>{b.className='solution-badge';b.textContent='';});
+  document.getElementById('scoreBanner').classList.remove('visible');
+  document.getElementById('resetConfirmBanner').classList.remove('visible');
+}
+function resetAll(){var c=document.getElementById('resetConfirmBanner');
+if(!c.classList.contains('visible')){
+c.innerHTML='<span style="margin-right:12px;">Alle Eingaben wirklich löschen?</span><button onclick="doReset()" style="background:#c0392b;color:white;border:none;padding:5px 14px;border-radius:4px;cursor:pointer;font-weight:600;margin-right:8px;">Ja</button><button onclick="document.getElementById(\'resetConfirmBanner\').classList.remove(\'visible\')" style="background:rgba(255,255,255,.2);color:white;border:1px solid rgba(255,255,255,.4);padding:5px 12px;border-radius:4px;cursor:pointer;">Abbrechen</button>';
+c.classList.add('visible');return;}doReset();}
+
+function printAsPDF(){
+  var name=document.getElementById('studentName').value.trim();
+  document.title=name?(FILENAME+'_'+name.replace(/\s+/g,'_')):FILENAME;
+  setTimeout(function(){window.print();},100);
+}
+function downloadFile(){
+  var name=document.getElementById('studentName').value.trim();
+  if(!name){alert('Bitte zuerst Vor- und Nachname eingeben!');document.getElementById('studentName').focus();return;}
+  var html=document.documentElement.outerHTML;
+  var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;a.download=FILENAME+'_'+name.replace(/\s+/g,'_')+'.html';
+  document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(url);document.body.removeChild(a);},500);
+  var btn=document.getElementById('btnDownload');
+  btn.textContent='✔ Gespeichert!';btn.style.background='rgba(30,150,80,.8)';
+  setTimeout(function(){btn.textContent='💾 Speichern';btn.style.background='';},2500);
+}
+document.getElementById('studentName').addEventListener('input',function(){
+  document.getElementById('footerName').textContent=this.value.trim();
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="de"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A24: Strafrecht – Selbstkontrolle</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,600;0,8..60,700;1,8..60,300&family=JetBrains+Mono:wght@400;600&display=swap');
+
+  :root {
+    --bg: #f5f2ec;
+    --paper: #fffef9;
+    --ink: #1a1a18;
+    --ink-light: #5a5a52;
+    --rule: #ccc9be;
+    --accent: #2c3e50;
+    --accent-light: #eef1f4;
+    --gold: #b8860b;
+    --gold-light: #fdf6e3;
+    --green: #1a5c2a;
+    --green-light: #eaf5ec;
+    --red: #8b1a1a;
+    --red-light: #faeaea;
+    --correct-border: #2a7a3a;
+    --wrong-border: #c0392b;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--accent);
+    color: white;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,.25);
+  }
+  .top-bar h1 {
+    font-size: 15px;
+    font-weight: 600;
+    flex: 1;
+    min-width: 180px;
+    letter-spacing: .03em;
+  }
+  .nw { display: flex; align-items: center; gap: 8px; }
+  .nw label { font-size: 13px; opacity: .8; font-family: 'JetBrains Mono', monospace; }
+  .nw input {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,.3);
+    background: rgba(255,255,255,.12);
+    color: white;
+    font-size: 13px;
+    width: 175px;
+    font-family: 'Source Serif 4', serif;
+  }
+  .nw input::placeholder { color: rgba(255,255,255,.45); font-style: italic; }
+  .nw input:focus { outline: none; border-color: #afd0f0; background: rgba(255,255,255,.2); }
+
+  .btn {
+    padding: 7px 16px;
+    border-radius: 5px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    transition: all .18s;
+    white-space: nowrap;
+  }
+  .btn-check { background: var(--gold); color: white; }
+  .btn-check:hover { background: #9a6e00; transform: translateY(-1px); }
+  .btn-ghost { background: rgba(255,255,255,.12); color: white; border: 1px solid rgba(255,255,255,.3); }
+  .btn-ghost:hover { background: rgba(255,255,255,.22); }
+  .btn-dl { background: #1a5c8a; color: white; font-weight: 700; }
+  .btn-dl:hover { background: #144a70; transform: translateY(-1px); }
+
+  /* ── SCORE BANNER ── */
+  .score-banner {
+    display: none;
+    background: var(--accent);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    letter-spacing: .05em;
+  }
+  .score-banner.visible { display: block; }
+
+  /* ── WORKSHEET ── */
+  .ws {
+    max-width: 860px;
+    margin: 28px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-left: 4px solid #1a4c6e;
+    box-shadow: 0 4px 24px rgba(0,0,0,.09);
+    padding: 40px 44px 48px;
+  }
+  .task-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: .08em;
+    margin-bottom: 4px;
+  }
+  .task-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 26px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+  }
+
+  /* ── AUFGABENSTELLUNG ── */
+  .at {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  /* ── TABLES ── */
+  table.ex {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    margin-top: 4px;
+  }
+  table.ex thead th {
+    background: var(--accent);
+    color: white;
+    padding: 9px 12px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .05em;
+  }
+  table.ex tbody tr { border-bottom: 1px solid var(--rule); }
+  table.ex tbody tr:nth-child(even) td { background: #faf9f5; }
+  table.ex tbody td { padding: 9px 12px; vertical-align: middle; }
+
+  /* ── INPUTS ── */
+  .ci {
+    width: 100%;
+    padding: 5px 8px;
+    border: 1.5px solid var(--rule);
+    border-radius: 4px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 13.5px;
+    color: var(--ink);
+    background: var(--paper);
+    transition: border-color .15s;
+    resize: none;
+    min-height: 36px;
+  }
+  .ci:focus { outline: none; border-color: var(--accent); }
+
+  /* ── FEEDBACK (exact A32 style) ── */
+  .field-wrap { display: inline-flex; flex-direction: column; width: 100%; gap: 3px; }
+  .fi { font-size: 14px; display: none; flex-shrink: 0; }
+  .row-ok  .fi { display: inline; color: var(--green); }
+  .row-nok .fi { display: inline; color: var(--red); }
+  .row-ok  .ci, .row-ok  select { border-color: var(--correct-border) !important; background: var(--green-light) !important; }
+  .row-nok .ci, .row-nok select { border-color: var(--wrong-border)   !important; background: var(--red-light)   !important; }
+
+  /* badge – exactly like A32 solution-badge */
+  .badge {
+    display: none;
+    margin-top: 5px;
+    font-size: 11.5px;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    word-break: break-word;
+  }
+  .badge-ok  { display: block; background: var(--green-light); color: var(--green); border: 1px solid var(--correct-border); }
+  .badge-nok { display: block; background: var(--red-light);   color: var(--red);   border: 1px solid var(--wrong-border); }
+
+  /* ── R/F rows ── */
+  .rf-row td { padding: 9px 12px; vertical-align: middle; }
+  .rf-row.row-ok  td:first-child { background: var(--green-light); }
+  .rf-row.row-nok td:first-child { background: var(--red-light); }
+
+  /* ── CHECKBOXES ── */
+  .cb-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    border: 1.5px solid var(--rule);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14.5px;
+    margin-bottom: 4px;
+    transition: border-color .15s, background .15s;
+  }
+  .cb-item input { width: 17px; height: 17px; cursor: pointer; accent-color: var(--accent); }
+  .cb-item.row-ok  { border-color: var(--correct-border); background: var(--green-light); }
+  .cb-item.row-nok { border-color: var(--wrong-border);   background: var(--red-light); }
+  .cb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 32px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    font-size: 12px;
+    color: var(--ink-light);
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: white; padding: 1.6cm 2cm !important; margin: 0 !important; }
+    .top-bar { display: none; }
+    .score-banner { display: none !important; }
+    .ws { box-shadow: none; border: none; margin: 0; padding: 0; max-width: 100%; }
+    .ci { border: none; border-bottom: 1px solid #aaa; border-radius: 0; background: transparent !important; min-height: 36px; height: auto; }
+    select { border: none; border-bottom: 1px solid #aaa; border-radius: 0; background: transparent !important; }
+    .fi { display: none !important; }
+    .badge { display: none !important; }
+    table.ex tbody tr { page-break-inside: avoid; break-inside: avoid; }
+    .rf-row { page-break-inside: avoid; break-inside: avoid; }
+    @page { margin: 0; size: A4 portrait; }
+  }</style></head><body>
+<div id="iframeBanner" style="display:none;background:#b8860b;color:white;text-align:center;padding:10px 20px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.03em;z-index:9999;">
+  ⚠️ Diese Übung läuft in der SharePoint-Vorschau – Buttons sind deaktiviert.
+  &nbsp;<strong>Bitte oben rechts auf «Öffnen» klicken</strong>, um die Übung im Browser zu starten.
+</div>
+<div class="top-bar">
+  <h1>📘 A24: Strafrecht <span style="font-size:11px;opacity:.6;font-weight:400;margin-left:8px;">[ Selbstkontrolle ]</span></h1>
+  <div class="nw"><label>Name:</label><input type="text" id="studentName" placeholder="Vor- und Nachname"></div>
+  <button class="btn btn-dl"    id="btnDownload" onclick="downloadFile()">💾 Speichern</button>
+  <button class="btn btn-check" onclick="checkAll()">✓ Überprüfen</button>
+  <button class="btn btn-ghost" id="btnCopy"     onclick="copyAnswers()">📋 Kopieren</button>
+  <button class="btn btn-ghost" onclick="printAsPDF()">🖨 Als PDF</button>
+  <button class="btn btn-ghost" onclick="resetAll()">↺ Reset</button>
+</div>
+<div class="score-banner" id="scoreBanner"></div>
+<div class="ws">
+  <div class="task-id">102 – Rechtsgrundlagen</div>
+  <div class="task-title">Strafrecht</div>
+  <div class="at"><strong>A24</strong> &nbsp;Entscheiden Sie, ob die Aussagen zum Strafrecht richtig oder falsch sind.</div><table class="ex"><thead><tr><th>Aussage</th><th style="text-align:center;width:75px;">richtig</th><th style="text-align:center;width:75px;">falsch</th></tr></thead><tbody><tr id="row_a24_1" class="rf-row">
+  <td style="font-size:14.5px;line-height:1.6;">
+    Bei einem Offizialdelikt muss man zuerst eine Anzeige machen.<span class="fi" id="ic_a24_1"></span>
+    <div id="badge_a24_1" class="badge"></div>
+  </td>
+  <td style="text-align:center;width:75px;"><input type="radio" name="rf_a24_1" value="richtig" style="width:18px;height:18px;cursor:pointer;accent-color:var(--accent);"></td>
+  <td style="text-align:center;width:75px;"><input type="radio" name="rf_a24_1" value="falsch"  style="width:18px;height:18px;cursor:pointer;accent-color:var(--accent);"></td>
+</tr><tr id="row_a24_2" class="rf-row">
+  <td style="font-size:14.5px;line-height:1.6;">
+    Das schweizerische Strafrecht kennt die gemeinnützige Arbeit als Strafform.<span class="fi" id="ic_a24_2"></span>
+    <div id="badge_a24_2" class="badge"></div>
+  </td>
+  <td style="text-align:center;width:75px;"><input type="radio" name="rf_a24_2" value="richtig" style="width:18px;height:18px;cursor:pointer;accent-color:var(--accent);"></td>
+  <td style="text-align:center;width:75px;"><input type="radio" name="rf_a24_2" value="falsch"  style="width:18px;height:18px;cursor:pointer;accent-color:var(--accent);"></td>
+</tr><tr id="row_a24_3" class="rf-row">
+  <td style="font-size:14.5px;line-height:1.6;">
+    Bei einer Verwahrung wird man erst nach 20 Jahren wieder freigelassen.<span class="fi" id="ic_a24_3"></span>
+    <div id="badge_a24_3" class="badge"></div>
+  </td>
+  <td style="text-align:center;width:75px;"><input type="radio" name="rf_a24_3" value="richtig" style="width:18px;height:18px;cursor:pointer;accent-color:var(--accent);"></td>
+  <td style="text-align:center;width:75px;"><input type="radio" name="rf_a24_3" value="falsch"  style="width:18px;height:18px;cursor:pointer;accent-color:var(--accent);"></td>
+</tr><tr id="row_a24_4" class="rf-row">
+  <td style="font-size:14.5px;line-height:1.6;">
+    Das spezielle Jugendstrafrecht gilt bis zu einem Alter von 16 Jahren.<span class="fi" id="ic_a24_4"></span>
+    <div id="badge_a24_4" class="badge"></div>
+  </td>
+  <td style="text-align:center;width:75px;"><input type="radio" name="rf_a24_4" value="richtig" style="width:18px;height:18px;cursor:pointer;accent-color:var(--accent);"></td>
+  <td style="text-align:center;width:75px;"><input type="radio" name="rf_a24_4" value="falsch"  style="width:18px;height:18px;cursor:pointer;accent-color:var(--accent);"></td>
+</tr></tbody></table>
+  <div class="footer">
+    <span>102 – Rechtsgrundlagen · A24 · Strafrecht</span>
+    <span id="footerName"></span>
+  </div>
+</div>
+<script>
+const TASKS=[{"type": "rf", "items": [{"id": "a24_1", "shortText": "Offizialdelikt \u2013 Anzeige n\u00f6tig"}, {"id": "a24_2", "shortText": "Gemeinn\u00fctzige Arbeit als Strafe"}, {"id": "a24_3", "shortText": "Verwahrung = 20 Jahre"}, {"id": "a24_4", "shortText": "Jugendstrafrecht bis 16 J."}]}];
+const SAFE_FN='102_[UE]_Kapitel 1_A24_Strafrecht';
+function checkAll(){
+  var correct=0,total=0;
+  var scoreEl=document.getElementById('scoreBanner');
+  (function(){
+    var sel=document.querySelector('input[name="rf_a24_1"]:checked');
+    if(!sel)return;
+    total++;
+    var row=document.getElementById('row_a24_1');
+    var ic=document.getElementById('ic_a24_1');
+    var b=document.getElementById('badge_a24_1');
+    row.classList.remove('row-ok','row-nok');
+    if(sel.value==='falsch'){
+      row.classList.add('row-ok');ic.textContent=' ✔';correct++;
+      b.className='badge badge-ok';b.textContent='\u2714 falsch';
+    }else{
+      row.classList.add('row-nok');ic.textContent=' ✘';
+      b.className='badge badge-nok';b.textContent='\u2718 L\u00f6sung: falsch';
+    }
+  })();
+  (function(){
+    var sel=document.querySelector('input[name="rf_a24_2"]:checked');
+    if(!sel)return;
+    total++;
+    var row=document.getElementById('row_a24_2');
+    var ic=document.getElementById('ic_a24_2');
+    var b=document.getElementById('badge_a24_2');
+    row.classList.remove('row-ok','row-nok');
+    if(sel.value==='richtig'){
+      row.classList.add('row-ok');ic.textContent=' ✔';correct++;
+      b.className='badge badge-ok';b.textContent='\u2714 richtig';
+    }else{
+      row.classList.add('row-nok');ic.textContent=' ✘';
+      b.className='badge badge-nok';b.textContent='\u2718 L\u00f6sung: richtig';
+    }
+  })();
+  (function(){
+    var sel=document.querySelector('input[name="rf_a24_3"]:checked');
+    if(!sel)return;
+    total++;
+    var row=document.getElementById('row_a24_3');
+    var ic=document.getElementById('ic_a24_3');
+    var b=document.getElementById('badge_a24_3');
+    row.classList.remove('row-ok','row-nok');
+    if(sel.value==='falsch'){
+      row.classList.add('row-ok');ic.textContent=' ✔';correct++;
+      b.className='badge badge-ok';b.textContent='\u2714 falsch';
+    }else{
+      row.classList.add('row-nok');ic.textContent=' ✘';
+      b.className='badge badge-nok';b.textContent='\u2718 L\u00f6sung: falsch';
+    }
+  })();
+  (function(){
+    var sel=document.querySelector('input[name="rf_a24_4"]:checked');
+    if(!sel)return;
+    total++;
+    var row=document.getElementById('row_a24_4');
+    var ic=document.getElementById('ic_a24_4');
+    var b=document.getElementById('badge_a24_4');
+    row.classList.remove('row-ok','row-nok');
+    if(sel.value==='falsch'){
+      row.classList.add('row-ok');ic.textContent=' ✔';correct++;
+      b.className='badge badge-ok';b.textContent='\u2714 falsch';
+    }else{
+      row.classList.add('row-nok');ic.textContent=' ✘';
+      b.className='badge badge-nok';b.textContent='\u2718 L\u00f6sung: falsch';
+    }
+  })();
+  if(total>0){scoreEl.textContent='✓ '+correct+' von '+total+' korrekt';scoreEl.classList.add('visible');}
+}
+function collectVals(v){
+  TASKS.forEach(function(t){
+    if(t.type==='rf'){t.items.forEach(function(it){var s=document.querySelector('input[name="rf_'+it.id+'"]:checked');v['rf_'+it.id]=s?s.value:'';}); }
+    if(t.type==='cb'){t.items.forEach(function(it){var e=document.getElementById('cb_'+it.id);v['cb_'+it.id]=e?e.checked:false;}); }
+    if(t.type==='ta'){t.items.forEach(function(it){var e=document.getElementById('ta_'+it.id);if(e)v['ta_'+it.id]=e.value;}); }
+  });
+}
+function restoreVals(v){
+  TASKS.forEach(function(t){
+    if(t.type==='rf'){t.items.forEach(function(it){var val=v['rf_'+it.id];if(val){var r=document.querySelector('input[name="rf_'+it.id+'"][value="'+val+'"]');if(r)r.checked=true;}}); }
+    if(t.type==='cb'){t.items.forEach(function(it){var e=document.getElementById('cb_'+it.id);if(e&&v['cb_'+it.id]!==undefined)e.checked=v['cb_'+it.id];}); }
+    if(t.type==='ta'){t.items.forEach(function(it){var e=document.getElementById('ta_'+it.id);if(e&&v['ta_'+it.id]!==undefined)e.value=v['ta_'+it.id];}); }
+  });
+}
+
+function buildCopyText(){
+  var name=document.getElementById('studentName').value.trim()||'(kein Name)';
+  var titleEl=document.querySelector('.task-title');
+  var atEls=document.querySelectorAll('.at');
+  var aufgabe='';
+  atEls.forEach(function(el){aufgabe+=(aufgabe?'\n':'')+el.innerText.trim();});
+  var lines=[titleEl?titleEl.textContent.trim():''];
+  if(aufgabe)lines.push(aufgabe);
+  lines.push('Name: '+name,'Datum: '+new Date().toLocaleDateString('de-CH'),'');
+  TASKS.forEach(function(t){
+    if(t.type==='rf'){t.items.forEach(function(it){var s=document.querySelector('input[name="rf_'+it.id+'"]:checked');if(s)lines.push((it.shortText||it.id)+': '+s.value);});}
+    if(t.type==='cb'){t.items.forEach(function(it){var e=document.getElementById('cb_'+it.id);if(e&&e.checked)lines.push('☑ '+(it.label||it.id));});}
+    if(t.type==='ta'){t.items.forEach(function(it){var e=document.getElementById('ta_'+it.id);if(e&&e.value.trim())lines.push((it.label||it.id)+': '+e.value.trim());});}
+    lines.push('');
+  });
+  return lines.join('\n');
+}
+function copyAnswers(){
+  var text=buildCopyText();
+  navigator.clipboard.writeText(text).then(function(){
+    var btn=document.getElementById('btnCopy');var orig=btn.textContent;
+    btn.textContent='✔ Kopiert!';btn.style.background='rgba(30,150,80,.6)';
+    setTimeout(function(){btn.textContent=orig;btn.style.background='';},2200);
+  }).catch(function(){
+    var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);
+    alert('Kopiert – bitte in OneNote einfügen (Ctrl+V / ⌘+V).');
+  });
+}
+
+function resetAll(){
+  TASKS.forEach(function(t){
+    if(t.type==='rf'){t.items.forEach(function(it){
+      document.querySelectorAll('input[name="rf_'+it.id+'"]').forEach(function(r){r.checked=false;});
+      var row=document.getElementById('row_'+it.id);if(row)row.classList.remove('row-ok','row-nok');
+      var ic=document.getElementById('ic_'+it.id);if(ic)ic.textContent='';
+      var b=document.getElementById('badge_'+it.id);if(b){b.className='badge';b.textContent='';}
+    });}
+    if(t.type==='cb'){t.items.forEach(function(it){
+      var e=document.getElementById('cb_'+it.id);if(e)e.checked=false;
+      var lbl=document.getElementById('lbl_'+it.id);if(lbl)lbl.classList.remove('row-ok','row-nok');
+      var b=document.getElementById('badge_'+it.id);if(b){b.className='badge';b.textContent='';}
+    });}
+    if(t.type==='ta'){t.items.forEach(function(it){
+      var e=document.getElementById('ta_'+it.id);if(e){e.value='';e.classList.remove('row-ok','row-nok');}
+      var b=document.getElementById('badge_'+it.id);if(b){b.className='badge';b.textContent='';}
+    });}
+  });
+  var sb=document.getElementById('scoreBanner');if(sb){sb.classList.remove('visible');sb.innerHTML='';}
+}
+
+function printAsPDF(){
+  var n=document.getElementById('studentName').value.trim();
+  document.title=n?'102_[UE]_Kapitel 1_A24_Strafrecht'+'_'+n.replace(/\s+/g,'_'):'102_[UE]_Kapitel 1_A24_Strafrecht';
+  window.focus();setTimeout(function(){try{window.print();}catch(e){alert('Bitte Strg+P verwenden.');}},80);
+}
+document.getElementById('studentName').addEventListener('input',function(){
+  document.getElementById('footerName').textContent=this.value.trim();
+});
+function downloadFile(){
+  var name=document.getElementById('studentName').value.trim();
+  if(!name){alert('Bitte zuerst Vor- und Nachname eingeben!');document.getElementById('studentName').focus();return;}
+  var v={};collectVals(v);v.name=name;
+  var html=document.documentElement.outerHTML;
+  var inj='<script id="__inj__">(function(){window.addEventListener("load",function(){'+
+    'var sn=document.getElementById("studentName");if(sn)sn.value='+JSON.stringify('__N__')+';'+
+    'var fn=document.getElementById("footerName");if(fn)fn.textContent='+JSON.stringify('__N__')+';'+
+    'restoreVals(__V__);'+
+  '},{ once:true });})();<\/script>';
+  inj=inj.replace(/__N__/g,name).replace('__V__',JSON.stringify(v));
+  html=html.replace(/<script id="__inj__">[\s\S]*?<\/script>/g,'');
+  html=html.replace('</body>',inj+'</body>');
+  var fn='102_[UE]_Kapitel 1_A24_Strafrecht'+'_'+name.replace(/\s+/g,'_')+'.html';
+  var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');a.href=url;a.download=fn;
+  document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(url);document.body.removeChild(a);},500);
+  var btn=document.getElementById('btnDownload');
+  btn.textContent='✔ Gespeichert!';btn.style.background='rgba(30,150,80,.8)';
+  setTimeout(function(){btn.textContent='💾 Speichern';btn.style.background='';},2500);
+}
+
+// ── IFRAME / SHAREPOINT DETECTION ──────────────────────────────────────
+(function(){
+  try {
+    var inIframe = window.self !== window.top;
+    if (inIframe) {
+      var b = document.getElementById('iframeBanner');
+      if (b) b.style.display = 'block';
+      document.querySelectorAll('.btn').forEach(function(btn){
+        btn.disabled = true;
+        btn.style.opacity = '0.4';
+        btn.style.cursor = 'not-allowed';
+        btn.title = 'Bitte Datei direkt im Browser öffnen';
+      });
+    }
+  } catch(e) {
+    var b = document.getElementById('iframeBanner');
+    if (b) b.style.display = 'block';
+    document.querySelectorAll('.btn').forEach(function(btn){
+      btn.disabled = true;
+      btn.style.opacity = '0.4';
+      btn.style.cursor = 'not-allowed';
+    });
+  }
+})();
+
+</script></body></html>

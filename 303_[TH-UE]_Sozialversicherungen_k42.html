@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QV-Vorbereitung | Kapitel 4.2 – Versicherungen</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+  :root {
+    --bg: #f5f2ed;
+    --surface: #ffffff;
+    --green: #1a6b3a;
+    --green-light: #e8f4ed;
+    --green-mid: #2d8a52;
+    --accent: #c8401a;
+    --accent-light: #fdf0ec;
+    --navy: #1c2b3a;
+    --muted: #6b7280;
+    --border: #d8d0c4;
+    --yellow: #f5c842;
+    --yellow-light: #fefae0;
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--navy);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  header {
+    background: var(--green);
+    color: white;
+    padding: 36px 48px 28px;
+    border-bottom: 4px solid var(--yellow);
+  }
+  header .tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 8px;
+  }
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.15;
+  }
+  header p {
+    margin-top: 10px;
+    color: rgba(255,255,255,.72);
+    font-size: 14px;
+  }
+
+  .toc {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 18px 24px;
+    margin: 28px 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+  }
+  .toc a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13.5px;
+  }
+  .toc a:hover { text-decoration: underline; }
+
+  main { max-width: 940px; margin: 0 auto; padding: 8px 32px 60px; }
+
+  /* ── Section headings ─────────────────── */
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.55rem;
+    font-weight: 400;
+    color: var(--green);
+    border-bottom: 2px solid var(--green);
+    padding-bottom: 8px;
+    margin: 40px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-title .icon { font-size: 1.2rem; }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 20px 0 8px;
+    letter-spacing: .02em;
+  }
+
+  /* ── Cards ────────────────────────────── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .card.green-accent { border-left: 4px solid var(--green); }
+  .card.red-accent   { border-left: 4px solid var(--accent); }
+  .card.yellow-accent{ border-left: 4px solid var(--yellow); }
+
+  /* ── Principle box ────────────────────── */
+  .principle {
+    background: var(--green-light);
+    border: 1.5px solid #a8d4b8;
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .principle .motto {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--green);
+    margin-bottom: 8px;
+  }
+
+  /* ── Two-col grid ─────────────────────── */
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+  @media(max-width:640px){ .grid2 { grid-template-columns: 1fr; } }
+
+  /* ── Comparison table ─────────────────── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    font-size: 14px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+  }
+  th {
+    background: var(--green);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 500;
+  }
+  td { padding: 9px 14px; border-bottom: 1px solid #eee; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #fafaf8; }
+  td.label { font-weight: 600; color: var(--green); width: 38%; }
+
+  /* ── Badges ───────────────────────────── */
+  .badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 99px;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin-right: 6px;
+  }
+  .badge.oblig { background: var(--accent); color: white; }
+  .badge.freiw { background: #d1fae5; color: #065f46; }
+
+  /* ── Pill list ────────────────────────── */
+  .pillbox { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+  .pill {
+    background: var(--green-light);
+    border: 1px solid #b0d8c0;
+    color: var(--green);
+    border-radius: 99px;
+    padding: 4px 14px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .pill.red { background: var(--accent-light); border-color: #f4b8a6; color: var(--accent); }
+  .pill.yellow { background: var(--yellow-light); border-color: #f0d870; color: #7a6000; }
+
+  /* ── Callout ──────────────────────────── */
+  .callout {
+    background: var(--accent-light);
+    border: 1.5px solid #f4b8a6;
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  .callout .callout-title {
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+
+  .tip {
+    background: var(--yellow-light);
+    border: 1.5px solid #f0d870;
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  .tip .tip-title {
+    font-weight: 700;
+    color: #7a6000;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: 4px;
+  }
+
+  /* ── Savings list ─────────────────────── */
+  .savings-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 10px 16px;
+    align-items: start;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+  }
+  .savings-row:last-child { border-bottom: none; }
+  .savings-row .method { font-weight: 600; color: var(--green); }
+
+  /* ── Säulen diagram ───────────────────── */
+  .saulen {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .saeule {
+    border-radius: var(--radius);
+    padding: 18px 16px;
+    text-align: center;
+  }
+  .saeule-1 { background: #1a6b3a; color: white; }
+  .saeule-2 { background: #2d8a52; color: white; }
+  .saeule-3 { background: #5cad77; color: white; }
+  .saeule .nr { font-family: 'DM Serif Display', serif; font-size: 2rem; opacity: .7; }
+  .saeule .title { font-weight: 700; font-size: .95rem; margin: 4px 0; }
+  .saeule .sub { font-size: 12px; opacity: .85; margin-bottom: 8px; }
+  .saeule ul { list-style: none; font-size: 12.5px; opacity: .9; text-align: left; }
+  .saeule ul li::before { content: "→ "; }
+  @media(max-width:640px){ .saulen { grid-template-columns: 1fr; } }
+
+  /* ── Case study / Fallbeispiel ────────── */
+  .fallbeispiel {
+    background: #fffdf7;
+    border: 2px solid var(--yellow);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 18px;
+  }
+  .fallbeispiel .fb-title {
+    font-weight: 700;
+    color: #7a6000;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .fallbeispiel .scenario { font-size: 14.5px; margin-bottom: 12px; }
+  .fallbeispiel .answer {
+    background: var(--green-light);
+    border-left: 3px solid var(--green);
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 14px;
+  }
+  .fallbeispiel .answer strong { color: var(--green); }
+
+  /* ── Exercises ────────────────────────── */
+  .exercise-section {
+    background: var(--navy);
+    color: white;
+    border-radius: 14px;
+    padding: 32px 36px;
+    margin-top: 40px;
+  }
+  .exercise-section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--yellow);
+    margin-bottom: 6px;
+  }
+  .exercise-section .intro {
+    color: rgba(255,255,255,.65);
+    font-size: 13.5px;
+    margin-bottom: 24px;
+  }
+
+  .exercise {
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .ex-header {
+    padding: 14px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .ex-num {
+    background: var(--yellow);
+    color: var(--navy);
+    font-weight: 700;
+    border-radius: 50%;
+    min-width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .ex-question { font-size: 14.5px; line-height: 1.55; }
+  .ex-type {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-top: 4px;
+  }
+
+  details.answer-toggle { border-top: 1px solid rgba(255,255,255,.1); }
+  details.answer-toggle summary {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 12.5px;
+    color: var(--yellow);
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    list-style: none;
+    user-select: none;
+  }
+  details.answer-toggle summary::-webkit-details-marker { display: none; }
+  details.answer-toggle summary::after { content: " ▼"; font-size: 10px; }
+  details.answer-toggle[open] summary::after { content: " ▲"; }
+  details.answer-toggle .answer-body {
+    padding: 14px 20px 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,.88);
+    border-top: 1px solid rgba(255,255,255,.08);
+    line-height: 1.6;
+  }
+  details.answer-toggle .answer-body ul { margin-left: 20px; margin-top: 6px; }
+  details.answer-toggle .answer-body li { margin-bottom: 4px; }
+
+  /* ── Multiple choice ──────────────────── */
+  .mc-options { display: flex; flex-direction: column; gap: 7px; margin-top: 8px; }
+  .mc-opt {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background .18s;
+  }
+  .mc-opt:hover { background: rgba(255,255,255,.12); }
+  .mc-opt.correct { background: rgba(44,140,80,.4); border-color: #5cad77; }
+  .mc-opt.wrong   { background: rgba(200,64,26,.3); border-color: #e07060; }
+
+  p { margin-bottom: 8px; }
+  ul { margin-left: 20px; }
+  li { margin-bottom: 4px; }
+
+  .divider {
+    border: none;
+    border-top: 2px dashed var(--border);
+    margin: 32px 0;
+  }
+
+  .mini-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 10px 0 14px;
+  }
+  .mini-table th { background: var(--green); color: white; padding: 8px 12px; text-align: left; font-weight: 500; }
+  .mini-table td { padding: 8px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+  .mini-table tr:last-child td { border-bottom: none; }
+  .mini-table tr:nth-child(even) td { background: #f8f9fa; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="tag">QV-Vorbereitung · Gesellschaft &amp; Wirtschaft</div>
+  <h1>Kapitel 4.2 – Versicherungen &amp; Sozialversicherungen</h1>
+  <p>Kompakte Theorie · Fallbeispiele · Übungen mit Lösungen</p>
+</header>
+
+<nav class="toc">
+  <a href="#grundprinzip">Solidaritätsprinzip</a>
+  <a href="#uebersicht">Übersicht Versicherungen</a>
+  <a href="#krankenkasse">Krankenversicherung</a>
+  <a href="#unfall">Unfallversicherung</a>
+  <a href="#altersvorsorge">Drei-Säulen / AHV / IV / ALV</a>
+  <a href="#sach">Sach- &amp; Haftpflicht</a>
+  <a href="#fallbeispiele">Fallbeispiele</a>
+  <a href="#uebungen">Übungen</a>
+</nav>
+
+<main>
+
+<!-- ══════════════════════════════════════════════
+     1. GRUNDPRINZIP
+     ══════════════════════════════════════════════ -->
+<h2 class="section-title" id="grundprinzip"><span class="icon">🤝</span> Solidaritätsprinzip</h2>
+
+<div class="principle">
+  <div class="motto">«Einer für alle – alle für einen.»</div>
+  <p>Alle Versicherten zahlen Prämien in einen Topf. Das Geld kommt den wenigen zugute, die tatsächlich einen Schaden erleiden. Die Versicherung zieht Prämien ein, verwaltet das Geld und zahlt Schäden aus.</p>
+</div>
+
+<div class="grid2">
+  <div class="card green-accent">
+    <h3>Was macht eine Versicherung?</h3>
+    <ul>
+      <li>Schutz vor <strong>finanziellen Folgen</strong> eines Schadens</li>
+      <li>«Versicherung» eines bestimmten Risikos</li>
+      <li>Versicherte bilden eine <strong>Gefahrengemeinschaft</strong></li>
+    </ul>
+  </div>
+  <div class="card green-accent">
+    <h3>Konsumentenschutz (seit 2022)</h3>
+    <ul>
+      <li>Widerrufsrecht: <strong>14 Tage</strong> nach Vertragsabschluss</li>
+      <li>Lange Laufzeiten: kündbar nach <strong>3 Jahren</strong></li>
+      <li>Verjährungsfrist für Ansprüche: <strong>5 Jahre</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     2. ÜBERSICHT
+     ══════════════════════════════════════════════ -->
+<h2 class="section-title" id="uebersicht"><span class="icon">📋</span> Übersicht Versicherungen</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Art</th>
+      <th>Personenversicherungen</th>
+      <th>Sachversicherungen</th>
+      <th>Haftpflichtversicherungen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="label"><span class="badge oblig">Obligatorisch</span></td>
+      <td>Krankenversicherung (KV), Unfallversicherung (UV), IV, ALV, EO, AHV, Pensionskasse</td>
+      <td>Gebäudeversicherung (ausser GE, TI, VS)</td>
+      <td>Motorfahrzeug-Haftpflicht, Luft- &amp; Wasserfahrzeuge</td>
+    </tr>
+    <tr>
+      <td class="label"><span class="badge freiw">Freiwillig</span></td>
+      <td>Private Vorsorge (Lebensversicherung), private UV</td>
+      <td>Hausrat, Kasko (Teil-/Vollkasko), Rechtsschutz, Diebstahl</td>
+      <td>Privathaftpflicht (Familien, Tierhalter, Gebäude, Arbeitgeber)</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ══════════════════════════════════════════════
+     3. KRANKENVERSICHERUNG
+     ══════════════════════════════════════════════ -->
+<h2 class="section-title" id="krankenkasse"><span class="icon">🏥</span> Krankenversicherung (KVG)</h2>
+
+<div class="grid2">
+  <div class="card green-accent">
+    <h3>Grundversicherung – Grundsätze</h3>
+    <ul>
+      <li>Für <strong>alle Einwohner</strong> der Schweiz obligatorisch (KVG 3)</li>
+      <li>Leistungen bei <strong>allen Kassen gleich</strong> (KVG 25 ff.)</li>
+      <li>Kasse <strong>darf niemanden ablehnen</strong> (KVG 4)</li>
+      <li>Versicherte beteiligen sich über <strong>Franchise + Selbstbehalt</strong></li>
+    </ul>
+  </div>
+  <div class="card green-accent">
+    <h3>Leistungen Grundversicherung</h3>
+    <ul>
+      <li>Alle Arztkosten inkl. Labor</li>
+      <li>Kasssenpflichtige Medikamente</li>
+      <li>Spitalaufenthalt (allg. Abteilung, Wohnkanton)</li>
+      <li>Ausgewählte Komplementärmedizin</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Franchise &amp; Selbstbehalt</h3>
+<table>
+  <thead>
+    <tr><th>Franchise</th><th>Fr. 300.–</th><th>Fr. 1 500.–</th><th>Fr. 2 500.–</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="label">Selbstbehalt (max.)</td><td>Fr. 700.–</td><td>Fr. 700.–</td><td>Fr. 700.–</td></tr>
+    <tr><td class="label">Max. Kostenbeteiligung/Jahr</td><td>Fr. 1 000.–</td><td>Fr. 2 200.–</td><td>Fr. 3 200.–</td></tr>
+    <tr><td class="label">Prämie/Monat (Beispiel)</td><td>Fr. 300.–</td><td>Fr. 230.–</td><td>Fr. 175.–</td></tr>
+    <tr><td class="label">Max. Risiko ggü. Fr. 300</td><td>–</td><td>Fr. 360.–</td><td>Fr. 700.–</td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <div class="callout-title">⚠️ Merke</div>
+  Franchise = Betrag, den du <strong>zuerst selbst</strong> zahlst (Jahresbetrag). Danach zahlt die Kasse 90 % – du den <strong>Selbstbehalt von 10 %</strong> (max. Fr. 700.–/Jahr).
+</div>
+
+<h3>Sparmöglichkeiten bei der Krankenkasse</h3>
+<div class="card">
+  <div class="savings-row">
+    <div class="method">Franchise erhöhen</div>
+    <div>Tiefere Prämie, aber höheres Risiko im Krankheitsfall. Sinnvoll für gesunde, junge Personen.</div>
+  </div>
+  <div class="savings-row">
+    <div class="method">Kassenwechsel</div>
+    <div>Bis <strong>30. November</strong> kündigen. Grundleistungen sind bei allen Kassen gleich – nur Prämien unterscheiden sich.</div>
+  </div>
+  <div class="savings-row">
+    <div class="method">HMO / Hausarzt / Telmed</div>
+    <div>Eingeschränkte Arztwahl. Sparpotenzial bis <strong>25 %</strong>.</div>
+  </div>
+  <div class="savings-row">
+    <div class="method">Zusatzversicherungen</div>
+    <div>Überdenken und anpassen – können oft reduziert oder gekündigt werden.</div>
+  </div>
+  <div class="savings-row">
+    <div class="method">Prämienverbilligung</div>
+    <div>Für Personen in bescheidenen Verhältnissen auf Antrag möglich (kantonal geregelt).</div>
+  </div>
+</div>
+
+<div class="tip">
+  <div class="tip-title">💡 Zusatzversicherungen</div>
+  Nicht zwingend bei derselben Kasse! Decken z.B.: Halbprivat/Privat, Zahnbehandlung, Brillen, Fitnesscenter, nicht-kassenpflichtige Medikamente. Prämien <strong>nicht staatlich kontrolliert</strong> → unbedingt vergleichen.
+</div>
+
+<!-- ══════════════════════════════════════════════
+     4. UNFALLVERSICHERUNG
+     ══════════════════════════════════════════════ -->
+<h2 class="section-title" id="unfall"><span class="icon">🦺</span> Unfallversicherung (UVG)</h2>
+
+<div class="grid2">
+  <div class="card green-accent">
+    <h3>Wer ist versichert?</h3>
+    <ul>
+      <li>Alle Arbeitnehmer → <strong>Berufsunfälle &amp; Berufskrankheiten</strong></li>
+      <li>≥ 8 Std./Woche → zusätzlich <strong>Nichtberufsunfälle</strong></li>
+      <li>Sonst: UV bei Krankenkasse einschliessen</li>
+    </ul>
+  </div>
+  <div class="card red-accent">
+    <h3>Voraussetzungen eines Unfalls (alle 5!)</h3>
+    <ul>
+      <li>Plötzlich auftretender Vorfall</li>
+      <li>Ungewöhnlicher Vorfall</li>
+      <li>Unfreiwilliges Verhalten</li>
+      <li>Einwirkung von aussen</li>
+      <li>Medizinisch feststellbarer Körperschaden</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Leistungen der Unfallversicherung (besser als KV!)</h3>
+<table>
+  <tr><td class="label">Arztkosten</td><td>Ohne Franchise und Selbstbehalt</td></tr>
+  <tr><td class="label">Lohnersatz</td><td>Ab 3. Tag: <strong>80 % des versicherten Lohnes</strong></td></tr>
+  <tr><td class="label">Weitere Leistungen</td><td>Transport, Rettung, Bestattungskosten, Invalidenrenten, Hinterbliebenenrenten</td></tr>
+  <tr><td class="label">Nachdeckung</td><td>Erlischt <strong>30 Tage</strong> nach Austritt aus dem Betrieb</td></tr>
+</table>
+
+<div class="tip">
+  <div class="tip-title">💡 Einzelabrede</div>
+  UV-Deckung kann via Einzelabrede verlängert werden (z.B. für unbezahlten Urlaub). Max. <strong>6 Monate</strong>. Einzahlungsschein beim ehemaligen Arbeitgeber verlangen. Abschluss spätestens am letzten Tag der Nachdeckung.
+</div>
+
+<!-- ══════════════════════════════════════════════
+     5. DREI SÄULEN / ALTERSVORSORGE
+     ══════════════════════════════════════════════ -->
+<h2 class="section-title" id="altersvorsorge"><span class="icon">🏛️</span> Altersvorsorge – Drei-Säulen-Konzept</h2>
+
+<div class="saulen">
+  <div class="saeule saeule-1">
+    <div class="nr">1</div>
+    <div class="title">Staatliche Vorsorge</div>
+    <div class="sub">AHV · IV · ALV · EO</div>
+    <ul>
+      <li>Obligatorisch</li>
+      <li>Umlageverfahren</li>
+      <li>Existenzsicherung</li>
+    </ul>
+  </div>
+  <div class="saeule saeule-2">
+    <div class="nr">2</div>
+    <div class="title">Berufliche Vorsorge</div>
+    <div class="sub">Pensionskasse (BVG)</div>
+    <ul>
+      <li>Obligatorisch ab 22 050 Fr.</li>
+      <li>Kapitaldeckungsverfahren</li>
+      <li>Lebensstandard erhalten</li>
+    </ul>
+  </div>
+  <div class="saeule saeule-3">
+    <div class="nr">3</div>
+    <div class="title">Private Vorsorge</div>
+    <div class="sub">Säule 3a / 3b</div>
+    <ul>
+      <li>Freiwillig</li>
+      <li>Steuervorteile (3a)</li>
+      <li>Individuelle Ergänzung</li>
+    </ul>
+  </div>
+</div>
+
+<h3>1. Säule – AHV (Alters- und Hinterlassenenversicherung)</h3>
+<table>
+  <tr><td class="label">Ziel</td><td>Existenzsicherung im Alter; Schutz der Hinterbliebenen</td></tr>
+  <tr><td class="label">Rentenalter</td><td>65 Jahre (Frauen ab 2028, stufenweise ab 2025)</td></tr>
+  <tr><td class="label">Finanzierung</td><td><strong>Umlageverfahren</strong>: Erwerbstätige finanzieren heutige Renten</td></tr>
+  <tr><td class="label">Volle Rente</td><td>Keine Beitragslücken vom 18. Lebensjahr bis zur Pensionierung</td></tr>
+  <tr><td class="label">Minimalrente</td><td>Fr. 1 225.–/Monat (Stand 2024)</td></tr>
+  <tr><td class="label">Maximalrente</td><td>Fr. 2 450.–/Monat; Ehepaar max. Fr. 3 675.–/Monat</td></tr>
+  <tr><td class="label">Problem</td><td>Immer weniger Erwerbstätige je Rentner (1948: 8:1, heute ~3:1)</td></tr>
+</table>
+
+<h3>1. Säule – IV (Invalidenversicherung)</h3>
+<div class="card green-accent">
+  <p><strong>Grundsatz:</strong> «Eingliederung vor Rente» – erst Massnahmen zur Wiedereingliederung, dann Rente.</p>
+  <p><strong>Zielgruppe:</strong> Personen, die wegen Gesundheitsschaden nicht (voll) arbeiten können. Ursachen: Unfall, Krankheit, Geburtsgebrechen.</p>
+  <p><strong>Leistungen:</strong> Eingliederungsmassnahmen, Hilfsmittel, Taggelder, Reisekosten, Rente (je nach Invaliditätsgrad).</p>
+  <p><strong>Rentenhöhe:</strong> Bei 100 % Invalidität = AHV-Rente</p>
+</div>
+
+<h3>1. Säule – ALV (Arbeitslosenversicherung)</h3>
+<table>
+  <tr><td class="label">Leistungen</td><td>Arbeitslosigkeit, Kurzarbeit, wetterbedingte Ausfälle, Arbeitgeberinsolvenz</td></tr>
+  <tr><td class="label">Voraussetzung</td><td>Vorherige Erwerbstätigkeit nachweisen (ausser Studienabgänger)</td></tr>
+  <tr><td class="label">Max. Taggelder</td><td>520 Taggelder (bei Beitragszeit ≥ 22 Monate, Alter &lt; 55 Jahre)</td></tr>
+  <tr><td class="label">Zumutbarkeit</td><td>Bis 30 Jahre: auch Stellen ausserhalb bisheriger Erwerbstätigkeit zumutbar</td></tr>
+</table>
+
+<h3>1. Säule – EO (Erwerbsersatzordnung)</h3>
+<div class="card">
+  <div class="pillbox">
+    <span class="pill">Militär- &amp; Zivildienst → Lohnersatz</span>
+    <span class="pill">Mutterschaftsurlaub: 14 Wochen, 80% (max. Fr. 220.–/Tag)</span>
+    <span class="pill">Vaterschaftsurlaub: 2 Wochen, 80% (max. Fr. 196.–/Tag)</span>
+  </div>
+</div>
+
+<h3>2. Säule – Pensionskasse (BVG)</h3>
+<table>
+  <tr><td class="label">Pflicht</td><td>Ab Jahreslohn Fr. 22 050.– (BVG-Pflicht)</td></tr>
+  <tr><td class="label">Finanzierung</td><td><strong>Kapitaldeckungsverfahren</strong>: individuelles Sparen, paritätisch (Arbeitgeber = Arbeitnehmer)</td></tr>
+  <tr><td class="label">Vorteil ggü. AHV</td><td>Individuelles Konto; wer mehr einzahlt, bekommt mehr</td></tr>
+  <tr><td class="label">Vorbezug möglich</td><td>Wohneigentum, Selbstständigkeit (Firmengründung), Auswanderung</td></tr>
+  <tr><td class="label">Problem</td><td>Geld muss gewinnbringend angelegt werden → Börsenrisiko</td></tr>
+</table>
+
+<h3>3. Säule – Private Vorsorge</h3>
+<div class="grid2">
+  <div class="card green-accent">
+    <h3>Säule 3a – gebundene Vorsorge</h3>
+    <ul>
+      <li>Steuerabzug möglich</li>
+      <li>Max. Fr. 6 883.–/Jahr (Angestellte mit PK)</li>
+      <li>Bezug frühestens ab 60. Lebensjahr</li>
+      <li>Vorbezug: Wohneigentum, Selbstständigkeit, Auswanderung</li>
+    </ul>
+  </div>
+  <div class="card green-accent">
+    <h3>Säule 3b – freie Vorsorge</h3>
+    <ul>
+      <li>Freie Geldanlage</li>
+      <li>Sparguthaben, Wertpapiere, Lebensversicherungen, Immobilien</li>
+      <li>Teils steuerbegünstigt (z.B. Lebensversicherung)</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════════════
+     6. SACH- & HAFTPFLICHTVERSICHERUNGEN
+     ══════════════════════════════════════════════ -->
+<h2 class="section-title" id="sach"><span class="icon">🏠</span> Sach- &amp; Haftpflichtversicherungen</h2>
+
+<h3>Kaskoversicherungen (Auto)</h3>
+<table>
+  <tr><th>Versicherung</th><th>Was ist gedeckt?</th></tr>
+  <tr><td class="label">Teilkasko</td><td>Diebstahl, Elementarereignisse (Hagel, Hochwasser), Feuer, Glasbruch, Vandalismus, Tierkollision, Marder</td></tr>
+  <tr><td class="label">Vollkasko</td><td>Alles wie Teilkasko <strong>+ selbstverschuldete Kollisionsschäden</strong> am eigenen Fahrzeug</td></tr>
+</table>
+<div class="callout">
+  <div class="callout-title">⚠️ Merke</div>
+  Bei geleasten Fahrzeugen ist Vollkasko <strong>Pflicht</strong>. Bei älteren Fahrzeugen mit geringem Zeitwert lohnt sich Vollkasko oft nicht.
+</div>
+
+<h3>Gebäude- vs. Hausratversicherung</h3>
+<table>
+  <tr><th>Versicherung</th><th>Was ist versichert?</th><th>Obligatorisch?</th></tr>
+  <tr><td class="label">Gebäudeversicherung</td><td>Das Gebäude selbst und seine Bestandteile; Schäden durch Wasser, Feuer, Elementar</td><td>In den meisten Kantonen JA</td></tr>
+  <tr><td class="label">Hausratversicherung</td><td>Hausrat (Möbel, Geräte etc.); Feuer, Wasser, Glasbruch, Diebstahl → Ersatz zum Neuwert</td><td>In manchen Kantonen (VD, NE)</td></tr>
+</table>
+<div class="callout">
+  <div class="callout-title">⚠️ Unterversicherung!</div>
+  Versicherte Summe &lt; tatsächlicher Wert → Leistung wird <strong>anteilig gekürzt</strong>.<br>
+  Beispiel: Versichert Fr. 30 000.–, Wert Fr. 50 000.–, Schaden Fr. 15 000.– → Versicherung zahlt nur <strong>Fr. 9 000.–</strong> (= 3/5 des Schadens).
+</div>
+
+<h3>Motorfahrzeug-Haftpflichtversicherung (MFZ)</h3>
+<table>
+  <tr><td class="label">Grundsatz</td><td>Obligatorisch für alle Fahrzeughalter. Kausalhaftung: wer Schaden anrichtet, haftet.</td></tr>
+  <tr><td class="label">Selbstbehalte</td><td>Junglenker (&lt;25 J.): CHF 1 000 | Neulenker (&gt;25 J., &lt;2 Jahre Ausweis): CHF 500 | Übrige: kein Selbstbehalt</td></tr>
+  <tr><td class="label">Bonus/Malus</td><td>Unfallfrei = Prämienreduktion (Bonus). Unfall verursacht = Höherstufung (Malus).</td></tr>
+  <tr><td class="label">Regressrecht</td><td>Bei grober Fahrlässigkeit (Alkohol, Drogen, Rotlicht, kein Gurt) kann Versicherung Geld <strong>zurückfordern</strong></td></tr>
+</table>
+
+<h3>Privathaftpflichtversicherung</h3>
+<div class="card">
+  <p><strong>Nicht obligatorisch, aber sehr empfehlenswert!</strong></p>
+  <p>Zahlt, wenn du <strong>Drittpersonen</strong> (weder du noch Haushaltsangehörige) schuldhaft schädigst.</p>
+  <p><strong>Kausalhaftung</strong> (auch ohne eigenes Verschulden):</p>
+  <div class="pillbox">
+    <span class="pill">Als Eltern → Kind schädigt Dritten</span>
+    <span class="pill">Als Arbeitgeber → Mitarbeiter verursacht Schaden</span>
+    <span class="pill">Als Hauseigentümer → Ziegel fällt auf Auto</span>
+    <span class="pill">Als Tierhalter → Hund beisst</span>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════════════
+     7. FALLBEISPIELE
+     ══════════════════════════════════════════════ -->
+<h2 class="section-title" id="fallbeispiele"><span class="icon">📂</span> Fallbeispiele – Welche Versicherung zahlt?</h2>
+
+<div class="fallbeispiel">
+  <div class="fb-title">📁 Fall 1</div>
+  <div class="scenario">Lara (28) verunfallt auf dem Arbeitsweg mit dem Velo und bricht sich das Handgelenk. Sie muss 3 Wochen nicht arbeiten.</div>
+  <div class="answer">
+    <strong>Unfallversicherung (UVG):</strong> Alle Arztkosten ohne Franchise/Selbstbehalt. Lohnersatz ab 3. Tag (80 % des Lohnes). Arbeitsweg = Berufsunfall.
+  </div>
+</div>
+
+<div class="fallbeispiel">
+  <div class="fb-title">📁 Fall 2</div>
+  <div class="scenario">Tim (22, Junglenker) überfährt eine rote Ampel und verursacht einen Auffahrunfall. Der Schaden am anderen Auto beträgt Fr. 8 000.–.</div>
+  <div class="answer">
+    <strong>MFZ-Haftpflichtversicherung:</strong> Übernimmt den Schaden am fremden Fahrzeug. Tim trägt einen <strong>Selbstbehalt von CHF 1 000.–</strong> (Junglenker). Prämie steigt (Malus). Kein Regressrecht, da nicht grob fahrlässig.
+  </div>
+</div>
+
+<div class="fallbeispiel">
+  <div class="fb-title">📁 Fall 3</div>
+  <div class="scenario">Im Wohnzimmer von Familie Meier bricht ein Feuer aus. Sofa, TV und Bücherregale (Wert Fr. 15 000.–) werden zerstört. Die Hausratversicherung war auf Fr. 9 000.– versichert.</div>
+  <div class="answer">
+    <strong>Hausratversicherung:</strong> zahlt wegen <strong>Unterversicherung</strong> nur anteilig. Verhältnis: 9 000 / 15 000 = 3/5. Zahlt also: <strong>Fr. 9 000.– × 3/5 = Fr. 5 400.–</strong>. Der Rest bleibt bei Familie Meier.
+  </div>
+</div>
+
+<div class="fallbeispiel">
+  <div class="fb-title">📁 Fall 4</div>
+  <div class="scenario">Sandra kündigt ihre Stelle, macht 4 Monate unbezahlten Urlaub (Weltreise) und tritt danach eine neue Stelle an. Was passiert mit ihrer Unfallversicherung?</div>
+  <div class="answer">
+    <strong>Einzelabrede:</strong> Die UV erlischt 30 Tage nach Stellenaustritt. Für den Urlaub kann Sandra eine Einzelabrede abschliessen (max. 6 Monate). Einzahlungsschein beim früheren Arbeitgeber verlangen, spätestens am letzten Tag der Nachdeckung abschliessen.
+  </div>
+</div>
+
+<div class="fallbeispiel">
+  <div class="fb-title">📁 Fall 5</div>
+  <div class="scenario">Manfred (Hundehalter) – sein Labrador beisst beim Spielen das Nachbarskind. Das Kind muss kurz ins Spital.</div>
+  <div class="answer">
+    <strong>Privathaftpflichtversicherung:</strong> Kausalhaftung als Tierhalter (OR 56). Privathaftpflicht übernimmt die Arztkosten des Kindes. Wenn keine PHV vorhanden: Manfred haftet persönlich!
+  </div>
+</div>
+
+<div class="fallbeispiel">
+  <div class="fb-title">📁 Fall 6</div>
+  <div class="scenario">Katja (34) wird nach einem Sportunfall für 2 Jahre teilweise invalid (50 %). Sie hat ihr Leben lang gearbeitet und AHV eingezahlt.</div>
+  <div class="answer">
+    <strong>IV (Invalidenversicherung):</strong> Zuerst Eingliederungsmassnahmen (Umschulung, Arbeitsplatzanpassung). Falls Eingliederung nicht möglich: Rente entsprechend dem Invaliditätsgrad (50 % = halbe IV-Rente). Zusätzlich evtl. UV-Leistungen, falls Sportunfall (wenn sie ≥8 Std./Woche arbeitet).
+  </div>
+</div>
+
+<div class="fallbeispiel">
+  <div class="fb-title">📁 Fall 7</div>
+  <div class="scenario">Peter fährt betrunken und rammt ein geparktes Auto (Schaden Fr. 12 000.–). Die Haftpflichtversicherung zahlt dem Geschädigten – darf sie Geld zurückfordern?</div>
+  <div class="answer">
+    <strong>Regressrecht:</strong> JA. Alkohol am Steuer = grobe Fahrlässigkeit. Die Versicherung zahlt dem Geschädigten, kann aber einen Teil (<strong>in der Praxis oft 20–100 %</strong>) von Peter zurückfordern. Bei hohen Schadenssummen kann das existenzbedrohend sein.
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     8. ÜBUNGEN
+     ══════════════════════════════════════════════ -->
+<div class="exercise-section" id="uebungen">
+  <h2>Übungen zur QV-Vorbereitung</h2>
+  <p class="intro">Löse die Aufgaben selbst – dann klappe die Musterlösung auf.</p>
+
+  <!-- Ü 1 -->
+  <div class="exercise">
+    <div class="ex-header">
+      <div class="ex-num">1</div>
+      <div>
+        <div class="ex-question">Erkläre das Solidaritätsprinzip in eigenen Worten und nenne ein konkretes Beispiel aus dem Alltag.</div>
+        <div class="ex-type">Verständnis · Grundlagen</div>
+      </div>
+    </div>
+    <details class="answer-toggle">
+      <summary>Musterlösung anzeigen</summary>
+      <div class="answer-body">
+        Alle Versicherten zahlen regelmässig Prämien in einen gemeinsamen Topf. Tritt bei einer Person ein Schaden ein, wird dieser aus diesem Topf bezahlt – auch wenn die Prämien dieser Person nie den Schaden gedeckt hätten. Das Prinzip: «Einer für alle, alle für einen.»<br><br>
+        <strong>Beispiel:</strong> Anna zahlt jahrelang Krankenkassenprämien, ohne krank zu sein. Als Karl einen teuren Spitalaufenthalt benötigt, wird dieser aus dem Topf aller – inkl. Annas Beiträge – finanziert.
+      </div>
+    </details>
+  </div>
+
+  <!-- Ü 2 -->
+  <div class="exercise">
+    <div class="ex-header">
+      <div class="ex-num">2</div>
+      <div>
+        <div class="ex-question">Was ist der Unterschied zwischen Franchise und Selbstbehalt? Berechne: Franchise Fr. 1500.–, Arztrechnung Fr. 2400.–. Wie viel zahlt die Versicherung, wie viel zahlt der Versicherte?</div>
+        <div class="ex-type">Berechnung · Krankenversicherung</div>
+      </div>
+    </div>
+    <details class="answer-toggle">
+      <summary>Musterlösung anzeigen</summary>
+      <div class="answer-body">
+        <strong>Franchise:</strong> Jahresbetrag, den man selbst zahlt, bevor die Versicherung eintritt.<br>
+        <strong>Selbstbehalt:</strong> 10 % der verbleibenden Kosten (über der Franchise), max. Fr. 700.–/Jahr.<br><br>
+        <strong>Rechnung:</strong><br>
+        Arztrechnung: Fr. 2 400.–<br>
+        − Franchise: Fr. 1 500.–<br>
+        = Restbetrag: Fr. 900.–<br>
+        Selbstbehalt (10 %): Fr. 90.–<br>
+        Versicherung zahlt: Fr. 900.– − Fr. 90.– = <strong>Fr. 810.–</strong><br>
+        <strong>Versicherter zahlt total: Fr. 1 590.–</strong> (1 500 + 90)
+      </div>
+    </details>
+  </div>
+
+  <!-- Ü 3 -->
+  <div class="exercise">
+    <div class="ex-header">
+      <div class="ex-num">3</div>
+      <div>
+        <div class="ex-question">Erkläre den Unterschied zwischen Umlageverfahren (AHV) und Kapitaldeckungsverfahren (Pensionskasse). Welches Problem hat die AHV heute?</div>
+        <div class="ex-type">Vergleich · Altersvorsorge</div>
+      </div>
+    </div>
+    <details class="answer-toggle">
+      <summary>Musterlösung anzeigen</summary>
+      <div class="answer-body">
+        <strong>Umlageverfahren (AHV):</strong> Die Beiträge der heute Erwerbstätigen werden direkt als Renten an die heutigen Pensionierten ausbezahlt. Kein individuelles Ansparen.<br><br>
+        <strong>Kapitaldeckungsverfahren (PK):</strong> Jede Person spart individuell auf einem Konto. Das Geld wird verzinslich angelegt und im Alter als Rente oder Kapital ausbezahlt.<br><br>
+        <strong>Problem AHV:</strong> Immer weniger Erwerbstätige müssen immer mehr Rentner finanzieren (1948: ~8:1, heute ~3:1, Prognose 2050: ~2:1). Der Druck auf die Finanzierung steigt massiv.
+      </div>
+    </details>
+  </div>
+
+  <!-- Ü 4 – Multiple Choice -->
+  <div class="exercise">
+    <div class="ex-header">
+      <div class="ex-num">4</div>
+      <div>
+        <div class="ex-question">Welche Aussage über die Grundversicherung (KVG) ist FALSCH?</div>
+        <div class="ex-type">Multiple Choice · Krankenversicherung</div>
+        <div class="mc-options" id="mc1">
+          <div class="mc-opt" onclick="checkMC(this,'mc1',false)">A) Alle Krankenkassen müssen jeden aufnehmen.</div>
+          <div class="mc-opt" onclick="checkMC(this,'mc1',false)">B) Die Grundleistungen sind bei allen Kassen gleich.</div>
+          <div class="mc-opt" onclick="checkMC(this,'mc1',true)">C) Die Prämien für die Grundversicherung sind bei allen Kassen gleich.</div>
+          <div class="mc-opt" onclick="checkMC(this,'mc1',false)">D) Der Selbstbehalt beträgt 10 %, maximal Fr. 700.–/Jahr.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ü 5 -->
+  <div class="exercise">
+    <div class="ex-header">
+      <div class="ex-num">5</div>
+      <div>
+        <div class="ex-question">Jonas (20, Lehrling, arbeitet 42 Std./Woche) stürzt beim Snowboarden am Wochenende und bricht sich das Bein. Welche Versicherung zahlt? Gibt es Franchise/Selbstbehalt?</div>
+        <div class="ex-type">Fallanalyse · Unfall</div>
+      </div>
+    </div>
+    <details class="answer-toggle">
+      <summary>Musterlösung anzeigen</summary>
+      <div class="answer-body">
+        <strong>Unfallversicherung (UVG):</strong> Jonas arbeitet ≥ 8 Std./Woche → er ist auch gegen <strong>Nichtberufsunfälle</strong> versichert. Das Snowboarden am Wochenende ist ein Nichtberufsunfall.<br><br>
+        <strong>Keine Franchise, kein Selbstbehalt!</strong> Die UV übernimmt alle Arztkosten vollständig. Ab 3. Tag zahlt sie auch 80 % des Lohnes als Ersatz.
+      </div>
+    </details>
+  </div>
+
+  <!-- Ü 6 -->
+  <div class="exercise">
+    <div class="ex-header">
+      <div class="ex-num">6</div>
+      <div>
+        <div class="ex-question">Nenne die drei Bereiche der Energiestrategie 2050... Nein – falsche Frage! Nenne die drei Säulen der Schweizer Altersvorsorge und erkläre jeweils kurz Ziel und Finanzierungsart.</div>
+        <div class="ex-type">Strukturfrage · Altersvorsorge</div>
+      </div>
+    </div>
+    <details class="answer-toggle">
+      <summary>Musterlösung anzeigen</summary>
+      <div class="answer-body">
+        <ul>
+          <li><strong>1. Säule (AHV/IV/EO):</strong> Staatlich, obligatorisch. Ziel: Existenzsicherung. Finanzierung: Umlageverfahren (Erwerbstätige → Pensionierte).</li>
+          <li><strong>2. Säule (BVG/Pensionskasse):</strong> Beruflich, obligatorisch (ab Fr. 22 050.–). Ziel: bisherigen Lebensstandard erhalten. Finanzierung: Kapitaldeckungsverfahren (individuelles Ansparen, je 50 % Arbeitnehmer/Arbeitgeber).</li>
+          <li><strong>3. Säule (private Vorsorge):</strong> Freiwillig. Ziel: individuelle Ergänzung. Finanzierung: selbst gespart. 3a = gebunden (Steuervorteile), 3b = frei.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- Ü 7 -->
+  <div class="exercise">
+    <div class="ex-header">
+      <div class="ex-num">7</div>
+      <div>
+        <div class="ex-question">Hausrat von Familie Bauer ist auf Fr. 40 000.– versichert. Der tatsächliche Wert beträgt Fr. 60 000.–. Bei einem Wasserschaden entsteht ein Schaden von Fr. 18 000.–. Wie viel zahlt die Versicherung?</div>
+        <div class="ex-type">Berechnung · Unterversicherung</div>
+      </div>
+    </div>
+    <details class="answer-toggle">
+      <summary>Musterlösung anzeigen</summary>
+      <div class="answer-body">
+        <strong>Unterversicherungsquote:</strong> 40 000 / 60 000 = 2/3<br>
+        <strong>Versicherung zahlt:</strong> 18 000 × 2/3 = <strong>Fr. 12 000.–</strong><br>
+        <strong>Familie Bauer trägt:</strong> Fr. 6 000.– selbst.<br><br>
+        <em>Tipp: Immer den vollen Neuwert versichern – Prämien sind sehr günstig!</em>
+      </div>
+    </details>
+  </div>
+
+  <!-- Ü 8 – MC -->
+  <div class="exercise">
+    <div class="ex-header">
+      <div class="ex-num">8</div>
+      <div>
+        <div class="ex-question">Du willst deine Krankenkasse wechseln. Was ist richtig?</div>
+        <div class="ex-type">Multiple Choice · Krankenversicherung</div>
+        <div class="mc-options" id="mc2">
+          <div class="mc-opt" onclick="checkMC(this,'mc2',false)">A) Kündigung jederzeit möglich, wenn man unzufrieden ist.</div>
+          <div class="mc-opt" onclick="checkMC(this,'mc2',true)">B) Kündigung bis 30. November, Wechsel auf 1. Januar möglich.</div>
+          <div class="mc-opt" onclick="checkMC(this,'mc2',false)">C) Zusatzversicherung muss bei derselben Kasse sein wie Grundversicherung.</div>
+          <div class="mc-opt" onclick="checkMC(this,'mc2',false)">D) Wer eine Vorerkrankung hat, kann abgelehnt werden.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ü 9 -->
+  <div class="exercise">
+    <div class="ex-header">
+      <div class="ex-num">9</div>
+      <div>
+        <div class="ex-question">Wann muss eine Versicherung Regress nehmen? Nenne drei Beispiele für grobe Fahrlässigkeit im Strassenverkehr.</div>
+        <div class="ex-type">Haftpflicht · Regressrecht</div>
+      </div>
+    </div>
+    <details class="answer-toggle">
+      <summary>Musterlösung anzeigen</summary>
+      <div class="answer-body">
+        Die Versicherung muss dem Geschädigten zahlen, kann sich aber vom Unfallverursacher Teile zurückholen, wenn dieser <strong>grob fahrlässig</strong> gehandelt hat.<br><br>
+        <strong>Beispiele für grobe Fahrlässigkeit:</strong>
+        <ul>
+          <li>Fahren unter Alkohol-/Drogeneinfluss</li>
+          <li>Fahren ohne Sicherheitsgurt</li>
+          <li>Überfahren von Rotlichtern oder Stoppstrassen</li>
+          <li>Fahren mit abgefahrenen Reifen</li>
+        </ul>
+        <em>Ein Regress bei grosser Schadensumme kann den Verursacher finanziell ruinieren!</em>
+      </div>
+    </details>
+  </div>
+
+  <!-- Ü 10 – Offene Frage -->
+  <div class="exercise">
+    <div class="ex-header">
+      <div class="ex-num">10</div>
+      <div>
+        <div class="ex-question">Warum ist die Privathaftpflichtversicherung zwar nicht obligatorisch, aber trotzdem sehr empfehlenswert? Nenne ein Beispiel der Kausalhaftung.</div>
+        <div class="ex-type">Argumentation · Haftpflicht</div>
+      </div>
+    </div>
+    <details class="answer-toggle">
+      <summary>Musterlösung anzeigen</summary>
+      <div class="answer-body">
+        <strong>Warum empfehlenswert:</strong> Jeder kann im Alltag unbeabsichtigt Dritten Schaden zufügen – beim Sport, zu Hause, auf Reisen. Ohne PHV haftet man mit dem eigenen Vermögen, was bei grossen Schäden existenzbedrohend sein kann. Die PHV ist günstig (oft Fr. 100–200/Jahr) und deckt sehr vielfältige Risiken.<br><br>
+        <strong>Kausalhaftung Beispiel:</strong> Der Hund beisst das Nachbarskind (Tierhalter – OR 56). Du haftest, <em>ohne</em> persönlich schuld zu sein, weil du Halter des Tieres bist.
+      </div>
+    </details>
+  </div>
+
+</div><!-- /exercise-section -->
+
+</main>
+
+<script>
+function checkMC(el, groupId, isCorrect) {
+  const group = document.getElementById(groupId);
+  const opts = group.querySelectorAll('.mc-opt');
+  opts.forEach(o => o.style.pointerEvents = 'none');
+  if (isCorrect) {
+    el.classList.add('correct');
+    el.innerHTML += ' ✓ Richtig!';
+  } else {
+    el.classList.add('wrong');
+    el.innerHTML += ' ✗ Falsch';
+    opts.forEach(o => {
+      if(o !== el && o.onclick && o.onclick.toString().includes('true')) {
+        o.classList.add('correct');
+        o.innerHTML += ' ← Richtige Antwort';
+      }
+    });
+  }
+}
+</script>
+
+</body>
+</html>

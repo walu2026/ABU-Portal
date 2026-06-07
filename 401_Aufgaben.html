@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>401 – Aufgaben wählen</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --accent:#5a3e8a; --g9:#111827; --g7:#374151; --g5:#6B7280; --g3:#D1D5DB; --g1:#F3F4F6; }
+  *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'DM Sans',sans-serif; background:#F0F2F5; color:var(--g7); min-height:100vh; }
+  .wrap { max-width:680px; margin:0 auto; padding:2rem 1.5rem 5rem; }
+  .back-btn { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; color:var(--g5); text-decoration:none; margin-bottom:1.75rem; transition:color .15s; }
+  .back-btn:hover { color:var(--g9); }
+  .d-header { border-radius:14px; overflow:hidden; margin-bottom:1.75rem; display:grid; grid-template-columns:5px 1fr; box-shadow:0 2px 12px rgba(0,0,0,0.07); background:white; }
+  .d-stripe { background:var(--accent); }
+  .d-head-body { padding:20px 22px; display:flex; align-items:flex-start; gap:14px; }
+  .d-big-num { font-family:'Barlow Condensed',sans-serif; font-size:60px; font-weight:800; line-height:1; opacity:.15; flex-shrink:0; min-width:56px; color:var(--accent); }
+  .d-label { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:3px; }
+  .d-title { font-family:'Barlow Condensed',sans-serif; font-size:26px; font-weight:800; text-transform:uppercase; color:var(--g9); line-height:1.1; margin-bottom:4px; }
+  .d-desc { font-size:12px; color:var(--g5); line-height:1.5; }
+  .no-ue-banner { display:flex; align-items:center; gap:12px; padding:12px 16px; background:#FFFBEB; border:1px solid #FDE68A; border-radius:10px; margin-bottom:1.5rem; font-size:12px; color:#92400E; line-height:1.5; }
+  .no-ue-banner span { font-size:22px; flex-shrink:0; }
+  .toggle-bar { display:flex; gap:6px; margin-bottom:1.25rem; }
+  .toggle-btn { display:flex; align-items:center; gap:6px; padding:7px 14px; border-radius:8px; border:1.5px solid var(--g3); background:white; font-size:12px; font-weight:600; color:var(--g5); cursor:pointer; transition:all .15s; }
+  .toggle-btn.active { background:var(--accent); border-color:var(--accent); color:white; }
+  .toggle-btn:hover:not(.active) { border-color:var(--accent); color:var(--accent); }
+  .section-label { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--g5); margin:0 0 8px 2px; }
+
+  /* Lernziel-Zeilen: nur Display, kein Hover-Effekt auf die Zeile */
+  .lz-list { display:flex; flex-direction:column; gap:7px; margin-bottom:1.75rem; }
+  .lz-row { display:grid; grid-template-columns:4px 48px 1fr 12px; align-items:stretch; background:white; border-radius:10px; border:1px solid var(--g3); overflow:hidden; }
+  .lz-inactive { opacity:.5; }
+  .lz-bar { background:var(--fc, var(--accent)); }
+  .lz-inactive .lz-bar { background:var(--g3); }
+  .lz-num { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px 0; border-right:1px solid var(--g3); background:#FAFAFA; gap:3px; }
+  .lz-num-digit { font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:800; line-height:1; color:var(--fc, var(--accent)); }
+  .lz-inactive .lz-num-digit { color:var(--g5); }
+  .lz-fach { font-size:8px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; color:var(--fc, var(--accent)); opacity:.75; }
+  .lz-body { padding:10px 13px; }
+  .lz-title { font-size:13px; font-weight:600; color:var(--g9); margin-bottom:3px; }
+  .lz-ziel { font-size:11px; color:var(--g5); line-height:1.45; margin-bottom:8px; }
+  .lz-pills { display:flex; flex-wrap:wrap; gap:5px; }
+  .lz-arrow { display:flex; align-items:center; font-size:10px; color:var(--g3); padding-right:4px; }
+
+  /* Pills: jede ein Link */
+  .a-pill { font-size:11px; font-weight:500; padding:4px 10px; border-radius:20px; background:var(--g1); color:var(--g5); border:1px solid var(--g3); white-space:nowrap; }
+  .a-pill-link { text-decoration:none; transition:all .15s; cursor:pointer; }
+  .a-pill-link:hover { background:var(--accent); color:white; border-color:var(--accent); transform:translateY(-1px); box-shadow:0 2px 6px rgba(0,0,0,.12); }
+  .a-pill-none { background:#FEF3C7; color:#92400E; border-color:#FDE68A; font-style:italic; }
+
+  /* Aufgaben-Nr-Liste */
+  .a-list { display:flex; flex-direction:column; gap:5px; margin-bottom:1.75rem; }
+  .a-row { display:grid; grid-template-columns:4px 52px 1fr 28px; align-items:stretch; background:white; border-radius:9px; border:1px solid var(--g3); overflow:hidden; text-decoration:none; color:inherit; transition:box-shadow .15s, transform .15s; }
+  .a-row:hover { transform:translateX(3px); box-shadow:0 2px 10px rgba(0,0,0,.07); border-color:#cbd5e1; }
+  .a-bar { background:var(--accent); }
+  .a-code { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:8px 4px; border-right:1px solid var(--g3); background:#FAFAFA; gap:2px; }
+  .a-code-id { font-family:'Barlow Condensed',sans-serif; font-size:16px; font-weight:800; line-height:1; color:var(--accent); }
+  .a-code-lz { font-size:8px; font-weight:600; color:var(--g5); opacity:.7; }
+  .a-body { padding:9px 13px; display:flex; flex-direction:column; justify-content:center; }
+  .a-title { font-size:13px; font-weight:600; color:var(--g9); margin-bottom:1px; }
+  .a-type { display:inline-flex; align-items:center; gap:3px; font-size:9px; font-weight:600; padding:1px 6px; border-radius:10px; margin-top:3px; width:fit-content; background:#EDE9FE; color:#5B21B6; }
+  .a-arrow { display:flex; align-items:center; justify-content:center; font-size:14px; color:var(--g3); transition:all .15s; }
+  .a-row:hover .a-arrow { color:var(--accent); transform:translateX(2px); }
+  .empty-hint { padding:20px; text-align:center; font-size:13px; color:var(--g5); background:white; border-radius:10px; border:1px dashed var(--g3); }
+
+  .ls-inactive-list { display:flex; flex-direction:column; gap:6px; margin-bottom:2rem; }
+  .ls-inactive { display:grid; grid-template-columns:4px 52px 1fr; align-items:stretch; background:white; border-radius:10px; border:1px solid var(--g3); overflow:hidden; opacity:.5; }
+  .ls-inactive-bar { background:var(--g3); }
+  .ls-inactive-code { display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:800; color:var(--g5); background:#FAFAFA; border-right:1px solid var(--g3); min-width:52px; }
+  .ls-inactive-body { padding:10px 14px; }
+  .ls-inactive-title { font-size:13px; font-weight:600; color:var(--g9); }
+  .ls-inactive-hint { font-size:11px; color:var(--g5); margin-top:1px; }
+  .hidden { display:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back-btn" href="javascript:history.back()">← Zurück zur Übersicht</a>
+  <div class="d-header">
+    <div class="d-stripe"></div>
+    <div class="d-head-body">
+      <div class="d-big-num">401</div>
+      <div>
+        <div class="d-label">Thema 4 · Unsere Schweiz · Übungen</div>
+        <div class="d-title">Demokratie &amp; Staatsaufbau</div>
+        <div class="d-desc">Den demokratischen Staatsaufbau der Schweiz kennen</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toggle-bar">
+    <button class="toggle-btn active" id="btnLz" onclick="showView('lz')">📚 Nach Lernzielen</button>
+    <button class="toggle-btn" id="btnA"  onclick="showView('a')">🔢 Nach Aufgaben-Nr.</button>
+  </div>
+
+  <div id="viewLz">
+    <div class="section-label">SLP-Lernziele – Kapitel 401</div>
+    <div class="lz-list">
+      <div class="lz-row" style="--fc:#5a3e8a">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">1</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Geschichte &amp; Verfassung</div>
+          <div class="lz-ziel">Ich erkläre zentrale Stationen der Schweizer Geschichte und die Grundzüge der Bundesverfassung.</div>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A2_Schweizer_Geschichte.html">A2 Schweizer Geschichte</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A3_Bundesverfassung.html">A3 Bundesverfassung</a>
+            </div>
+        </div>
+        <div class="lz-arrow"></div>
+      </div>
+      <div class="lz-row" style="--fc:#5a3e8a">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">2</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Staatsformen</div>
+          <div class="lz-ziel">Ich vergleiche Staats- und Regierungsformen und ordne die Schweiz ein.</div>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A5_Staatsformen.html">A5 Staatsformen</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A6_Regierungsformen.html">A6 Regierungsformen</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A7_Demokratie_Diktatur.html">A7 Demokratie Diktatur</a>
+            </div>
+        </div>
+        <div class="lz-arrow"></div>
+      </div>
+      <div class="lz-row" style="--fc:#5a3e8a">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">3</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Staatsaufbau &amp; Gewalten</div>
+          <div class="lz-ziel">Ich erkläre die Gewaltenteilung auf Bundes-, Kantons- und Gemeindeebene.</div>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A8_Gewaltenteilung.html">A8 Gewaltenteilung</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A9_Ebenen_und_Gewalten.html">A9 Ebenen und Gewalten</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A10_Aemter_Gewalten.html">A10 Aemter Gewalten</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A11_Aufgaben_Bund_Kanton_Gemeinde.html">A11 Aufgaben Bund Kanton Gemeinde</a>
+            </div>
+        </div>
+        <div class="lz-arrow"></div>
+      </div>
+      <div class="lz-row" style="--fc:#5a3e8a">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">4</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Bundesorgane</div>
+          <div class="lz-ziel">Ich beschreibe Aufbau und Aufgaben von Parlament und Bundesrat.</div>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A13_Parlament.html">A13 Parlament</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A14_Staende_Nationalrat.html">A14 Staende Nationalrat</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A15_Bundesrat.html">A15 Bundesrat</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A16_Konkordanz.html">A16 Konkordanz</a>
+            </div>
+        </div>
+        <div class="lz-arrow"></div>
+      </div>
+      <div class="lz-row" style="--fc:#5a3e8a">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">5</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Grundrechte &amp; Pflichten</div>
+          <div class="lz-ziel">Ich nenne zentrale Grundrechte und Bürgerpflichten.</div>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A17_Rechte_und_Pflichten.html">A17 Rechte und Pflichten</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A18_Grundrechte.html">A18 Grundrechte</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A19_Weitere_Grundrechte.html">A19 Weitere Grundrechte</a>
+            </div>
+        </div>
+        <div class="lz-arrow"></div>
+      </div>
+      <div class="lz-row" style="--fc:#5a3e8a">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">6</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Volksrechte &amp; Wahlen</div>
+          <div class="lz-ziel">Ich erkläre Initiative, Referendum, Wahlsysteme und wende das Stimmrecht an.</div>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A20_Stimmrecht.html">A20 Stimmrecht</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A21_Wahl_Mehrheiten.html">A21 Wahl Mehrheiten</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A22_Formen_von_Mehr.html">A22 Formen von Mehr</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A23_Proporzwahl.html">A23 Proporzwahl</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A24_Wahlverfahren.html">A24 Wahlverfahren</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A25_Wahllisten.html">A25 Wahllisten</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A26_Klassensprecherwahl.html">A26 Klassensprecherwahl</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A27_Initiative_Referendum.html">A27 Initiative Referendum</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A28_Doppeltes_Mehr.html">A28 Doppeltes Mehr</a>
+            </div>
+        </div>
+        <div class="lz-arrow"></div>
+      </div>
+      <div class="lz-row" style="--fc:#5a3e8a">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">7</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Gesetzgebung &amp; Verbände</div>
+          <div class="lz-ziel">Ich beschreibe den Gesetzgebungsprozess und die Rolle von Parteien und Verbänden.</div>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A29_Gesetzgebung.html">A29 Gesetzgebung</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A30_Parteien_Smartspider.html">A30 Parteien Smartspider</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A35_Waehleranteile.html">A35 Waehleranteile</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A36_Verbaende.html">A36 Verbaende</a>
+            <a class="a-pill a-pill-link" href="401_[UE]_Kapitel 3_A37_Branchenverbaende.html">A37 Branchenverbaende</a>
+            </div>
+        </div>
+        <div class="lz-arrow"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="viewA" class="hidden">
+    <div class="section-label">Alle interaktiven Übungen – Kapitel 401</div>
+    <div class="a-list">
+      <a class="a-row" href="401_[UE]_Kapitel 3_A2_Schweizer_Geschichte.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A2</span><span class="a-code-lz">LZ 1</span></div>
+        <div class="a-body">
+          <div class="a-title">Schweizer Geschichte</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A3_Bundesverfassung.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A3</span><span class="a-code-lz">LZ 1</span></div>
+        <div class="a-body">
+          <div class="a-title">Bundesverfassung</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A5_Staatsformen.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A5</span><span class="a-code-lz">LZ 2</span></div>
+        <div class="a-body">
+          <div class="a-title">Staatsformen</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A6_Regierungsformen.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A6</span><span class="a-code-lz">LZ 2</span></div>
+        <div class="a-body">
+          <div class="a-title">Regierungsformen</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A7_Demokratie_Diktatur.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A7</span><span class="a-code-lz">LZ 2</span></div>
+        <div class="a-body">
+          <div class="a-title">Demokratie Diktatur</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A8_Gewaltenteilung.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A8</span><span class="a-code-lz">LZ 3</span></div>
+        <div class="a-body">
+          <div class="a-title">Gewaltenteilung</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A9_Ebenen_und_Gewalten.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A9</span><span class="a-code-lz">LZ 3</span></div>
+        <div class="a-body">
+          <div class="a-title">Ebenen und Gewalten</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A10_Aemter_Gewalten.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A10</span><span class="a-code-lz">LZ 3</span></div>
+        <div class="a-body">
+          <div class="a-title">Aemter Gewalten</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A11_Aufgaben_Bund_Kanton_Gemeinde.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A11</span><span class="a-code-lz">LZ 3</span></div>
+        <div class="a-body">
+          <div class="a-title">Aufgaben Bund Kanton Gemeinde</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A13_Parlament.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A13</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Parlament</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A14_Staende_Nationalrat.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A14</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Staende Nationalrat</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A15_Bundesrat.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A15</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Bundesrat</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A16_Konkordanz.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A16</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Konkordanz</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A17_Rechte_und_Pflichten.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A17</span><span class="a-code-lz">LZ 5</span></div>
+        <div class="a-body">
+          <div class="a-title">Rechte und Pflichten</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A18_Grundrechte.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A18</span><span class="a-code-lz">LZ 5</span></div>
+        <div class="a-body">
+          <div class="a-title">Grundrechte</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A19_Weitere_Grundrechte.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A19</span><span class="a-code-lz">LZ 5</span></div>
+        <div class="a-body">
+          <div class="a-title">Weitere Grundrechte</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A20_Stimmrecht.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A20</span><span class="a-code-lz">LZ 6</span></div>
+        <div class="a-body">
+          <div class="a-title">Stimmrecht</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A21_Wahl_Mehrheiten.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A21</span><span class="a-code-lz">LZ 6</span></div>
+        <div class="a-body">
+          <div class="a-title">Wahl Mehrheiten</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A22_Formen_von_Mehr.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A22</span><span class="a-code-lz">LZ 6</span></div>
+        <div class="a-body">
+          <div class="a-title">Formen von Mehr</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A23_Proporzwahl.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A23</span><span class="a-code-lz">LZ 6</span></div>
+        <div class="a-body">
+          <div class="a-title">Proporzwahl</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A24_Wahlverfahren.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A24</span><span class="a-code-lz">LZ 6</span></div>
+        <div class="a-body">
+          <div class="a-title">Wahlverfahren</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A25_Wahllisten.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A25</span><span class="a-code-lz">LZ 6</span></div>
+        <div class="a-body">
+          <div class="a-title">Wahllisten</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A26_Klassensprecherwahl.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A26</span><span class="a-code-lz">LZ 6</span></div>
+        <div class="a-body">
+          <div class="a-title">Klassensprecherwahl</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A27_Initiative_Referendum.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A27</span><span class="a-code-lz">LZ 6</span></div>
+        <div class="a-body">
+          <div class="a-title">Initiative Referendum</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A28_Doppeltes_Mehr.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A28</span><span class="a-code-lz">LZ 6</span></div>
+        <div class="a-body">
+          <div class="a-title">Doppeltes Mehr</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A29_Gesetzgebung.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A29</span><span class="a-code-lz">LZ 7</span></div>
+        <div class="a-body">
+          <div class="a-title">Gesetzgebung</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A30_Parteien_Smartspider.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A30</span><span class="a-code-lz">LZ 7</span></div>
+        <div class="a-body">
+          <div class="a-title">Parteien Smartspider</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A35_Waehleranteile.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A35</span><span class="a-code-lz">LZ 7</span></div>
+        <div class="a-body">
+          <div class="a-title">Waehleranteile</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A36_Verbaende.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A36</span><span class="a-code-lz">LZ 7</span></div>
+        <div class="a-body">
+          <div class="a-title">Verbaende</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="401_[UE]_Kapitel 3_A37_Branchenverbaende.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A37</span><span class="a-code-lz">LZ 7</span></div>
+        <div class="a-body">
+          <div class="a-title">Branchenverbaende</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="section-label">Weitere Unterkapitel – Thema 4</div>
+  <div class="ls-inactive-list">
+    <div class="ls-inactive">
+      <div class="ls-inactive-bar"></div>
+      <div class="ls-inactive-code">402</div>
+      <div class="ls-inactive-body">
+        <div class="ls-inactive-title">Meinungsbildung &amp; Medien</div>
+        <div class="ls-inactive-hint">→ 402 Meinungsbildung</div>
+      </div>
+    </div>
+    <div class="ls-inactive">
+      <div class="ls-inactive-bar"></div>
+      <div class="ls-inactive-code">403</div>
+      <div class="ls-inactive-body">
+        <div class="ls-inactive-title">Vielseitigkeit der Schweiz</div>
+        <div class="ls-inactive-hint">→ 403 Vielseitigkeit</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function showView(v) {
+  document.getElementById('viewLz').classList.toggle('hidden', v !== 'lz');
+  document.getElementById('viewA').classList.toggle('hidden',  v !== 'a');
+  document.getElementById('btnLz').classList.toggle('active',  v === 'lz');
+  document.getElementById('btnA').classList.toggle('active',   v === 'a');
+}
+</script>
+</body>
+</html>

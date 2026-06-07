@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABU Lernportal – Detail</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --t1:#C0392B; --t2:#E67E22; --t3:#27AE60;
+    --t4:#2980B9; --t5:#F39C12; --t6:#8E44AD; --t7:#6C3483; --t8:#1a5276; --t9:#145a32; --t10:#117a65;
+    --g9:#111827; --g7:#374151; --g5:#6B7280; --g3:#D1D5DB; --g1:#F3F4F6;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'DM Sans',sans-serif; background:#F0F2F5; color:var(--g7); }
+
+  .wrap { max-width:700px; margin:0 auto; padding:2rem 1.5rem 5rem; }
+
+  .back-btn { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; color:var(--g5); text-decoration:none; margin-bottom:1.75rem; transition:color .15s; }
+  .back-btn:hover { color:var(--g9); }
+
+  .d-header { border-radius:14px; overflow:hidden; margin-bottom:1.75rem; display:grid; grid-template-columns:5px 1fr; box-shadow:0 3px 14px rgba(0,0,0,0.08); }
+  .d-stripe { }
+  .d-head-body { padding:22px 24px; display:flex; align-items:flex-start; gap:16px; }
+  .d-big-num { font-family:'Barlow Condensed',sans-serif; font-size:64px; font-weight:800; line-height:1; opacity:0.18; flex-shrink:0; min-width:60px; }
+  .d-label { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:3px; }
+  .d-title { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; text-transform:uppercase; color:var(--g9); letter-spacing:-0.3px; line-height:1.1; margin-bottom:5px; }
+  .d-desc { font-size:12px; color:var(--g5); line-height:1.5; }
+
+  .file-cards { display:flex; flex-direction:column; gap:10px; }
+
+  .file-card { display:flex; align-items:center; gap:14px; padding:16px 18px; background:white; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,0.06); text-decoration:none; color:inherit; transition:all .18s; border:1.5px solid transparent; }
+  .file-card:hover { border-color:var(--tc,#333); transform:translateX(4px); box-shadow:0 4px 16px rgba(0,0,0,0.09); }
+
+  .file-icon { width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+  .fi-t { background:#DBEAFE; } .fi-e { background:#DCFCE7; } .fi-q { background:#FCE7F3; }
+
+  .file-body { flex:1; }
+  .file-name { font-weight:600; font-size:14px; color:var(--g9); margin-bottom:2px; }
+  .file-hint { font-size:11px; color:var(--g5); }
+
+  .file-arrow { font-size:16px; color:var(--g3); transition:all .15s; }
+  .file-card:hover .file-arrow { color:var(--tc,#333); transform:translateX(3px); }
+
+  .not-linked { opacity:0.5; cursor:default; }
+  .not-linked:hover { transform:none; box-shadow:0 1px 4px rgba(0,0,0,0.06); border-color:transparent; }
+
+  .info-box { background:#FFF3CD; border:1px solid #F0C040; border-radius:10px; padding:12px 16px; font-size:12px; color:#856404; margin-top:1rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back-btn" href="#" onclick="event.preventDefault(); history.back();">← Zurück zur Übersicht</a>
+
+  <div class="d-header" id="dHeader">
+    <div class="d-stripe" id="dStripe"></div>
+    <div class="d-head-body" id="dHeadBody">
+      <div class="d-big-num" id="dNum"></div>
+      <div>
+        <div class="d-label" id="dLabel"></div>
+        <div class="d-title" id="dTitle"></div>
+        <div class="d-desc" id="dDesc"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="file-cards" id="fileCards"></div>
+  <div class="info-box">💡 Klicke auf eine Karte um die Datei zu öffnen. Falls noch kein Link hinterlegt ist, wende dich an deine Lehrperson.</div>
+</div>
+
+<script>
+const DATA = {
+  '101':{ tc:'#C0392B', tbg:'#FDDBD9', label:'Thema 1 · Mein Lehrbeginn', title:'Lehrvertrag & Rechte/Pflichten', desc:'Eine Lehre beginnen – Rechte und Pflichten verstehen und wahrnehmen', pre:'110' },
+  '102':{ tc:'#C0392B', tbg:'#FDDBD9', label:'Thema 1 · Mein Lehrbeginn', title:'Rechtsgrundlagen', desc:'In einen neuen Lebensabschnitt eintreten und die eigene Rolle finden', pre:'120' },
+  '103':{ tc:'#C0392B', tbg:'#FDDBD9', label:'Thema 1 · Mein Lehrbeginn', title:'Kommunikation & Konflikte', desc:'Den Alltag zwischen Beruf, Schule und Privatleben organisieren', pre:'130' },
+  '201':{ tc:'#E67E22', tbg:'#FCE9D4', label:'Thema 2 · Mein Geld', title:'Lohn & Budget', desc:'Einen Lohn erhalten, ausgeben und sparen', pre:'210' },
+  '202':{ tc:'#E67E22', tbg:'#FCE9D4', label:'Thema 2 · Mein Geld', title:'Konsum & Werbung', desc:'Durch Umfeld und Medien im Konsumverhalten beeinflusst werden', pre:'220' },
+  '203':{ tc:'#E67E22', tbg:'#FCE9D4', label:'Thema 2 · Mein Geld', title:'Kaufvertrag', desc:'Einkaufen und Verträge abschliessen', pre:'230' },
+  '204':{ tc:'#E67E22', tbg:'#FCE9D4', label:'Thema 2 · Mein Geld', title:'Investition & Finanzierung', desc:'Grössere Anschaffungen planen und finanzieren', pre:'240' },
+  '301':{ tc:'#27AE60', tbg:'#D4F7E2', label:'Thema 3 · Meine Gesundheit', title:'Gesundheitsfaktoren', desc:'Verschiedene Faktoren wie Körper, Psyche und Sozialleben', pre:'310' },
+  '302':{ tc:'#27AE60', tbg:'#D4F7E2', label:'Thema 3 · Meine Gesundheit', title:'Prävention', desc:'Verantwortung für die Gesundheit tragen', pre:'320' },
+  '303':{ tc:'#27AE60', tbg:'#D4F7E2', label:'Thema 3 · Meine Gesundheit', title:'Krankenkasse & Versicherung', desc:'Mit allfälligen Krankheiten und Unfällen umgehen', pre:'330' },
+  '304':{ tc:'#27AE60', tbg:'#D4F7E2', label:'Thema 3 · Meine Gesundheit', title:'Stress, Sucht & Resilienz', desc:'Mit psychischen Herausforderungen und Suchtverhalten umgehen', pre:'340' },
+  '305':{ tc:'#27AE60', tbg:'#D4F7E2', label:'Thema 3 · Meine Gesundheit', title:'Gewalt & Zivilcourage', desc:'Auf Gewaltsituationen treffen', pre:'350' },
+  '401':{ tc:'#2980B9', tbg:'#D4E9F9', label:'Thema 4 · Unsere Schweiz', title:'Demokratie & Politik', desc:'In einer Demokratie leben und Politik als alltäglich erfahren', pre:'410' },
+  '402':{ tc:'#2980B9', tbg:'#D4E9F9', label:'Thema 4 · Unsere Schweiz', title:'Meinungsbildung & Medien', desc:'Auf verschiedene Meinungen und Haltungen treffen', pre:'420' },
+  '403':{ tc:'#2980B9', tbg:'#D4E9F9', label:'Thema 4 · Unsere Schweiz', title:'Vielseitigkeit der Schweiz', desc:'In der Schweiz leben und ihrer Vielseitigkeit begegnen', pre:'430' },
+  '501':{ tc:'#F39C12', tbg:'#FCF0CD', label:'Thema 5 · Unser Zusammenleben', title:'Beziehungen', desc:'Beziehungen eingehen, pflegen und beenden', pre:'510' },
+  '502':{ tc:'#F39C12', tbg:'#FCF0CD', label:'Thema 5 · Unser Zusammenleben', title:'Ausziehen & Mietrecht', desc:'Das gewohnte Zuhause verlassen', pre:'520' },
+  '503':{ tc:'#F39C12', tbg:'#FCF0CD', label:'Thema 5 · Unser Zusammenleben', title:'Lebensmodelle & Eherecht', desc:'Sich mit dem eigenen Lebensmodell auseinandersetzen', pre:'530' },
+  '504':{ tc:'#F39C12', tbg:'#FCF0CD', label:'Thema 5 · Unser Zusammenleben', title:'Multikulturelles Leben', desc:'Menschen aus anderen Kulturen begegnen', pre:'540' },
+  '505':{ tc:'#F39C12', tbg:'#FCF0CD', label:'Thema 5 · Unser Zusammenleben', title:'Gesellschaft mitgestalten', desc:'Eine lebenswerte Gesellschaft mitgestalten', pre:'550' },
+  '601':{ tc:'#8E44AD', tbg:'#EDD9F7', label:'Thema 6 · Unsere Welt', title:'Weltgeschehen', desc:'Das aktuelle Weltgeschehen verfolgen', pre:'610' },
+  '602':{ tc:'#8E44AD', tbg:'#EDD9F7', label:'Thema 6 · Unsere Welt', title:'Ökologie & Klimawandel', desc:'Gemeinsam Lösungen für ökologische Herausforderungen finden', pre:'620' },
+  '603':{ tc:'#8E44AD', tbg:'#EDD9F7', label:'Thema 6 · Unsere Welt', title:'Globale Vernetzung', desc:'Mit der ganzen Welt vernetzt sein', pre:'630' },
+  '604':{ tc:'#8E44AD', tbg:'#EDD9F7', label:'Thema 6 · Unsere Welt', title:'Migration', desc:'Migration im Alltag erleben', pre:'640' },
+  '701':{ tc:'#6C3483', tbg:'#E2D3F0', label:'Thema 7 · Meine Zukunft', title:'Arbeitsmarkt & Wirtschaft', desc:'Im Arbeitsmarkt ankommen', pre:'710' },
+  '702':{ tc:'#6C3483', tbg:'#E2D3F0', label:'Thema 7 · Meine Zukunft', title:'Stellensuche & Bewerbung', desc:'Eine Stelle suchen und Arbeitsvertrag abschliessen', pre:'720' },
+  '703':{ tc:'#6C3483', tbg:'#E2D3F0', label:'Thema 7 · Meine Zukunft', title:'Lohn, Steuern & Vorsorge', desc:'Einen vollen Lohn erhalten und damit umsichtig planen', pre:'730' },
+  '704':{ tc:'#6C3483', tbg:'#E2D3F0', label:'Thema 7 · Meine Zukunft', title:'Zukunftsperspektiven', desc:'Sich in einer Welt des Wandels weiterentwickeln', pre:'740' },
+  // T8 Qualifikationsverfahren
+  '801':{ tc:'#1a5276', tbg:'#d6eaf8', label:'Thema 8 · Qualifikationsverfahren', title:'Mein Lehrbeginn',      desc:'Wiederholung und Prüfungsvorbereitung – Thema 1', pre:'801' },
+  '802':{ tc:'#1a5276', tbg:'#d6eaf8', label:'Thema 8 · Qualifikationsverfahren', title:'Mein Geld',            desc:'Wiederholung und Prüfungsvorbereitung – Thema 2', pre:'802' },
+  '803':{ tc:'#1a5276', tbg:'#d6eaf8', label:'Thema 8 · Qualifikationsverfahren', title:'Meine Gesundheit',     desc:'Wiederholung und Prüfungsvorbereitung – Thema 3', pre:'803' },
+  '804':{ tc:'#1a5276', tbg:'#d6eaf8', label:'Thema 8 · Qualifikationsverfahren', title:'Unsere Schweiz',       desc:'Wiederholung und Prüfungsvorbereitung – Thema 4', pre:'804' },
+  '805':{ tc:'#1a5276', tbg:'#d6eaf8', label:'Thema 8 · Qualifikationsverfahren', title:'Unser Zusammenleben',  desc:'Wiederholung und Prüfungsvorbereitung – Thema 5', pre:'805' },
+  '806':{ tc:'#1a5276', tbg:'#d6eaf8', label:'Thema 8 · Qualifikationsverfahren', title:'Unsere Welt',          desc:'Wiederholung und Prüfungsvorbereitung – Thema 6', pre:'806' },
+  '807':{ tc:'#1a5276', tbg:'#d6eaf8', label:'Thema 8 · Qualifikationsverfahren', title:'Meine Zukunft',        desc:'Wiederholung und Prüfungsvorbereitung – Thema 7', pre:'807' },
+  // T9 Vertiefungsarbeit
+  '901':{ tc:'#145a32', tbg:'#d5f5e3', label:'Thema 9 · Vertiefungsarbeit', title:'Reglement', desc:'Leitfaden, Themeneingabe, Arbeitsjournal', pre:'901' },
+  '902':{ tc:'#145a32', tbg:'#d5f5e3', label:'Thema 9 · Vertiefungsarbeit', title:'Probe VA',  desc:'Übungsarbeit zu den Themen Wohnen und Freizeit', pre:'902' },
+  // T10 Sprache und Kommunikation
+  '1001':{ tc:'#117a65', tbg:'#d1f2eb', label:'Thema 10 · Sprache und Kommunikation', title:'Lese- und Hörverständnis', desc:'Hörverständnis, Kurzgeschichte, Philosophische Texte', pre:'1001' },
+  '1002':{ tc:'#117a65', tbg:'#d1f2eb', label:'Thema 10 · Sprache und Kommunikation', title:'Produktion',               desc:'Texte verfassen',                                    pre:'1002' },
+  '1003':{ tc:'#117a65', tbg:'#d1f2eb', label:'Thema 10 · Sprache und Kommunikation', title:'Interaktion',              desc:'Korrespondenz',                                      pre:'1003' },
+};
+
+// Links: fill in SharePoint URLs here
+// Format: 'CODE_TYPE': 'https://sharepoint-url...'
+const LINKS = {
+  '101_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/101_Lehrvertrag/101_Theorie?csf=1&web=1',
+  '101_Übungen': '101_Aufgaben.html',
+  '101_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/101_Lehrvertrag/101_Quiz?csf=1&web=1',
+  '102_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/102_Rechtsgrundlagen/102_Theorie?csf=1&web=1',
+  '102_Übungen': '102_Aufgaben.html',
+  '102_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/102_Rechtsgrundlagen/102_Quiz?csf=1&web=1',
+  '103_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/103_Kommunikation/103_Theorie?csf=1&web=1',
+  '103_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/103_Kommunikation/103_Uebungen?csf=1&web=1',
+  '103_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/103_Kommunikation/103_Quiz?csf=1&web=1',
+  '201_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/201_Lohn/201_Theorie?csf=1&web=1',
+  '201_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/201_Lohn/201_Uebungen?csf=1&web=1',
+  '201_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/201_Lohn/201_Quiz?csf=1&web=1',
+  '202_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/202_Konsum/202_Theorie?csf=1&web=1',
+  '202_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/202_Konsum/202_Uebungen?csf=1&web=1',
+  '202_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/202_Konsum/202_Quiz?csf=1&web=1',
+  '203_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/203_Kaufvertrag/203_Theorie?csf=1&web=1',
+  '203_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/203_Kaufvertrag/203_Uebungen?csf=1&web=1',
+  '203_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/203_Kaufvertrag/203_Quiz?csf=1&web=1',
+  '204_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/204_Investition/204_Theorie?csf=1&web=1',
+  '204_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/204_Investition/204_Uebungen?csf=1&web=1',
+  '204_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/204_Investition/204_Quiz?csf=1&web=1',
+  '301_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/03_Meine_Gesundheit/301_Gesundheitsfaktoren/301_Theorie?csf=1&web=1',
+  '301_Übungen': '301_Aufgaben.html',
+  '301_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/03_Meine_Gesundheit/301_Gesundheitsfaktoren/301_Quiz?csf=1&web=1',
+  '302_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/03_Meine_Gesundheit/302_Eigenverantwortung_Praevention/302_Theorie?csf=1&web=1',
+  '302_Übungen': '302_Aufgaben.html',
+  '302_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/03_Meine_Gesundheit/302_Eigenverantwortung_Praevention/302_Quiz?csf=1&web=1',
+  '303_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/03_Meine_Gesundheit/303_Krankenkasse/303_Theorie?csf=1&web=1',
+  '303_Übungen': '303_Aufgaben.html',
+  '303_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/03_Meine_Gesundheit/303_Krankenkasse/303_Quiz?csf=1&web=1',
+  '304_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/03_Meine_Gesundheit/304_Stress_Sucht/304_Theorie?csf=1&web=1',
+  '304_Übungen': '304_Aufgaben.html',
+  '304_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/03_Meine_Gesundheit/304_Stress_Sucht/304_Quiz?csf=1&web=1',
+  '305_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/03_Meine_Gesundheit/305_Gewalt/305_Theorie?csf=1&web=1',
+  '305_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/03_Meine_Gesundheit/305_Gewalt/305_Uebungen?csf=1&web=1',
+  '305_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/03_Meine_Gesundheit/305_Gewalt/305_Quiz?csf=1&web=1',
+  '401_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/04_Unsere_Schweiz/401_Demokratie/401_Theorie?csf=1&web=1',
+  '401_Übungen': '401_Aufgaben.html',
+  '401_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/04_Unsere_Schweiz/401_Demokratie/401_Quiz?csf=1&web=1',
+  '402_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/04_Unsere_Schweiz/402_Meinungsbildung/402_Theorie?csf=1&web=1',
+  '402_Übungen': '402_Aufgaben.html',
+  '402_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/04_Unsere_Schweiz/402_Meinungsbildung/402_Quiz?csf=1&web=1',
+  '403_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/04_Unsere_Schweiz/403_Vielseitigkeit/403_Theorie?csf=1&web=1',
+  '403_Übungen': '403_Aufgaben.html',
+  '403_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/04_Unsere_Schweiz/403_Vielseitigkeit/403_Quiz?csf=1&web=1',
+  '501_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/05_Unser_Zusammenleben/501_Beziehungen/501_Theorie?csf=1&web=1',
+  '501_Übungen': '501_Aufgaben.html',
+  '501_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/05_Unser_Zusammenleben/501_Beziehungen/501_Quiz?csf=1&web=1',
+  '502_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/05_Unser_Zusammenleben/502_Ausziehen/502_Theorie?csf=1&web=1',
+  '502_Übungen': '502_Aufgaben.html',
+  '502_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/05_Unser_Zusammenleben/502_Ausziehen/502_Quiz?csf=1&web=1',
+  '503_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/05_Unser_Zusammenleben/503_Lebensmodell/503_Theorie?csf=1&web=1',
+  '503_Übungen': '503_Aufgaben.html',
+  '503_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/05_Unser_Zusammenleben/503_Lebensmodell/503_Quiz?csf=1&web=1',
+  '504_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/05_Unser_Zusammenleben/504_Multikulturell/504_Theorie?csf=1&web=1',
+  '504_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/05_Unser_Zusammenleben/504_Multikulturell/504_Uebungen?csf=1&web=1',
+  '504_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/05_Unser_Zusammenleben/504_Multikulturell/504_Quiz?csf=1&web=1',
+  '505_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/05_Unser_Zusammenleben/505_Mitgestaltung/505_Theorie?csf=1&web=1',
+  '505_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/05_Unser_Zusammenleben/505_Mitgestaltung/505_Uebungen?csf=1&web=1',
+  '505_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/05_Unser_Zusammenleben/505_Mitgestaltung/505_Quiz?csf=1&web=1',
+  '601_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/06_Unsere_Welt/601_Weltgeschehen/601_Theorie?csf=1&web=1',
+  '601_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/06_Unsere_Welt/601_Weltgeschehen/601_Uebungen?csf=1&web=1',
+  '601_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/06_Unsere_Welt/601_Weltgeschehen/601_Quiz?csf=1&web=1',
+  '602_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/06_Unsere_Welt/602_%C3%96kologische_Herausforderung/602_Theorie?csf=1&web=1',
+  '602_Übungen': '602_Aufgaben.html',
+  '602_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/06_Unsere_Welt/602_%C3%96kologische_Herausforderung/602_Quiz?csf=1&web=1',
+  '603_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/06_Unsere_Welt/603_Vernetzung/603_Theorie?csf=1&web=1',
+  '603_Übungen': '603_Aufgaben.html',
+  '603_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/06_Unsere_Welt/603_Vernetzung/603_Quiz?csf=1&web=1',
+  '604_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/06_Unsere_Welt/604_Migration/604_Theorie?csf=1&web=1',
+  '604_Übungen': '604_Aufgaben.html',
+  '604_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/06_Unsere_Welt/604_Migration/604_Quiz?csf=1&web=1',
+  '701_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/07_Meine_Zukunft/701_Arbeitsmarkt/701_Theorie?csf=1&web=1',
+  '701_Übungen': '701_Aufgaben.html',
+  '701_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/07_Meine_Zukunft/701_Arbeitsmarkt/701_Quiz?csf=1&web=1',
+  '702_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/07_Meine_Zukunft/702_Stellensuche/702_Theorie?csf=1&web=1',
+  '702_Übungen': '702_Aufgaben.html',
+  '702_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/07_Meine_Zukunft/702_Stellensuche/702_Quiz?csf=1&web=1',
+  '703_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/07_Meine_Zukunft/703_Lohn_erhalten/703_Theorie?csf=1&web=1',
+  '703_Übungen': '703_Aufgaben.html',
+  '703_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/07_Meine_Zukunft/703_Lohn_erhalten/703_Quiz?csf=1&web=1',
+  '704_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/07_Meine_Zukunft/704_Zukunftsperspektiven/704_Theorie?csf=1&web=1',
+  '704_Übungen': '704_Aufgaben.html',
+  '704_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/07_Meine_Zukunft/704_Zukunftsperspektiven/704_Quiz?csf=1&web=1',
+  '801_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/801_Mein_Lehrbeginn/801_Theorie?csf=1&web=1',
+  '801_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/801_Mein_Lehrbeginn/801_Uebungen?csf=1&web=1',
+  '801_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/801_Mein_Lehrbeginn/801_Quiz?csf=1&web=1',
+  '802_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/802_Mein_Geld/802_Theorie?csf=1&web=1',
+  '802_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/802_Mein_Geld/802_Uebungen?csf=1&web=1',
+  '802_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/802_Mein_Geld/802_Quiz?csf=1&web=1',
+  '803_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/803_Meine_Gesundheit/803_Theorie?csf=1&web=1',
+  '803_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/803_Meine_Gesundheit/803_Uebungen?csf=1&web=1',
+  '803_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/803_Meine_Gesundheit/803_Quiz?csf=1&web=1',
+  '804_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/804_Unsere_Schweiz/804_Theorie?csf=1&web=1',
+  '804_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/804_Unsere_Schweiz/804_Uebungen?csf=1&web=1',
+  '804_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/804_Unsere_Schweiz/804_Quiz?csf=1&web=1',
+  '805_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/805_Unser_Zusammenleben/805_Theorie?csf=1&web=1',
+  '805_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/805_Unser_Zusammenleben/805_Uebungen?csf=1&web=1',
+  '805_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/805_Unser_Zusammenleben/805_Quiz?csf=1&web=1',
+  '806_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/806_Unsere_Welt/806_Theorie?csf=1&web=1',
+  '806_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/806_Unsere_Welt/806_Uebungen?csf=1&web=1',
+  '806_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/806_Unsere_Welt/806_Quiz?csf=1&web=1',
+  '807_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/807_Meine_Zukunft/807_Theorie?csf=1&web=1',
+  '807_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/807_Meine_Zukunft/807_Uebungen?csf=1&web=1',
+  '807_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/807_Meine_Zukunft/807_Quiz?csf=1&web=1',
+  '901_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/09_Vertiefungsarbeit/801_Reglement?csf=1&web=1',
+  '902_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/09_Vertiefungsarbeit/802_Probe_VA?csf=1&web=1',
+  '1001_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/10_Sprache_Kommunikation/1001_Lese-und_H%C3%B6rverst%C3%A4ndnis?csf=1&web=1',
+  '1002_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/10_Sprache_Kommunikation/1002_Texte_verfassen?csf=1&web=1',
+  '1003_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/10_Sprache_Kommunikation/1003_Korrespondenz?csf=1&web=1',
+};
+
+function getParam(name) {
+  // Hash (#101) statt ?id= weil SharePoint den ?id= Parameter selbst verwendet
+  if (name === 'id') {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) return hash;
+  }
+  return new URLSearchParams(window.location.search).get(name);
+}
+
+window.onload = function() {
+  const id = getParam('id');
+  const d = DATA[id];
+  if (!d) { document.body.innerHTML = '<div style="padding:2rem">Nicht gefunden. <a href="https://bldsg.sharepoint.com/:f:/t/ABULernportal/IgARC7kSs6RURa9TJyrnBVH8AZPe0HR_0OutEDgeFoGXprg?e=99OxCs">Zurück</a></div>'; return; }
+
+  document.title = 'ABU – ' + d.title;
+  document.getElementById('dStripe').style.background = d.tc;
+  document.getElementById('dHeadBody').style.background = d.tbg;
+  document.getElementById('dNum').style.color = d.tc;
+  document.getElementById('dNum').textContent = id;
+  document.getElementById('dLabel').style.color = d.tc;
+  document.getElementById('dLabel').textContent = d.label;
+  document.getElementById('dTitle').textContent = d.title;
+  document.getElementById('dDesc').textContent = d.desc;
+
+  // T9 und T10: nur ein Ordner pro Kachel, kein Theorie/Übungen/Quiz
+  const isT9  = id === '901' || id === '902';
+  const isT10 = id === '1001' || id === '1002' || id === '1003';
+  const files = (isT9 || isT10)
+    ? [ { key: id+'_Theorie', icon:'📁', cls:'fi-t', name: d.title, hint:'SharePoint-Ordner öffnen' } ]
+    : [
+        { key: id+'_Theorie',  icon:'📘', cls:'fi-t', name: d.pre+'_Theorie '+d.title,  hint:'Erklärungen, Grundlagen' },
+        { key: id+'_Übungen',  icon:'✏️', cls:'fi-e', name: d.pre+'_Übungen '+d.title,  hint:'Interaktive Übungen nach Lernzielen' },
+        { key: id+'_Quiz',     icon:'🧠', cls:'fi-q', name: d.pre+'_Quiz '+d.title,      hint:'Lernkontrolle, Self-Check' },
+      ];
+
+  const container = document.getElementById('fileCards');
+  files.forEach(f => {
+    const url = LINKS[f.key];
+    const a = document.createElement('a');
+    a.className = 'file-card' + (url ? '' : ' not-linked');
+    a.style.setProperty('--tc', d.tc);
+    a.href = url || '#';
+    if (url && url.startsWith('http')) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+    a.innerHTML = `
+      <div class="file-icon ${f.cls}">${f.icon}</div>
+      <div class="file-body">
+        <div class="file-name">${f.name}</div>
+        <div class="file-hint">${url ? f.hint : '🔗 Noch kein Link hinterlegt'}</div>
+      </div>
+      <span class="file-arrow">${url ? '→' : ''}</span>`;
+    container.appendChild(a);
+  });
+};
+</script>
+</body>
+</html>
