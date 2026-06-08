@@ -24,7 +24,7 @@
   ],
   "2": [
     {
-      "id": "art-20260607-02",
+      "id": "art-20260608-05",
       "date": "07.06.",
       "title": "Gleichstellung neu denken: Nicht jede Ungleichheit ist ungerecht",
       "source": "NZZ",
@@ -259,7 +259,49 @@
   ],
   "4": [
     {
-      "id": "art-20260607-03",
+      "id": "art-20260608-00",
+      "date": "08.06.",
+      "title": "Späte Strafe: Lex Greensill darf neun Jahre keine britischen Firmen mehr leiten",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/spaete-strafe-lex-greensill-darf-9-jahre-keine-britischen-firmen-mehr-leiten-ld.10010213",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Späte Strafe: Lex Greensill darf neun Jahre keine britischen Firmen mehr leiten»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der Kollaps seiner Finanzfirma hat den Untergang der Credit Suisse beschleunigt. Jetzt wird der Fina"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260608-01",
+      "date": "08.06.",
+      "title": "«Je mehr KI ich anzapfe, desto mehr Tokens verbrauche ich. Deshalb kann das exponentiell teuer werden»",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/je-mehr-ki-ich-anzapfe-desto-mehr-tokens-verbrauche-ich-deshalb-kann-das-sehr-schnell-exponentiell-teuer-werden-ld.10010028",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn eine KI pro Wort, das sie schreibt, Geld kostet – wer trägt am Ende diese Rechnung: das Unternehmen, die Angestellten oder der Kunde?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernende erkennen, dass neue Technologien nicht nur technische, sondern auch wirtschaftliche und ökologische Folgen haben. Dies verbindet sich mit dem Verständnis von Nachhaltigkeit und verantwortungsvollem Ressourceneinsatz in der Schweizer Wirtschaft."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert ein Schweizer Unternehmen in eurer Branche und überlegt: Könnte KI dort eingesetzt werden? Erstellt eine einfache Kosten-Nutzen-Tabelle (KI-Kosten vs. eingesparte Arbeitszeit)."
+        }
+      ]
+    },
+    {
+      "id": "art-20260608-06",
       "date": "07.06.",
       "title": "Historischer Glücksfall für Hausbesitzer: Die Bevölkerungszunahme lässt Vermögen explodieren",
       "source": "NZZ",
@@ -267,15 +309,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Historischer Glücksfall für Hausbesitzer: Die Bevölkerungszunahme lässt Vermögen explodieren»?"
+          "text": "Warum werden manche Menschen durch das Kaufen eines Hauses steinreich, während andere das nie schaffen können?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Seit der Einführung der Personenfreizügigkeit boomt der Schweizer Immobilienmarkt. Wer rechtzeitig k"
+          "text": "Das Konzept der Vermögensbildung zeigt, wie wirtschaftliche Faktoren (Migration, Nachfrage, Preise) das Leben von Menschen konkret verändern. Gleichzeitig wird sichtbar, wie Chancenungleichheit entsteht: Wer früh kaufen konnte, profitiert heute massiv – andere haben nie diese Möglichkeit gehabt."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Recherchiert: Wie haben sich die Immobilienpreise in eurer Region in den letzten 20 Jahren entwickelt? Erstellt eine kleine Grafik und diskutiert: Ist das fair?"
         }
       ]
     },
@@ -429,7 +471,28 @@
   ],
   "5": [
     {
-      "id": "art-20260607-01",
+      "id": "art-20260608-02",
+      "date": "08.06.",
+      "title": "«Unsere Ehe mit der EU war toxisch, und darauf folgte eine teure Scheidung», sagt der ehemalige Speaker des britischen Unterhauses John Bercow zum Brexit",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/ex-parlamentssprecher-john-bercow-interview-zu-brexit-labour-starmer-farage-ld.10009380",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: ««Unsere Ehe mit der EU war toxisch, und darauf folgte eine teure Scheidung», sagt der ehemalige Speaker des britischen Unterhauses John Bercow zum Brexit»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Finanzmärkte und die hohen Lebenshaltungskosten setzen die britische Labour-Regierung unter Druc"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260608-04",
       "date": "07.06.",
       "title": "Konkurrenz in der Art-Familie: Bleibt die wichtigste Kunstmesse in Basel, oder wandert sie nach Paris ab?",
       "source": "NZZ",
@@ -616,32 +679,11 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260603-08",
-      "date": "02.06.",
-      "title": "Tatort Wohnungsmarkt: Ist die Zuwanderung schuld an den hohen Mieten? Eine Beweisaufnahme",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/ist-die-zuwanderung-schuld-an-der-wohnungsnot-eine-beweisaufnahme-ld.10007428",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Tatort Wohnungsmarkt: Ist die Zuwanderung schuld an den hohen Mieten? Eine Beweisaufnahme»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die SVP macht die hohen Mieten zu einem Argument für ihre 10-Millionen-Initiative. Die Anklage gegen"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "6": [
     {
-      "id": "art-20260607-00",
+      "id": "art-20260608-03",
       "date": "07.06.",
       "title": "Der Gen-Z-Flüsterer aus Vevey: Der Nestlé-Chef Philipp Navratil verordnet seinem Konzern eine Verjüngungskur",
       "source": "NZZ",
@@ -662,7 +704,7 @@
       ]
     },
     {
-      "id": "art-20260607-04",
+      "id": "art-20260608-07",
       "date": "07.06.",
       "title": "Abschied vom Autoland? In vielen deutschen Werken geht die Angst um",
       "source": "NZZ",
