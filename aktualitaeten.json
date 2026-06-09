@@ -24,7 +24,7 @@
   ],
   "2": [
     {
-      "id": "art-20260608-05",
+      "id": "art-20260609-09",
       "date": "07.06.",
       "title": "Gleichstellung neu denken: Nicht jede Ungleichheit ist ungerecht",
       "source": "NZZ",
@@ -236,6 +236,27 @@
   ],
   "3": [
     {
+      "id": "art-20260609-00",
+      "date": "09.06.",
+      "title": "North Carolina hat Roche, Novartis und Ypsomed angelockt. Aber der amerikanische Gliedstaat will noch mehr",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/north-carolina-buhlt-nicht-nur-um-roche-und-um-novartis-ld.10010357",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «North Carolina hat Roche, Novartis und Ypsomed angelockt. Aber der amerikanische Gliedstaat will noch mehr»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Firmen aus dem Gesundheitssektor investieren wegen der Zölle so viel wie noch nie in den USA. Fabrik"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260601-07",
       "date": "31.05.",
       "title": "Der Anarchokapitalist Peter Thiel hat endlich eine Heimat gefunden – beim Anarchokapitalisten Javier Milei",
@@ -259,7 +280,49 @@
   ],
   "4": [
     {
-      "id": "art-20260608-00",
+      "id": "art-20260609-02",
+      "date": "09.06.",
+      "title": "Digitec Galaxus löscht 380 000 Produktbewertungen – der Auslöser heisst «Kevin»",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/digitec-galaxus-loescht-380-000-produktbewertungen-der-ausloeser-heisst-kevin-ld.10010335",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Digitec Galaxus löscht 380 000 Produktbewertungen – der Auslöser heisst «Kevin»»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Beim grössten Schweizer Onlinehändler dürfen ab sofort nur noch Käufer Produkte bewerten. Damit schä"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260609-03",
+      "date": "09.06.",
+      "title": "«Kein weiteres Rekordjahr»: Die Amerikaner reisen diesen Sommer in die Schweiz, doch es fehlen die Gäste von anderswo",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/fuer-2026-erwarten-wir-kein-weiteres-rekordjahr-welche-touristen-diesen-sommer-fehlen-und-wer-trotzdem-in-die-schweiz-kommt-ld.10010330",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: ««Kein weiteres Rekordjahr»: Die Amerikaner reisen diesen Sommer in die Schweiz, doch es fehlen die Gäste von anderswo»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der Iran-Krieg vermiest den Schweizer Top-Destinationen das Geschäftsjahr. Hoffnung gibt es trotzdem"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260609-04",
       "date": "08.06.",
       "title": "Späte Strafe: Lex Greensill darf neun Jahre keine britischen Firmen mehr leiten",
       "source": "NZZ",
@@ -425,53 +488,32 @@
           "text": "Recherchiert: Welche Schweizer Rohstoffkonzerne sind in eurer Region/Branche relevant? Notiert Pro- und Contra-Argumente, warum diese Firmen in Krisenregionen tätig sind."
         }
       ]
-    },
+    }
+  ],
+  "5": [
     {
-      "id": "art-20260603-01",
-      "date": "03.06.",
-      "title": "Wirtschaftsstandort Schweiz: Das Parlament will die Unternehmen entlasten",
+      "id": "art-20260609-01",
+      "date": "09.06.",
+      "title": "Übernahmewelle auf dem Höhepunkt: Der italienische Finanzplatz setzt zum grossen Showdown an",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wirtschaftsstandort-schweiz-ein-fast-perfekter-auftakt-in-die-sommersession-ld.10009391",
+      "url": "https://www.nzz.ch/wirtschaft/showdown-um-monte-dei-paschi-italiens-finanzplatz-vor-umbruch-ld.10010349",
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn die Schweiz Steuern für grosse Firmen senkt – wer zahlt dann am Ende für Schulen, Strassen und Spitäler?"
+          "text": "Was denkst du zu: «Übernahmewelle auf dem Höhepunkt: Der italienische Finanzplatz setzt zum grossen Showdown an»?"
         },
         {
           "phase": "TH",
-          "text": "Hier zeigt sich das Spannungsfeld zwischen Wirtschaftsstandort und Gemeinwohl: Staaten konkurrieren um Investitionen durch tiefe Steuern, müssen aber gleichzeitig ihre öffentlichen Aufgaben finanzieren. Lernende verstehen, dass politische Entscheidungen immer Gewinner und Verlierer haben."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Welche drei Steuern zahlen Unternehmen in der Schweiz? Notiert, wofür der Kanton diese Steuereinnahmen braucht – und überlegt, was passiert, wenn diese sinken."
-        }
-      ]
-    },
-    {
-      "id": "art-20260530-08",
-      "date": "28.05.",
-      "title": "Der Pharmakonzern Bristol Myers Squibb investiert Millionen in eine neue Schweizer Fabrik. Doch künftig fliesst das Geld in die USA",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/pharmasektor-neues-werk-von-bms-in-boudry-erhaelt-konkurrenz-aus-usa-ld.10008850",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Der Pharmakonzern Bristol Myers Squibb investiert Millionen in eine neue Schweizer Fabrik. Doch künftig fliesst das Geld in die USA»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Bristol Myers Squibb würde vom neuenburgischen Boudry aus gerne die gesamte Welt mit Tabletten der n"
+          "text": "Dieser Artikel zeigt: Die Banken Intesa und BPM buhlen um Monte dei Paschi di Siena (MPS), die älteste Bank der Welt. Ein "
         },
         {
           "phase": "UE",
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    }
-  ],
-  "5": [
+    },
     {
-      "id": "art-20260608-02",
+      "id": "art-20260609-06",
       "date": "08.06.",
       "title": "«Unsere Ehe mit der EU war toxisch, und darauf folgte eine teure Scheidung», sagt der ehemalige Speaker des britischen Unterhauses John Bercow zum Brexit",
       "source": "NZZ",
@@ -492,7 +534,7 @@
       ]
     },
     {
-      "id": "art-20260608-04",
+      "id": "art-20260609-08",
       "date": "07.06.",
       "title": "Konkurrenz in der Art-Familie: Bleibt die wichtigste Kunstmesse in Basel, oder wandert sie nach Paris ab?",
       "source": "NZZ",
@@ -658,32 +700,11 @@
           "text": "Erstellt eine Pro-Contra-Liste: Welche Vorteile und Risiken hat es, wenn Menschen selbst über ihren Renteneintritt entscheiden können? Berücksichtigt auch junge Menschen, die später arbeiten müssen."
         }
       ]
-    },
-    {
-      "id": "art-20260603-03",
-      "date": "03.06.",
-      "title": "Dunkle Wolken am KMU-Horizont: «Die Schweiz steht früh auf, aber erwacht spät»",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/dunkle-wolken-am-kmu-horizont-die-schweiz-steht-frueh-auf-aber-erwacht-spaet-ld.10009281",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Dunkle Wolken am KMU-Horizont: «Die Schweiz steht früh auf, aber erwacht spät»»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Stimmung unter den Unternehmen ist so pessimistisch wie seit dem Jahr 2021 nicht mehr. Laut dem "
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "6": [
     {
-      "id": "art-20260608-03",
+      "id": "art-20260609-07",
       "date": "07.06.",
       "title": "Der Gen-Z-Flüsterer aus Vevey: Der Nestlé-Chef Philipp Navratil verordnet seinem Konzern eine Verjüngungskur",
       "source": "NZZ",
@@ -691,15 +712,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Der Gen-Z-Flüsterer aus Vevey: Der Nestlé-Chef Philipp Navratil verordnet seinem Konzern eine Verjüngungskur»?"
+          "text": "Warum kauft ein 160-jähriges Schweizer Unternehmen plötzlich ein deutsches Start-up für Trinkmahlzeiten – könnte Nestlé auch einfach selbst so ein Produkt erfinden?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Nestlé übernimmt den Trinkmahlzeiten-Anbieter Yfood aus Deutschland. Der Zukauf zeigt, wie der Chef "
+          "text": "Konzernstrategie und Marktadaption: Große Unternehmen müssen sich kontinuierlich an verändernde Konsumentenbedürfnisse anpassen, um relevant zu bleiben. Der Zukauf von Yfood zeigt, wie Traditionsunternehmen durch gezielte Übernahmen jüngere Zielgruppen erschließen."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Recherchiert online, welche Produkte/Gewohnheiten eure Generation (Gen Z) anders konsumiert als eure Eltern – und überlegt: Welche Schweizer Traditionsunternehmen könnten davon profitieren, solche Trends früh zu erkennen?"
         }
       ]
     },
