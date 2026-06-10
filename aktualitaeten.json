@@ -236,7 +236,7 @@
   ],
   "3": [
     {
-      "id": "art-20260609-00",
+      "id": "art-20260610-07",
       "date": "09.06.",
       "title": "North Carolina hat Roche, Novartis und Ypsomed angelockt. Aber der amerikanische Gliedstaat will noch mehr",
       "source": "NZZ",
@@ -280,7 +280,49 @@
   ],
   "4": [
     {
-      "id": "art-20260609-02",
+      "id": "art-20260610-03",
+      "date": "10.06.",
+      "title": "Die Schweizer Wirtschaft will sich dem Druck aus Washington nicht beugen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-schweizer-wirtschaft-ist-gegen-ein-importverbot-fuer-gueter-aus-zwangsarbeit-und-stemmt-sich-damit-gegen-den-druck-der-usa-im-zollstreit-ld.10010347",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Die Schweizer Wirtschaft will sich dem Druck aus Washington nicht beugen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die USA begründen die neuen Strafzölle damit, dass die Schweiz zu wenig gegen die globale Zwangsarbe"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260610-04",
+      "date": "09.06.",
+      "title": "Bundesbern ringt um Kompromiss beim UBS-Eigenkapital: Krisenanleihen rücken wieder ins Zentrum",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/bundesbern-ringt-um-kompromiss-beim-ubs-eigenkapital-krisenanleihen-ruecken-wieder-ins-zentrum-ld.10010495",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn die grösste Bank der Schweiz in Schieflage gerät – warum kümmert sich dann der Bundesrat persönlich darum und nicht nur die Bankenaufsicht?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernziel: Verständnis für die Rolle des Staates in der Wirtschaft und die Verflechtung von Politik, Finanzsektor und Gesellschaftsverantwortung. Konzept: Systemische Risiken und staatliche Handlungsfähigkeit in Krisensituationen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche Aufgaben hat der Bundesrat beim Schutz der Schweizer Wirtschaft? Erstellt eine Liste von 3–4 Massnahmen, die der Staat ergreifen kann, wenn eine Grossbank wackelt."
+        }
+      ]
+    },
+    {
+      "id": "art-20260610-09",
       "date": "09.06.",
       "title": "Digitec Galaxus löscht 380 000 Produktbewertungen – der Auslöser heisst «Kevin»",
       "source": "NZZ",
@@ -446,53 +488,32 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260606-09",
-      "date": "05.06.",
-      "title": "Schweizer Rohstoffriesen wie Trafigura und Glencore verdienen prächtig am Iran-Krieg",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/iran-krieg-schweizer-rohstoffhaendler-wie-trafigura-und-glencore-steigern-gewinn-ld.10009849",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Schweizer Rohstoffriesen wie Trafigura und Glencore verdienen prächtig am Iran-Krieg»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Knappes Öl ist begehrtes Öl: Der Rohstoffhändler Trafigura erzielt eines seiner besten Halbjahreserg"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260605-02",
-      "date": "05.06.",
-      "title": "Der Iran-Krieg ist lukrativ: Schweizer Rohstoffriesen wie Trafigura und Glencore verdienen prächtig",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/iran-krieg-schweizer-rohstoffhaendler-wie-trafigura-und-glencore-steigern-gewinn-ld.10009849",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Sollte es der Schweiz egal sein, wie unsere grossen Rohstoffkonzerne Geld verdienen – auch wenn Kriege daran beteiligt sind?"
-        },
-        {
-          "phase": "TH",
-          "text": "Hier zeigt sich die Spannung zwischen Wirtschaftsinteressen und ethischen Verantwortungen in der Globalisierung. Das Konzept der «Schweizer Neutralität» wird praktisch hinterfragt: Kann ein Land neutral sein, wenn seine Unternehmen von Konflikten profitieren?"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Welche Schweizer Rohstoffkonzerne sind in eurer Region/Branche relevant? Notiert Pro- und Contra-Argumente, warum diese Firmen in Krisenregionen tätig sind."
-        }
-      ]
     }
   ],
   "5": [
     {
-      "id": "art-20260609-01",
+      "id": "art-20260610-02",
+      "date": "10.06.",
+      "title": "Die Millionärsmaschine: Der SpaceX-Börsengang macht auch Handwerker und Ingenieurinnen reich – und die Banken liegen auf der Lauer",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-millionaersmaschine-der-spacex-boersengang-macht-auch-handwerker-und-ingenieurinnen-reich-und-die-banken-liegen-auf-der-lauer-ld.10010417",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn eine Firma an die Börse geht und plötzlich alle Angestellten reich werden – ist das gerecht oder nur Glück?"
+        },
+        {
+          "phase": "TH",
+          "text": "Sichtbar wird hier, wie Vermögensverteilung und wirtschaftliche Chancen funktionieren: nicht alle haben gleiche Startbedingungen, um an Wohlstand zu gelangen. Das zeigt die Spannung zwischen Leistung, Glück und strukturellen Unterschieden in unserer Gesellschaft."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Wer profitiert beim SpaceX-Börsengang alles (Angestellte, Banken, Gründer) und wer nicht? Erstellt eine Liste und diskutiert, ob das 'fair' ist."
+        }
+      ]
+    },
+    {
+      "id": "art-20260610-08",
       "date": "09.06.",
       "title": "Übernahmewelle auf dem Höhepunkt: Der italienische Finanzplatz setzt zum grossen Showdown an",
       "source": "NZZ",
@@ -679,30 +700,51 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260604-09",
-      "date": "03.06.",
-      "title": "Ökonomen fordern mehr Wahlfreiheit bei der Rente. Wer später in Rente geht, soll niedrigere Beiträge zahlen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/oekonomen-fordern-mehr-wahlfreiheit-bei-der-rente-wer-spaeter-in-rente-geht-soll-niedrige-beitraege-zahlen-ld.10009678",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Sollte jede Person selbst entscheiden dürfen, wann sie in Rente geht – auch wenn das bedeutet, weniger Geld zu bekommen?"
-        },
-        {
-          "phase": "TH",
-          "text": "Das Konzept der individuellen Wahlfreiheit steht in Spannung zur Solidarität in der Altersvorsorge. Die Lernenden erkennen, dass wirtschaftliche Reformen immer zwischen persönlicher Freiheit und gesellschaftlicher Verantwortung abwägen müssen."
-        },
-        {
-          "phase": "UE",
-          "text": "Erstellt eine Pro-Contra-Liste: Welche Vorteile und Risiken hat es, wenn Menschen selbst über ihren Renteneintritt entscheiden können? Berücksichtigt auch junge Menschen, die später arbeiten müssen."
-        }
-      ]
     }
   ],
   "6": [
+    {
+      "id": "art-20260610-05",
+      "date": "09.06.",
+      "title": "Ein deutscher Versicherer will mit Lionel Messi die USA erobern",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/ein-deutscher-versicherer-will-mit-lionel-messi-die-usa-erobern-ld.10010103",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Ein deutscher Versicherer will mit Lionel Messi die USA erobern»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: In keiner anderen Branche zählen deutsche Konzerne deutlicher zur Weltspitze als bei den Versicherun"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260610-06",
+      "date": "09.06.",
+      "title": "Nach historischem Kurssturz: Die Führungsriege von Partners Group kauft eigene Aktien in Millionenhöhe",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/nach-historischem-kurssturz-die-fuehrungsriege-von-partners-group-kauft-eigene-aktien-in-millionenhoehe-ld.10010494",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Nach historischem Kurssturz: Die Führungsriege von Partners Group kauft eigene Aktien in Millionenhöhe»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Aktie von Partners Group stürzte vergangene Woche an einem einzelnen Handelstag um 16 Prozent ab"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260609-07",
       "date": "07.06.",
@@ -870,51 +912,51 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260605-08",
-      "date": "04.06.",
-      "title": "T-Shirts, Tomaten, Solarmodule: Vor allem in Asien ist Zwangsarbeit weit verbreitet",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/t-shirts-tomaten-solarmodule-vor-allem-in-asien-ist-zwangsarbeit-weit-verbreitet-ld.10009633",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «T-Shirts, Tomaten, Solarmodule: Vor allem in Asien ist Zwangsarbeit weit verbreitet»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Wer seinen Markt nicht ausreichend vor Gütern schützt, die von Zwangsarbeitern hergestellt werden, m"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260604-02",
-      "date": "04.06.",
-      "title": "Europa fürchtet Trumps «kill switch» und will sich von den amerikanischen Tech-Giganten befreien",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/europa-fuerchtet-trumps-kill-switch-und-will-sich-von-den-amerikanischen-tech-giganten-befreien-ld.10009611",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Europa fürchtet Trumps «kill switch» und will sich von den amerikanischen Tech-Giganten befreien»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Kontinent ist bei allen IT-Dienstleistungen stark von den USA abhängig. Die EU schlägt Massnahme"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "7": [
+    {
+      "id": "art-20260610-00",
+      "date": "10.06.",
+      "title": "Florentino Pérez ist Präsident von Real Madrid, Bauunternehmer und der heimliche König in der spanischen Hauptstadt",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/florentino-perez-ist-praesident-von-real-madrid-bauunternehmer-und-der-heimliche-koenig-in-der-spanischen-hauptstadt-ld.10010499",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Florentino Pérez ist Präsident von Real Madrid, Bauunternehmer und der heimliche König in der spanischen Hauptstadt»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Pérez ist mehr als nur Präsident eines legendären Fussballvereins. Er ist einer der grössten Bauunte"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260610-01",
+      "date": "10.06.",
+      "title": "Nvidia will sich mit einer Partnerschaft in Südkorea die Zukunft sichern. Die Firma braucht Nachschub bei Hochleistungsspeichern",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/nvidia-will-sich-mit-einer-partnerschaft-in-suedkorea-die-zukunft-sichern-die-firma-braucht-nachschub-bei-hochleistungsspeichern-ld.10010483",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Nvidia will sich mit einer Partnerschaft in Südkorea die Zukunft sichern. Die Firma braucht Nachschub bei Hochleistungsspeichern»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Nvidia gilt als grosser Gewinner des KI-Booms. Doch der Erfolg des Konzerns hängt auch von Lieferket"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260606-05",
       "date": "06.06.",
