@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A21 – Entwicklungsländer / DEZA / Entwicklungshilfe – Selbstkontrolle</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,600;0,8..60,700;1,8..60,300&family=JetBrains+Mono:wght@400;600&display=swap');
+  :root{
+    --bg:#f3f2f6;--paper:#fafaf9;--ink:#1a1a1e;--ink-light:#54546a;
+    --rule:#c8c8d8;--accent:#5a3e8a;--accent-light:#f0ecfb;
+    --gold:#b8860b;--green:#1a5c2a;--green-light:#eaf5ec;
+    --red:#8b1a1a;--red-light:#faeaea;
+    --correct-border:#2a7a3a;--wrong-border:#c0392b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--bg);color:var(--ink);min-height:100vh;}
+  .top-bar{background:var(--accent);color:white;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.25);}
+  .top-bar h1{font-size:15px;font-weight:600;flex:1;min-width:180px;letter-spacing:.03em;}
+  .name-wrap{display:flex;align-items:center;gap:8px;}
+  .name-wrap label{font-size:13px;opacity:.8;font-family:'JetBrains Mono',monospace;}
+  .name-wrap input{padding:6px 10px;border-radius:5px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:white;font-size:13px;width:175px;font-family:'Source Serif 4',serif;}
+  .name-wrap input::placeholder{color:rgba(255,255,255,.45);font-style:italic;}
+  .name-wrap input:focus{outline:none;border-color:#c8aaff;background:rgba(255,255,255,.2);}
+  .btn{padding:7px 16px;border-radius:5px;border:none;font-size:13px;font-weight:600;cursor:pointer;font-family:'JetBrains Mono',monospace;transition:all .18s;white-space:nowrap;}
+  .btn-check{background:var(--gold);color:white;}.btn-check:hover{background:#9a6e00;transform:translateY(-1px);}
+  .btn-reset{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-pdf{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-download{background:#1a5c8a;color:white;font-weight:700;}.btn-download:hover{background:#144a70;}
+  .score-banner{display:none;background:var(--accent);color:white;text-align:center;padding:10px;font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:.05em;}
+  .score-banner.visible{display:block;}
+  .worksheet{max-width:860px;margin:28px auto;background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--accent);box-shadow:0 4px 24px rgba(0,0,0,.09);padding:40px 44px 48px;}
+  .task-id{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.08em;margin-bottom:4px;}
+  .task-title{font-size:17px;font-weight:600;color:var(--ink);margin-bottom:26px;border-bottom:2px solid var(--accent);padding-bottom:10px;}
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin:28px 0 14px;}
+  .free-text{width:100%;padding:8px 10px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:14px;color:var(--ink);background:var(--paper);resize:vertical;min-height:70px;}
+  .free-text:focus{outline:none;border-color:var(--accent);}
+  .solution-badge{display:none;margin-top:5px;font-size:11.5px;font-family:'JetBrains Mono',monospace;padding:3px 8px;border-radius:3px;font-weight:600;letter-spacing:.04em;word-break:break-word;}
+  .solution-badge.correct{display:block;background:var(--green-light);color:var(--green);border:1px solid var(--correct-border);}
+  .solution-badge.wrong{display:block;background:var(--red-light);color:var(--red);border:1px solid var(--wrong-border);}
+  .solution-badge.hint{display:block;background:var(--accent-light);color:var(--accent);border:1px solid #a88ad4;}
+  .match-table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;}
+  .match-table thead th{background:var(--accent);color:white;padding:8px 12px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.05em;}
+  .match-table tbody tr{border-bottom:1px solid var(--rule);}
+  .match-table tbody tr:nth-child(even) td{background:#f5f4f9;}
+  .match-table tbody td{padding:9px 12px;vertical-align:middle;}
+  .match-table select{width:100%;padding:4px 6px;border:1.5px solid var(--rule);border-radius:4px;background:var(--paper);font-family:'Source Serif 4',serif;font-size:13px;color:var(--ink);cursor:pointer;}
+  .correct-sel{border-color:var(--correct-border)!important;background:var(--green-light)!important;}
+  .wrong-sel{border-color:var(--wrong-border)!important;background:var(--red-light)!important;}
+  .radio-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:15px;line-height:1.5;}
+  .radio-row:last-child{border-bottom:none;}
+  .radio-row input{margin-top:3px;flex-shrink:0;}
+  .cell-ta{width:100%;padding:5px 8px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:13px;color:var(--ink);background:var(--paper);resize:vertical;height:55px;}
+  .cell-ta:focus{outline:none;border-color:var(--accent);}
+  .sort-item{display:flex;align-items:flex-start;gap:10px;padding:9px 12px;border:1.5px solid var(--rule);border-radius:5px;margin-bottom:6px;background:var(--paper);font-size:14px;}
+  .sort-item select{width:60px;padding:3px 4px;border:1.5px solid var(--rule);border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;}
+  .lueck{padding:3px 6px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:14px;background:var(--paper);color:var(--ink);cursor:pointer;}
+  .info-footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-light);font-family:'JetBrains Mono',monospace;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+  @media print{
+    body{background:white;padding:1.6cm 2cm!important;margin:0!important;}
+    .top-bar{display:none;}.score-banner{display:none!important;}
+    .worksheet{box-shadow:none;border:none;margin:0;padding:0;max-width:100%;}
+    select,.free-text,.cell-ta{border:none;border-bottom:1px solid #aaa;border-radius:0;background:transparent!important;}
+    .solution-badge{display:none!important;}
+    @page{margin:0;size:A4 portrait;}
+  }
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <h1>🌍 A21 – Entwicklungsländer / DEZA / Entwicklungshilfe <span style="font-size:11px;opacity:.6;font-weight:400;margin-left:8px;">[ Selbstkontrolle ]</span></h1>
+  <div class="name-wrap"><label>Name:</label><input type="text" id="studentName" placeholder="Vor- und Nachname"/></div>
+  <button class="btn btn-download" onclick="downloadFile()" id="btnDownload">💾 Speichern</button>
+  <button class="btn btn-check" onclick="checkAll()">✓ Überprüfen</button>
+  <button class="btn btn-pdf" onclick="printAsPDF()">🖨 Als PDF</button>
+  <button class="btn btn-reset" onclick="resetAll()">↺ Reset</button>
+</div>
+<div class="score-banner" id="scoreBanner"></div>
+<div class="score-banner" id="resetConfirmBanner" style="background:#7a1a1a;"></div>
+<div class="worksheet">
+  <div class="task-id">THEMA 6 · VERNETZUNG · KAPITEL 5</div>
+  <div class="task-title">A21 – Entwicklungsländer / DEZA / Entwicklungshilfe</div>
+
+  <div class="section-label">A21 – Merkmale: Industrieland oder Entwicklungsland?</div>
+  <table class="match-table">
+    <thead><tr><th>Merkmal</th><th>Zuordnung</th></tr></thead>
+    <tbody><tr>
+  <td>400 Liter Leitungswasser pro Tag</td>
+  <td><select id="a21_0"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_0"></div></td>
+</tr><tr>
+  <td>Arbeit auf Abruf</td>
+  <td><select id="a21_1"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_1"></div></td>
+</tr><tr>
+  <td>Kenntnisse über Verhütungsmethoden</td>
+  <td><select id="a21_2"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_2"></div></td>
+</tr><tr>
+  <td>Lohn deckt meistens die Existenz</td>
+  <td><select id="a21_3"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_3"></div></td>
+</tr><tr>
+  <td>Maschinen in schlechtem Zustand</td>
+  <td><select id="a21_4"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_4"></div></td>
+</tr><tr>
+  <td>Schutzbestimmungen zum Arbeitsrecht</td>
+  <td><select id="a21_5"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_5"></div></td>
+</tr><tr>
+  <td>einseitige Anbaumethoden</td>
+  <td><select id="a21_6"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_6"></div></td>
+</tr><tr>
+  <td>einseitige Ernährung</td>
+  <td><select id="a21_7"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_7"></div></td>
+</tr><tr>
+  <td>geringe Produktivität</td>
+  <td><select id="a21_8"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_8"></div></td>
+</tr><tr>
+  <td>grosse Kindersterblichkeit</td>
+  <td><select id="a21_9"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_9"></div></td>
+</tr><tr>
+  <td>gut ausgebautes Schulsystem</td>
+  <td><select id="a21_10"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_10"></div></td>
+</tr><tr>
+  <td>gute medizinische Versorgung</td>
+  <td><select id="a21_11"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_11"></div></td>
+</tr><tr>
+  <td>hohe Kaufkraft des Geldes</td>
+  <td><select id="a21_12"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_12"></div></td>
+</tr><tr>
+  <td>hohe Produktivität</td>
+  <td><select id="a21_13"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_13"></div></td>
+</tr><tr>
+  <td>kein geregeltes Schulsystem</td>
+  <td><select id="a21_14"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_14"></div></td>
+</tr><tr>
+  <td>korrupte Unternehmer</td>
+  <td><select id="a21_15"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_15"></div></td>
+</tr><tr>
+  <td>lange Transportwege</td>
+  <td><select id="a21_16"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_16"></div></td>
+</tr><tr>
+  <td>niedrige Bruttoinlandprodukt pro Kopf</td>
+  <td><select id="a21_17"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_17"></div></td>
+</tr><tr>
+  <td>rationalisierte Betriebe</td>
+  <td><select id="a21_18"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_18"></div></td>
+</tr><tr>
+  <td>schlechte Bildung</td>
+  <td><select id="a21_19"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_19"></div></td>
+</tr><tr>
+  <td>schlechte Wasserqualität</td>
+  <td><select id="a21_20"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_20"></div></td>
+</tr><tr>
+  <td>viele Analphabeten</td>
+  <td><select id="a21_21"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_21"></div></td>
+</tr><tr>
+  <td>wenige Analphabeten</td>
+  <td><select id="a21_22"><option value="">—</option><option value="i">Industrieland</option><option value="e">Entwicklungsland</option></select><div class="solution-badge" id="bA21_22"></div></td>
+</tr></tbody>
+  </table>
+
+  <div class="section-label" style="margin-top:28px;">A22 – DEZA-Projekte (Recherche)</div>
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <div><label style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);">Projekt 1 (Kontinent 1)</label>
+    <textarea class="free-text" id="deza1" rows="3" placeholder="Land / Projekt / Ziel..."></textarea></div>
+    <div><label style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);">Projekt 2 (Kontinent 2)</label>
+    <textarea class="free-text" id="deza2" rows="3" placeholder="Land / Projekt / Ziel..."></textarea></div>
+  </div>
+  <div class="solution-badge" id="bDEZA"></div>
+
+  <div class="section-label" style="margin-top:28px;">A23 – Entwicklungshilfe und Bundesverfassung</div>
+  <p style="font-size:15px;margin-bottom:10px;">Könnte sich die Schweiz aus der Entwicklungshilfe zurückziehen? Begründen Sie mit der BV.</p>
+  <textarea class="free-text" id="a23" rows="4" placeholder="Nein, weil die BV Art. 54..."></textarea>
+  <div class="solution-badge" id="bA23"></div>
+<div class="info-footer"><span>Thema 6 · Weltgeschehen · A21 Entwicklungshilfe</span><span id="footerName"></span></div>
+</div>
+<script>
+const FILENAME='A21_Industrie_Entwicklungsland';
+
+var A21C=["i", "e", "i", "e", "e", "i", "e", "e", "e", "e", "i", "i", "i", "i", "e", "e", "e", "e", "i", "e", "e", "e", "i"];
+var A21L={"deza1": "Individuelle Recherche-Aufgabe auf hep.plus/gescah-laender", "deza2": "Individuelle Recherche-Aufgabe auf hep.plus/gescah-laender", "a23": "Nein. BV Art. 54 verpflichtet die Schweiz zur Linderung von Not und Armut in der Welt, zur Achtung der Menschenrechte und zur F\u00f6rderung der Demokratie und eines friedlichen Zusammenlebens der V\u00f6lker."};
+function checkAll(){
+  var c=0,t=0;
+  A21C.forEach(function(ans,i){
+    var el=document.getElementById('a21_'+i);var b=document.getElementById('bA21_'+i);
+    if(!el||el.value===''){b.className='solution-badge';return;}
+    t++;var lbl=ans==='i'?'Industrieland':'Entwicklungsland';
+    var ok=el.value===ans;
+    b.className='solution-badge '+(ok?'correct':'wrong');
+    b.textContent=ok?('✔ '+lbl):('✘ Lösung: '+lbl);
+    el.className=ok?'correct-sel':'wrong-sel';
+    if(ok)c++;
+  });
+  Object.keys(A21L).forEach(function(id){
+    var el=document.getElementById(id);var bid='b'+id.charAt(0).toUpperCase()+id.slice(1);
+    var bmap={'deza1':'bDEZA','deza2':'bDEZA','a23':'bA23'};
+    var b=document.getElementById(bmap[id]);
+    if(el&&el.value.trim()&&b){b.className='solution-badge hint';b.textContent='📋 '+A21L[id];}
+    else if(b&&id==='a23') b.className='solution-badge';
+  });
+  document.getElementById('scoreBanner').className='score-banner visible';
+  document.getElementById('scoreBanner').textContent=t?('✓ A21: '+c+' von '+t+' korrekt'):'⚠️ Bitte Antworten wählen.';
+}
+function resetAll(){
+  var c=document.getElementById('resetConfirmBanner');
+  if(!c.classList.contains('visible')){
+    c.innerHTML='<span style="margin-right:12px;">Alle Eingaben wirklich löschen?</span><button onclick="doReset()" style="background:#c0392b;color:white;border:none;padding:5px 14px;border-radius:4px;cursor:pointer;font-weight:600;margin-right:8px;">Ja</button><button onclick="document.getElementById(\'resetConfirmBanner\').classList.remove(\'visible\')" style="background:rgba(255,255,255,.2);color:white;border:1px solid rgba(255,255,255,.4);padding:5px 12px;border-radius:4px;cursor:pointer;">Abbrechen</button>';
+    c.classList.add('visible');return;
+  }doReset();
+}
+function doReset(){
+  var e=document.getElementById('deza1');if(e)e.value='';
+  var e=document.getElementById('deza2');if(e)e.value='';
+  var e=document.getElementById('a23');if(e)e.value='';
+  var e=document.getElementById('a21_0');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_1');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_2');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_3');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_4');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_5');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_6');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_7');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_8');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_9');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_10');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_11');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_12');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_13');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_14');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_15');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_16');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_17');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_18');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_19');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_20');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_21');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  var e=document.getElementById('a21_22');if(e){e.value='';e.style.borderColor='';e.style.background='';e.className='';} 
+  document.querySelectorAll('.solution-badge').forEach(b=>{b.className='solution-badge';b.textContent='';});
+  document.querySelectorAll('.correct-sel,.wrong-sel').forEach(s=>{s.classList.remove('correct-sel','wrong-sel');s.style.borderColor='';s.style.background='';});
+  document.getElementById('scoreBanner').classList.remove('visible');
+  document.getElementById('resetConfirmBanner').classList.remove('visible');
+}
+
+function printAsPDF(){
+  var name=document.getElementById('studentName').value.trim();
+  document.title=name?(FILENAME+'_'+name.replace(/\s+/g,'_')):FILENAME;
+  setTimeout(function(){window.print();},100);
+}
+function downloadFile(){
+  var name=document.getElementById('studentName').value.trim();
+  if(!name){alert('Bitte zuerst Vor- und Nachname eingeben!');document.getElementById('studentName').focus();return;}
+  var html=document.documentElement.outerHTML;
+  var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;a.download=FILENAME+'_'+name.replace(/\s+/g,'_')+'.html';
+  document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(url);document.body.removeChild(a);},500);
+  var btn=document.getElementById('btnDownload');
+  btn.textContent='✔ Gespeichert!';btn.style.background='rgba(30,150,80,.8)';
+  setTimeout(function(){btn.textContent='💾 Speichern';btn.style.background='';},2500);
+}
+document.getElementById('studentName').addEventListener('input',function(){
+  document.getElementById('footerName').textContent=this.value.trim();
+});
+
+</script>
+</body>
+</html>

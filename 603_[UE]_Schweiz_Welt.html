@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Übungen – Schweiz und Welt</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+
+  :root {
+    --red: #c0392b;
+    --red-light: #e74c3c;
+    --cream: #faf7f2;
+    --dark: #1a1a1a;
+    --mid: #3d3d3d;
+    --muted: #888;
+    --border: #d9d0c5;
+    --green: #2c6e49;
+    --blue: #1a4d7a;
+    --highlight: #fff3cd;
+    --correct: #d4edda;
+    --wrong: #f8d7da;
+    --correct-border: #28a745;
+    --wrong-border: #dc3545;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--dark);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  header {
+    background: var(--dark);
+    color: white;
+    padding: 2rem 3rem 1.8rem;
+    position: relative;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: var(--red);
+  }
+  .header-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
+  header h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; line-height: 1.1; }
+  header h1 span { color: var(--red-light); }
+  .header-sub { color: #aaa; font-size: 13px; font-style: italic; margin-top: 0.4rem; }
+
+  /* SCORE BAR */
+  .score-bar {
+    background: #111;
+    padding: 0.7rem 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #333;
+  }
+  .score-label { font-size: 12px; color: #888; letter-spacing: 1px; text-transform: uppercase; }
+  .score-val { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: white; font-weight: 700; }
+  .score-val span { color: var(--red-light); }
+  #reset-btn {
+    margin-left: auto;
+    background: none;
+    border: 1px solid #555;
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.3rem 0.9rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  #reset-btn:hover { background: var(--red); border-color: var(--red); color: white; }
+
+  nav {
+    background: white;
+    border-bottom: 2px solid var(--border);
+    padding: 0.7rem 3rem;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--mid);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.25rem 0.7rem;
+    border-radius: 3px;
+    transition: all 0.2s;
+  }
+  nav a:hover { background: var(--dark); color: white; }
+
+  main { max-width: 960px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+
+  /* SECTION HEADERS */
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    border-bottom: 2px solid var(--dark);
+    padding-bottom: 0.4rem;
+    margin: 2.5rem 0 1.5rem;
+  }
+  .section-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--red);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  /* EXERCISE CARD */
+  .ex-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .ex-num {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+  .ex-question {
+    font-size: 14.5px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    line-height: 1.5;
+  }
+  .ex-hint {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 0.8rem;
+  }
+
+  /* MULTIPLE CHOICE */
+  .mc-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-bottom: 0.4rem;
+    cursor: pointer;
+    font-size: 13.5px;
+    transition: all 0.15s;
+    background: #fdfcfa;
+    user-select: none;
+  }
+  .mc-option:hover:not(.locked) { background: #f0ece6; border-color: #bbb; }
+  .mc-option input[type=checkbox],
+  .mc-option input[type=radio] { margin-top: 3px; flex-shrink: 0; accent-color: var(--blue); }
+  .mc-option.correct { background: var(--correct); border-color: var(--correct-border); }
+  .mc-option.wrong { background: var(--wrong); border-color: var(--wrong-border); }
+  .mc-option.missed { background: #fff3cd; border-color: #d4a017; }
+
+  /* TRUE/FALSE */
+  .tf-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13.5px;
+  }
+  .tf-row:last-child { border-bottom: none; }
+  .tf-label { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; color: var(--muted); text-align: center; }
+  .tf-btn {
+    border: 1px solid var(--border);
+    background: #fdfcfa;
+    border-radius: 3px;
+    padding: 0.2rem 0.7rem;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.15s;
+  }
+  .tf-btn:hover:not(.locked) { background: #e8e4df; }
+  .tf-btn.selected-r { background: #cfe2ff; border-color: #0d6efd; color: #0d6efd; }
+  .tf-btn.selected-f { background: #f8d7da; border-color: #dc3545; color: #dc3545; }
+  .tf-btn.correct-r { background: var(--correct); border-color: var(--correct-border); color: var(--correct-border); }
+  .tf-btn.correct-f { background: var(--correct); border-color: var(--correct-border); color: var(--correct-border); }
+  .tf-btn.wrong-sel { background: var(--wrong); border-color: var(--wrong-border); color: var(--wrong-border); }
+
+  /* MATCHING / ASSIGN */
+  .assign-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  .assign-table th {
+    background: var(--dark);
+    color: white;
+    padding: 0.4rem 0.7rem;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  .assign-table th:first-child { text-align: left; }
+  .assign-table td { padding: 0.45rem 0.7rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .assign-table tr:nth-child(even) td { background: #f5f2ed; }
+  .assign-table td.check-cell { text-align: center; }
+  .assign-table input[type=radio] { accent-color: var(--blue); cursor: pointer; transform: scale(1.2); }
+  .assign-table td.correct-cell { background: var(--correct) !important; }
+  .assign-table td.wrong-cell { background: var(--wrong) !important; }
+
+  /* CHECK BUTTON */
+  .check-btn {
+    margin-top: 0.9rem;
+    background: var(--dark);
+    color: white;
+    border: none;
+    padding: 0.45rem 1.2rem;
+    border-radius: 3px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .check-btn:hover { background: var(--red); }
+  .check-btn:disabled { background: #999; cursor: default; }
+
+  /* FEEDBACK */
+  .feedback {
+    display: none;
+    margin-top: 0.7rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .feedback.ok { background: var(--correct); border-left: 4px solid var(--correct-border); color: #155724; }
+  .feedback.nok { background: var(--wrong); border-left: 4px solid var(--wrong-border); color: #721c24; }
+  .feedback.partial { background: var(--highlight); border-left: 4px solid #d4a017; color: #856404; }
+  .feedback.show { display: block; }
+
+  /* FREE TEXT */
+  textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.6rem 0.8rem;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 13.5px;
+    resize: vertical;
+    min-height: 80px;
+    background: #fdfcfa;
+    transition: border-color 0.2s;
+  }
+  textarea:focus { outline: none; border-color: var(--blue); }
+
+  /* MODEL ANSWER */
+  .model-answer {
+    display: none;
+    margin-top: 0.6rem;
+    background: #f0f6fa;
+    border-left: 4px solid var(--blue);
+    padding: 0.7rem 1rem;
+    border-radius: 0 4px 4px 0;
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.6;
+  }
+  .model-answer.show { display: block; }
+  .show-model-btn {
+    margin-top: 0.5rem;
+    background: none;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .show-model-btn:hover { background: var(--blue); color: white; }
+
+  /* ORDERING */
+  .order-list { list-style: none; }
+  .order-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-bottom: 0.35rem;
+    font-size: 13.5px;
+    background: #fdfcfa;
+  }
+  .order-num-input {
+    width: 38px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.2rem 0.4rem;
+    font-size: 13px;
+    text-align: center;
+    flex-shrink: 0;
+    background: white;
+  }
+  .order-num-input.correct { background: var(--correct); border-color: var(--correct-border); }
+  .order-num-input.wrong { background: var(--wrong); border-color: var(--wrong-border); }
+
+  /* FILL-IN BLANK */
+  .blank-input {
+    border: none;
+    border-bottom: 2px solid var(--border);
+    background: transparent;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 14px;
+    padding: 0 4px;
+    min-width: 120px;
+    transition: border-color 0.2s;
+    text-align: center;
+  }
+  .blank-input:focus { outline: none; border-color: var(--blue); }
+  .blank-input.correct { border-color: var(--correct-border); background: var(--correct); border-radius: 3px; }
+  .blank-input.wrong { border-color: var(--wrong-border); background: var(--wrong); border-radius: 3px; }
+
+  .sep { height: 1px; background: linear-gradient(to right, var(--red), transparent); margin: 2rem 0; }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+    border-top: 1px solid var(--border);
+  }
+
+  @media(max-width:600px) {
+    header { padding: 1.5rem 1.2rem; }
+    header h1 { font-size: 1.6rem; }
+    nav { padding: 0.5rem 1rem; }
+    main { padding: 1.2rem 1rem 3rem; }
+    .score-bar { padding: 0.6rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-label">Kapitel 5</div>
+  <h1>Schweiz und <span>Welt</span></h1>
+  <p class="header-sub">Interaktive Übungen · Bilaterale Verträge · Migration · Internationale Organisationen</p>
+</header>
+
+<div class="score-bar">
+  <span class="score-label">Punkte</span>
+  <span class="score-val" id="score-display"><span id="pts">0</span> / <span id="total-pts">0</span></span>
+  <button id="reset-btn" onclick="resetAll()">↺ Zurücksetzen</button>
+</div>
+
+<nav>
+  <a href="#bilaterale">Bilaterale Verträge</a>
+  <a href="#organisationen">Org. &amp; NGO</a>
+  <a href="#migration">Migration</a>
+  <a href="#asyl">Asyl &amp; Einbürgerung</a>
+  <a href="#eu">EU</a>
+  <a href="#diverses">Diverses</a>
+</nav>
+
+<main>
+
+<!-- ==================== BILATERALE VERTRÄGE ==================== -->
+<div id="bilaterale">
+  <div class="section-header">
+    <span class="section-num">A</span>
+    <span class="section-title">Bilaterale Verträge Schweiz–EU</span>
+  </div>
+
+  <!-- A1: MC – Warum bilaterale Verträge? -->
+  <div class="ex-card" id="ex-a1">
+    <div class="ex-num">Aufgabe A1</div>
+    <div class="ex-question">Warum hat die Schweiz mit der EU bilaterale Verträge abgeschlossen? Wählen Sie die zwei zutreffenden Aussagen.</div>
+    <div class="ex-hint">2 richtige Antworten</div>
+    <label class="mc-option"><input type="checkbox" name="a1" value="a"> a) Weil die EU die Schweiz dazu zwang.</label>
+    <label class="mc-option"><input type="checkbox" name="a1" value="b"> b) Weil das Schweizer Volk 1992 den EWR-Beitritt abgelehnt hatte, aber trotzdem enge Beziehungen zur EU nötig waren.</label>
+    <label class="mc-option"><input type="checkbox" name="a1" value="c"> c) Weil die Schweiz in der globalisierten Welt politisch und wirtschaftlich mit der EU zusammenarbeiten muss.</label>
+    <label class="mc-option"><input type="checkbox" name="a1" value="d"> d) Weil die Schweiz EU-Mitglied werden wollte.</label>
+    <button class="check-btn" onclick="checkMC('a1', ['b','c'], 1)">Prüfen</button>
+    <div class="feedback" id="fb-a1"></div>
+  </div>
+
+  <!-- A2: Assign – Bilaterale I Dossiers -->
+  <div class="ex-card" id="ex-a2">
+    <div class="ex-num">Aufgabe A2</div>
+    <div class="ex-question">Ordnen Sie die Aussagen den richtigen Dossiers der Bilateralen I zu.</div>
+    <table class="assign-table" id="tbl-a2">
+      <thead>
+        <tr>
+          <th>Aussage</th>
+          <th>Personen-freizügigkeit</th>
+          <th>Landverkehr</th>
+          <th>Luftverkehr</th>
+          <th>Öff. Beschaffung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-correct="0">
+          <td>Die EU akzeptiert die LSVA für den alpenquerenden Transit.</td>
+          <td class="check-cell"><input type="radio" name="a2r1" value="0"></td>
+          <td class="check-cell"><input type="radio" name="a2r1" value="1"></td>
+          <td class="check-cell"><input type="radio" name="a2r1" value="2"></td>
+          <td class="check-cell"><input type="radio" name="a2r1" value="3"></td>
+        </tr>
+        <tr data-correct="3">
+          <td>Ich kann überall in der EU arbeiten und leben, wenn ich eine Stelle habe.</td>
+          <td class="check-cell"><input type="radio" name="a2r2" value="0"></td>
+          <td class="check-cell"><input type="radio" name="a2r2" value="1"></td>
+          <td class="check-cell"><input type="radio" name="a2r2" value="2"></td>
+          <td class="check-cell"><input type="radio" name="a2r2" value="3"></td>
+        </tr>
+        <tr data-correct="1">
+          <td>Millionenaufträge der öffentlichen Hand müssen im gesamten EU-Raum ausgeschrieben werden.</td>
+          <td class="check-cell"><input type="radio" name="a2r3" value="0"></td>
+          <td class="check-cell"><input type="radio" name="a2r3" value="1"></td>
+          <td class="check-cell"><input type="radio" name="a2r3" value="2"></td>
+          <td class="check-cell"><input type="radio" name="a2r3" value="3"></td>
+        </tr>
+        <tr data-correct="2">
+          <td>Für die SWISS gibt es keine Lande- und Startbeschränkungen innerhalb des EU-Raums.</td>
+          <td class="check-cell"><input type="radio" name="a2r4" value="0"></td>
+          <td class="check-cell"><input type="radio" name="a2r4" value="1"></td>
+          <td class="check-cell"><input type="radio" name="a2r4" value="2"></td>
+          <td class="check-cell"><input type="radio" name="a2r4" value="3"></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="check-btn" onclick="checkAssign('a2', 'tbl-a2', 1)">Prüfen</button>
+    <div class="feedback" id="fb-a2"></div>
+  </div>
+
+  <!-- A3: MC – Bilaterale Verträge korrekte Aussagen -->
+  <div class="ex-card" id="ex-a3">
+    <div class="ex-num">Aufgabe A3</div>
+    <div class="ex-question">Welche drei Aussagen zu den Bilateralen Verträgen mit der EU sind korrekt?</div>
+    <div class="ex-hint">3 richtige Antworten</div>
+    <label class="mc-option"><input type="checkbox" name="a3" value="a"> a) Die Bilateralen Verträge wurden in einer Volksabstimmung angenommen.</label>
+    <label class="mc-option"><input type="checkbox" name="a3" value="b"> b) Personenfreizügigkeit bedeutet, dass Schweizer Bürger/innen sich in jedem EU-Land niederlassen und dort arbeiten können.</label>
+    <label class="mc-option"><input type="checkbox" name="a3" value="c"> c) Für EU-Bürger/innen gilt die Personenfreizügigkeit nicht, da die Schweiz Einreisekontingente festgelegt hat.</label>
+    <label class="mc-option"><input type="checkbox" name="a3" value="d"> d) Schengen/Dublin sind zwei bilaterale Verträge (Bilaterale II).</label>
+    <label class="mc-option"><input type="checkbox" name="a3" value="e"> e) Das Freihandelsabkommen von 1972 ersetzte alle späteren bilateralen Verträge.</label>
+    <button class="check-btn" onclick="checkMC('a3', ['a','b','d'], 1)">Prüfen</button>
+    <div class="feedback" id="fb-a3"></div>
+  </div>
+
+  <!-- A4: Vor-/Nachteile bilateraler Weg (Freitext) -->
+  <div class="ex-card" id="ex-a4">
+    <div class="ex-num">Aufgabe A4</div>
+    <div class="ex-question">a) Welche Vorteile hat der bilaterale Weg gegenüber einem EU-Vollbeitritt?<br>b) Welche Nachteile hat er?</div>
+    <textarea placeholder="Ihre Antwort…" rows="4" style="margin-bottom:0.5rem"></textarea>
+    <button class="show-model-btn" onclick="toggleModel(this)">Musterlösung anzeigen</button>
+    <div class="model-answer">
+      <strong>Vorteile:</strong> Die Schweiz bleibt in ihrer politischen Unabhängigkeit unberührt. Volksrechte (Referendum, Initiative) können vollumfänglich beibehalten werden. Die Schweiz bestimmt selbst, welche Bereiche sie gemeinsam regeln möchte.<br><br>
+      <strong>Nachteile:</strong> Die enge wirtschaftliche Verflechtung zwingt die Schweiz oft, EU-Vorschriften zu übernehmen. Als Nicht-Mitglied kann sie sich in den EU-Institutionen (Ministerrat, Parlament) nicht einbringen und ihre Anliegen nicht direkt vertreten.
+    </div>
+  </div>
+
+  <!-- A5: TF – Schengen/Dublin -->
+  <div class="ex-card" id="ex-a5">
+    <div class="ex-num">Aufgabe A5</div>
+    <div class="ex-question">Beurteilen Sie: Richtig oder falsch?</div>
+    <div id="tf-a5">
+      <div style="display:grid;grid-template-columns:1fr auto auto;gap:0.4rem 0.8rem;align-items:center;margin-bottom:0.3rem">
+        <span style="font-size:11px;font-weight:700;color:var(--muted)"></span>
+        <span class="tf-label">R</span>
+        <span class="tf-label">F</span>
+      </div>
+      <div class="tf-row" data-correct="r" id="tf-a5-1">
+        <span>Das Schengener Abkommen schafft Grenzkontrollen zwischen beteiligten Staaten ab.</span>
+        <button class="tf-btn" onclick="selectTF(this,'r','a5',1)">R</button>
+        <button class="tf-btn" onclick="selectTF(this,'f','a5',1)">F</button>
+      </div>
+      <div class="tf-row" data-correct="r" id="tf-a5-2">
+        <span>Das Dubliner Abkommen regelt die Behandlung von Asylgesuchen.</span>
+        <button class="tf-btn" onclick="selectTF(this,'r','a5',2)">R</button>
+        <button class="tf-btn" onclick="selectTF(this,'f','a5',2)">F</button>
+      </div>
+      <div class="tf-row" data-correct="f" id="tf-a5-3">
+        <span>Die Schweiz ist seit 2001 Teil des Schengenraums.</span>
+        <button class="tf-btn" onclick="selectTF(this,'r','a5',3)">R</button>
+        <button class="tf-btn" onclick="selectTF(this,'f','a5',3)">F</button>
+      </div>
+      <div class="tf-row" data-correct="r" id="tf-a5-4">
+        <span>Dank EURODAC kann ein Asylgesuch nicht in mehreren Dublin-Staaten gleichzeitig gestellt werden.</span>
+        <button class="tf-btn" onclick="selectTF(this,'r','a5',4)">R</button>
+        <button class="tf-btn" onclick="selectTF(this,'f','a5',4)">F</button>
+      </div>
+      <div class="tf-row" data-correct="r" id="tf-a5-5">
+        <span>Der AIA (automatischer Informationsaustausch) dient der Bekämpfung von Steuerhinterziehung.</span>
+        <button class="tf-btn" onclick="selectTF(this,'r','a5',5)">R</button>
+        <button class="tf-btn" onclick="selectTF(this,'f','a5',5)">F</button>
+      </div>
+    </div>
+    <button class="check-btn" onclick="checkTF('a5', 5, 1)">Prüfen</button>
+    <div class="feedback" id="fb-a5"></div>
+  </div>
+
+</div>
+
+<div class="sep"></div>
+
+<!-- ==================== INTERNATIONALE ORGANISATIONEN ==================== -->
+<div id="organisationen">
+  <div class="section-header">
+    <span class="section-num">B</span>
+    <span class="section-title">Internationale Organisationen &amp; NGO</span>
+  </div>
+
+  <!-- B1: Assign UNO/NATO/WTO -->
+  <div class="ex-card" id="ex-b1">
+    <div class="ex-num">Aufgabe B1</div>
+    <div class="ex-question">Ordnen Sie die Ziele den entsprechenden Regierungsorganisationen zu.</div>
+    <table class="assign-table" id="tbl-b1">
+      <thead>
+        <tr><th>Ziel</th><th>UNO</th><th>NATO</th><th>WTO</th></tr>
+      </thead>
+      <tbody>
+        <tr data-correct="2"><td>1. Abbau von Zöllen</td><td class="check-cell"><input type="radio" name="b1r1" value="0"></td><td class="check-cell"><input type="radio" name="b1r1" value="1"></td><td class="check-cell"><input type="radio" name="b1r1" value="2"></td></tr>
+        <tr data-correct="0"><td>2. Einhaltung des Völkerrechts</td><td class="check-cell"><input type="radio" name="b1r2" value="0"></td><td class="check-cell"><input type="radio" name="b1r2" value="1"></td><td class="check-cell"><input type="radio" name="b1r2" value="2"></td></tr>
+        <tr data-correct="2"><td>3. Faire Spielregeln im Welthandel</td><td class="check-cell"><input type="radio" name="b1r3" value="0"></td><td class="check-cell"><input type="radio" name="b1r3" value="1"></td><td class="check-cell"><input type="radio" name="b1r3" value="2"></td></tr>
+        <tr data-correct="0"><td>4. Förderung der internationalen Zusammenarbeit</td><td class="check-cell"><input type="radio" name="b1r4" value="0"></td><td class="check-cell"><input type="radio" name="b1r4" value="1"></td><td class="check-cell"><input type="radio" name="b1r4" value="2"></td></tr>
+        <tr data-correct="1"><td>5. Militärische Konfliktverhütung</td><td class="check-cell"><input type="radio" name="b1r5" value="0"></td><td class="check-cell"><input type="radio" name="b1r5" value="1"></td><td class="check-cell"><input type="radio" name="b1r5" value="2"></td></tr>
+        <tr data-correct="0"><td>6. Sicherung des Weltfriedens</td><td class="check-cell"><input type="radio" name="b1r6" value="0"></td><td class="check-cell"><input type="radio" name="b1r6" value="1"></td><td class="check-cell"><input type="radio" name="b1r6" value="2"></td></tr>
+        <tr data-correct="2"><td>7. Freier Welthandel</td><td class="check-cell"><input type="radio" name="b1r7" value="0"></td><td class="check-cell"><input type="radio" name="b1r7" value="1"></td><td class="check-cell"><input type="radio" name="b1r7" value="2"></td></tr>
+        <tr data-correct="1"><td>8. Militärische Krisenbewältigung</td><td class="check-cell"><input type="radio" name="b1r8" value="0"></td><td class="check-cell"><input type="radio" name="b1r8" value="1"></td><td class="check-cell"><input type="radio" name="b1r8" value="2"></td></tr>
+        <tr data-correct="0"><td>10. Schutz der Menschenrechte</td><td class="check-cell"><input type="radio" name="b1r9" value="0"></td><td class="check-cell"><input type="radio" name="b1r9" value="1"></td><td class="check-cell"><input type="radio" name="b1r9" value="2"></td></tr>
+      </tbody>
+    </table>
+    <button class="check-btn" onclick="checkAssign('b1', 'tbl-b1', 1)">Prüfen</button>
+    <div class="feedback" id="fb-b1"></div>
+  </div>
+
+  <!-- B2: Assign NGO -->
+  <div class="ex-card" id="ex-b2">
+    <div class="ex-num">Aufgabe B2</div>
+    <div class="ex-question">Ordnen Sie die Ziele den entsprechenden Nichtregierungsorganisationen (NGO) zu.</div>
+    <table class="assign-table" id="tbl-b2">
+      <thead>
+        <tr><th>Ziel</th><th>IKRK</th><th>WWF</th><th>Amnesty Intl.</th><th>Greenpeace</th></tr>
+      </thead>
+      <tbody>
+        <tr data-correct="1"><td>Schutz von Tieren</td><td class="check-cell"><input type="radio" name="b2r1" value="0"></td><td class="check-cell"><input type="radio" name="b2r1" value="1"></td><td class="check-cell"><input type="radio" name="b2r1" value="2"></td><td class="check-cell"><input type="radio" name="b2r1" value="3"></td></tr>
+        <tr data-correct="2"><td>Bekämpfung von Menschenrechtsverletzungen</td><td class="check-cell"><input type="radio" name="b2r2" value="0"></td><td class="check-cell"><input type="radio" name="b2r2" value="1"></td><td class="check-cell"><input type="radio" name="b2r2" value="2"></td><td class="check-cell"><input type="radio" name="b2r2" value="3"></td></tr>
+        <tr data-correct="0"><td>Menschliches Leiden verhüten und lindern</td><td class="check-cell"><input type="radio" name="b2r3" value="0"></td><td class="check-cell"><input type="radio" name="b2r3" value="1"></td><td class="check-cell"><input type="radio" name="b2r3" value="2"></td><td class="check-cell"><input type="radio" name="b2r3" value="3"></td></tr>
+        <tr data-correct="1"><td>Natur- und Umweltschutz</td><td class="check-cell"><input type="radio" name="b2r4" value="0"></td><td class="check-cell"><input type="radio" name="b2r4" value="1"></td><td class="check-cell"><input type="radio" name="b2r4" value="2"></td><td class="check-cell"><input type="radio" name="b2r4" value="3"></td></tr>
+        <tr data-correct="2"><td>Hilfe für politische Gefangene</td><td class="check-cell"><input type="radio" name="b2r5" value="0"></td><td class="check-cell"><input type="radio" name="b2r5" value="1"></td><td class="check-cell"><input type="radio" name="b2r5" value="2"></td><td class="check-cell"><input type="radio" name="b2r5" value="3"></td></tr>
+      </tbody>
+    </table>
+    <button class="check-btn" onclick="checkAssign('b2', 'tbl-b2', 1)">Prüfen</button>
+    <div class="feedback" id="fb-b2"></div>
+  </div>
+
+  <!-- B3: MC – UNO Aufgaben -->
+  <div class="ex-card" id="ex-b3">
+    <div class="ex-num">Aufgabe B3</div>
+    <div class="ex-question">Welche zwei Aufgaben gehören zu den wichtigsten der UNO?</div>
+    <div class="ex-hint">2 richtige Antworten</div>
+    <label class="mc-option"><input type="checkbox" name="b3" value="a"> a) Verbesserung der Gesundheitsversorgung in Afrika</label>
+    <label class="mc-option"><input type="checkbox" name="b3" value="b"> b) Sicherung des Weltfriedens</label>
+    <label class="mc-option"><input type="checkbox" name="b3" value="c"> c) Umweltschutz</label>
+    <label class="mc-option"><input type="checkbox" name="b3" value="d"> d) Tierschutz</label>
+    <label class="mc-option"><input type="checkbox" name="b3" value="e"> e) Schutz der Menschenrechte</label>
+    <button class="check-btn" onclick="checkMC('b3', ['b','e'], 1)">Prüfen</button>
+    <div class="feedback" id="fb-b3"></div>
+  </div>
+
+  <!-- B4: MC – Welche Organisation? -->
+  <div class="ex-card" id="ex-b4">
+    <div class="ex-num">Aufgabe B4</div>
+    <div class="ex-question">Ordnen Sie die Beschreibungen den Organisationen zu: a) UNO  b) IKRK  c) G20  d) Greenpeace</div>
+    <table class="assign-table" id="tbl-b4">
+      <thead>
+        <tr><th>Beschreibung</th><th>UNO</th><th>IKRK</th><th>G20</th><th>Greenpeace</th></tr>
+      </thead>
+      <tbody>
+        <tr data-correct="1"><td>Einsatz für humanitäre Hilfe auf der ganzen Welt</td><td class="check-cell"><input type="radio" name="b4r1" value="0"></td><td class="check-cell"><input type="radio" name="b4r1" value="1"></td><td class="check-cell"><input type="radio" name="b4r1" value="2"></td><td class="check-cell"><input type="radio" name="b4r1" value="3"></td></tr>
+        <tr data-correct="2"><td>Gespräche zwischen wirtschaftlich starken Staaten über globalen Handel</td><td class="check-cell"><input type="radio" name="b4r2" value="0"></td><td class="check-cell"><input type="radio" name="b4r2" value="1"></td><td class="check-cell"><input type="radio" name="b4r2" value="2"></td><td class="check-cell"><input type="radio" name="b4r2" value="3"></td></tr>
+        <tr data-correct="3"><td>Schutz der Natur, der Umwelt und der Tiere, gegen Atomkraft und Gentechnik</td><td class="check-cell"><input type="radio" name="b4r3" value="0"></td><td class="check-cell"><input type="radio" name="b4r3" value="1"></td><td class="check-cell"><input type="radio" name="b4r3" value="2"></td><td class="check-cell"><input type="radio" name="b4r3" value="3"></td></tr>
+        <tr data-correct="0"><td>Sicherung des Weltfriedens, Einhaltung des Völkerrechts</td><td class="check-cell"><input type="radio" name="b4r4" value="0"></td><td class="check-cell"><input type="radio" name="b4r4" value="1"></td><td class="check-cell"><input type="radio" name="b4r4" value="2"></td><td class="check-cell"><input type="radio" name="b4r4" value="3"></td></tr>
+      </tbody>
+    </table>
+    <button class="check-btn" onclick="checkAssign('b4', 'tbl-b4', 1)">Prüfen</button>
+    <div class="feedback" id="fb-b4"></div>
+  </div>
+
+  <!-- B5: MC – NATO -->
+  <div class="ex-card" id="ex-b5">
+    <div class="ex-num">Aufgabe B5</div>
+    <div class="ex-question">Welche internationale Organisation wird beschrieben? «Rein militärisches Verteidigungsbündnis, das die Sicherheit seiner Mitgliedstaaten garantiert.»</div>
+    <label class="mc-option"><input type="radio" name="b5" value="a"> a) NATO</label>
+    <label class="mc-option"><input type="radio" name="b5" value="b"> b) UNO</label>
+    <label class="mc-option"><input type="radio" name="b5" value="c"> c) Greenpeace</label>
+    <label class="mc-option"><input type="radio" name="b5" value="d"> d) WTO</label>
+    <button class="check-btn" onclick="checkMC('b5', ['a'], 1)">Prüfen</button>
+    <div class="feedback" id="fb-b5"></div>
+  </div>
+
+</div>
+
+<div class="sep"></div>
+
+<!-- ==================== MIGRATION ==================== -->
+<div id="migration">
+  <div class="section-header">
+    <span class="section-num">C</span>
+    <span class="section-title">Migration</span>
+  </div>
+
+  <!-- C1: MC – Definition Migration -->
+  <div class="ex-card" id="ex-c1">
+    <div class="ex-num">Aufgabe C1</div>
+    <div class="ex-question">Welche Erklärung trifft auf den Begriff «Migration» zu?</div>
+    <label class="mc-option"><input type="radio" name="c1" value="a"> a) Ein- und Auswanderung von Menschen, teilweise sogar ganzer Bevölkerungsgruppen, um bessere Existenzgrundlagen zu finden.</label>
+    <label class="mc-option"><input type="radio" name="c1" value="b"> b) Einwanderung von Menschen, die bessere Existenzgrundlagen suchen.</label>
+    <label class="mc-option"><input type="radio" name="c1" value="c"> c) Auswanderung von Menschen, die bessere Existenzgrundlagen suchen.</label>
+    <label class="mc-option"><input type="radio" name="c1" value="d"> d) Sich wohlfühlen in der eigenen Heimat, damit man nicht auswandern muss.</label>
+    <button class="check-btn" onclick="checkMC('c1', ['a'], 1)">Prüfen</button>
+    <div class="feedback" id="fb-c1"></div>
+  </div>
+
+  <!-- C2: MC – Push-Faktoren -->
+  <div class="ex-card" id="ex-c2">
+    <div class="ex-num">Aufgabe C2</div>
+    <div class="ex-question">Welche zwei Situationen sind Schubfaktoren (Push-Faktoren)?</div>
+    <div class="ex-hint">2 richtige Antworten</div>
+    <label class="mc-option"><input type="checkbox" name="c2" value="a"> a) Umweltkatastrophe</label>
+    <label class="mc-option"><input type="checkbox" name="c2" value="b"> b) Hungersnot</label>
+    <label class="mc-option"><input type="checkbox" name="c2" value="c"> c) Viele Touristen</label>
+    <label class="mc-option"><input type="checkbox" name="c2" value="d"> d) Gute Bildungsmöglichkeiten</label>
+    <label class="mc-option"><input type="checkbox" name="c2" value="e"> e) Arbeitsplätze</label>
+    <button class="check-btn" onclick="checkMC('c2', ['a','b'], 1)">Prüfen</button>
+    <div class="feedback" id="fb-c2"></div>
+  </div>
+
+  <!-- C3: MC – Pull-Faktoren -->
+  <div class="ex-card" id="ex-c3">
+    <div class="ex-num">Aufgabe C3</div>
+    <div class="ex-question">Welche zwei Situationen sind Sogfaktoren (Pull-Faktoren)?</div>
+    <div class="ex-hint">2 richtige Antworten</div>
+    <label class="mc-option"><input type="checkbox" name="c3" value="a"> a) Umweltkatastrophe</label>
+    <label class="mc-option"><input type="checkbox" name="c3" value="b"> b) Hungersnot</label>
+    <label class="mc-option"><input type="checkbox" name="c3" value="c"> c) Viele Touristen</label>
+    <label class="mc-option"><input type="checkbox" name="c3" value="d"> d) Gute Bildungsmöglichkeiten</label>
+    <label class="mc-option"><input type="checkbox" name="c3" value="e"> e) Arbeitsplätze</label>
+    <button class="check-btn" onclick="checkMC('c3', ['d','e'], 1)">Prüfen</button>
+    <div class="feedback" id="fb-c3"></div>
+  </div>
+
+  <!-- C4: TF – Wirtschaftsbegriffe: Industrieland / Schwellenland / Entwicklungsland -->
+  <div class="ex-card" id="ex-c4">
+    <div class="ex-num">Aufgabe C4</div>
+    <div class="ex-question">Ordnen Sie die Aussagen den Begriffen zu: a) Industrieland  b) Schwellenland  c) Entwicklungsland</div>
+    <table class="assign-table" id="tbl-c4">
+      <thead>
+        <tr><th>Aussage</th><th>Industrieland</th><th>Schwellenland</th><th>Entwicklungsland</th></tr>
+      </thead>
+      <tbody>
+        <tr data-correct="0"><td>Schweiz</td><td class="check-cell"><input type="radio" name="c4r1" value="0"></td><td class="check-cell"><input type="radio" name="c4r1" value="1"></td><td class="check-cell"><input type="radio" name="c4r1" value="2"></td></tr>
+        <tr data-correct="0"><td>Staat mit hohem Entwicklungsstand</td><td class="check-cell"><input type="radio" name="c4r2" value="0"></td><td class="check-cell"><input type="radio" name="c4r2" value="1"></td><td class="check-cell"><input type="radio" name="c4r2" value="2"></td></tr>
+        <tr data-correct="2"><td>Staat mit niedrigem Entwicklungsstand</td><td class="check-cell"><input type="radio" name="c4r3" value="0"></td><td class="check-cell"><input type="radio" name="c4r3" value="1"></td><td class="check-cell"><input type="radio" name="c4r3" value="2"></td></tr>
+        <tr data-correct="1"><td>Staat mit viel Industrie und wachsendem Dienstleistungssektor (z.B. Brasilien)</td><td class="check-cell"><input type="radio" name="c4r4" value="0"></td><td class="check-cell"><input type="radio" name="c4r4" value="1"></td><td class="check-cell"><input type="radio" name="c4r4" value="2"></td></tr>
+      </tbody>
+    </table>
+    <button class="check-btn" onclick="checkAssign('c4', 'tbl-c4', 1)">Prüfen</button>
+    <div class="feedback" id="fb-c4"></div>
+  </div>
+
+  <!-- C5: TF – Richtig/Falsch Migration -->
+  <div class="ex-card" id="ex-c5">
+    <div class="ex-num">Aufgabe C5</div>
+    <div class="ex-question">Richtig oder falsch?</div>
+    <div id="tf-c5">
+      <div style="display:grid;grid-template-columns:1fr auto auto;gap:0.4rem 0.8rem;align-items:center;margin-bottom:0.3rem">
+        <span></span><span class="tf-label">R</span><span class="tf-label">F</span>
+      </div>
+      <div class="tf-row" data-correct="f" id="tf-c5-1"><span>Push-Faktoren sind Faktoren, welche Heimatlose anziehen.</span><button class="tf-btn" onclick="selectTF(this,'r','c5',1)">R</button><button class="tf-btn" onclick="selectTF(this,'f','c5',1)">F</button></div>
+      <div class="tf-row" data-correct="r" id="tf-c5-2"><span>Gute Verdienstmöglichkeiten in der Schweiz sind ein Pull-Faktor.</span><button class="tf-btn" onclick="selectTF(this,'r','c5',2)">R</button><button class="tf-btn" onclick="selectTF(this,'f','c5',2)">F</button></div>
+      <div class="tf-row" data-correct="r" id="tf-c5-3"><span>Die Schweiz zählt zu den Staaten mit den höchsten Ausländeranteilen.</span><button class="tf-btn" onclick="selectTF(this,'r','c5',3)">R</button><button class="tf-btn" onclick="selectTF(this,'f','c5',3)">F</button></div>
+      <div class="tf-row" data-correct="r" id="tf-c5-4"><span>Kanada und Australien haben einen grösseren Ausländeranteil als die Schweiz.</span><button class="tf-btn" onclick="selectTF(this,'r','c5',4)">R</button><button class="tf-btn" onclick="selectTF(this,'f','c5',4)">F</button></div>
+      <div class="tf-row" data-correct="r" id="tf-c5-5"><span>Eine Aufenthaltsbewilligung B ist in der Schweiz fünf Jahre gültig.</span><button class="tf-btn" onclick="selectTF(this,'r','c5',5)">R</button><button class="tf-btn" onclick="selectTF(this,'f','c5',5)">F</button></div>
+      <div class="tf-row" data-correct="f" id="tf-c5-6"><span>Eingebürgert werden Personen, wenn sie mindestens acht Jahre Wohnsitz in der Schweiz haben.</span><button class="tf-btn" onclick="selectTF(this,'r','c5',6)">R</button><button class="tf-btn" onclick="selectTF(this,'f','c5',6)">F</button></div>
+      <div class="tf-row" data-correct="r" id="tf-c5-7"><span>Der grösste Teil der Ausländer/innen in der Schweiz hat nichts mit dem Asylbereich zu tun.</span><button class="tf-btn" onclick="selectTF(this,'r','c5',7)">R</button><button class="tf-btn" onclick="selectTF(this,'f','c5',7)">F</button></div>
+      <div class="tf-row" data-correct="f" id="tf-c5-8"><span>Jeder Ausländer, der über zwölf Jahre in der Schweiz gelebt hat, wird automatisch eingebürgert.</span><button class="tf-btn" onclick="selectTF(this,'r','c5',8)">R</button><button class="tf-btn" onclick="selectTF(this,'f','c5',8)">F</button></div>
+    </div>
+    <button class="check-btn" onclick="checkTF('c5', 8, 1)">Prüfen</button>
+    <div class="feedback" id="fb-c5"></div>
+  </div>
+
+</div>
+
+<div class="sep"></div>
+
+<!-- ==================== ASYL & EINBÜRGERUNG ==================== -->
+<div id="asyl">
+  <div class="section-header">
+    <span class="section-num">D</span>
+    <span class="section-title">Asyl &amp; Einbürgerung</span>
+  </div>
+
+  <!-- D1: TF – Flüchtling -->
+  <div class="ex-card" id="ex-d1">
+    <div class="ex-num">Aufgabe D1</div>
+    <div class="ex-question">Beurteilen Sie die Aussagen zum Begriff «Flüchtling». Richtig oder falsch?</div>
+    <div id="tf-d1">
+      <div style="display:grid;grid-template-columns:1fr auto auto;gap:0.4rem 0.8rem;align-items:center;margin-bottom:0.3rem">
+        <span></span><span class="tf-label">R</span><span class="tf-label">F</span>
+      </div>
+      <div class="tf-row" data-correct="r" id="tf-d1-1"><span>Politische Verfolgung im Heimatland ist ein Fluchtgrund.</span><button class="tf-btn" onclick="selectTF(this,'r','d1',1)">R</button><button class="tf-btn" onclick="selectTF(this,'f','d1',1)">F</button></div>
+      <div class="tf-row" data-correct="f" id="tf-d1-2"><span>Flüchtlinge stammen mehrheitlich aus Industrieländern.</span><button class="tf-btn" onclick="selectTF(this,'r','d1',2)">R</button><button class="tf-btn" onclick="selectTF(this,'f','d1',2)">F</button></div>
+      <div class="tf-row" data-correct="f" id="tf-d1-3"><span>Flüchtlinge bekommen in der Schweiz immer Asyl.</span><button class="tf-btn" onclick="selectTF(this,'r','d1',3)">R</button><button class="tf-btn" onclick="selectTF(this,'f','d1',3)">F</button></div>
+      <div class="tf-row" data-correct="f" id="tf-d1-4"><span>Nicht jeder Flüchtling ist ein Asylsuchender.</span><button class="tf-btn" onclick="selectTF(this,'r','d1',4)">R</button><button class="tf-btn" onclick="selectTF(this,'f','d1',4)">F</button></div>
+    </div>
+    <button class="check-btn" onclick="checkTF('d1', 4, 1)">Prüfen</button>
+    <div class="feedback" id="fb-d1"></div>
+  </div>
+
+  <!-- D2: MC – Einbürgerung -->
+  <div class="ex-card" id="ex-d2">
+    <div class="ex-num">Aufgabe D2</div>
+    <div class="ex-question">Welche zwei Aussagen treffen auf die Voraussetzungen für eine Einbürgerung zu?</div>
+    <div class="ex-hint">2 richtige Antworten</div>
+    <label class="mc-option"><input type="checkbox" name="d2" value="a"> a) Mindestens 12 Jahre Aufenthalt in der Schweiz</label>
+    <label class="mc-option"><input type="checkbox" name="d2" value="b"> b) Kenntnisse einer Landessprache</label>
+    <label class="mc-option"><input type="checkbox" name="d2" value="c"> c) Mitgliedschaft in einem Verein</label>
+    <label class="mc-option"><input type="checkbox" name="d2" value="d"> d) Teilnahme am Wirtschaftsleben</label>
+    <button class="check-btn" onclick="checkMC('d2', ['b','d'], 1)">Prüfen</button>
+    <div class="feedback" id="fb-d2"></div>
+  </div>
+
+  <!-- D3: Ordering – Asylverfahren -->
+  <div class="ex-card" id="ex-d3">
+    <div class="ex-num">Aufgabe D3</div>
+    <div class="ex-question">Bringen Sie die Stationen des Asylverfahrens in die richtige Reihenfolge (1 = zuerst, 7 = zuletzt).</div>
+    <ul class="order-list" id="order-d3">
+      <li><input class="order-num-input" type="number" min="1" max="7" placeholder="?" id="od3-3"> Ausführliche Befragung zu Fluchtgründen durch SEM</li>
+      <li><input class="order-num-input" type="number" min="1" max="7" placeholder="?" id="od3-2"> Erkennungsdienstliche Behandlung und Kurzbefragung im Empfangs- und Verfahrenszentrum (EVZ)</li>
+      <li><input class="order-num-input" type="number" min="1" max="7" placeholder="?" id="od3-7"> Vollzug der Wegweisung durch Polizei</li>
+      <li><input class="order-num-input" type="number" min="1" max="7" placeholder="?" id="od3-1"> Ankunft am Flughafen</li>
+      <li><input class="order-num-input" type="number" min="1" max="7" placeholder="?" id="od3-5"> Entscheid durch SEM</li>
+      <li><input class="order-num-input" type="number" min="1" max="7" placeholder="?" id="od3-4"> Verteilung auf Kantone/Gemeinden</li>
+      <li><input class="order-num-input" type="number" min="1" max="7" placeholder="?" id="od3-6"> Bei ablehnendem Entscheid: Beschwerdemöglichkeit beim Bundesverwaltungsgericht</li>
+    </ul>
+    <button class="check-btn" onclick="checkOrder('d3', [3,2,7,1,5,4,6], 1)">Prüfen</button>
+    <div class="feedback" id="fb-d3"></div>
+  </div>
+
+  <!-- D4: Neutralität -->
+  <div class="ex-card" id="ex-d4">
+    <div class="ex-num">Aufgabe D4</div>
+    <div class="ex-question">Welche zwei Handlungen lassen sich mit der Neutralität der Schweiz vereinbaren?</div>
+    <div class="ex-hint">2 richtige Antworten</div>
+    <label class="mc-option"><input type="checkbox" name="d4" value="a"> a) Die Schweiz beteiligt sich an einem militärischen Verteidigungsbündnis.</label>
+    <label class="mc-option"><input type="checkbox" name="d4" value="b"> b) Die Schweiz beteiligt sich an militärischen Sanktionen gegen eine Diktatur.</label>
+    <label class="mc-option"><input type="checkbox" name="d4" value="c"> c) Die Schweiz beteiligt sich an Friedenseinsätzen der UNO und sendet bewaffnete Soldaten.</label>
+    <label class="mc-option"><input type="checkbox" name="d4" value="d"> d) Die Schweiz organisiert internationale Sportwettkämpfe.</label>
+    <label class="mc-option"><input type="checkbox" name="d4" value="e"> e) Die Schweiz liefert Waffen an ein Land, welches in keinen militärischen Konflikt verwickelt ist.</label>
+    <button class="check-btn" onclick="checkMC('d4', ['d','e'], 1)">Prüfen</button>
+    <div class="feedback" id="fb-d4"></div>
+  </div>
+
+</div>
+
+<div class="sep"></div>
+
+<!-- ==================== EU ==================== -->
+<div id="eu">
+  <div class="section-header">
+    <span class="section-num">E</span>
+    <span class="section-title">Europäische Union (EU)</span>
+  </div>
+
+  <!-- E1: MC – Regierung der EU -->
+  <div class="ex-card" id="ex-e1">
+    <div class="ex-num">Aufgabe E1</div>
+    <div class="ex-question">Diese Institution nennt man auch «Regierung der EU»:</div>
+    <label class="mc-option"><input type="radio" name="e1" value="a"> a) der Ministerrat</label>
+    <label class="mc-option"><input type="radio" name="e1" value="b"> b) der Europäische Rat</label>
+    <label class="mc-option"><input type="radio" name="e1" value="c"> c) die Europäische Kommission</label>
+    <label class="mc-option"><input type="radio" name="e1" value="d"> d) das Europäische Parlament</label>
+    <button class="check-btn" onclick="checkMC('e1', ['c'], 1)">Prüfen</button>
+    <div class="feedback" id="fb-e1"></div>
+  </div>
+
+  <!-- E2: Assign – EU-Organe Funktionen -->
+  <div class="ex-card" id="ex-e2">
+    <div class="ex-num">Aufgabe E2</div>
+    <div class="ex-question">Ordnen Sie die Funktionen den entsprechenden EU-Organen zu.</div>
+    <table class="assign-table" id="tbl-e2">
+      <thead>
+        <tr><th>Funktion</th><th>Europ. Rat</th><th>Kommission</th><th>Ministerrat</th><th>Parlament</th></tr>
+      </thead>
+      <tbody>
+        <tr data-correct="3"><td>Verabschiedung des EU-Budgets (zusammen mit dem Rat)</td><td class="check-cell"><input type="radio" name="e2r1" value="0"></td><td class="check-cell"><input type="radio" name="e2r1" value="1"></td><td class="check-cell"><input type="radio" name="e2r1" value="2"></td><td class="check-cell"><input type="radio" name="e2r1" value="3"></td></tr>
+        <tr data-correct="2"><td>Beschlüsse über Aussen-, Sicherheits- und Steuerpolitik der Fachminister</td><td class="check-cell"><input type="radio" name="e2r2" value="0"></td><td class="check-cell"><input type="radio" name="e2r2" value="1"></td><td class="check-cell"><input type="radio" name="e2r2" value="2"></td><td class="check-cell"><input type="radio" name="e2r2" value="3"></td></tr>
+        <tr data-correct="1"><td>Umsetzung der Beschlüsse von Ministerrat und Parlament</td><td class="check-cell"><input type="radio" name="e2r3" value="0"></td><td class="check-cell"><input type="radio" name="e2r3" value="1"></td><td class="check-cell"><input type="radio" name="e2r3" value="2"></td><td class="check-cell"><input type="radio" name="e2r3" value="3"></td></tr>
+        <tr data-correct="0"><td>Legt allgemeine politische Leitlinien fest (Staats- und Regierungschefs)</td><td class="check-cell"><input type="radio" name="e2r4" value="0"></td><td class="check-cell"><input type="radio" name="e2r4" value="1"></td><td class="check-cell"><input type="radio" name="e2r4" value="2"></td><td class="check-cell"><input type="radio" name="e2r4" value="3"></td></tr>
+        <tr data-correct="1"><td>Unterbreitet Gesetzesentwürfe (Vorschlagsrecht)</td><td class="check-cell"><input type="radio" name="e2r5" value="0"></td><td class="check-cell"><input type="radio" name="e2r5" value="1"></td><td class="check-cell"><input type="radio" name="e2r5" value="2"></td><td class="check-cell"><input type="radio" name="e2r5" value="3"></td></tr>
+      </tbody>
+    </table>
+    <button class="check-btn" onclick="checkAssign('e2', 'tbl-e2', 1)">Prüfen</button>
+    <div class="feedback" id="fb-e2"></div>
+  </div>
+
+  <!-- E3: TF – EU Säulen -->
+  <div class="ex-card" id="ex-e3">
+    <div class="ex-num">Aufgabe E3</div>
+    <div class="ex-question">Welche der folgenden Bereiche gehören zu den drei Säulen der EU (gemäss Vertrag von Maastricht)? Richtig oder falsch?</div>
+    <div id="tf-e3">
+      <div style="display:grid;grid-template-columns:1fr auto auto;gap:0.4rem 0.8rem;align-items:center;margin-bottom:0.3rem">
+        <span></span><span class="tf-label">R</span><span class="tf-label">F</span>
+      </div>
+      <div class="tf-row" data-correct="f" id="tf-e3-1"><span>Gemeinsame Asylpolitik</span><button class="tf-btn" onclick="selectTF(this,'r','e3',1)">R</button><button class="tf-btn" onclick="selectTF(this,'f','e3',1)">F</button></div>
+      <div class="tf-row" data-correct="r" id="tf-e3-2"><span>Wirtschafts- und Währungsunion</span><button class="tf-btn" onclick="selectTF(this,'r','e3',2)">R</button><button class="tf-btn" onclick="selectTF(this,'f','e3',2)">F</button></div>
+      <div class="tf-row" data-correct="r" id="tf-e3-3"><span>Gemeinsame Aussen- und Sicherheitspolitik</span><button class="tf-btn" onclick="selectTF(this,'r','e3',3)">R</button><button class="tf-btn" onclick="selectTF(this,'f','e3',3)">F</button></div>
+      <div class="tf-row" data-correct="r" id="tf-e3-4"><span>Zusammenarbeit in der Justiz- und Innenpolitik</span><button class="tf-btn" onclick="selectTF(this,'r','e3',4)">R</button><button class="tf-btn" onclick="selectTF(this,'f','e3',4)">F</button></div>
+    </div>
+    <button class="check-btn" onclick="checkTF('e3', 4, 1)">Prüfen</button>
+    <div class="feedback" id="fb-e3"></div>
+  </div>
+
+  <!-- E4: Assign EU/UNO/WTO -->
+  <div class="ex-card" id="ex-e4">
+    <div class="ex-num">Aufgabe E4</div>
+    <div class="ex-question">Ordnen Sie die Aussagen den Organisationen EU, UNO oder WTO zu.</div>
+    <table class="assign-table" id="tbl-e4">
+      <thead>
+        <tr><th>Aussage</th><th>EU</th><th>UNO</th><th>WTO</th></tr>
+      </thead>
+      <tbody>
+        <tr data-correct="0"><td>Förderung des Friedens in Europa</td><td class="check-cell"><input type="radio" name="e4r1" value="0"></td><td class="check-cell"><input type="radio" name="e4r1" value="1"></td><td class="check-cell"><input type="radio" name="e4r1" value="2"></td></tr>
+        <tr data-correct="1"><td>Einhaltung des Völkerrechts</td><td class="check-cell"><input type="radio" name="e4r2" value="0"></td><td class="check-cell"><input type="radio" name="e4r2" value="1"></td><td class="check-cell"><input type="radio" name="e4r2" value="2"></td></tr>
+        <tr data-correct="2"><td>Abbau von Zöllen</td><td class="check-cell"><input type="radio" name="e4r3" value="0"></td><td class="check-cell"><input type="radio" name="e4r3" value="1"></td><td class="check-cell"><input type="radio" name="e4r3" value="2"></td></tr>
+        <tr data-correct="1"><td>Sicherung des Weltfriedens</td><td class="check-cell"><input type="radio" name="e4r4" value="0"></td><td class="check-cell"><input type="radio" name="e4r4" value="1"></td><td class="check-cell"><input type="radio" name="e4r4" value="2"></td></tr>
+      </tbody>
+    </table>
+    <button class="check-btn" onclick="checkAssign('e4', 'tbl-e4', 1)">Prüfen</button>
+    <div class="feedback" id="fb-e4"></div>
+  </div>
+
+</div>
+
+<div class="sep"></div>
+
+<!-- ==================== DIVERSES ==================== -->
+<div id="diverses">
+  <div class="section-header">
+    <span class="section-num">F</span>
+    <span class="section-title">Diverses: NGO / Regierung / Begriffe</span>
+  </div>
+
+  <!-- F1: Assign NGO vs Regierungsorg -->
+  <div class="ex-card" id="ex-f1">
+    <div class="ex-num">Aufgabe F1</div>
+    <div class="ex-question">Ordnen Sie die Institutionen: a) Nichtregierungsorganisation (NGO) oder b) Regierungsorganisation?</div>
+    <table class="assign-table" id="tbl-f1">
+      <thead>
+        <tr><th>Institution</th><th>NGO</th><th>Regierungs­organisation</th></tr>
+      </thead>
+      <tbody>
+        <tr data-correct="1"><td>Schweizer Bundesrat</td><td class="check-cell"><input type="radio" name="f1r1" value="0"></td><td class="check-cell"><input type="radio" name="f1r1" value="1"></td></tr>
+        <tr data-correct="0"><td>WWF</td><td class="check-cell"><input type="radio" name="f1r2" value="0"></td><td class="check-cell"><input type="radio" name="f1r2" value="1"></td></tr>
+        <tr data-correct="1"><td>Bundesgericht</td><td class="check-cell"><input type="radio" name="f1r3" value="0"></td><td class="check-cell"><input type="radio" name="f1r3" value="1"></td></tr>
+        <tr data-correct="0"><td>Greenpeace</td><td class="check-cell"><input type="radio" name="f1r4" value="0"></td><td class="check-cell"><input type="radio" name="f1r4" value="1"></td></tr>
+        <tr data-correct="0"><td>IKRK</td><td class="check-cell"><input type="radio" name="f1r5" value="0"></td><td class="check-cell"><input type="radio" name="f1r5" value="1"></td></tr>
+        <tr data-correct="1"><td>UNO</td><td class="check-cell"><input type="radio" name="f1r6" value="0"></td><td class="check-cell"><input type="radio" name="f1r6" value="1"></td></tr>
+        <tr data-correct="0"><td>Amnesty International</td><td class="check-cell"><input type="radio" name="f1r7" value="0"></td><td class="check-cell"><input type="radio" name="f1r7" value="1"></td></tr>
+      </tbody>
+    </table>
+    <button class="check-btn" onclick="checkAssign('f1', 'tbl-f1', 1)">Prüfen</button>
+    <div class="feedback" id="fb-f1"></div>
+  </div>
+
+  <!-- F2: Freitext – Personenportrait -->
+  <div class="ex-card" id="ex-f2">
+    <div class="ex-num">Aufgabe F2 (Offene Frage)</div>
+    <div class="ex-question">Beschreiben Sie, welche beruflichen Möglichkeiten sich aufgrund der Personenfreizügigkeit für Sie persönlich ergeben könnten.</div>
+    <textarea placeholder="Ihre persönliche Antwort…" rows="5"></textarea>
+    <button class="show-model-btn" onclick="toggleModel(this)">Hinweise anzeigen</button>
+    <div class="model-answer">
+      Individuelle Antwort. Mögliche Aspekte: Arbeit in einem EU-Land ohne Sonderbewilligung, Studium im EU-Ausland (mit Schengen-Reisefreiheit), gegenseitige Anerkennung von Berufsdiplomen, Lohnschutz durch flankierende Massnahmen.
+    </div>
+  </div>
+
+</div>
+
+</main>
+
+<footer>Kapitel 5 · Schweiz und Welt · Übungen</footer>
+
+<script>
+// ===================== SCORE =====================
+let scores = {};
+let maxScores = {};
+
+function updateScore() {
+  let total = 0, max = 0;
+  for (let k in scores) { total += scores[k]; }
+  for (let k in maxScores) { max += maxScores[k]; }
+  document.getElementById('pts').textContent = total;
+  document.getElementById('total-pts').textContent = max;
+}
+
+// ===================== MC =====================
+function checkMC(id, correct, points) {
+  const inputs = document.querySelectorAll(`input[name="${id}"]`);
+  const isRadio = inputs[0].type === 'radio';
+  const selected = [];
+  inputs.forEach(i => { if (i.checked) selected.push(i.value); });
+
+  if (selected.length === 0) { alert('Bitte wählen Sie eine Antwort.'); return; }
+
+  // lock
+  inputs.forEach(i => {
+    i.disabled = true;
+    const label = i.closest('.mc-option');
+    label.classList.add('locked');
+    if (correct.includes(i.value)) {
+      if (i.checked) label.classList.add('correct');
+      else label.classList.add('missed');
+    } else if (i.checked) {
+      label.classList.add('wrong');
+    }
+  });
+
+  const correctSelected = selected.filter(v => correct.includes(v));
+  const wrongSelected = selected.filter(v => !correct.includes(v));
+  const allCorrect = correctSelected.length === correct.length && wrongSelected.length === 0;
+
+  maxScores[id] = points;
+  scores[id] = allCorrect ? points : (correctSelected.length > 0 && wrongSelected.length === 0 ? Math.round(points/2) : 0);
+
+  const fb = document.getElementById('fb-' + id);
+  fb.className = 'feedback show ' + (allCorrect ? 'ok' : (scores[id] > 0 ? 'partial' : 'nok'));
+  fb.textContent = allCorrect ? '✓ Richtig!' : (scores[id] > 0 ? '~ Teilweise richtig. Gelb = verpasste Antwort.' : '✗ Falsch. Gelb = richtige Antwort.');
+  updateScore();
+
+  document.querySelector(`#ex-${id} .check-btn`).disabled = true;
+}
+
+// ===================== TF state =====================
+const tfState = {};
+function selectTF(btn, val, group, idx) {
+  const row = document.getElementById(`tf-${group}-${idx}`);
+  const btns = row.querySelectorAll('.tf-btn');
+  if (btns[0].classList.contains('locked')) return;
+  btns.forEach(b => b.classList.remove('selected-r','selected-f'));
+  btn.classList.add(val === 'r' ? 'selected-r' : 'selected-f');
+  if (!tfState[group]) tfState[group] = {};
+  tfState[group][idx] = val;
+}
+
+function checkTF(group, count, points) {
+  if (!tfState[group] || Object.keys(tfState[group]).length < count) {
+    alert('Bitte beantworten Sie alle Aussagen.'); return;
+  }
+  let correct = 0;
+  for (let i = 1; i <= count; i++) {
+    const row = document.getElementById(`tf-${group}-${i}`);
+    const expected = row.dataset.correct;
+    const given = tfState[group][i];
+    const btns = row.querySelectorAll('.tf-btn');
+    btns.forEach(b => b.classList.add('locked'));
+    if (given === expected) {
+      correct++;
+      btns.forEach(b => { if (b.classList.contains(given === 'r' ? 'selected-r' : 'selected-f')) b.classList.add(expected === 'r' ? 'correct-r' : 'correct-f'); });
+    } else {
+      btns.forEach(b => { if (b.classList.contains(given === 'r' ? 'selected-r' : 'selected-f')) b.classList.add('wrong-sel'); });
+    }
+  }
+  maxScores[group] = points;
+  scores[group] = correct === count ? points : (correct >= Math.ceil(count/2) ? Math.round(points/2) : 0);
+  const fb = document.getElementById('fb-' + group);
+  fb.className = 'feedback show ' + (correct === count ? 'ok' : (scores[group] > 0 ? 'partial' : 'nok'));
+  fb.textContent = `${correct} von ${count} richtig. ` + (correct === count ? '✓ Perfekt!' : '');
+  updateScore();
+  document.querySelector(`#ex-${group} .check-btn`).disabled = true;
+}
+
+// ===================== ASSIGN =====================
+function checkAssign(id, tableId, points) {
+  const table = document.getElementById(tableId);
+  const rows = table.querySelectorAll('tbody tr');
+  let correct = 0;
+  rows.forEach(row => {
+    const expected = parseInt(row.dataset.correct);
+    const radios = row.querySelectorAll('input[type=radio]');
+    let selected = -1;
+    radios.forEach((r,i) => { if (r.checked) selected = parseInt(r.value); r.disabled = true; });
+    const cells = row.querySelectorAll('td.check-cell');
+    cells.forEach(c => c.classList.add('locked'));
+    if (selected === expected) {
+      correct++;
+      cells[expected].classList.add('correct-cell');
+    } else {
+      if (selected >= 0) cells[selected].classList.add('wrong-cell');
+      cells[expected].classList.add('correct-cell');
+    }
+  });
+  maxScores[id] = points;
+  scores[id] = correct === rows.length ? points : (correct >= Math.ceil(rows.length/2) ? Math.round(points/2) : 0);
+  const fb = document.getElementById('fb-' + id);
+  fb.className = 'feedback show ' + (correct === rows.length ? 'ok' : (scores[id] > 0 ? 'partial' : 'nok'));
+  fb.textContent = `${correct} von ${rows.length} richtig. ` + (correct === rows.length ? '✓ Perfekt!' : 'Grün = richtig, Rot = falsch gewählt.');
+  updateScore();
+  document.querySelector(`#ex-${id} .check-btn`).disabled = true;
+}
+
+// ===================== ORDERING =====================
+function checkOrder(id, correct, points) {
+  const inputs = document.querySelectorAll(`#order-${id} input.order-num-input`);
+  let allFilled = true;
+  inputs.forEach(i => { if (!i.value) allFilled = false; });
+  if (!allFilled) { alert('Bitte alle Felder ausfüllen.'); return; }
+
+  let correctCount = 0;
+  inputs.forEach((inp, idx) => {
+    inp.disabled = true;
+    if (parseInt(inp.value) === correct[idx]) {
+      inp.classList.add('correct'); correctCount++;
+    } else {
+      inp.classList.add('wrong');
+      inp.title = `Richtig: ${correct[idx]}`;
+    }
+  });
+  maxScores[id] = points;
+  scores[id] = correctCount === correct.length ? points : (correctCount >= Math.ceil(correct.length/2) ? Math.round(points/2) : 0);
+  const fb = document.getElementById('fb-' + id);
+  fb.className = 'feedback show ' + (correctCount === correct.length ? 'ok' : (scores[id] > 0 ? 'partial' : 'nok'));
+  fb.textContent = `${correctCount} von ${correct.length} richtig. ` + (correctCount === correct.length ? '✓ Perfekt!' : 'Rot = falsche Position. Hover für richtige Zahl.');
+  updateScore();
+  document.querySelector(`#ex-${id} .check-btn`).disabled = true;
+}
+
+// ===================== MODEL ANSWER =====================
+function toggleModel(btn) {
+  const ma = btn.nextElementSibling;
+  if (ma.classList.contains('show')) {
+    ma.classList.remove('show');
+    btn.textContent = btn.textContent.replace('verbergen','anzeigen');
+  } else {
+    ma.classList.add('show');
+    btn.textContent = btn.textContent.replace('anzeigen','verbergen');
+  }
+}
+
+// ===================== RESET =====================
+function resetAll() {
+  if (!confirm('Alle Antworten zurücksetzen?')) return;
+  location.reload();
+}
+
+// Init total
+updateScore();
+</script>
+</body>
+</html>

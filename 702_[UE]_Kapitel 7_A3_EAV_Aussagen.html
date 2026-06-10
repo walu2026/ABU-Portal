@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A3 – EAV Aussagen / Pausen & Ruhezeit – Selbstkontrolle</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,600;0,8..60,700;1,8..60,300&family=JetBrains+Mono:wght@400;600&display=swap');
+  :root{
+    --bg:#f3f2f6;--paper:#fafaf9;--ink:#1a1a1e;--ink-light:#54546a;
+    --rule:#c8c8d8;--accent:#5a3e8a;--accent-light:#f0ecfb;
+    --gold:#b8860b;--green:#1a5c2a;--green-light:#eaf5ec;
+    --red:#8b1a1a;--red-light:#faeaea;
+    --correct-border:#2a7a3a;--wrong-border:#c0392b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--bg);color:var(--ink);min-height:100vh;}
+  .top-bar{background:var(--accent);color:white;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.25);}
+  .top-bar h1{font-size:15px;font-weight:600;flex:1;min-width:180px;}
+  .name-wrap{display:flex;align-items:center;gap:8px;}
+  .name-wrap label{font-size:13px;opacity:.8;font-family:'JetBrains Mono',monospace;}
+  .name-wrap input{padding:6px 10px;border-radius:5px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:white;font-size:13px;width:175px;}
+  .name-wrap input::placeholder{color:rgba(255,255,255,.45);font-style:italic;}
+  .name-wrap input:focus{outline:none;border-color:#c8aaff;}
+  .btn{padding:7px 16px;border-radius:5px;border:none;font-size:13px;font-weight:600;cursor:pointer;font-family:'JetBrains Mono',monospace;transition:all .18s;white-space:nowrap;}
+  .btn-check{background:var(--gold);color:white;}
+  .btn-reset{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-pdf{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-download{background:#1a5c8a;color:white;font-weight:700;}
+  .score-banner{display:none;background:var(--accent);color:white;text-align:center;padding:10px;font-family:'JetBrains Mono',monospace;font-size:14px;}
+  .score-banner.visible{display:block;}
+  .worksheet{max-width:860px;margin:28px auto;background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--accent);box-shadow:0 4px 24px rgba(0,0,0,.09);padding:40px 44px 48px;}
+  .task-id{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.08em;margin-bottom:4px;}
+  .task-title{font-size:17px;font-weight:600;margin-bottom:26px;border-bottom:2px solid var(--accent);padding-bottom:10px;}
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin:28px 0 14px;}
+  .free-text{width:100%;padding:8px 10px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:14px;color:var(--ink);background:var(--paper);resize:vertical;min-height:70px;}
+  .free-text:focus{outline:none;border-color:var(--accent);}
+  .solution-badge{display:none;margin-top:5px;font-size:11.5px;font-family:'JetBrains Mono',monospace;padding:3px 8px;border-radius:3px;font-weight:600;word-break:break-word;}
+  .solution-badge.correct{display:block;background:var(--green-light);color:var(--green);border:1px solid var(--correct-border);}
+  .solution-badge.wrong{display:block;background:var(--red-light);color:var(--red);border:1px solid var(--wrong-border);}
+  .solution-badge.hint{display:block;background:var(--accent-light);color:var(--accent);border:1px solid #a88ad4;}
+  .match-table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;}
+  .match-table thead th{background:var(--accent);color:white;padding:8px 12px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;}
+  .match-table tbody tr{border-bottom:1px solid var(--rule);}
+  .match-table tbody tr:nth-child(even) td{background:#f5f4f9;}
+  .match-table tbody td{padding:9px 12px;vertical-align:middle;}
+  .cell-ta{width:100%;padding:5px 8px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:13px;color:var(--ink);background:var(--paper);resize:vertical;height:55px;}
+  .info-footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-light);font-family:'JetBrains Mono',monospace;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+  @media print{
+    body{background:white;padding:1.6cm 2cm!important;}
+    .top-bar{display:none;}.score-banner{display:none!important;}
+    .worksheet{box-shadow:none;border:none;margin:0;padding:0;max-width:100%;}
+    .solution-badge{display:none!important;}
+    @page{margin:0;size:A4 portrait;}
+  }
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <h1>⚖️ A3 – EAV Aussagen / Pausen & Ruhezeit</h1>
+  <div class="name-wrap"><label>Name:</label><input type="text" id="studentName" placeholder="Vor- und Nachname"/></div>
+  <button class="btn btn-download" onclick="downloadFile()" id="btnDownload">💾 Speichern</button>
+  <button class="btn btn-check" onclick="checkAll()">✓ Überprüfen</button>
+  <button class="btn btn-pdf" onclick="printAsPDF()">🖨 Als PDF</button>
+  <button class="btn btn-reset" onclick="resetAll()">↺ Reset</button>
+</div>
+<div class="score-banner" id="scoreBanner"></div>
+<div class="score-banner" id="resetConfirmBanner" style="background:#7a1a1a;"></div>
+<div class="worksheet">
+  <div class="task-id">THEMA 7 · ARBEITSRECHT · KAPITEL 7</div>
+  <div class="task-title">A3 – EAV Aussagen / Pausen & Ruhezeit</div>
+
+  <div class="section-label">A3 – EAV: Aussagen richtig oder falsch?</div>
+  <table class="match-table">
+    <thead><tr><th style="width:65%;">Aussage</th><th>richtig</th><th>falsch</th><th></th></tr></thead>
+    <tbody><tr>
+  <td style="font-size:14px;">1. Unbefristete Arbeitsverhältnisse haben keine Probezeit.</td>
+  <td style="text-align:center;"><input type="radio" name="re0" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re0" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE0"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">2. Wenn ich einen Schaden im Betrieb anrichte, übernimmt meine Privathaftpflichtversicherung die Kosten.</td>
+  <td style="text-align:center;"><input type="radio" name="re1" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re1" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE1"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">3. Meine Treuepflicht endet in jedem Fall mit der Vertragsauflösung.</td>
+  <td style="text-align:center;"><input type="radio" name="re2" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re2" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE2"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">4. Wenn ich für meine Arbeit Trinkgeld erhalte, darf ich das behalten.</td>
+  <td style="text-align:center;"><input type="radio" name="re3" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re3" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE3"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">5. Überstunden sind zu leisten, wenn sie betrieblich notwendig und für den Arbeitnehmer zumutbar sind.</td>
+  <td style="text-align:center;"><input type="radio" name="re4" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re4" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE4"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">6. Der Arbeitgeber entscheidet, ob Überstunden mit Freizeit kompensiert oder ausbezahlt werden.</td>
+  <td style="text-align:center;"><input type="radio" name="re5" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re5" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE5"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">7. Wenn ich den Betrieb vorzeitig verlasse, habe ich auch keinen Anspruch mehr auf eine Gratifikation.</td>
+  <td style="text-align:center;"><input type="radio" name="re6" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re6" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE6"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">8. Der 13. Monatslohn ist ein fester Lohnbestandteil.</td>
+  <td style="text-align:center;"><input type="radio" name="re7" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re7" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE7"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">9. Wenn ich ein Arztzeugnis vorweisen kann, erhalte ich immer den vollen Lohn.</td>
+  <td style="text-align:center;"><input type="radio" name="re8" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re8" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE8"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">10. Für auswärtige Arbeiten kann ich Spesen geltend machen.</td>
+  <td style="text-align:center;"><input type="radio" name="re9" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re9" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE9"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">11. Belegt mein Arztzeugnis, dass ich in den Ferien krank war, kann ich diese Ferientage nachbeziehen.</td>
+  <td style="text-align:center;"><input type="radio" name="re10" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re10" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE10"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">12. Ist eine Arbeitnehmerin längere Zeit arbeitsunfähig, können ihr die Ferien gekürzt werden.</td>
+  <td style="text-align:center;"><input type="radio" name="re11" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re11" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE11"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">13. Für die Hochzeit meiner Schwester erhalte ich zwei freie Tage.</td>
+  <td style="text-align:center;"><input type="radio" name="re12" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re12" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE12"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">14. Ich kann vom Arbeitgeber jederzeit ein Arbeitszeugnis verlangen.</td>
+  <td style="text-align:center;"><input type="radio" name="re13" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re13" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE13"></div></td>
+</tr><tr>
+  <td style="font-size:14px;">15. Der Arbeitgeber kann sich weigern, eine Arbeitsbestätigung auszustellen.</td>
+  <td style="text-align:center;"><input type="radio" name="re14" value="richtig"></td>
+  <td style="text-align:center;"><input type="radio" name="re14" value="falsch"></td>
+  <td><div class="solution-badge" id="bRE14"></div></td>
+</tr></tbody>
+  </table>
+
+  <div class="section-label" style="margin-top:28px;">A4 – ArG: Pausen und Ruhezeit</div>
+  <p style="font-size:15px;margin-bottom:14px;">Suchen Sie im ArG (Art. 15) die Bestimmungen zu Pausen und Ruhezeit.</p>
+  <table class="match-table">
+    <thead><tr><th style="width:25%;">Gesetz/Artikel</th><th>Inhalt</th></tr></thead>
+    <tbody>
+      <tr><td><input class="cell-ta" style="height:36px;" id="a4_art" placeholder="ArG ..."></td>
+          <td><textarea class="cell-ta" id="a4_inh" rows="3" placeholder="Pausen: ... Minuten bei mehr als ... Stunden / Ruhezeit: ..."></textarea>
+          <div class="solution-badge" id="bA4"></div></td></tr>
+    </tbody>
+  </table>
+<div class="info-footer"><span>THEMA 7 · ARBEITSRECHT · KAPITEL 7</span><span id="footerName"></span></div>
+</div>
+<script>
+const FILENAME='A3_EAV_Aussagen';
+
+var EAV_C=["falsch", "falsch", "falsch", "richtig", "richtig", "falsch", "falsch", "falsch", "falsch", "richtig", "richtig", "richtig", "falsch", "richtig", "falsch"];var EAV_L=["Falsch \u2013 auch unbefristete Vertr\u00e4ge k\u00f6nnen eine Probezeit (max. 3 Monate) vorsehen.", "Falsch \u2013 die Privathaftpflicht deckt keine Sch\u00e4den aus dem Arbeitsverh\u00e4ltnis; der Arbeitnehmer haftet nach OR 321e.", "Falsch \u2013 das Berufsgeheimnis (Treuepflicht bez\u00fcglich Betriebsgeheimnissen) gilt auch nach Vertragsende.", "Richtig \u2013 Trinkgeld geh\u00f6rt dem Arbeitnehmer.", "Richtig \u2013 OR 321c Abs. 1.", "Falsch \u2013 grunds\u00e4tzlich werden \u00dcberstunden mit Freizeit kompensiert; Auszahlung nur mit Einverst\u00e4ndnis des Arbeitnehmers.", "Falsch \u2013 ein anteiliger Anspruch kann bestehen, sofern dies vertraglich vorgesehen ist.", "Falsch \u2013 der 13. Monatslohn ist nur dann fester Bestandteil, wenn er so vereinbart wurde; sonst ist er eine Gratifikation.", "Falsch \u2013 die Dauer der Lohnfortzahlung h\u00e4ngt von der Besch\u00e4ftigungsdauer und dem Kanton ab (Skala nach OR 324a).", "Richtig \u2013 notwendige Auslagen bei ausw\u00e4rtigen Arbeiten sind Spesen.", "Richtig \u2013 OR 329b Abs. 2.", "Richtig \u2013 ab dem 2. Monat Arbeitsunf\u00e4higkeit pro Dienstjahr um 1/12 pro Monat (OR 329b).", "Falsch \u2013 der Anspruch auf freie Tage bei Hochzeit gilt f\u00fcr die eigene Hochzeit, nicht f\u00fcr Geschwister.", "Richtig \u2013 OR 330a: Anspruch auf Zeugnis jederzeit m\u00f6glich (Zwischenzeugnis).", "Falsch \u2013 der Arbeitgeber ist verpflichtet, auf Wunsch eine einfache Arbeitsbest\u00e4tigung auszustellen."];
+function checkAll(){
+  var c=0,t=0;
+  EAV_C.forEach(function(ans,i){
+    var sel=document.querySelector('input[name="re'+i+'"]:checked');
+    var b=document.getElementById('bRE'+i);
+    if(!sel){b.className='solution-badge';return;}
+    t++;var ok=sel.value===ans;
+    b.className='solution-badge '+(ok?'correct':'wrong');
+    b.textContent=ok?('✔ '+ans+' – '+EAV_L[i]):('✘ Lösung: '+ans+' – '+EAV_L[i]);
+    if(ok)c++;
+  });
+  var el=document.getElementById('a4_inh');var b=document.getElementById('bA4');
+  if(el&&el.value.trim()){b.className='solution-badge hint';b.textContent='📋 ArG 15: Pausen gelten als Arbeitszeit. 15 Min. bei >5,5h / 30 Min. bei >7h / 1h bei >9h Arbeit. Tägliche Ruhezeit: mind. 11 aufeinanderfolgende Stunden.';}
+  document.getElementById('scoreBanner').className='score-banner visible';
+  document.getElementById('scoreBanner').textContent=t?('✓ A3: '+c+' von '+t+' korrekt; A4: Musterlösung eingeblendet'):'⚠️ Bitte Antworten eintragen.';
+}
+function doReset(){
+  for(var i=0;i<15;i++) document.querySelectorAll('input[name="re'+i+'"]').forEach(x=>x.checked=false);
+  ['a4_art','a4_inh'].forEach(function(id){var e=document.getElementById(id);if(e)e.value='';});
+  document.querySelectorAll('.solution-badge').forEach(b=>{b.className='solution-badge';b.textContent='';});
+  document.getElementById('scoreBanner').classList.remove('visible');
+  document.getElementById('resetConfirmBanner').classList.remove('visible');
+}
+function resetAll(){var c=document.getElementById('resetConfirmBanner');
+if(!c.classList.contains('visible')){
+c.innerHTML='<span style="margin-right:12px;">Alle Eingaben wirklich löschen?</span><button onclick="doReset()" style="background:#c0392b;color:white;border:none;padding:5px 14px;border-radius:4px;cursor:pointer;font-weight:600;margin-right:8px;">Ja</button><button onclick="document.getElementById(\'resetConfirmBanner\').classList.remove(\'visible\')" style="background:rgba(255,255,255,.2);color:white;border:1px solid rgba(255,255,255,.4);padding:5px 12px;border-radius:4px;cursor:pointer;">Abbrechen</button>';
+c.classList.add('visible');return;}doReset();}
+
+function printAsPDF(){
+  var name=document.getElementById('studentName').value.trim();
+  document.title=name?(FILENAME+'_'+name.replace(/\s+/g,'_')):FILENAME;
+  setTimeout(function(){window.print();},100);
+}
+function downloadFile(){
+  var name=document.getElementById('studentName').value.trim();
+  if(!name){alert('Bitte zuerst Vor- und Nachname eingeben!');document.getElementById('studentName').focus();return;}
+  var html=document.documentElement.outerHTML;
+  var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;a.download=FILENAME+'_'+name.replace(/\s+/g,'_')+'.html';
+  document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(url);document.body.removeChild(a);},500);
+  var btn=document.getElementById('btnDownload');
+  btn.textContent='✔ Gespeichert!';btn.style.background='rgba(30,150,80,.8)';
+  setTimeout(function(){btn.textContent='💾 Speichern';btn.style.background='';},2500);
+}
+document.getElementById('studentName').addEventListener('input',function(){
+  document.getElementById('footerName').textContent=this.value.trim();
+});
+
+</script>
+</body>
+</html>

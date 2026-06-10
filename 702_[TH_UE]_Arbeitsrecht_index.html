@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbeitsrecht in der Schweiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #d3eafc;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        nav {
+            background-color: #1d3557;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 40px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #1d3557;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .quiz {
+            background-color: #fafafa;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .quiz h3 {
+            margin-top: 0;
+        }
+        .quiz button {
+            margin-top: 10px;
+            background-color: #1d3557;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .quiz button:hover {
+            background-color: #457b9d;
+        }
+
+        /* Stildefinitionen für Lernkarten */
+        .flashcard {
+            background-color: #fafafa;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .flashcard button {
+            margin-top: 10px;
+            background-color: #1d3557;
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .flashcard button:hover {
+            background-color: #457b9d;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        footer {
+            background-color: #eee;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #1d3557;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function checkAnswer(quizId, correctOptionId) {
+            var quiz = document.getElementById(quizId);
+            var radios = quiz.querySelectorAll('input[type="radio"]');
+            var selected = null;
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    selected = radios[i];
+                    break;
+                }
+            }
+            var feedback = quiz.querySelector('.feedback');
+            if (!selected) {
+                feedback.textContent = 'Bitte wähle eine Antwort.';
+                feedback.className = 'feedback incorrect';
+                return;
+            }
+            if (selected.id === correctOptionId) {
+                feedback.textContent = 'Richtig!';
+                feedback.className = 'feedback correct';
+            } else {
+                feedback.textContent = 'Leider falsch. Versuche es erneut.';
+                feedback.className = 'feedback incorrect';
+            }
+        }
+
+        // Lernkarten – zeigt oder versteckt die Antwort
+        function toggleAnswer(answerId) {
+            var ans = document.getElementById(answerId);
+            if (!ans) return;
+            if (ans.style.display === 'none' || ans.style.display === '') {
+                ans.style.display = 'block';
+            } else {
+                ans.style.display = 'none';
+            }
+        }
+
+        // Daten für Lernkarten (Frage-Antwort-Paare). Diese Liste wurde aus der CSV-Beilage übernommen.
+        const flashcards = [
+            { q: "Welches Gesetz regelt in der Schweiz primär den Einzelarbeitsvertrag (EAV) und die Beendigung des Arbeitsverhältnisses?", a: "Das Obligationenrecht (OR)." },
+            { q: "Welches Gesetz enthält Schutzvorschriften zu Unfall- und Gesundheitsvorsorge sowie zu den Höchstarbeitszeiten?", a: "Das Arbeitsgesetz (ArG)." },
+            { q: "Wie wird ein Vertrag bezeichnet, der zwischen einem Arbeitgeberverband und einer Gewerkschaft abgeschlossen wird?", a: "Gesamtarbeitsvertrag (GAV)." },
+            { q: "In welchen spezifischen Branchen kommen Normalarbeitsverträge (NAV) typischerweise zum Einsatz?", a: "In der Landwirtschaft, im Hausdienst oder in der Krankenpflege." },
+            { q: "Wo werden betriebsspezifische Regelungen wie das Verhalten bei Unfall oder Gleitzeitmodelle festgehalten?", a: "In betriebsinternen Reglementen (Betriebsordnung)." },
+            { q: "Welche gesetzliche Formvorschrift gilt für den Abschluss eines Einzelarbeitsvertrags (EAV)?", a: "Er ist formlos gültig." },
+            { q: "Wie lange dauert die gesetzliche Probezeit bei einem unbefristeten Arbeitsverhältnis im Standardfall?", a: "Ein Monat." },
+            { q: "Auf welche maximale Dauer kann die Probezeit vertraglich verlängert werden?", a: "Auf drei Monate." },
+            { q: "Warum darf eine angestellte Person ihre Arbeit nicht durch einen Dritten (z. B. Geschwister) ausführen lassen?", a: "Wegen der Pflicht zur persönlichen Arbeitsleistung (OR 321)." },
+            { q: "Welche Pflicht verpflichtet den Arbeitnehmer, Arbeitsgeräte und Materialien fachgerecht und schonend zu behandeln?", a: "Die Sorgfaltspflicht (OR 321a)." },
+            { q: "Unter welchen Kriterien wird die Haftung eines Arbeitnehmers für verursachte Schäden beurteilt?", a: "Unter Berücksichtigung des Berufsrisikos, Bildungsgrades und der Fachkenntnisse." },
+            { q: "Was besagt die Treuepflicht des Arbeitnehmers in Bezug auf Geschäftsgeheimnisse?", a: "Sie müssen während der Dauer des Arbeitsverhältnisses gewahrt werden." },
+            { q: "Wann ist für eine Nebenbeschäftigung bei einer 100-prozentigen Anstellung zwingend die Zustimmung des Arbeitgebers nötig?", a: "Wenn die Leistungsfähigkeit am Arbeitsplatz beeinträchtigt wird oder eine Konkurrenzierung vorliegt." },
+            { q: "Was muss ein Arbeitnehmer mit Geld oder Geschenken tun, die er von Dritten während der Arbeit erhält?", a: "Er muss sie dem Arbeitgeber abliefern (Rechenschafts- und Herausgabepflicht)." },
+            { q: "Wie definiert das Gesetz den Begriff 'Überstunden'?", a: "Arbeit, die über die vertraglich vereinbarte Arbeitszeit hinaus geleistet wird." },
+            { q: "Unter welcher Bedingung ist ein Arbeitnehmer gesetzlich zur Leistung von Überstunden verpflichtet?", a: "Wenn sie betrieblich notwendig und für den Arbeitnehmer zumutbar sind." },
+            { q: "Wie hoch ist der gesetzliche Lohnzuschlag für Überstunden, sofern kein Freizeitausgleich erfolgt?", a: "Mindestens 25 Prozent." },
+            { q: "Wer trägt die Beweislast dafür, dass Überstunden tatsächlich geleistet wurden?", a: "Der Arbeitnehmende." },
+            { q: "Wann hat ein Arbeitnehmer das Recht, Weisungen des Arbeitgebers nicht zu befolgen?", a: "Wenn diese schikanös sind, die Gesundheit gefährden oder Gewissenskonflikte auslösen." },
+            { q: "Was ist der rechtliche Unterschied zwischen einer Gratifikation und dem 13. Monatslohn?", a: "Die Gratifikation ist eine freiwillige Sondervergütung, der 13. Monatslohn ein fester Lohnbestandteil." },
+            { q: "Unter welcher Voraussetzung besteht ein gesetzlicher Anspruch auf Lohnfortzahlung bei Arbeitsverhinderung (z. B. Krankheit)?", a: "Das Arbeitsverhältnis muss mehr als drei Monate gedauert haben oder für mehr als drei Monate eingegangen worden sein." },
+            { q: "Wie lange beträgt die Lohnfortzahlungspflicht des Arbeitgebers im ersten Dienstjahr gemäss Gesetz?", a: "Drei Wochen." },
+            { q: "Welche drei regionalen Skalen werden in der Gerichtspraxis zur Festsetzung der Lohnfortzahlung genutzt?", a: "Zürcher Skala, Basler Skala und Berner Skala." },
+            { q: "Wer muss im Regelfall die für die Arbeit notwendigen Geräte und Materialien zur Verfügung stellen?", a: "Der Arbeitgeber." },
+            { q: "Was versteht man im Arbeitsrecht unter 'Schutz der Persönlichkeit' durch den Arbeitgeber?", a: "Der Schutz vor sexueller Belästigung, Mobbing und Gesundheitsgefährdungen." },
+            { q: "Wie hoch ist der gesetzliche Mindestferienanspruch pro Jahr ab dem vollendeten 20. Altersjahr?", a: "Vier Wochen (20 Arbeitstage)." },
+            { q: "Wer bestimmt im Arbeitsverhältnis letztlich den Zeitpunkt der Ferien?", a: "Der Arbeitgeber (unter Berücksichtigung der Wünsche des Arbeitnehmenden)." },
+            { q: "Wie viele Ferienwochen müssen pro Jahr mindestens zusammenhängend gewährt werden?", a: "Mindestens zwei Wochen." },
+            { q: "Darf der Ferienanspruch während des laufenden Arbeitsverhältnisses durch Geld ausgezahlt werden?", a: "Nein, Ferien dienen der Erholung und dürfen nicht abgegolten werden." },
+            { q: "Was kann ein Arbeitnehmer tun, wenn er während der Ferien durch Unfall oder Krankheit arbeitsunfähig wird?", a: "Er kann die Ferientage unter Vorlage eines Arztzeugnisses nachbeziehen." },
+            { q: "Welchen Anspruch haben Jugendliche bis zum 30. Altersjahr für ehrenamtliche Führungstätigkeiten in der Jugendarbeit?", a: "Anspruch auf maximal fünf Arbeitstage unbezahlten Urlaub." },
+            { q: "Was ist der inhaltliche Hauptunterschied zwischen einem Arbeitszeugnis und einer Arbeitsbestätigung?", a: "Das Zeugnis bewertet Leistung und Verhalten; die Bestätigung nennt nur Art und Dauer der Tätigkeit." },
+            { q: "Gilt der Weg zur Arbeit rechtlich als Arbeitszeit?", a: "Nein, nur die Zeit am Arbeitsplatz gilt als Arbeitszeit." },
+            { q: "Wie hoch ist die wöchentliche Höchstarbeitszeit für Büropersonal und technische Angestellte?", a: "45 Stunden." },
+            { q: "Wann liegt rechtlich gesehen 'Überzeit' (im Gegensatz zu Überstunden) vor?", a: "Wenn die gesetzliche wöchentliche Höchstarbeitszeit überschritten wird." },
+            { q: "Wie hoch ist der gesetzliche Lohnzuschlag für Sonntagsarbeit gemäss Arbeitsgesetz?", a: "50 Prozent." },
+            { q: "Bis zu welchem Alter gelten für Lernende verstärkte Fürsorgepflichten des Arbeitgebers bezüglich der Arbeitszeit?", a: "Bis zum 20. Altersjahr." },
+            { q: "Welche Kündigungsfrist gilt während der Probezeit gemäss Gesetz?", a: "Sieben Tage (jederzeit kündbar)." },
+            { q: "Wie lang ist die gesetzliche Kündigungsfrist im ersten Dienstjahr nach Ablauf der Probezeit?", a: "Ein Monat auf das Ende eines Monats." },
+            { q: "Welche gesetzliche Kündigungsfrist gilt im 2. bis zum 9. Dienstjahr?", a: "Zwei Monate auf das Ende eines Monats." },
+            { q: "Welche gesetzliche Kündigungsfrist gilt ab dem 10. Dienstjahr?", a: "Drei Monate auf das Ende eines Monats." },
+            { q: "Was ist die rechtliche Folge, wenn eine Kündigung mit einer zu kurzen Frist ausgesprochen wird?", a: "Sie ist verspätet und wird automatisch auf den nächstmöglichen Termin vollzogen." },
+            { q: "Nenne ein Beispiel für einen Grund, der eine Kündigung als 'missbräuchlich' einstuft.", a: "Kündigung aufgrund der Religionszugehörigkeit oder der Mitgliedschaft in einer Gewerkschaft." },
+            { q: "Welche finanzielle Konsequenz kann eine missbräuchliche Kündigung für den Arbeitgeber haben?", a: "Eine Entschädigungszahlung von bis zu sechs Monatslöhnen." },
+            { q: "Wie lange ist die Sperrfrist bei Krankheit oder Unfall im ersten Dienstjahr?", a: "30 Tage." },
+            { q: "Wie lange ist die Sperrfrist bei Krankheit oder Unfall ab dem sechsten Dienstjahr?", a: "180 Tage." },
+            { q: "Darf einer Arbeitnehmerin während der Schwangerschaft gekündigt werden?", a: "Nein, es besteht eine Sperrfrist während der gesamten Schwangerschaft." },
+            { q: "Bis zu welchem Zeitpunkt nach der Geburt gilt die Kündigungsschutzfrist für Mütter?", a: "Bis 16 Wochen nach der Geburt." },
+            { q: "Was ist die Rechtsfolge einer Kündigung, die während einer laufenden Sperrfrist ausgesprochen wird?", a: "Die Kündigung ist nichtig (ungültig)." },
+            { q: "Wann ist eine fristlose Auflösung des Arbeitsverhältnisses gemäss OR zulässig?", a: "Wenn ein wichtiger Grund vorliegt, der die Fortsetzung des Verhältnisses unzumutbar macht." },
+            { q: "Nenne zwei wichtige Gründe, die einen Arbeitgeber zur fristlosen Kündigung berechtigen.", a: "Straftaten am Arbeitsplatz (z. B. Diebstahl) oder Tätlichkeiten gegenüber Kollegen." },
+            { q: "Welcher Grund berechtigt einen Arbeitnehmer zur fristlosen Kündigung?", a: "Zahlungsunfähigkeit des Arbeitgebers, sofern keine Sicherheiten für den Lohn geleistet werden." },
+            { q: "Welche finanzielle Forderung kann bei einer ungerechtfertigten fristlosen Entlassung gerichtlich geltend gemacht werden?", a: "Lohn bis zum Ablauf der ordentlichen Kündigungsfrist plus eine Entschädigung von bis zu sechs Monatslöhnen." },
+            { q: "Bis zu welchem Streitwert fallen bei Arbeitsgerichten in der Regel keine Gerichtskosten an?", a: "Bis zu einem Streitwert von 30'000 Franken." },
+            { q: "Wo können Arbeitnehmende unentgeltliche Rechtsauskünfte bei Streitigkeiten am Arbeitsplatz einholen?", a: "Bei Gemeinden, Kantonen, Gewerkschaften oder dem örtlichen Arbeitsgericht." }
+        ];
+
+        // erstellt Lernkarten dynamisch im Container mit der ID 'flashcardsContainer'
+        function renderFlashcards() {
+            var container = document.getElementById('flashcardsContainer');
+            if (!container) return;
+            flashcards.forEach(function(card, index) {
+                var div = document.createElement('div');
+                div.className = 'flashcard';
+                var q = document.createElement('p');
+                q.className = 'question';
+                q.innerHTML = '<strong>' + (index + 1) + '. Frage:</strong> ' + card.q;
+                var btn = document.createElement('button');
+                var answerId = 'flashcard-answer-' + index;
+                btn.textContent = 'Antwort anzeigen';
+                btn.onclick = function() {
+                    toggleAnswer(answerId);
+                };
+                var ans = document.createElement('p');
+                ans.id = answerId;
+                ans.className = 'answer';
+                ans.style.display = 'none';
+                ans.innerHTML = '<strong>Antwort:</strong> ' + card.a;
+                div.appendChild(q);
+                div.appendChild(btn);
+                div.appendChild(ans);
+                container.appendChild(div);
+            });
+        }
+
+        // Nach dem Laden der Seite die Lernkarten generieren
+        window.addEventListener('load', function() {
+            renderFlashcards();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <!-- Decorative image representing fair labour relations -->
+        <img src="a0db726b-2b25-47cc-9a9c-9c5e20901ba2.png" alt="Kapitel Arbeit und Markt Lehrbuch Gesellschaft">
+        <h1>Arbeitsvertrag</h1>
+        <p>Rechte und Pflichten verständlich erklärt - SOL-Auftrag Abschlussklassen ABU - bzbs</p>
+    </header>
+    <nav>
+        <a href="#grundlagen">Grundlagen</a>
+        <a href="#pflichten">Rechte &amp; Pflichten</a>
+        <a href="#arbeitszeit">Arbeitszeit</a>
+        <a href="#kuendigung">Kündigung</a>
+        <a href="#zeugnis">Arbeitszeugnis</a>
+        <a href="#uebungen">Übungen</a>
+        <!-- neu hinzugefügte Navigationspunkte für zusätzliche Lernressourcen -->
+        <a href="#lernkarten">Lernkarten</a>
+        <a href="#film">Film</a>
+        <a href="#grafik">Grafik</a>
+        <a href="#kahoot">Kahoot</a>
+    </nav>
+    <main>
+        <section id="grundlagen">
+            <h2>Rechtliche Grundlagen</h2>
+            <p>Das Arbeitsverhältnis wird durch gesetzliche Bestimmungen, vertragliche Vereinbarungen und betriebsinterne Reglemente geregelt. Die wichtigsten gesetzlichen Grundlagen sind das Obligationenrecht (OR) und das Arbeitsgesetz (ArG). Branchenspezifische Gesamtarbeitsverträge (GAV) und Betriebsreglemente können zusätzlich Rechte und Pflichten festlegen. Ein Arbeitsvertrag kann mündlich oder schriftlich abgeschlossen werden, sollte aber die wesentlichen Punkte wie Parteien, Aufgaben, Entlöhnung, Arbeitsort und Kündigungsfristen eindeutig festhalten<sup>[1][2]</sup>.</p>
+        </section>
+        <section id="pflichten">
+            <h2>Rechte und Pflichten</h2>
+            <h3>Pflichten der Arbeitnehmerin / des Arbeitnehmers</h3>
+            <ul>
+                <li><strong>Persönliche Arbeitsleistung:</strong> Die Arbeit muss persönlich und sorgfältig erbracht werden.</li>
+                <li><strong>Sorgfaltspflicht:</strong> Werkzeuge und Materialien sind sorgfältig zu behandeln und Schäden zu vermeiden.</li>
+                <li><strong>Treuepflicht:</strong> Mitarbeitende müssen die Interessen des Arbeitgebers wahren, Betriebsgeheimnisse schützen und dürfen keine konkurrierenden Nebenerwerbe ausüben. Nebenjobs, die die Leistungsfähigkeit beeinträchtigen oder dem Arbeitgeber Konkurrenz machen, sind ohne Einwilligung des Arbeitgebers verboten<sup>[13][14][5]</sup>.</li>
+                <li><strong>Überstunden:</strong> Überstunden fallen an, wenn über die vertraglich vereinbarte Arbeitszeit hinaus gearbeitet wird. Sie sind nur zu leisten, wenn sie notwendig sind und dem Arbeitnehmenden zugemutet werden können. Überstunden können durch Freizeit von gleicher Dauer oder mit mindestens 25&nbsp;% Lohnzuschlag entschädigt werden, sofern nichts anderes schriftlich vereinbart wurde<sup>[4]</sup>.</li>
+            </ul>
+            <h3>Pflichten des Arbeitgebers</h3>
+            <ul>
+                <li><strong>Lohnzahlung:</strong> Der Lohn ist am vereinbarten Termin zu bezahlen, meist am Ende des Monats. Bei Überstunden muss ein Zuschlag von 25&nbsp;% entrichtet werden, sofern keine andere Vereinbarung besteht<sup>[4]</sup>.</li>
+                <li><strong>Fürsorge- und Schutzpflicht:</strong> Arbeitgeber müssen die Persönlichkeit der Arbeitnehmerinnen und Arbeitnehmer respektieren, sie vor Diskriminierung schützen und dürfen Personaldaten nur für die Vertragsdurchführung verarbeiten (Grundsatz der Verhältnismässigkeit)<sup>[12]</sup>.</li>
+                <li><strong>Ferien:</strong> Erwachsene haben Anspruch auf mindestens vier Wochen Ferien pro Jahr; bis zum 20. Geburtstag beträgt der Anspruch fünf Wochen<sup>[3]</sup>. Ferien dürfen grundsätzlich nicht durch Geld abgegolten werden. Bei Krankheit oder Unfall während der Ferien werden diese Tage nach Vorlage eines Arztzeugnisses nicht als Ferien angerechnet.</li>
+            </ul>
+        </section>
+        <section id="arbeitszeit">
+            <h2>Arbeitszeit und Überzeit</h2>
+            <p>Das Arbeitsgesetz begrenzt die Höchstarbeitszeit auf 45 Stunden pro Woche für Angestellte in industriellen Betrieben sowie für Büropersonal, technische und andere Mitarbeitende in grossen Handelsbetrieben. Für alle übrigen Arbeitnehmerinnen und Arbeitnehmer gilt eine Grenze von 50 Stunden pro Woche. Als <em>Überstunden</em> gilt die Arbeit, die über die vertraglich vereinbarte Arbeitszeit hinausgeht; sie kann mit Freizeit oder Lohnzuschlag ausgeglichen werden. <em>Überzeit</em> bezeichnet die Arbeit über die gesetzliche Höchstarbeitszeit hinaus und ist mit einem Zuschlag von 25&nbsp;% zu entschädigen. Nachtarbeit und Sonntagsarbeit unterliegen speziellen Bewilligungen und Zuschlägen. Jugendliche unter 15 Jahren dürfen nicht beschäftigt werden; für Jugendliche bis 19 Jahre gelten besondere Schutzvorschriften<sup>[4]</sup>.</p>
+        </section>
+        <section id="kuendigung">
+            <h2>Kündigung und Kündigungsschutz</h2>
+            <p>Ein Arbeitsverhältnis kann von beiden Seiten unter Einhaltung einer Kündigungsfrist aufgelöst werden. Während der Probezeit gilt eine Kündigungsfrist von sieben Tagen, sofern nichts anderes vereinbart ist<sup>[6]</sup>. Nach der Probezeit beträgt die Kündigungsfrist einen Monat im ersten Dienstjahr, zwei Monate vom zweiten bis zum neunten Dienstjahr und drei Monate ab dem zehnten Dienstjahr<sup>[7]</sup>. Die Kündigung bedarf keiner besonderen Form; schriftliche Kündigungen sind jedoch üblich und erleichtern den Nachweis<sup>[8]</sup>. Kündigungen sind unzulässig, wenn sie während der Schwangerschaft oder in den ersten 16 Wochen nach der Geburt, während obligatorischem Militär-, Zivil- oder Schutzdienst oder während Krankheit/Unfall (abhängig von der Dauer des Dienstverhältnisses) ausgesprochen werden; eine Kündigung während einer solchen Sperrfrist ist nichtig. Missbräuchliche Kündigungen – beispielsweise wegen der Zugehörigkeit zu einer Gewerkschaft, Religion oder sexueller Orientierung – können Entschädigungsansprüche von bis zu sechs Monatslöhnen auslösen.</p>
+        </section>
+        <section id="zeugnis">
+            <h2>Arbeitszeugnis</h2>
+            <p>Arbeitnehmende haben gemäss Art.&nbsp;330a OR jederzeit Anspruch auf ein Zwischen- oder Schlusszeugnis. Ein vollständiges Zeugnis muss Art und Dauer des Arbeitsverhältnisses, Leistung und Verhalten der Arbeitnehmerin oder des Arbeitnehmers beschreiben und mit Datum und Unterschrift versehen sein<sup>[9][10]</sup>. Zeugnisse müssen klar, wahrheitsgemäss und wohlwollend formuliert sein und dürfen keine Geheimcodes enthalten<sup>[11]</sup>. Der Anspruch verjährt nach zehn Jahren.</p>
+        </section>
+        <section id="uebungen">
+            <h2>Übungen – Testen Sie Ihr Wissen</h2>
+            <p>Die folgenden interaktiven Aufgaben basieren auf typischen Situationen aus dem Arbeitsalltag. Wählen Sie die korrekte Antwort und klicken Sie auf „Antwort überprüfen“.</p>
+            <!-- Quiz 1: Nebenerwerb -->
+            <div class="quiz" id="quiz1">
+                <h3>Fall 1: Nebenerwerb</h3>
+                <p>Herr Müller arbeitet 100 % bei einer Firma und erhält ein Angebot für einen Nebenjob in derselben Branche. Darf er den Nebenjob ohne Zustimmung seines Arbeitgebers annehmen?</p>
+                <label><input type="radio" id="q1a1" name="q1"> Ja, Nebenerwerb ist immer erlaubt.</label><br>
+                <label><input type="radio" id="q1a2" name="q1"> Ja, wenn der Nebenjob in der Freizeit stattfindet.</label><br>
+                <label><input type="radio" id="q1a3" name="q1"> Nein, er braucht die Zustimmung des Arbeitgebers und darf keine Konkurrenz betreiben.</label><br>
+                <button onclick="checkAnswer('quiz1','q1a3')">Antwort überprüfen</button>
+                <p class="feedback"></p>
+            </div>
+            <!-- Quiz 2: Überstunden -->
+            <div class="quiz" id="quiz2">
+                <h3>Fall 2: Überstundenkompensation</h3>
+                <p>Frau Weber hat zehn Überstunden geleistet. Ihr Arbeitgeber verlangt, dass sie die Überstunden durch Freizeit kompensiert. Sie möchte den Lohn ausbezahlt bekommen. Was gilt?</p>
+                <label><input type="radio" id="q2a1" name="q2"> Sie muss die Überstunden zwingend mit Freizeit kompensieren.</label><br>
+                <label><input type="radio" id="q2a2" name="q2"> Überstunden können nur mit Lohnzuschlag von 25 % entschädigt werden.</label><br>
+                <label><input type="radio" id="q2a3" name="q2"> Überstunden können mit Freizeit oder mit mindestens 25 % Lohnzuschlag abgegolten werden; für Freizeit bedarf es der Zustimmung beider Parteien.</label><br>
+                <button onclick="checkAnswer('quiz2','q2a3')">Antwort überprüfen</button>
+                <p class="feedback"></p>
+            </div>
+            <!-- Quiz 3: Ferien und Krankheit -->
+            <div class="quiz" id="quiz3">
+                <h3>Fall 3: Ferien und Krankheit</h3>
+                <p>Ein Angestellter erkrankt während seiner zweiwöchigen Ferien schwer und kann das Ferienprogramm nicht nutzen. Wie werden die Krankheitstage behandelt?</p>
+                <label><input type="radio" id="q3a1" name="q3"> Die Krankheitstage gelten als Ferien und verfallen.</label><br>
+                <label><input type="radio" id="q3a2" name="q3"> Die Krankheitstage gelten als Arbeitszeit und müssen nachgeholt werden.</label><br>
+                <label><input type="radio" id="q3a3" name="q3"> Die Krankheitstage werden nach Vorlage eines Arztzeugnisses gutgeschrieben und können später bezogen werden.</label><br>
+                <button onclick="checkAnswer('quiz3','q3a3')">Antwort überprüfen</button>
+                <p class="feedback"></p>
+            </div>
+            <!-- Quiz 4: Arbeitsvertrag -->
+            <div class="quiz" id="quiz4">
+                <h3>Frage 4: Form des Arbeitsvertrags</h3>
+                <p>Muss ein Arbeitsvertrag zwingend schriftlich abgeschlossen werden?</p>
+                <label><input type="radio" id="q4a1" name="q4"> Ja, ohne Schriftform ist der Vertrag ungültig.</label><br>
+                <label><input type="radio" id="q4a2" name="q4"> Nein, mündliche Verträge sind gültig, doch eine schriftliche Vereinbarung wird empfohlen.</label><br>
+                <label><input type="radio" id="q4a3" name="q4"> Nur befristete Verträge müssen schriftlich sein.</label><br>
+                <button onclick="checkAnswer('quiz4','q4a2')">Antwort überprüfen</button>
+                <p class="feedback"></p>
+            </div>
+            <!-- Quiz 5: Treuepflicht und Kritik -->
+            <div class="quiz" id="quiz5">
+                <h3>Frage 5: Kritik am Arbeitgeber</h3>
+                <p>Ist es erlaubt, den Arbeitgeber am Stammtisch oder in sozialen Medien öffentlich schlechtzumachen?</p>
+                <label><input type="radio" id="q5a1" name="q5"> Ja, Meinungsfreiheit erlaubt jede Äußerung.</label><br>
+                <label><input type="radio" id="q5a2" name="q5"> Nein, die Treuepflicht untersagt herabsetzende oder schädigende Äußerungen über den Arbeitgeber.</label><br>
+                <label><input type="radio" id="q5a3" name="q5"> Ja, solange keine Namen genannt werden.</label><br>
+                <button onclick="checkAnswer('quiz5','q5a2')">Antwort überprüfen</button>
+                <p class="feedback"></p>
+            </div>
+            <!-- Quiz 6: Kündigungsfristen -->
+            <div class="quiz" id="quiz6">
+                <h3>Frage 6: Kündigungsfristen</h3>
+                <p>Welche Kündigungsfrist gilt im zweiten bis neunten Dienstjahr, sofern nichts anderes schriftlich vereinbart wurde?</p>
+                <label><input type="radio" id="q6a1" name="q6"> Ein Monat</label><br>
+                <label><input type="radio" id="q6a2" name="q6"> Zwei Monate</label><br>
+                <label><input type="radio" id="q6a3" name="q6"> Drei Monate</label><br>
+                <button onclick="checkAnswer('quiz6','q6a2')">Antwort überprüfen</button>
+                <p class="feedback"></p>
+            </div>
+            <!-- Quiz 7: Ferienanspruch -->
+            <div class="quiz" id="quiz7">
+                <h3>Frage 7: Ferienanspruch</h3>
+                <p>Wie viele Ferienwochen pro Jahr stehen Arbeitnehmenden über 20 Jahren mindestens zu?</p>
+                <label><input type="radio" id="q7a1" name="q7"> Zwei Wochen</label><br>
+                <label><input type="radio" id="q7a2" name="q7"> Vier Wochen</label><br>
+                <label><input type="radio" id="q7a3" name="q7"> Fünf Wochen</label><br>
+                <button onclick="checkAnswer('quiz7','q7a2')">Antwort überprüfen</button>
+                <p class="feedback"></p>
+            </div>
+            <!-- Quiz 8: Probezeit -->
+            <div class="quiz" id="quiz8">
+                <h3>Frage 8: Probezeit</h3>
+                <p>Wie lange dauert die gesetzliche Probezeit, wenn im Arbeitsvertrag nichts anderes vereinbart wurde?</p>
+                <label><input type="radio" id="q8a1" name="q8"> Eine Woche</label><br>
+                <label><input type="radio" id="q8a2" name="q8"> Ein Monat</label><br>
+                <label><input type="radio" id="q8a3" name="q8"> Drei Monate</label><br>
+                <button onclick="checkAnswer('quiz8','q8a2')">Antwort überprüfen</button>
+                <p class="feedback"></p>
+            </div>
+            <!-- Quiz 9: Kündigungsschutz Schwangerschaft -->
+            <div class="quiz" id="quiz9">
+                <h3>Frage 9: Kündigungsschutz bei Schwangerschaft</h3>
+                <p>Darf eine Arbeitnehmerin während der Schwangerschaft ordentlich gekündigt werden?</p>
+                <label><input type="radio" id="q9a1" name="q9"> Ja, sie kann jederzeit gekündigt werden.</label><br>
+                <label><input type="radio" id="q9a2" name="q9"> Nein, während der Schwangerschaft und bis 16 Wochen nach der Geburt gilt eine Sperrfrist.</label><br>
+                <label><input type="radio" id="q9a3" name="q9"> Ja, aber nur mit Zustimmung des Arztes.</label><br>
+                <button onclick="checkAnswer('quiz9','q9a2')">Antwort überprüfen</button>
+                <p class="feedback"></p>
+            </div>
+        </section>
+        <!-- Lernkarten: dynamischer Container für Frage-Antwort-Karten -->
+        <section id="lernkarten">
+            <h2>Lernkarten – Rechtliche Grundlagen</h2>
+            <p>Nutzen Sie diese Lernkarten, um Ihr Wissen zu den rechtlichen Grundlagen des Schweizer Arbeitsrechts zu vertiefen. Klicken Sie auf „Antwort anzeigen“, um die Lösung einzublenden.</p>
+            <div id="flashcardsContainer"></div>
+        </section>
+
+        <!-- Film über den Arbeitsvertrag: lokal eingebetteter Video-Beitrag -->
+        <section id="film">
+            <h2>Film – Der Arbeitsvertrag erklärt</h2>
+            <p>Dieser Filmbeitrag erklärt anschaulich die wichtigsten Aspekte des Arbeitsvertrags – von den grundlegenden Pflichten bis zu den Regelungen zur Sorgfalts- und Treuepflicht gemäss Lehrmittel. Das Video wird lokal eingebettet, sodass keine externe Verbindung notwendig ist.</p>
+            <video controls style="width: 100%; max-width: 800px; display: block; margin: 0 auto;">
+                <source src="Arbeitsrecht.mp4" type="video/mp4">
+                Ihr Browser unterstützt das Video-Element nicht. Sie können das Video auch <a href="Arbeitsrecht.mp4">herunterladen</a> und lokal ansehen.
+            </video>
+        </section>
+
+        <!-- Übersichtsgrafik zum Arbeitsrecht -->
+        <section id="grafik">
+            <h2>Übersichtsgrafik</h2>
+            <p>Die folgende Grafik bietet Ihnen einen strukturierten Überblick über die wichtigsten Themen des Arbeitsrechts – von den Grundlagen über die Pflichten bis hin zu Ferien und Kündigungsschutz.</p>
+            <img src="unnamed.png" alt="Übersichtsgrafik zum Schweizer Arbeitsrecht" style="max-width: 100%; height: auto; display:block; margin: 0 auto;">
+        </section>
+
+        <!-- Kahoot-Challenge zur Selbstkontrolle -->
+        <section id="kahoot">
+            <h2>Kahoot – Interaktives Quiz</h2>
+            <p>Testen Sie Ihr Wissen! Scannen Sie den QR‑Code mit Ihrem Smartphone oder geben Sie den PIN&nbsp;04476746 auf <a href="https://kahoot.it" target="_blank">kahoot.it</a> ein. Sie können auch den Direktlink verwenden.</p>
+            <div style="text-align:center; margin-bottom:10px;">
+                <img src="assignment-qr-code.png" alt="Kahoot QR‑Code" style="max-width: 200px; height: auto;">
+            </div>
+            <p><a href="https://kahoot.it/challenge/04476746?challenge-id=9beb9be3-222e-4504-a11d-b9bcd946995c_1771158078903" target="_blank">Direkt zum Kahoot-Challenge starten</a> (PIN: 04476746)</p>
+        </section>
+    </main>
+    <footer>
+        <p><strong>Fußnoten:</strong></p>
+        <ol>
+            <li id="fn1">Dextra Ratgeber: Das Arbeitsrecht regelt die abhängige Erwerbstätigkeit und basiert hauptsächlich auf OR und ArG【270833609502754†L75-L85】.</li>
+            <li id="fn2">Dextra Ratgeber: Ein Arbeitsvertrag kann mündlich oder schriftlich abgeschlossen werden; er sollte die wesentlichen Punkte wie Parteien, Arbeitsort, Aufgaben, Entlöhnung und Kündigungsfristen enthalten【270833609502754†L129-L149】.</li>
+            <li id="fn3">Dextra Ratgeber: Erwachsene haben Anspruch auf mindestens vier Wochen Ferien pro Jahr, unter Zwanzigjährige auf fünf Wochen【270833609502754†L209-L212】.</li>
+            <li id="fn4">SECO FAQ Überstunden: Überstunden können durch Freizeit oder mit mindestens 25&nbsp;% Lohnzuschlag abgegolten werden; eine vertragliche Änderung ist nur schriftlich möglich【974312019889214†L269-L280】.</li>
+            <li id="fn5">SECO FAQ Nebenerwerb: Nebenbeschäftigungen sind unzulässig, wenn sie die Leistungsfähigkeit beeinträchtigen, den Arbeitgeber konkurrenzieren oder dessen Ruf schädigen【860369078066032†L153-L168】.</li>
+            <li id="fn6">SECO FAQ Kündigung: Die gesetzliche Probezeit beträgt einen Monat und kann vertraglich auf bis zu drei Monate verlängert werden【124935688858438†L169-L175】.</li>
+            <li id="fn7">SECO FAQ Kündigung: Nach der Probezeit beträgt die Kündigungsfrist einen Monat im 1.&nbsp;Dienstjahr, zwei Monate vom 2.&nbsp;bis 9.&nbsp;Dienstjahr und drei Monate ab dem 10.&nbsp;Dienstjahr【124935688858438†L267-L275】.</li>
+            <li id="fn8">SECO FAQ Kündigung: Eine Kündigung kann mündlich erfolgen, sollte aber aus Beweisgründen schriftlich festgehalten werden【124935688858438†L195-L203】.</li>
+            <li id="fn9">SECO FAQ Arbeitszeugnis: Arbeitnehmer haben jederzeit Anspruch auf ein Zwischen- oder Schlusszeugnis, das Art und Dauer des Arbeitsverhältnisses ausweist【147461358338517†L152-L163】.</li>
+            <li id="fn10">SECO FAQ Arbeitszeugnis: Ein Arbeitszeugnis muss Leistung und Verhalten beschreiben und mit Datum und Unterschrift versehen sein【147461358338517†L169-L178】.</li>
+            <li id="fn11">SECO FAQ Arbeitszeugnis: Zeugnisse müssen klar, wahrheitsgemäss und wohlwollend formuliert sein und dürfen keine Geheimcodes enthalten【147461358338517†L184-L223】.</li>
+            <li id="fn12">EDÖB: Arbeitgeber müssen die Persönlichkeit der Arbeitnehmenden schützen und dürfen Personaldaten nur für die Vertragsdurchführung verarbeiten; der Grundsatz der Verhältnismässigkeit gilt【467236821002796†L43-L58】.</li>
+            <li id="fn13">Lawinfo: Die Treuepflicht verpflichtet Arbeitnehmer, die Interessen des Arbeitgebers zu wahren und Schäden, Unruhe oder Rufschädigung zu vermeiden【330414362626716†L180-L214】.</li>
+            <li id="fn14">Lawinfo: Betriebsgeheimnisse sind zu wahren; konkurrierende Nebenerwerbe und die Nutzung von Arbeitsgeräten für private Zwecke sind untersagt【330414362626716†L224-L249】.</li>
+            <li id="fn15">Lawinfo: Mitarbeitende dürfen während Krankheit oder Ferien nicht für Dritte arbeiten und müssen Sicherheitsmängel melden; Verstösse gegen die Treuepflicht können zur Kündigung führen【330414362626716†L252-L267】.</li>
+        </ol>
+        <p>Diese Homepage dient der Information und ersetzt keine Rechtsberatung.</p>
+    </footer>
+</body>
+</html>

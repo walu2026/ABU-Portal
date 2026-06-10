@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A17 – Bilaterale Verträge – Selbstkontrolle</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,600;0,8..60,700;1,8..60,300&family=JetBrains+Mono:wght@400;600&display=swap');
+  :root{
+    --bg:#f3f2f6;--paper:#fafaf9;--ink:#1a1a1e;--ink-light:#54546a;
+    --rule:#c8c8d8;--accent:#5a3e8a;--accent-light:#f0ecfb;
+    --gold:#b8860b;--green:#1a5c2a;--green-light:#eaf5ec;
+    --red:#8b1a1a;--red-light:#faeaea;
+    --correct-border:#2a7a3a;--wrong-border:#c0392b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--bg);color:var(--ink);min-height:100vh;}
+  .top-bar{background:var(--accent);color:white;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.25);}
+  .top-bar h1{font-size:15px;font-weight:600;flex:1;min-width:180px;letter-spacing:.03em;}
+  .name-wrap{display:flex;align-items:center;gap:8px;}
+  .name-wrap label{font-size:13px;opacity:.8;font-family:'JetBrains Mono',monospace;}
+  .name-wrap input{padding:6px 10px;border-radius:5px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:white;font-size:13px;width:175px;font-family:'Source Serif 4',serif;}
+  .name-wrap input::placeholder{color:rgba(255,255,255,.45);font-style:italic;}
+  .name-wrap input:focus{outline:none;border-color:#c8aaff;background:rgba(255,255,255,.2);}
+  .btn{padding:7px 16px;border-radius:5px;border:none;font-size:13px;font-weight:600;cursor:pointer;font-family:'JetBrains Mono',monospace;transition:all .18s;white-space:nowrap;}
+  .btn-check{background:var(--gold);color:white;}.btn-check:hover{background:#9a6e00;transform:translateY(-1px);}
+  .btn-reset{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-pdf{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-download{background:#1a5c8a;color:white;font-weight:700;}.btn-download:hover{background:#144a70;}
+  .score-banner{display:none;background:var(--accent);color:white;text-align:center;padding:10px;font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:.05em;}
+  .score-banner.visible{display:block;}
+  .worksheet{max-width:860px;margin:28px auto;background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--accent);box-shadow:0 4px 24px rgba(0,0,0,.09);padding:40px 44px 48px;}
+  .task-id{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.08em;margin-bottom:4px;}
+  .task-title{font-size:17px;font-weight:600;color:var(--ink);margin-bottom:26px;border-bottom:2px solid var(--accent);padding-bottom:10px;}
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin:28px 0 14px;}
+  .free-text{width:100%;padding:8px 10px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:14px;color:var(--ink);background:var(--paper);resize:vertical;min-height:70px;}
+  .free-text:focus{outline:none;border-color:var(--accent);}
+  .solution-badge{display:none;margin-top:5px;font-size:11.5px;font-family:'JetBrains Mono',monospace;padding:3px 8px;border-radius:3px;font-weight:600;letter-spacing:.04em;word-break:break-word;}
+  .solution-badge.correct{display:block;background:var(--green-light);color:var(--green);border:1px solid var(--correct-border);}
+  .solution-badge.wrong{display:block;background:var(--red-light);color:var(--red);border:1px solid var(--wrong-border);}
+  .solution-badge.hint{display:block;background:var(--accent-light);color:var(--accent);border:1px solid #a88ad4;}
+  .match-table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;}
+  .match-table thead th{background:var(--accent);color:white;padding:8px 12px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.05em;}
+  .match-table tbody tr{border-bottom:1px solid var(--rule);}
+  .match-table tbody tr:nth-child(even) td{background:#f5f4f9;}
+  .match-table tbody td{padding:9px 12px;vertical-align:middle;}
+  .match-table select{width:100%;padding:4px 6px;border:1.5px solid var(--rule);border-radius:4px;background:var(--paper);font-family:'Source Serif 4',serif;font-size:13px;color:var(--ink);cursor:pointer;}
+  .correct-sel{border-color:var(--correct-border)!important;background:var(--green-light)!important;}
+  .wrong-sel{border-color:var(--wrong-border)!important;background:var(--red-light)!important;}
+  .radio-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:15px;line-height:1.5;}
+  .radio-row:last-child{border-bottom:none;}
+  .radio-row input{margin-top:3px;flex-shrink:0;}
+  .cell-ta{width:100%;padding:5px 8px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:13px;color:var(--ink);background:var(--paper);resize:vertical;height:55px;}
+  .cell-ta:focus{outline:none;border-color:var(--accent);}
+  .sort-item{display:flex;align-items:flex-start;gap:10px;padding:9px 12px;border:1.5px solid var(--rule);border-radius:5px;margin-bottom:6px;background:var(--paper);font-size:14px;}
+  .sort-item select{width:60px;padding:3px 4px;border:1.5px solid var(--rule);border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;}
+  .lueck{padding:3px 6px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:14px;background:var(--paper);color:var(--ink);cursor:pointer;}
+  .info-footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-light);font-family:'JetBrains Mono',monospace;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+  @media print{
+    body{background:white;padding:1.6cm 2cm!important;margin:0!important;}
+    .top-bar{display:none;}.score-banner{display:none!important;}
+    .worksheet{box-shadow:none;border:none;margin:0;padding:0;max-width:100%;}
+    select,.free-text,.cell-ta{border:none;border-bottom:1px solid #aaa;border-radius:0;background:transparent!important;}
+    .solution-badge{display:none!important;}
+    @page{margin:0;size:A4 portrait;}
+  }
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <h1>🌍 A17 – Bilaterale Verträge <span style="font-size:11px;opacity:.6;font-weight:400;margin-left:8px;">[ Selbstkontrolle ]</span></h1>
+  <div class="name-wrap"><label>Name:</label><input type="text" id="studentName" placeholder="Vor- und Nachname"/></div>
+  <button class="btn btn-download" onclick="downloadFile()" id="btnDownload">💾 Speichern</button>
+  <button class="btn btn-check" onclick="checkAll()">✓ Überprüfen</button>
+  <button class="btn btn-pdf" onclick="printAsPDF()">🖨 Als PDF</button>
+  <button class="btn btn-reset" onclick="resetAll()">↺ Reset</button>
+</div>
+<div class="score-banner" id="scoreBanner"></div>
+<div class="score-banner" id="resetConfirmBanner" style="background:#7a1a1a;"></div>
+<div class="worksheet">
+  <div class="task-id">THEMA 6 · VERNETZUNG · KAPITEL 5</div>
+  <div class="task-title">A17 – Bilaterale Verträge</div>
+
+  <div class="section-label">A12 – Warum bilaterale Verträge?</div>
+  <textarea class="free-text" id="b12" rows="3" placeholder="Die Schweiz muss in der globalisierten Welt..."></textarea>
+  <div class="solution-badge" id="bB12"></div>
+
+  <div class="section-label" style="margin-top:20px;">A13 – Bilaterale Verträge I: Inhalt und persönliche Betroffenheit</div>
+  <table class="match-table">
+    <thead><tr><th style="width:25%;">Dossier</th><th>Inhalt</th><th>Persönliche Betroffenheit</th></tr></thead>
+    <tbody>
+      <tr><td style="font-weight:600;">Personenfreizügigkeit</td><td><textarea class="cell-ta" id="b1_1" rows="2" placeholder="..."></textarea><div class="solution-badge" id="bB1_1"></div></td><td><textarea class="cell-ta" id="bk1_1" rows="2" placeholder="..."></textarea></td></tr>
+      <tr><td style="font-weight:600;">Technische Handelshemmnisse</td><td><textarea class="cell-ta" id="b1_2" rows="2" placeholder="..."></textarea><div class="solution-badge" id="bB1_2"></div></td><td><textarea class="cell-ta" id="bk1_2" rows="2" placeholder="..."></textarea></td></tr>
+      <tr><td style="font-weight:600;">Öffentl. Beschaffungswesen</td><td><textarea class="cell-ta" id="b1_3" rows="2" placeholder="..."></textarea><div class="solution-badge" id="bB1_3"></div></td><td><textarea class="cell-ta" id="bk1_3" rows="2" placeholder="..."></textarea></td></tr>
+      <tr><td style="font-weight:600;">Landverkehr</td><td><textarea class="cell-ta" id="b1_4" rows="2" placeholder="..."></textarea><div class="solution-badge" id="bB1_4"></div></td><td><textarea class="cell-ta" id="bk1_4" rows="2" placeholder="..."></textarea></td></tr>
+      <tr><td style="font-weight:600;">Luftverkehr</td><td><textarea class="cell-ta" id="b1_5" rows="2" placeholder="..."></textarea><div class="solution-badge" id="bB1_5"></div></td><td><textarea class="cell-ta" id="bk1_5" rows="2" placeholder="..."></textarea></td></tr>
+      <tr><td style="font-weight:600;">Landwirtschaft</td><td><textarea class="cell-ta" id="b1_6" rows="2" placeholder="..."></textarea><div class="solution-badge" id="bB1_6"></div></td><td><textarea class="cell-ta" id="bk1_6" rows="2" placeholder="..."></textarea></td></tr>
+      <tr><td style="font-weight:600;">Forschung</td><td><textarea class="cell-ta" id="b1_7" rows="2" placeholder="..."></textarea><div class="solution-badge" id="bB1_7"></div></td><td><textarea class="cell-ta" id="bk1_7" rows="2" placeholder="..."></textarea></td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-label" style="margin-top:28px;">A14 – Bilaterale Verträge II: Inhalt</div>
+  <table class="match-table">
+    <thead><tr><th style="width:35%;">Dossier</th><th>Inhalt</th></tr></thead>
+    <tbody>
+      <tr><td style="font-weight:600;">Schengener Abkommen</td><td><textarea class="cell-ta" id="b2_1" rows="2" placeholder="..."></textarea><div class="solution-badge" id="bB2_1"></div></td></tr>
+      <tr><td style="font-weight:600;">Dubliner Abkommen</td><td><textarea class="cell-ta" id="b2_2" rows="2" placeholder="..."></textarea><div class="solution-badge" id="bB2_2"></div></td></tr>
+      <tr><td style="font-weight:600;">Automatischer Informationsaustausch</td><td><textarea class="cell-ta" id="b2_3" rows="2" placeholder="..."></textarea><div class="solution-badge" id="bB2_3"></div></td></tr>
+      <tr><td style="font-weight:600;">Betrugsbekämpfung</td><td><textarea class="cell-ta" id="b2_4" rows="2" placeholder="..."></textarea><div class="solution-badge" id="bB2_4"></div></td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-label" style="margin-top:28px;">A15 – Dossiers der Bilateralen I zuordnen</div>
+  <table class="match-table">
+    <thead><tr><th>Inhalt</th><th>Personenverkehr</th><th>Transitverkehr</th><th>Luftverkehr</th><th>Beschaffungswesen</th></tr></thead>
+    <tbody>
+      <tr><td>Die EU akzeptiert die LSVA für den alpenquerenden Transit.</td>
+        <td style="text-align:center;"><input type="radio" name="r15_0" value="p"></td>
+        <td style="text-align:center;"><input type="radio" name="r15_0" value="t"></td>
+        <td style="text-align:center;"><input type="radio" name="r15_0" value="l"></td>
+        <td style="text-align:center;"><input type="radio" name="r15_0" value="b"></td>
+        <td><div class="solution-badge" id="bR15_0"></div></td></tr>
+      <tr><td>Ich kann überall in der EU arbeiten und leben, wenn ich eine Stelle habe.</td>
+        <td style="text-align:center;"><input type="radio" name="r15_1" value="p"></td>
+        <td style="text-align:center;"><input type="radio" name="r15_1" value="t"></td>
+        <td style="text-align:center;"><input type="radio" name="r15_1" value="l"></td>
+        <td style="text-align:center;"><input type="radio" name="r15_1" value="b"></td>
+        <td><div class="solution-badge" id="bR15_1"></div></td></tr>
+      <tr><td>Millionenaufträge der öffentlichen Hand müssen im gesamten EU-Raum ausgeschrieben werden.</td>
+        <td style="text-align:center;"><input type="radio" name="r15_2" value="p"></td>
+        <td style="text-align:center;"><input type="radio" name="r15_2" value="t"></td>
+        <td style="text-align:center;"><input type="radio" name="r15_2" value="l"></td>
+        <td style="text-align:center;"><input type="radio" name="r15_2" value="b"></td>
+        <td><div class="solution-badge" id="bR15_2"></div></td></tr>
+      <tr><td>Für die SWISS gibt es keine Lande- und Startbeschränkungen innerhalb des EU-Raums.</td>
+        <td style="text-align:center;"><input type="radio" name="r15_3" value="p"></td>
+        <td style="text-align:center;"><input type="radio" name="r15_3" value="t"></td>
+        <td style="text-align:center;"><input type="radio" name="r15_3" value="l"></td>
+        <td style="text-align:center;"><input type="radio" name="r15_3" value="b"></td>
+        <td><div class="solution-badge" id="bR15_3"></div></td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-label" style="margin-top:28px;">A16 – Bilateraler Weg: Vor- und Nachteile</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <div><label style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);">a) Vorteile gegenüber EU-Beitritt</label>
+    <textarea class="free-text" id="bw16a" rows="4" placeholder="..."></textarea>
+    <div class="solution-badge" id="bBW16a"></div></div>
+    <div><label style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);">b) Nachteile gegenüber EU-Beitritt</label>
+    <textarea class="free-text" id="bw16b" rows="4" placeholder="..."></textarea>
+    <div class="solution-badge" id="bBW16b"></div></div>
+  </div>
+
+  <div class="section-label" style="margin-top:28px;">A17 – Personenfreizügigkeit: Meine Möglichkeiten</div>
+  <textarea class="free-text" id="pf17" rows="4" placeholder="Dank Personenfreizügigkeit könnte ich..."></textarea>
+  <div class="solution-badge" id="bPF17"></div>
+<div class="info-footer"><span>Thema 6 · Weltgeschehen · A17 Bilaterale</span><span id="footerName"></span></div>
+</div>
+<script>
+const FILENAME='A17_Personenfreizuegigkeit';
+
+var R15C=["t", "p", "b", "l"];
+var BL={"b12": "Die Schweiz muss in der globalisierten Welt politisch und wirtschaftlich mit anderen L\u00e4ndern zusammenarbeiten. Die EU ist ihr wichtigster Partner. Beispiel: Schengen/Dublin regelt Grenzkontrollen und Asylgesuche.", "b1_1": "Schweizer B\u00fcrger k\u00f6nnen sich frei in allen EU-Staaten niederlassen und arbeiten. Berufsabschl\u00fcsse werden gegenseitig anerkannt.", "b1_2": "G\u00fcter mit Schweizer Zulassung brauchen im EU-Raum keine zus\u00e4tzliche Pr\u00fcfung und umgekehrt.", "b1_3": "\u00d6ffentliche Auftr\u00e4ge ab einem bestimmten Betrag m\u00fcssen EU-weit ausgeschrieben werden.", "b1_4": "EU akzeptiert LSVA f\u00fcr alpenquerenden Transit; Verlagerung auf die Schiene angestrebt.", "b1_5": "Schweizer Airlines erhalten dieselben Start-/Landerechte wie EU-Airlines.", "b1_6": "Handel mit landwirtschaftlichen Produkten wird vereinfacht; K\u00e4se/Produkte ohne Mengenbeschr\u00e4nkung.", "b1_7": "Schweizer Forschende und Universit\u00e4ten k\u00f6nnen sich an EU-Forschungsrahmenprogrammen beteiligen.", "b2_1": "Grenz\u00fcbertritt von Personen vereinfacht; Visa-Erteilung vereinheitlicht; polizeiliche Zusammenarbeit.", "b2_2": "In der EU abgewiesene Asylbewerber erhalten automatisch auch in der Schweiz kein Asyl.", "b2_3": "Steuerhinterziehung verhindern durch automatischen Austausch von Zinsdaten.", "b2_4": "Schweiz leistet verst\u00e4rkte Amts- und Rechtshilfe gegen Schmuggler und Betr\u00fcger.", "bw16a": "Politische Unabh\u00e4ngigkeit bleibt erhalten / direktdemokratische Volksrechte bleiben vollst\u00e4ndig / Schweiz entscheidet selbst, welche Bereiche gemeinsam geregelt werden.", "bw16b": "Schweiz oft gezwungen EU-Recht zu \u00fcbernehmen ohne Mitsprache / keine Stimme in EU-Institutionen / st\u00e4ndige Nachverhandlungen n\u00f6tig.", "pf17": "Individuelle L\u00f6sung \u2013 z.B. in Deutschland, \u00d6sterreich oder Frankreich arbeiten / Berufsabschluss wird anerkannt / Wohnsitz in EU-Staat w\u00e4hlen..."};
+function checkAll(){
+  var c=0,t=0;
+  Object.keys(BL).forEach(function(id){
+    var el=document.getElementById(id);var bid='b'+id.charAt(0).toUpperCase()+id.slice(1);
+    // badge ID mapping
+    var bmap={'b12':'bB12','b1_1':'bB1_1','b1_2':'bB1_2','b1_3':'bB1_3','b1_4':'bB1_4','b1_5':'bB1_5','b1_6':'bB1_6','b1_7':'bB1_7','b2_1':'bB2_1','b2_2':'bB2_2','b2_3':'bB2_3','b2_4':'bB2_4','bw16a':'bBW16a','bw16b':'bBW16b','pf17':'bPF17'};
+    var b=document.getElementById(bmap[id]);
+    if(el&&el.value.trim()&&b){b.className='solution-badge hint';b.textContent='📋 '+BL[id];}
+    else if(b) b.className='solution-badge';
+  });
+  R15C.forEach(function(ans,i){
+    var sel=document.querySelector('input[name="r15_'+i+'"]:checked');
+    var b=document.getElementById('bR15_'+i);
+    if(!sel){b.className='solution-badge';return;}
+    t++;var lbl={'p':'Personenverkehr','t':'Transitverkehr','l':'Luftverkehr','b':'Beschaffungswesen'};
+    var ok=sel.value===ans;
+    b.className='solution-badge '+(ok?'correct':'wrong');
+    b.textContent=ok?('✔ '+lbl[ans]):('✘ Lösung: '+lbl[ans]);
+    if(ok)c++;
+  });
+  document.getElementById('scoreBanner').className='score-banner visible';
+  document.getElementById('scoreBanner').textContent=t?('✓ A15: '+c+' von '+t+' korrekt; restl. Musterlösungen eingeblendet'):'⚠️ Bitte Antworten eintragen.';
+}
+function resetAll(){
+  var c=document.getElementById('resetConfirmBanner');
+  if(!c.classList.contains('visible')){
+    c.innerHTML='<span style="margin-right:12px;">Alle Eingaben wirklich löschen?</span><button onclick="doReset()" style="background:#c0392b;color:white;border:none;padding:5px 14px;border-radius:4px;cursor:pointer;font-weight:600;margin-right:8px;">Ja</button><button onclick="document.getElementById(\'resetConfirmBanner\').classList.remove(\'visible\')" style="background:rgba(255,255,255,.2);color:white;border:1px solid rgba(255,255,255,.4);padding:5px 12px;border-radius:4px;cursor:pointer;">Abbrechen</button>';
+    c.classList.add('visible');return;
+  }doReset();
+}
+function doReset(){
+  var e=document.getElementById('b12');if(e)e.value='';
+  var e=document.getElementById('b1_1');if(e)e.value='';
+  var e=document.getElementById('b1_2');if(e)e.value='';
+  var e=document.getElementById('b1_3');if(e)e.value='';
+  var e=document.getElementById('b1_4');if(e)e.value='';
+  var e=document.getElementById('b1_5');if(e)e.value='';
+  var e=document.getElementById('b1_6');if(e)e.value='';
+  var e=document.getElementById('b1_7');if(e)e.value='';
+  var e=document.getElementById('b2_1');if(e)e.value='';
+  var e=document.getElementById('b2_2');if(e)e.value='';
+  var e=document.getElementById('b2_3');if(e)e.value='';
+  var e=document.getElementById('b2_4');if(e)e.value='';
+  var e=document.getElementById('bw16a');if(e)e.value='';
+  var e=document.getElementById('bw16b');if(e)e.value='';
+  var e=document.getElementById('pf17');if(e)e.value='';
+  var e=document.getElementById('bk1_1');if(e)e.value='';
+  var e=document.getElementById('bk1_2');if(e)e.value='';
+  var e=document.getElementById('bk1_3');if(e)e.value='';
+  var e=document.getElementById('bk1_4');if(e)e.value='';
+  var e=document.getElementById('bk1_5');if(e)e.value='';
+  var e=document.getElementById('bk1_6');if(e)e.value='';
+  var e=document.getElementById('bk1_7');if(e)e.value='';
+  document.querySelectorAll('input[name="r15_0"]').forEach(x=>x.checked=false);
+  document.querySelectorAll('input[name="r15_1"]').forEach(x=>x.checked=false);
+  document.querySelectorAll('input[name="r15_2"]').forEach(x=>x.checked=false);
+  document.querySelectorAll('input[name="r15_3"]').forEach(x=>x.checked=false);
+  document.querySelectorAll('.solution-badge').forEach(b=>{b.className='solution-badge';b.textContent='';});
+  document.querySelectorAll('.correct-sel,.wrong-sel').forEach(s=>{s.classList.remove('correct-sel','wrong-sel');s.style.borderColor='';s.style.background='';});
+  document.getElementById('scoreBanner').classList.remove('visible');
+  document.getElementById('resetConfirmBanner').classList.remove('visible');
+}
+
+function printAsPDF(){
+  var name=document.getElementById('studentName').value.trim();
+  document.title=name?(FILENAME+'_'+name.replace(/\s+/g,'_')):FILENAME;
+  setTimeout(function(){window.print();},100);
+}
+function downloadFile(){
+  var name=document.getElementById('studentName').value.trim();
+  if(!name){alert('Bitte zuerst Vor- und Nachname eingeben!');document.getElementById('studentName').focus();return;}
+  var html=document.documentElement.outerHTML;
+  var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;a.download=FILENAME+'_'+name.replace(/\s+/g,'_')+'.html';
+  document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(url);document.body.removeChild(a);},500);
+  var btn=document.getElementById('btnDownload');
+  btn.textContent='✔ Gespeichert!';btn.style.background='rgba(30,150,80,.8)';
+  setTimeout(function(){btn.textContent='💾 Speichern';btn.style.background='';},2500);
+}
+document.getElementById('studentName').addEventListener('input',function(){
+  document.getElementById('footerName').textContent=this.value.trim();
+});
+
+</script>
+</body>
+</html>

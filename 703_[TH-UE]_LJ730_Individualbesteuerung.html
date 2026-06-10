@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Individualbesteuerung – Abstimmung 8. März 2026</title>
+  <style>
+    :root{
+      --bg:#0b1020; --card:#121a33; --muted:#9fb0d0; --text:#eaf0ff; --accent:#6ee7ff;
+      --ok:#49f2a6; --bad:#ff6b8a; --warn:#ffd86e; --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:var(--sans); background:radial-gradient(1200px 700px at 20% 0%, #1d2b62 0%, var(--bg) 60%);
+      color:var(--text); line-height:1.45;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{
+      padding:28px 18px 10px;
+      max-width:1100px; margin:0 auto;
+    }
+    .badge{
+      display:inline-flex; gap:10px; align-items:center;
+      background:rgba(110,231,255,.12); border:1px solid rgba(110,231,255,.25);
+      padding:8px 12px; border-radius:999px; color:var(--text);
+      font-family:var(--mono); font-size:12px;
+    }
+    h1{
+      margin:14px 0 6px; font-size:clamp(24px, 3.4vw, 44px);
+      letter-spacing:-.02em;
+    }
+    .sub{
+      margin:0; color:var(--muted); max-width:70ch;
+      font-size:clamp(14px, 1.5vw, 18px);
+    }
+
+    .wrap{max-width:1100px; margin:0 auto; padding:18px;}
+    .grid{
+      display:grid; gap:14px;
+      grid-template-columns: 1.2fr .8fr;
+      align-items:start;
+    }
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+    }
+    .card{
+      background:rgba(18,26,51,.86);
+      border:1px solid rgba(159,176,208,.18);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:16px;
+      backdrop-filter: blur(8px);
+    }
+    .tabs{
+      display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 0;
+    }
+    .tab{
+      border:1px solid rgba(159,176,208,.22);
+      background:rgba(159,176,208,.06);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:999px;
+      cursor:pointer;
+      font-size:14px;
+      transition:.15s transform ease, .15s background ease;
+      user-select:none;
+    }
+    .tab:hover{transform:translateY(-1px)}
+    .tab[aria-selected="true"]{
+      border-color:rgba(110,231,255,.35);
+      background:rgba(110,231,255,.14);
+    }
+
+    .panel{display:none; margin-top:14px}
+    .panel.active{display:block}
+
+    .kicker{
+      font-family:var(--mono);
+      color:var(--muted);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin:0 0 8px;
+    }
+    .hr{height:1px; background:rgba(159,176,208,.15); margin:12px 0}
+    ul{margin:10px 0 0 18px}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(159,176,208,.22);
+      background:rgba(159,176,208,.06);
+      color:var(--text);
+      font-size:13px;
+      margin:6px 6px 0 0;
+    }
+    .pill.ok{border-color:rgba(73,242,166,.35); background:rgba(73,242,166,.10)}
+    .pill.bad{border-color:rgba(255,107,138,.35); background:rgba(255,107,138,.10)}
+    .pill.warn{border-color:rgba(255,216,110,.35); background:rgba(255,216,110,.10)}
+    .twoCol{
+      display:grid; gap:12px; grid-template-columns:1fr 1fr;
+    }
+    @media (max-width: 700px){ .twoCol{grid-template-columns:1fr} }
+
+    .video{
+      position:relative; width:100%; padding-top:56.25%;
+      border-radius:14px; overflow:hidden; border:1px solid rgba(159,176,208,.18);
+      background:#0a0f1d;
+    }
+    .video iframe{
+      position:absolute; inset:0; width:100%; height:100%; border:0;
+    }
+
+    .quizQ{
+      margin:12px 0;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(159,176,208,.18);
+      background:rgba(10,15,29,.55);
+    }
+    .opts{display:grid; gap:8px; margin-top:10px}
+    .opt{
+      display:flex; align-items:flex-start; gap:10px;
+      padding:10px 10px;
+      border-radius:12px;
+      border:1px solid rgba(159,176,208,.18);
+      background:rgba(159,176,208,.06);
+      cursor:pointer;
+      transition:.12s transform ease;
+    }
+    .opt:hover{transform:translateY(-1px)}
+    .opt input{margin-top:3px}
+    .feedback{
+      margin-top:10px; padding:10px; border-radius:12px;
+      border:1px solid rgba(159,176,208,.18);
+      background:rgba(18,26,51,.55);
+      color:var(--muted);
+      display:none;
+    }
+    .feedback.show{display:block}
+    .feedback.ok{border-color:rgba(73,242,166,.35); color:var(--ok)}
+    .feedback.bad{border-color:rgba(255,107,138,.35); color:var(--bad)}
+
+    .row{display:grid; gap:10px; grid-template-columns: 1fr 1fr;}
+    @media (max-width: 700px){ .row{grid-template-columns:1fr} }
+    label{display:block; font-size:13px; color:var(--muted); margin-bottom:6px}
+    input[type="number"], input[type="range"], select{
+      width:100%; padding:10px 10px; border-radius:12px;
+      border:1px solid rgba(159,176,208,.20);
+      background:rgba(10,15,29,.55); color:var(--text);
+      outline:none;
+    }
+    .btn{
+      margin-top:10px;
+      display:inline-flex; gap:10px; align-items:center; justify-content:center;
+      border-radius:12px;
+      padding:10px 12px;
+      border:1px solid rgba(110,231,255,.35);
+      background:rgba(110,231,255,.14);
+      color:var(--text);
+      cursor:pointer;
+      transition:.15s transform ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .result{
+      margin-top:10px; padding:12px; border-radius:14px;
+      border:1px solid rgba(159,176,208,.18);
+      background:rgba(10,15,29,.55);
+    }
+    .big{
+      font-size:22px; font-family:var(--mono); margin:4px 0 0;
+    }
+    footer{
+      max-width:1100px; margin:0 auto; padding:10px 18px 28px;
+      color:var(--muted); font-size:13px;
+    }
+    .note{
+      border-left:3px solid rgba(255,216,110,.6);
+      padding:10px 12px;
+      border-radius:12px;
+      background:rgba(255,216,110,.07);
+      color:var(--text);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="badge">🗳️ Volksabstimmung • 08.03.2026 • Thema: Individualbesteuerung</div>
+    <h1>Individualbesteuerung (Heiratsstrafe) – was steht auf dem Spiel?</h1>
+    <p class="sub">
+      Diese Seite erklärt die Vorlage in einfacher Sprache (16–18 Jahre). Mit Pro/Contra, Links zu Befürwortern & Gegnern,
+      Video zur Geschichte der «Heiratsstrafe», Quiz und einem vereinfachten Rechner.
+    </p>
+
+    <div class="tabs" role="tablist" aria-label="Navigation">
+      <button class="tab" role="tab" aria-selected="true" data-tab="sachlage">Sachlage</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="procontra">Vor-/Nachteile</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="links">Links</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="videos">Videos</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="quiz">Quiz</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="rechner">Steuerrechner</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+      <!-- LEFT: Main content -->
+      <section class="card">
+        <!-- Sachlage -->
+        <div class="panel active" id="sachlage" role="tabpanel" aria-label="Sachlage">
+          <p class="kicker">Worum geht’s?</p>
+          <p>
+            Heute werden Ehepaare bei vielen Steuern <b>gemeinsam</b> veranlagt (ein gemeinsames Einkommen/Vermögen). Dadurch kann es passieren,
+            dass Paare – vor allem wenn beide ähnlich viel verdienen – mehr zahlen als ein unverheiratetes Paar mit ähnlichem Gesamteinkommen
+            (das wird oft «Heiratsstrafe» genannt).
+          </p>
+          <div class="hr"></div>
+          <p class="kicker">Was würde sich bei Annahme ändern?</p>
+          <ul>
+            <li><b>Jede Person</b> wird steuerlich <b>einzeln</b> erfasst – unabhängig vom Zivilstand.</li>
+            <li>Verheiratete würden oft zwei Steuererklärungen ausfüllen (je nach Ausgestaltung/Kanton).</li>
+            <li>Ziel: Ungleichbehandlung zwischen verheirateten und unverheirateten Paaren reduzieren/abschaffen.</li>
+          </ul>
+
+          <div class="hr"></div>
+          <div class="note">
+            <b>Wichtig:</b> Die konkreten Auswirkungen hängen stark von Einkommen, Abzügen, Kindern und Kanton/Gemeinde ab.
+            Nutze für genaue Zahlen offizielle Steuerrechner deines Kantons bzw. der Steuerverwaltung.
+          </div>
+        </div>
+
+        <!-- Pro/Contra -->
+        <div class="panel" id="procontra" role="tabpanel" aria-label="Vor- und Nachteile">
+          <p class="kicker">Vorteile (Argumente von Befürwortern)</p>
+          <span class="pill ok">⚖️ Gleichbehandlung</span>
+          <span class="pill ok">👩‍💼 Arbeit lohnt sich eher</span>
+          <span class="pill ok">🧍‍♀️🧍‍♂️ Individuelle Eigenständigkeit</span>
+          <ul>
+            <li><b>Gleichbehandlung:</b> Gleiche Regeln – egal ob verheiratet oder nicht.</li>
+            <li><b>Anreiz für Zweitverdienende:</b> Wenn die zweite Person mehr arbeitet, steigt die Steuerlast weniger stark (Progression).</li>
+            <li><b>Unabhängigkeit:</b> Jede Person gilt steuerlich als eigenständig.</li>
+          </ul>
+
+          <div class="hr"></div>
+          <p class="kicker">Nachteile (Argumente von Gegnern)</p>
+          <span class="pill bad">📑 Mehr Aufwand</span>
+          <span class="pill bad">💸 Kosten/Umstellung</span>
+          <span class="pill bad">🏠 Risiko für Einverdiener-Familien</span>
+          <ul>
+            <li><b>Mehr Bürokratie:</b> Umstellung + mehr Erklärungen/Formulare möglich.</li>
+            <li><b>Kosten:</b> IT-/Systemwechsel und mögliche Steuerausfälle oder Verschiebungen.</li>
+            <li><b>Verteilungseffekte:</b> Manche Haushalte könnten profitieren, andere mehr zahlen – je nach Modell.</li>
+          </ul>
+
+          <div class="hr"></div>
+          <p class="kicker">Merksatz</p>
+          <p>
+            Individualbesteuerung ist vor allem ein <b>Systemwechsel</b>: Weg von «Ehe als Steuereinheit» hin zu «jede Person einzeln».
+            Ob das für einen Haushalt gut oder schlecht ist, hängt stark von der Situation ab.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div class="panel" id="links" role="tabpanel" aria-label="Links">
+          <p class="kicker">Neutral / Hintergrund</p>
+          <ul>
+            <li><a href="https://www.admin.ch/gov/de/start/dokumentation/abstimmungen/20260308/individualbesteuerung.html" target="_blank" rel="noopener">admin.ch – Abstimmungsvorlage Individualbesteuerung (Bund)</a></li>
+            <li><a href="https://www.efd.admin.ch/de/abstimmung-individualbesteurung" target="_blank" rel="noopener">EFD – Das Wichtigste in Kürze + Erklärvideo</a></li>
+            <li><a href="https://www.easyvote.ch/de/abstimmungen/8-maerz-2026/individualbesteuerung" target="_blank" rel="noopener">easyvote – einfach erklärt (politisch neutral)</a></li>
+            <li><a href="https://www.srf.ch/news/abstimmung-individualbesteuerung-vom-8-3-2026" target="_blank" rel="noopener">SRF – Dossiers, Q&A, Einordnung</a></li>
+          </ul>
+
+          <div class="hr"></div>
+          <p class="kicker">Befürworter (Ja)</p>
+          <ul>
+            <li><a href="https://ja-zur-individualbesteuerung.ch/" target="_blank" rel="noopener">Komitee: «Ja zur fairen Individualbesteuerung»</a></li>
+            <li><a href="https://de.alliancef.ch/frauenkomitee-individualbesteuerung" target="_blank" rel="noopener">alliance F – Frauenkomitee «Ja zur Individualbesteuerung»</a></li>
+            <li><a href="https://www.individualbesteuerung.ch/" target="_blank" rel="noopener">Plattform/Initiativumfeld: individualbesteuerung.ch</a></li>
+          </ul>
+
+          <div class="hr"></div>
+          <p class="kicker">Gegner (Nein)</p>
+          <ul>
+            <li><a href="https://nein-zur-individualbesteuerung.ch/" target="_blank" rel="noopener">Komitee: «Nein zur Individualbesteuerung»</a></li>
+            <li><a href="https://www.evppev.ch/politik/kampagnen/nein-zum-steuer-schwindel" target="_blank" rel="noopener">EVP – «Nein zum Steuer-Schwindel»</a></li>
+            <li><a href="https://www.svp.ch/aktuell/publikationen/referate/klar-nein-zur-individualbesteuerung-sie-ist-kompliziert-ungerecht-und-teuer/" target="_blank" rel="noopener">SVP – Argumentation gegen die Vorlage</a></li>
+            <li><a href="https://kdk.ch/aktuell/medienmitteilungen/details/nein-zur-einfuehrung-der-individualbesteuerung" target="_blank" rel="noopener">KDK – Position der Kantone (Medienmitteilung)</a></li>
+          </ul>
+        </div>
+
+        <!-- Videos -->
+        <div class="panel" id="videos" role="tabpanel" aria-label="Videos">
+          <p class="kicker">Geschichte «Heiratsstrafe» (YouTube)</p>
+          <div class="video" aria-label="YouTube Video Heiratsstrafe">
+            <!-- Embed: start=488 seconds -->
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/wP8DA6YHkJo?start=488"
+              title="Geschichte Heiratsstrafe – YouTube"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="hr"></div>
+          <p class="kicker">Offizielles Erklärvideo (Bund)</p>
+          <div class="video" aria-label="YouTube Erklärvideo Bund">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/trC9P62Olio"
+              title="Bundesgesetz über die Individualbesteuerung – Erklärvideo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Quiz -->
+        <div class="panel" id="quiz" role="tabpanel" aria-label="Quiz">
+          <p class="kicker">Quiz: Check dein Verständnis</p>
+
+          <div class="quizQ" data-q="q1">
+            <b>1) Was ist der Kern der Individualbesteuerung?</b>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="q1" value="a"> Ehepaare werden wie bisher gemeinsam besteuert.</label>
+              <label class="opt"><input type="radio" name="q1" value="b"> Jede Person wird unabhängig vom Zivilstand einzeln besteuert.</label>
+              <label class="opt"><input type="radio" name="q1" value="c"> Nur Unternehmen zahlen künftig keine Steuern mehr.</label>
+            </div>
+            <div class="feedback" id="fb-q1"></div>
+          </div>
+
+          <div class="quizQ" data-q="q2">
+            <b>2) Welche Situation wird oft mit «Heiratsstrafe» beschrieben?</b>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="q2" value="a"> Ehepaare zahlen manchmal mehr als unverheiratete Paare mit ähnlichem Gesamteinkommen.</label>
+              <label class="opt"><input type="radio" name="q2" value="b"> Verheiratete bekommen automatisch eine Steuer-Rückerstattung.</label>
+              <label class="opt"><input type="radio" name="q2" value="c"> Nur Singles zahlen Steuern.</label>
+            </div>
+            <div class="feedback" id="fb-q2"></div>
+          </div>
+
+          <div class="quizQ" data-q="q3">
+            <b>3) Was ist ein häufiges Contra-Argument?</b>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="q3" value="a"> Weniger Aufwand und weniger Formulare.</label>
+              <label class="opt"><input type="radio" name="q3" value="b"> Mehr administrativer Aufwand durch Systemwechsel und mehr Erklärungen.</label>
+              <label class="opt"><input type="radio" name="q3" value="c"> Es gäbe gar keine Änderungen im System.</label>
+            </div>
+            <div class="feedback" id="fb-q3"></div>
+          </div>
+
+          <button class="btn" id="checkQuiz">✅ Quiz auswerten</button>
+          <button class="btn" id="resetQuiz">🔄 Zurücksetzen</button>
+
+          <div class="result" id="quizResult" style="display:none">
+            <div class="kicker">Resultat</div>
+            <div class="big" id="quizScore"></div>
+            <div style="color:var(--muted); margin-top:6px" id="quizHint"></div>
+          </div>
+        </div>
+
+        <!-- Rechner -->
+        <div class="panel" id="rechner" role="tabpanel" aria-label="Steuerrechner">
+          <p class="kicker">Vereinfachter Rechner (nur zur Veranschaulichung)</p>
+          <p style="color:var(--muted); margin-top:0">
+            Das ist <b>kein offizieller Steuerrechner</b>. Er zeigt nur, wie ein Systemwechsel (gemeinsam vs. einzeln) bei progressiven Steuern
+            grob wirken kann. Für echte Zahlen nutze die Rechner deines Kantons / der Steuerverwaltung.
+          </p>
+
+          <div class="row">
+            <div>
+              <label for="incA">Einkommen Person A (CHF/Jahr)</label>
+              <input type="number" id="incA" min="0" step="1000" value="70000" />
+            </div>
+            <div>
+              <label for="incB">Einkommen Person B (CHF/Jahr)</label>
+              <input type="number" id="incB" min="0" step="1000" value="50000" />
+            </div>
+          </div>
+
+          <div class="row" style="margin-top:10px">
+            <div>
+              <label for="kids">Anzahl Kinder (vereinfachter Abzug)</label>
+              <select id="kids">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4+</option>
+              </select>
+            </div>
+            <div>
+              <label for="ded">Weitere Abzüge (Pauschal, CHF)</label>
+              <input type="number" id="ded" min="0" step="500" value="8000" />
+            </div>
+          </div>
+
+          <div class="row" style="margin-top:10px">
+            <div>
+              <label for="mode">Vergleich</label>
+              <select id="mode">
+                <option value="both" selected>Gemeinsam vs. Individuell</option>
+                <option value="joint">Nur gemeinsame Besteuerung</option>
+                <option value="individual">Nur Individualbesteuerung</option>
+              </select>
+            </div>
+            <div>
+              <label>&nbsp;</label>
+              <button class="btn" id="calcBtn">🧮 Berechnen</button>
+            </div>
+          </div>
+
+          <div class="result" id="calcOut">
+            <div class="kicker">Ergebnis (Modell)</div>
+            <div id="calcLines" style="color:var(--muted)"></div>
+            <div class="hr"></div>
+            <div class="note">
+              <b>Interpretation:</b> Bei progressiven Steuern kann «einzeln» v. a. dann tiefer ausfallen,
+              wenn zwei Einkommen zusammen heute in eine höhere Progressionsstufe rutschen.
+              Umgekehrt können je nach Abzügen/Regeln auch andere Haushalte stärker belastet werden.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT: Quick summary / actions -->
+      <aside class="card">
+        <p class="kicker">Schnellüberblick</p>
+        <p style="margin:0">
+          <b>Frage:</b> Soll die Schweiz zur <b>Individualbesteuerung</b> wechseln (Systemwechsel: jede Person einzeln)?
+        </p>
+
+        <div class="hr"></div>
+        <p class="kicker">One-liner Pro / Contra</p>
+        <p style="margin:0">
+          <span class="pill ok">Pro: Gleichbehandlung</span>
+          <span class="pill bad">Contra: Mehr Aufwand</span>
+        </p>
+
+        <div class="hr"></div>
+        <p class="kicker">Direkt starten</p>
+        <button class="btn" data-jump="videos">🎬 Video: Heiratsstrafe</button>
+        <button class="btn" data-jump="quiz">🧠 Quiz machen</button>
+        <button class="btn" data-jump="rechner">🧮 Rechner testen</button>
+
+        <div class="hr"></div>
+        <p class="kicker">Neutraler Einstieg</p>
+        <ul style="margin-top:8px">
+          <li><a href="https://www.admin.ch/gov/de/start/dokumentation/abstimmungen/20260308/individualbesteuerung.html" target="_blank" rel="noopener">Bund (admin.ch)</a></li>
+          <li><a href="https://www.easyvote.ch/de/abstimmungen/8-maerz-2026/individualbesteuerung" target="_blank" rel="noopener">easyvote</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="card" style="box-shadow:none">
+      <b>Hinweis:</b> Diese Seite ist ein Lern-/Unterrichtsformat. Inhalte sind vereinfacht und ersetzen keine offiziellen Informationen oder Steuerberatung.
+      Nutze für Details die verlinkten offiziellen Seiten und Argumentarien der Lager.
+    </div>
+  </footer>
+
+  <script>
+    // Tabs
+    const tabs = document.querySelectorAll(".tab");
+    const panels = document.querySelectorAll(".panel");
+
+    function showTab(id){
+      panels.forEach(p => p.classList.toggle("active", p.id === id));
+      tabs.forEach(t => t.setAttribute("aria-selected", String(t.dataset.tab === id)));
+      // scroll a bit to make content visible on mobile
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    tabs.forEach(t => t.addEventListener("click", () => showTab(t.dataset.tab)));
+
+    // Quick jump buttons
+    document.querySelectorAll("[data-jump]").forEach(btn=>{
+      btn.addEventListener("click", ()=> showTab(btn.dataset.jump));
+    });
+
+    // Quiz
+    const answers = { q1: "b", q2: "a", q3: "b" };
+
+    function setFeedback(q, ok, msg){
+      const fb = document.getElementById("fb-" + q);
+      fb.className = "feedback show " + (ok ? "ok" : "bad");
+      fb.textContent = msg;
+    }
+
+    document.getElementById("checkQuiz").addEventListener("click", ()=>{
+      let score = 0;
+      let total = Object.keys(answers).length;
+
+      Object.keys(answers).forEach(q=>{
+        const chosen = (document.querySelector(`input[name="${q}"]:checked`) || {}).value;
+        if(!chosen){
+          setFeedback(q, false, "Bitte wähle eine Antwort aus.");
+          return;
+        }
+        if(chosen === answers[q]){
+          score++;
+          setFeedback(q, true, "Richtig ✅");
+        } else {
+          setFeedback(q, false, "Nicht ganz ❌ – schau dir die Sachlage/Pro&Contra nochmals an.");
+        }
+      });
+
+      const box = document.getElementById("quizResult");
+      box.style.display = "block";
+      document.getElementById("quizScore").textContent = `${score} / ${total} richtig`;
+      document.getElementById("quizHint").textContent =
+        score === total ? "Top! Du hast die Grundidee verstanden." :
+        score >= 2 ? "Gut! Ein paar Details kannst du noch nachschärfen." :
+        "Tipp: Schau zuerst «Sachlage» und «Vor-/Nachteile» an und versuch’s nochmals.";
+    });
+
+    document.getElementById("resetQuiz").addEventListener("click", ()=>{
+      ["q1","q2","q3"].forEach(q=>{
+        document.querySelectorAll(`input[name="${q}"]`).forEach(i=> i.checked = false);
+        const fb = document.getElementById("fb-" + q);
+        fb.className = "feedback";
+        fb.textContent = "";
+      });
+      document.getElementById("quizResult").style.display = "none";
+    });
+
+    // Simple illustrative tax model (NOT official):
+    // - taxable income = income - deductions - kidAllowance
+    // - progressive "model" rates:
+    //    0–20k: 0%
+    //    20k–50k: 5%
+    //    50k–100k: 10%
+    //    100k–200k: 15%
+    //    200k+: 20%
+    // - For "joint": combine incomes then apply brackets once (one unit)
+    // - For "individual": apply brackets separately to A and B and sum
+    function taxProgressive(x){
+      let t = 0;
+      const brackets = [
+        [0, 20000, 0.00],
+        [20000, 50000, 0.05],
+        [50000, 100000, 0.10],
+        [100000, 200000, 0.15],
+        [200000, Infinity, 0.20],
+      ];
+      for(const [lo, hi, r] of brackets){
+        if(x > lo){
+          const part = Math.min(x, hi) - lo;
+          t += part * r;
+        }
+      }
+      return Math.max(0, t);
+    }
+
+    function fmtCHF(n){
+      const rounded = Math.round(n);
+      return rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "’") + " CHF";
+    }
+
+    function calc(){
+      const incA = Math.max(0, Number(document.getElementById("incA").value || 0));
+      const incB = Math.max(0, Number(document.getElementById("incB").value || 0));
+      const kids = Number(document.getElementById("kids").value || 0);
+      const ded = Math.max(0, Number(document.getElementById("ded").value || 0));
+      const mode = document.getElementById("mode").value;
+
+      // super simplified child allowance
+      const kidAllowance = kids >= 4 ? 4 * 6500 : kids * 6500;
+
+      // Shared deductions split for individual (very simplified)
+      const dedSplit = ded / 2;
+
+      const taxableJoint = Math.max(0, (incA + incB) - ded - kidAllowance);
+      const taxJoint = taxProgressive(taxableJoint);
+
+      const taxableA = Math.max(0, incA - dedSplit - kidAllowance/2);
+      const taxableB = Math.max(0, incB - dedSplit - kidAllowance/2);
+      const taxInd = taxProgressive(taxableA) + taxProgressive(taxableB);
+
+      const lines = [];
+      lines.push(`<div>Abzüge (Modell): weitere Abzüge <b>${fmtCHF(ded)}</b> + Kinderabzug <b>${fmtCHF(kidAllowance)}</b></div>`);
+
+      if(mode === "joint" || mode === "both"){
+        lines.push(`<div style="margin-top:10px"><b>Gemeinsam</b>: steuerbares Einkommen ≈ <b>${fmtCHF(taxableJoint)}</b> → Modellsteuer ≈ <b class="big">${fmtCHF(taxJoint)}</b></div>`);
+      }
+      if(mode === "individual" || mode === "both"){
+        lines.push(`<div style="margin-top:10px"><b>Individuell</b>: steuerbar A ≈ <b>${fmtCHF(taxableA)}</b>, B ≈ <b>${fmtCHF(taxableB)}</b> → Modellsteuer ≈ <b class="big">${fmtCHF(taxInd)}</b></div>`);
+      }
+      if(mode === "both"){
+        const diff = taxInd - taxJoint;
+        const sign = diff > 0 ? "+" : "";
+        const color = diff > 0 ? "var(--bad)" : (diff < 0 ? "var(--ok)" : "var(--muted)");
+        lines.push(`<div class="hr"></div>`);
+        lines.push(`<div><b>Unterschied (Individuell − Gemeinsam)</b>: <span style="color:${color}; font-family:var(--mono)">${sign}${fmtCHF(diff)}</span></div>`);
+        lines.push(`<div style="margin-top:6px; color:var(--muted)">Wenn der Wert negativ ist, wäre «individuell» im Modell tiefer – wenn positiv, höher.</div>`);
+      }
+
+      document.getElementById("calcLines").innerHTML = lines.join("");
+    }
+
+    document.getElementById("calcBtn").addEventListener("click", calc);
+    // calculate once on load
+    calc();
+  </script>
+</body>
+</html>

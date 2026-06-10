@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A12 – Konjunkturphasen zuordnen – Selbstkontrolle</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,600;0,8..60,700;1,8..60,300&family=JetBrains+Mono:wght@400;600&display=swap');
+  :root{
+    --bg:#f3f2f6;--paper:#fafaf9;--ink:#1a1a1e;--ink-light:#54546a;
+    --rule:#c8c8d8;--accent:#5a3e8a;--accent-light:#f0ecfb;
+    --gold:#b8860b;--green:#1a5c2a;--green-light:#eaf5ec;
+    --red:#8b1a1a;--red-light:#faeaea;
+    --correct-border:#2a7a3a;--wrong-border:#c0392b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--bg);color:var(--ink);min-height:100vh;}
+  .top-bar{background:var(--accent);color:white;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.25);}
+  .top-bar h1{font-size:15px;font-weight:600;flex:1;min-width:180px;letter-spacing:.03em;}
+  .name-wrap{display:flex;align-items:center;gap:8px;}
+  .name-wrap label{font-size:13px;opacity:.8;font-family:'JetBrains Mono',monospace;}
+  .name-wrap input{padding:6px 10px;border-radius:5px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:white;font-size:13px;width:175px;}
+  .name-wrap input::placeholder{color:rgba(255,255,255,.45);font-style:italic;}
+  .name-wrap input:focus{outline:none;border-color:#c8aaff;}
+  .btn{padding:7px 16px;border-radius:5px;border:none;font-size:13px;font-weight:600;cursor:pointer;font-family:'JetBrains Mono',monospace;transition:all .18s;white-space:nowrap;}
+  .btn-check{background:var(--gold);color:white;}.btn-check:hover{background:#9a6e00;}
+  .btn-reset{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-pdf{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-download{background:#1a5c8a;color:white;font-weight:700;}
+  .score-banner{display:none;background:var(--accent);color:white;text-align:center;padding:10px;font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:.05em;}
+  .score-banner.visible{display:block;}
+  .worksheet{max-width:860px;margin:28px auto;background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--accent);box-shadow:0 4px 24px rgba(0,0,0,.09);padding:40px 44px 48px;}
+  .task-id{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.08em;margin-bottom:4px;}
+  .task-title{font-size:17px;font-weight:600;margin-bottom:26px;border-bottom:2px solid var(--accent);padding-bottom:10px;}
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin:28px 0 14px;}
+  .free-text{width:100%;padding:8px 10px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:14px;color:var(--ink);background:var(--paper);resize:vertical;min-height:70px;}
+  .free-text:focus{outline:none;border-color:var(--accent);}
+  .solution-badge{display:none;margin-top:5px;font-size:11.5px;font-family:'JetBrains Mono',monospace;padding:3px 8px;border-radius:3px;font-weight:600;word-break:break-word;}
+  .solution-badge.correct{display:block;background:var(--green-light);color:var(--green);border:1px solid var(--correct-border);}
+  .solution-badge.wrong{display:block;background:var(--red-light);color:var(--red);border:1px solid var(--wrong-border);}
+  .solution-badge.hint{display:block;background:var(--accent-light);color:var(--accent);border:1px solid #a88ad4;}
+  .match-table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;}
+  .match-table thead th{background:var(--accent);color:white;padding:8px 12px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;}
+  .match-table tbody tr{border-bottom:1px solid var(--rule);}
+  .match-table tbody tr:nth-child(even) td{background:#f5f4f9;}
+  .match-table tbody td{padding:9px 12px;vertical-align:middle;}
+  .match-table select{width:100%;padding:4px 6px;border:1.5px solid var(--rule);border-radius:4px;background:var(--paper);font-family:'Source Serif 4',serif;font-size:13px;cursor:pointer;}
+  .correct-sel{border-color:var(--correct-border)!important;background:var(--green-light)!important;}
+  .wrong-sel{border-color:var(--wrong-border)!important;background:var(--red-light)!important;}
+  .radio-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:15px;line-height:1.5;}
+  .radio-row:last-child{border-bottom:none;}
+  .radio-row input{margin-top:3px;flex-shrink:0;}
+  .cell-ta{width:100%;padding:5px 8px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:13px;color:var(--ink);background:var(--paper);resize:vertical;height:55px;}
+  .lueck{padding:3px 6px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:14px;background:var(--paper);color:var(--ink);cursor:pointer;}
+  .info-footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-light);font-family:'JetBrains Mono',monospace;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+  @media print{
+    body{background:white;padding:1.6cm 2cm!important;}
+    .top-bar{display:none;}.score-banner{display:none!important;}
+    .worksheet{box-shadow:none;border:none;margin:0;padding:0;max-width:100%;}
+    .solution-badge{display:none!important;}
+    @page{margin:0;size:A4 portrait;}
+  }
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <h1>💼 A12 – Konjunkturphasen zuordnen</h1>
+  <div class="name-wrap"><label>Name:</label><input type="text" id="studentName" placeholder="Vor- und Nachname"/></div>
+  <button class="btn btn-download" onclick="downloadFile()" id="btnDownload">💾 Speichern</button>
+  <button class="btn btn-check" onclick="checkAll()">✓ Überprüfen</button>
+  <button class="btn btn-pdf" onclick="printAsPDF()">🖨 Als PDF</button>
+  <button class="btn btn-reset" onclick="resetAll()">↺ Reset</button>
+</div>
+<div class="score-banner" id="scoreBanner"></div>
+<div class="score-banner" id="resetConfirmBanner" style="background:#7a1a1a;"></div>
+<div class="worksheet">
+  <div class="task-id">THEMA 7 · ARBEITSMARKT · KAPITEL 7</div>
+  <div class="task-title">A12 – Konjunkturphasen zuordnen</div>
+
+  <div style="background:var(--accent-light);padding:14px 18px;border-radius:6px;margin-bottom:18px;">
+    <strong style="font-family:'JetBrains Mono',monospace;font-size:13px;">Konjunkturphasen:</strong>
+    <span style="font-size:14px;margin-left:8px;">1 Aufschwung/Erholung 🙂 &nbsp;|&nbsp; 2 Hochkonjunktur/Boom 😄 &nbsp;|&nbsp; 3 Abschwung 😐 &nbsp;|&nbsp; 4 Rezession 😟</span>
+  </div>
+  <p style="font-size:15px;margin-bottom:16px;">Ordnen Sie jeder Aussage die passende Konjunkturphase zu.</p>
+  <table class="match-table">
+    <thead><tr><th style="width:5%;"></th><th style="width:65%;">Aussage</th><th>Konjunkturphase</th></tr></thead>
+    <tbody><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">a)</td>
+  <td style="font-size:14px;">Es herrscht eine optimistische Stimmung.</td>
+  <td><select id="kp0">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP0"></div></td>
+</tr><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">b)</td>
+  <td style="font-size:14px;">Die Produktionsanlagen laufen auf Hochtouren und sind voll ausgelastet.</td>
+  <td><select id="kp1">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP1"></div></td>
+</tr><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">c)</td>
+  <td style="font-size:14px;">Die Preise von Immobilien steigen.</td>
+  <td><select id="kp2">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP2"></div></td>
+</tr><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">d)</td>
+  <td style="font-size:14px;">Die Löhne der Arbeitnehmenden steigen immer noch. Die Gewinne der Unternehmen sind riesig.</td>
+  <td><select id="kp3">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP3"></div></td>
+</tr><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">e)</td>
+  <td style="font-size:14px;">Es herrscht hohe Arbeitslosigkeit, mehr und mehr Firmen melden den Konkurs an.</td>
+  <td><select id="kp4">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP4"></div></td>
+</tr><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">f)</td>
+  <td style="font-size:14px;">Die Nachfrage nach Geld sinkt, dadurch sinken auch die Zinssätze.</td>
+  <td><select id="kp5">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP5"></div></td>
+</tr><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">g)</td>
+  <td style="font-size:14px;">Es herrscht eine allgemein pessimistische Stimmung.</td>
+  <td><select id="kp6">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP6"></div></td>
+</tr><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">h)</td>
+  <td style="font-size:14px;">Die privaten Haushalte sparen vermehrt; sie befürchten Lohnkürzungen, Kurzarbeit und Arbeitslosigkeit.</td>
+  <td><select id="kp7">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP7"></div></td>
+</tr><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">i)</td>
+  <td style="font-size:14px;">Es werden viele neue Arbeitsplätze geschaffen.</td>
+  <td><select id="kp8">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP8"></div></td>
+</tr><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">j)</td>
+  <td style="font-size:14px;">Die Arbeitslosenzahlen sind rückläufig.</td>
+  <td><select id="kp9">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP9"></div></td>
+</tr><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">k)</td>
+  <td style="font-size:14px;">Die Börsenkurse fallen.</td>
+  <td><select id="kp10">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP10"></div></td>
+</tr><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">l)</td>
+  <td style="font-size:14px;">Investitionen bleiben aus.</td>
+  <td><select id="kp11">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP11"></div></td>
+</tr><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">m)</td>
+  <td style="font-size:14px;">Die Aufträge nehmen zu.</td>
+  <td><select id="kp12">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP12"></div></td>
+</tr><tr>
+  <td style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);">n)</td>
+  <td style="font-size:14px;">Es herrscht Vollbeschäftigung.</td>
+  <td><select id="kp13">
+    <option value="">—</option>
+    <option value="1">1 Aufschwung 🙂</option>
+    <option value="2">2 Hochkonjunktur 😄</option>
+    <option value="3">3 Abschwung 😐</option>
+    <option value="4">4 Rezession 😟</option>
+  </select><div class="solution-badge" id="bKP13"></div></td>
+</tr></tbody>
+  </table>
+<div class="info-footer"><span>THEMA 7 · ARBEITSMARKT · KAPITEL 7</span><span id="footerName"></span></div>
+</div>
+<script>
+const FILENAME='A12_Konjunkturphasen';
+
+var KPC=["1", "2", "2", "2", "4", "4", "4", "3", "1", "1", "3", "4", "1", "2"];var KPL={"1": "Aufschwung/Erholung \ud83d\ude42", "2": "Hochkonjunktur/Boom \ud83d\ude04", "3": "Abschwung \ud83d\ude10", "4": "Rezession \ud83d\ude1f"};
+function checkAll(){
+  var c=0,t=0;
+  KPC.forEach(function(ans,i){
+    var el=document.getElementById('kp'+i);var b=document.getElementById('bKP'+i);
+    if(!el||el.value===''){b.className='solution-badge';return;}
+    t++;var ok=el.value===ans;
+    el.className=ok?'correct-sel':'wrong-sel';
+    b.className='solution-badge '+(ok?'correct':'wrong');
+    b.textContent=ok?('✔ Phase '+ans+': '+KPL[ans]):('✘ Lösung: Phase '+ans+' – '+KPL[ans]);
+    if(ok)c++;
+  });
+  document.getElementById('scoreBanner').className='score-banner visible';
+  document.getElementById('scoreBanner').textContent=t?('✓ '+c+' von '+t+' korrekt'):'⚠️ Bitte Antworten wählen.';
+}
+function resetAll(){var c=document.getElementById('resetConfirmBanner');
+if(!c.classList.contains('visible')){
+c.innerHTML='<span style="margin-right:12px;">Alle Eingaben wirklich löschen?</span><button onclick="doReset()" style="background:#c0392b;color:white;border:none;padding:5px 14px;border-radius:4px;cursor:pointer;font-weight:600;margin-right:8px;">Ja</button><button onclick="document.getElementById(\'resetConfirmBanner\').classList.remove(\'visible\')" style="background:rgba(255,255,255,.2);color:white;border:1px solid rgba(255,255,255,.4);padding:5px 12px;border-radius:4px;cursor:pointer;">Abbrechen</button>';
+c.classList.add('visible');return;}doReset();}
+function doReset(){
+var e=document.getElementById('kp0');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+var e=document.getElementById('kp1');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+var e=document.getElementById('kp2');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+var e=document.getElementById('kp3');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+var e=document.getElementById('kp4');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+var e=document.getElementById('kp5');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+var e=document.getElementById('kp6');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+var e=document.getElementById('kp7');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+var e=document.getElementById('kp8');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+var e=document.getElementById('kp9');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+var e=document.getElementById('kp10');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+var e=document.getElementById('kp11');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+var e=document.getElementById('kp12');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+var e=document.getElementById('kp13');if(e){e.value='';e.className='';e.style.borderColor='';e.style.background='';} 
+document.querySelectorAll('.solution-badge').forEach(b=>{b.className='solution-badge';b.textContent='';});
+document.getElementById('scoreBanner').classList.remove('visible');
+document.getElementById('resetConfirmBanner').classList.remove('visible');}
+
+function printAsPDF(){
+  var name=document.getElementById('studentName').value.trim();
+  document.title=name?(FILENAME+'_'+name.replace(/\s+/g,'_')):FILENAME;
+  setTimeout(function(){window.print();},100);
+}
+function downloadFile(){
+  var name=document.getElementById('studentName').value.trim();
+  if(!name){alert('Bitte zuerst Vor- und Nachname eingeben!');document.getElementById('studentName').focus();return;}
+  var html=document.documentElement.outerHTML;
+  var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;a.download=FILENAME+'_'+name.replace(/\s+/g,'_')+'.html';
+  document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(url);document.body.removeChild(a);},500);
+  var btn=document.getElementById('btnDownload');
+  btn.textContent='✔ Gespeichert!';btn.style.background='rgba(30,150,80,.8)';
+  setTimeout(function(){btn.textContent='💾 Speichern';btn.style.background='';},2500);
+}
+document.getElementById('studentName').addEventListener('input',function(){
+  document.getElementById('footerName').textContent=this.value.trim();
+});
+
+</script>
+</body>
+</html>

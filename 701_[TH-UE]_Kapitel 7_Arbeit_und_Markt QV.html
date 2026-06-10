@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QV-Vorbereitung | Kapitel 7: Arbeit und Markt</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f2eb;
+    --card: #ffffff;
+    --green: #1a6b3a;
+    --green-light: #e8f4ed;
+    --green-mid: #2d8a52;
+    --accent: #c8832a;
+    --accent-light: #fdf3e3;
+    --dark: #1a1a1a;
+    --muted: #6b6b6b;
+    --border: #ddd8cc;
+    --red: #b93a3a;
+    --red-light: #fdeaea;
+    --blue: #2a5c8a;
+    --blue-light: #e8f0f8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--green);
+    color: white;
+    padding: 2.5rem 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    border: 3px solid rgba(255,255,255,0.12);
+    border-radius: 50%;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: 30%;
+    width: 300px; height: 300px;
+    border: 2px solid rgba(255,255,255,0.07);
+    border-radius: 50%;
+  }
+  .header-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0.5rem;
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .badge-row {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+    flex-wrap: wrap;
+  }
+  .badge {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* NAV */
+  nav {
+    background: white;
+    border-bottom: 2px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  nav a {
+    display: block;
+    padding: 0.85rem 1.1rem;
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    transition: all 0.2s;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  nav a:hover, nav a.active {
+    color: var(--green);
+    border-bottom-color: var(--green);
+  }
+
+  /* MAIN */
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  /* SECTIONS */
+  .section {
+    margin-bottom: 2.5rem;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  .section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    background: var(--green);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+  }
+  .section-num.orange { background: var(--accent); }
+  .section-num.blue { background: var(--blue); }
+  .section-num.red { background: var(--red); }
+
+  .section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--dark);
+  }
+
+  /* CARDS */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.07); }
+  .card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--green);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .card.orange h3 { color: var(--accent); }
+  .card.blue h3 { color: var(--blue); }
+  .card.red h3 { color: var(--red); }
+
+  .card p, .card li { font-size: 14px; color: #333; }
+  .card ul { padding-left: 1.2rem; }
+  .card ul li { margin-bottom: 3px; }
+
+  /* KEY-VALUE TABLE */
+  .kv-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  .kv-table th {
+    background: var(--green);
+    color: white;
+    padding: 8px 12px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .kv-table th.orange-th { background: var(--accent); }
+  .kv-table tr:nth-child(even) td { background: var(--green-light); }
+  .kv-table td { padding: 7px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .kv-table td:first-child { font-weight: 600; color: var(--green); min-width: 130px; }
+  .kv-table td:first-child.orange-key { color: var(--accent); }
+
+  /* HIGHLIGHT BOX */
+  .highlight {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    padding: 0.9rem 1.1rem;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 1rem;
+    font-size: 13.5px;
+  }
+  .highlight.orange {
+    background: var(--accent-light);
+    border-color: var(--accent);
+  }
+  .highlight.blue {
+    background: var(--blue-light);
+    border-color: var(--blue);
+  }
+  .highlight.red {
+    background: var(--red-light);
+    border-color: var(--red);
+  }
+  .highlight strong { display: block; margin-bottom: 4px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+
+  /* TWO COL */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* PHASE TABLE */
+  .phase-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 0.5rem; }
+  .phase-table th {
+    padding: 8px 10px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--border);
+  }
+  .th-aufschwung { background: #d4edda; color: #1a6b3a; }
+  .th-hoch { background: #a8d8b8; color: #0f4025; }
+  .th-abschwung { background: #fde9d4; color: #8a4010; }
+  .th-rezession { background: #f8d0d0; color: #6b1010; }
+  .th-label { background: var(--bg); color: var(--muted); }
+  .phase-table td { padding: 6px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .phase-table tr:hover td { background: rgba(0,0,0,0.02); }
+  .td-label { font-weight: 600; font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+  .pos { color: var(--green-mid); }
+  .neg { color: var(--red); }
+
+  /* OR BADGE */
+  .or {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    background: #eee;
+    color: var(--muted);
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+
+  /* SCALE TABLE */
+  .scale-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .scale-table th { background: var(--dark); color: white; padding: 7px 10px; font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+  .scale-table td { padding: 6px 10px; border-bottom: 1px solid var(--border); text-align: center; }
+  .scale-table td:first-child { text-align: left; font-weight: 600; }
+  .scale-table tr:nth-child(even) td { background: #fafafa; }
+
+  /* EXERCISES */
+  .exercise-section {
+    background: var(--dark);
+    color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .exercise-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+  .exercise-section .sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1.5rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .exercise-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .exercise-card .q-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 0.4rem;
+    letter-spacing: 1px;
+  }
+  .exercise-card .question {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+  }
+
+  /* MC options */
+  .options { display: flex; flex-direction: column; gap: 0.4rem; }
+  .opt {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-size: 13.5px;
+  }
+  .opt:hover { background: rgba(255,255,255,0.1); }
+  .opt.correct { background: rgba(40,140,70,0.3) !important; border-color: #4caf77 !important; }
+  .opt.wrong { background: rgba(180,40,40,0.3) !important; border-color: #e87070 !important; }
+  .opt .letter {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.4);
+    min-width: 18px;
+    margin-top: 1px;
+  }
+
+  /* Text input */
+  .answer-area {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    color: white;
+    padding: 0.6rem 0.8rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    resize: vertical;
+    min-height: 70px;
+    margin-bottom: 0.6rem;
+  }
+  .answer-area::placeholder { color: rgba(255,255,255,0.25); }
+
+  .check-btn {
+    background: var(--green);
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.5px;
+    transition: background 0.15s;
+  }
+  .check-btn:hover { background: var(--green-mid); }
+  .check-btn.orange-btn { background: var(--accent); }
+  .check-btn.orange-btn:hover { background: #b5721f; }
+
+  .feedback {
+    margin-top: 0.6rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    font-size: 13px;
+    display: none;
+  }
+  .feedback.show { display: block; }
+  .feedback.ok { background: rgba(40,140,70,0.2); border: 1px solid #4caf77; color: #8dd4aa; }
+  .feedback.bad { background: rgba(180,40,40,0.2); border: 1px solid #e87070; color: #f0aaaa; }
+
+  .score-bar {
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  .score-bar .score-label { font-size: 12px; color: rgba(255,255,255,0.5); font-family: 'JetBrains Mono', monospace; }
+  .score-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--accent); }
+
+  /* SEPARATOR */
+  .sep {
+    border: none;
+    border-top: 2px solid var(--border);
+    margin: 2rem 0;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    border-top: 1px solid var(--border);
+  }
+
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  .pill-green { background: var(--green-light); color: var(--green); }
+  .pill-orange { background: var(--accent-light); color: var(--accent); }
+  .pill-red { background: var(--red-light); color: var(--red); }
+  .pill-blue { background: var(--blue-light); color: var(--blue); }
+
+  /* DRAG DROP */
+  .drag-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.8rem;
+  }
+  .drag-item {
+    background: rgba(255,255,255,0.1);
+    border: 1px dashed rgba(255,255,255,0.3);
+    border-radius: 6px;
+    padding: 5px 12px;
+    cursor: grab;
+    font-size: 13px;
+    user-select: none;
+    transition: all 0.15s;
+  }
+  .drag-item:hover { background: rgba(255,255,255,0.18); }
+  .drag-item.dragging { opacity: 0.4; }
+
+  .drop-zones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  @media (max-width: 500px) { .drop-zones { grid-template-columns: 1fr; } }
+  .drop-zone {
+    background: rgba(255,255,255,0.04);
+    border: 2px dashed rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 0.8rem;
+    min-height: 80px;
+    transition: all 0.15s;
+  }
+  .drop-zone.over {
+    background: rgba(40,180,90,0.1);
+    border-color: #4caf77;
+  }
+  .drop-zone-label {
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .drop-zone .drag-item {
+    margin: 3px 3px 3px 0;
+    display: inline-block;
+    cursor: default;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.6rem;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+  .tl-item {
+    position: relative;
+    padding: 0.6rem 0 0.6rem 1rem;
+    font-size: 13.5px;
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -0.75rem;
+    top: 0.9rem;
+    width: 10px; height: 10px;
+    background: var(--green);
+    border-radius: 50%;
+    border: 2px solid var(--bg);
+  }
+  .tl-item strong { color: var(--green); }
+
+  /* MATCH */
+  .match-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+  @media (max-width: 500px) { .match-grid { grid-template-columns: 1fr; } }
+  .match-left, .match-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .match-term {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    padding: 0.5rem 0.7rem;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .match-select {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 0.5rem 0.7rem;
+    font-size: 13px;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'Source Sans 3', sans-serif;
+    -webkit-appearance: none;
+  }
+  .match-select option { background: #222; color: white; }
+  .match-select.correct-sel { border-color: #4caf77; background: rgba(40,140,70,0.2); }
+  .match-select.wrong-sel { border-color: #e87070; background: rgba(180,40,40,0.2); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">QV-Vorbereitung · Wirtschaft</div>
+  <h1>Kapitel 7<br>Arbeit und Markt</h1>
+  <p>Theorie-Zusammenfassung & Übungen — Schwerpunkt Konjunktur &amp; Wirtschaftspolitik</p>
+  <div class="badge-row">
+    <span class="badge">7.1 Arbeitsrecht</span>
+    <span class="badge">7.2 EAV</span>
+    <span class="badge">7.5 Werkvertrag</span>
+    <span class="badge">★ 7.7 Konjunktur</span>
+    <span class="badge">7.8 Globalisierung</span>
+  </div>
+</header>
+
+<nav id="topnav">
+  <a href="#sec-71" onclick="setActive(this)">7.1 Arbeitsrecht</a>
+  <a href="#sec-72" onclick="setActive(this)">7.2 EAV</a>
+  <a href="#sec-75" onclick="setActive(this)">7.5 Werkvertrag</a>
+  <a href="#sec-77" onclick="setActive(this)" class="active">★ 7.7 Konjunktur</a>
+  <a href="#sec-78" onclick="setActive(this)">7.8 Globalisierung</a>
+  <a href="#uebungen" onclick="setActive(this)">✏ Übungen</a>
+</nav>
+
+<main>
+
+<!-- ===== 7.1 ===== -->
+<div class="section" id="sec-71">
+  <div class="section-header">
+    <span class="section-num">7.1</span>
+    <h2>Rechtliche Grundlagen des Arbeitsvertrags</h2>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>Gesetzliche Grundlagen</h3>
+      <ul>
+        <li><strong>OR</strong> – Einzelarbeitsvertrag, Pflichten, Beendigung</li>
+        <li><strong>ArG</strong> – Arbeits-/Ruhezeiten, Gesundheitsschutz, Nacht-/Sonntagsarbeit</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Vertragliche Ebenen</h3>
+      <ul>
+        <li><strong>EAV</strong> – Individueller Vertrag (Lohn, Funktion, Fristen)</li>
+        <li><strong>GAV</strong> – Zw. Arbeitgeberverband &amp; Gewerkschaft</li>
+        <li><strong>NAV</strong> – Staatlich festgelegtes Muster (z.B. Landwirtschaft)</li>
+        <li><strong>Betriebsreglement</strong> – Betriebsinterne Regeln</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <strong>Merksatz</strong>
+    Hierarchie: Gesetz (OR/ArG) &gt; GAV &gt; EAV &gt; Betriebsreglement. Ein EAV darf vom GAV nur <em>zugunsten</em> der Arbeitnehmenden abweichen.
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- ===== 7.2 ===== -->
+<div class="section" id="sec-72">
+  <div class="section-header">
+    <span class="section-num">7.2</span>
+    <h2>Einzelarbeitsvertrag (EAV)</h2>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>Pflichten der Arbeitnehmenden</h3>
+      <ul>
+        <li>Persönliche Arbeitsleistung <span class="or">OR 321</span></li>
+        <li>Sorgfaltspflicht <span class="or">OR 321a</span></li>
+        <li>Treuepflicht &amp; Schweigepflicht <span class="or">OR 321a</span></li>
+        <li>Rechenschaftspflicht <span class="or">OR 321b</span></li>
+        <li>Überstunden leisten (wenn zumutbar) <span class="or">OR 321c</span></li>
+        <li>Weisungen befolgen <span class="or">OR 321d</span></li>
+        <li>Haftung bei Vorsatz/Fahrlässigkeit <span class="or">OR 321e</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Pflichten der Arbeitgebenden</h3>
+      <ul>
+        <li>Lohnzahlung <span class="or">OR 322</span></li>
+        <li>Gratifikation / 13. Monatslohn</li>
+        <li>Lohnfortzahlung bei Verhinderung <span class="or">OR 324a</span></li>
+        <li>Arbeitsgeräte &amp; Spesen <span class="or">OR 327</span></li>
+        <li>Persönlichkeitsschutz (Mobbing, sex. Belästigung) <span class="or">OR 328</span></li>
+        <li>Ferien (min. 4 Wochen ab 20 J.) <span class="or">OR 329a</span></li>
+        <li>Arbeitszeugnis <span class="or">OR 330a</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Lohnfortzahlung -->
+  <div class="card" style="margin-bottom:1rem;">
+    <h3>Lohnfortzahlungspflicht – Skalentabelle</h3>
+    <table class="scale-table">
+      <thead><tr>
+        <th>Dienstjahr</th><th>Berner Skala</th><th>Basler Skala</th><th>Zürcher Skala</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>1.</td><td>3 Wochen</td><td>3 Wochen</td><td>3 Wochen</td></tr>
+        <tr><td>2.</td><td>1 Monat</td><td>2 Monate</td><td>8 Wochen</td></tr>
+        <tr><td>3.</td><td>2 Monate</td><td>2 Monate</td><td>9 Wochen</td></tr>
+        <tr><td>4.</td><td>2 Monate</td><td>3 Monate</td><td>10 Wochen</td></tr>
+        <tr><td>5.–9.</td><td>3 Monate</td><td>3 Monate</td><td>11–15 Wochen</td></tr>
+        <tr><td>10.</td><td>4 Monate</td><td>3 Monate</td><td>16 Wochen</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--muted);margin-top:6px;">Gilt wenn KEINE Versicherung (KTG/UVG/EO) den Ausfall deckt. TG/SH = Zürcher Skala.</p>
+  </div>
+
+  <!-- Kündigung -->
+  <div class="card">
+    <h3>Kündigungsfristen (OR 335a–c)</h3>
+    <table class="kv-table" style="margin-bottom:8px;">
+      <thead><tr><th>Zeitpunkt</th><th>Frist</th></tr></thead>
+      <tbody>
+        <tr><td>Probezeit</td><td>7 Tage, jederzeit</td></tr>
+        <tr><td>1. Dienstjahr</td><td>1 Monat auf Monatsende</td></tr>
+        <tr><td>2.–9. Dienstjahr</td><td>2 Monate auf Monatsende</td></tr>
+        <tr><td>Ab 10. Dienstjahr</td><td>3 Monate auf Monatsende</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight red" style="margin-bottom:0;">
+      <strong>Sperrfristen (OR 336c)</strong>
+      Militär (±4 Wo.) · Krankheit/Unfall (30/90/180 T.) · Schwangerschaft (+ 16 Wo. nach Geburt). Kündigung während Sperrfrist = nichtig!
+    </div>
+  </div>
+
+  <!-- Arbeitszeit -->
+  <div class="card">
+    <h3>Arbeitszeit (ArG)</h3>
+    <div class="two-col">
+      <div>
+        <p><strong>Höchstarbeitszeiten:</strong></p>
+        <ul style="padding-left:1.2rem;font-size:14px;">
+          <li>Büro / Industrie / Detailhandel: <strong>45h</strong></li>
+          <li>Übrige: <strong>50h</strong></li>
+          <li>Max. 5½ Arbeitstage/Woche</li>
+        </ul>
+      </div>
+      <div>
+        <p><strong>Zuschläge:</strong></p>
+        <ul style="padding-left:1.2rem;font-size:14px;">
+          <li>Überstunden: +25 % oder Freizeit</li>
+          <li>Nachtarbeit: +25 %</li>
+          <li>Sonntagsarbeit: +50 %</li>
+        </ul>
+      </div>
+    </div>
+    <div class="highlight orange" style="margin-top:0.8rem;margin-bottom:0;">
+      <strong>Überstunden vs. Überzeit</strong>
+      <strong>Überstunden</strong> = über vertragliche Arbeitszeit (OR 321c). <strong>Überzeit</strong> = über gesetzliche Höchstzeit (ArG 12/13), nur bei Dringlichkeit erlaubt.
+    </div>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- ===== 7.5 ===== -->
+<div class="section" id="sec-75">
+  <div class="section-header">
+    <span class="section-num orange">7.5</span>
+    <h2>Werkvertrag</h2>
+  </div>
+  <table class="kv-table">
+    <thead><tr><th>Merkmal</th><th>Einfacher Auftrag</th><th class="orange-th">Werkvertrag</th></tr></thead>
+    <tbody>
+      <tr><td>Ziel</td><td>Sorgfältige Dienstleistung</td><td>Konkretes Werk / Resultat</td></tr>
+      <tr><td>Beispiele</td><td>Arzt, Anwalt, Coiffeur</td><td>Hausbau, Autorep., Möbel</td></tr>
+      <tr><td>Haftung</td><td>Für sorgfältiges Handeln</td><td>Für Mängelfreiheit + Termin</td></tr>
+      <tr><td>Garantiezeit</td><td>—</td><td>5 J. Bauwerke / 1 J. übrige</td></tr>
+      <tr><td>Auflösung</td><td>Jederzeit (bei Unzeit: SE)</td><td>Vor Vollendung (SE) / bei >10% Preisüberschr.</td></tr>
+      <tr><td>Form</td><td>Formlos</td><td>Formlos</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<hr class="sep">
+
+<!-- ===== 7.7 SCHWERPUNKT ===== -->
+<div class="section" id="sec-77">
+  <div class="section-header">
+    <span class="section-num" style="background:var(--accent);font-size:13px;padding:4px 10px;">★ SCHWERPUNKT</span>
+    <h2>7.7 Konjunktur &amp; Wirtschaftsentwicklung</h2>
+  </div>
+
+  <!-- Wirtschaftssysteme -->
+  <div class="card">
+    <h3>Wirtschaftssysteme im Überblick</h3>
+    <table class="kv-table">
+      <thead><tr><th>Freie Marktwirtschaft</th><th class="orange-th">Zentrale Planwirtschaft</th><th>Soziale Marktwirtschaft (CH)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Keine Staatseingriffe, Gewinnstreben, freie Preisbildung</td>
+          <td>Staatliche Planung, keine freien Preise, Auszeichnung/Strafe als Anreiz</td>
+          <td>Markt + staatliche Korrekturfunktion (Recht, Verteilung, Marktversagen)</td>
+        </tr>
+        <tr>
+          <td>Schweiz, USA (annähernd)</td>
+          <td>Nordkorea</td>
+          <td>Westliche Demokratien</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="highlight" style="margin-top:0.8rem;margin-bottom:0;">
+      <strong>3 Staatsaufgaben in der sozialen Marktwirtschaft</strong>
+      1. Rechtssystem durchsetzen &nbsp;|&nbsp; 2. «Gerechte» Umverteilung &nbsp;|&nbsp; 3. Marktversagen korrigieren
+    </div>
+  </div>
+
+  <!-- Wirtschaftspolitik Ziele -->
+  <div class="card">
+    <h3>Ziele der Wirtschaftspolitik</h3>
+    <div class="two-col">
+      <div>
+        <ul>
+          <li>🏆 <strong>Hoher Wohlstand</strong> (BIP-Wachstum)</li>
+          <li>📉 <strong>Tiefe Arbeitslosigkeit</strong></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>💰 <strong>Stabile Preise</strong> (tiefe Inflation)</li>
+          <li>⚖️ <strong>Nachhaltige Staatsfinanzen</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- KONJUNKTURZYKLUS – 4 Phasen -->
+  <div class="card">
+    <h3>Die 4 Phasen des Konjunkturzyklus ★</h3>
+
+    <!-- Kurve Visualisierung -->
+    <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:160px;margin-bottom:0.8rem;">
+      <defs>
+        <linearGradient id="curve-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1a6b3a" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#1a6b3a" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <!-- Trend line -->
+      <line x1="20" y1="120" x2="680" y2="40" stroke="#ccc" stroke-width="1.5" stroke-dasharray="5,4"/>
+      <!-- BIP curve -->
+      <path d="M20,120 Q120,115 175,70 Q230,25 290,30 Q350,35 400,80 Q450,125 510,130 Q570,135 680,80"
+            fill="url(#curve-grad)" stroke="none"/>
+      <path d="M20,120 Q120,115 175,70 Q230,25 290,30 Q350,35 400,80 Q450,125 510,130 Q570,135 680,80"
+            fill="none" stroke="#c8832a" stroke-width="3" stroke-linecap="round"/>
+      <!-- Phase zones -->
+      <rect x="20" y="0" width="155" height="155" fill="#d4edda" opacity="0.3"/>
+      <rect x="175" y="0" width="120" height="155" fill="#a8d8b8" opacity="0.3"/>
+      <rect x="295" y="0" width="130" height="155" fill="#fde9d4" opacity="0.3"/>
+      <rect x="425" y="0" width="255" height="155" fill="#f8d0d0" opacity="0.3"/>
+      <!-- Phase labels -->
+      <text x="97" y="150" text-anchor="middle" font-size="11" fill="#1a6b3a" font-family="monospace" font-weight="700">① AUFSCHWUNG</text>
+      <text x="235" y="150" text-anchor="middle" font-size="11" fill="#0f4025" font-family="monospace" font-weight="700">② HOCH</text>
+      <text x="360" y="150" text-anchor="middle" font-size="11" fill="#8a4010" font-family="monospace" font-weight="700">③ ABSCHWUNG</text>
+      <text x="552" y="150" text-anchor="middle" font-size="11" fill="#6b1010" font-family="monospace" font-weight="700">④ REZESSION</text>
+      <!-- Trend label -->
+      <text x="560" y="52" font-size="10" fill="#aaa" font-family="monospace">Trend</text>
+      <!-- BIP axis -->
+      <text x="5" y="80" font-size="10" fill="#888" font-family="monospace" writing-mode="tb">BIP</text>
+    </svg>
+
+    <table class="phase-table">
+      <thead>
+        <tr>
+          <th class="th-label">Indikator</th>
+          <th class="th-aufschwung">① Aufschwung</th>
+          <th class="th-hoch">② Hochkonjunktur</th>
+          <th class="th-abschwung">③ Abschwung</th>
+          <th class="th-rezession">④ Rezession / Depression</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-label">BIP</td>
+          <td class="pos">↑ steigt</td>
+          <td class="pos">↑↑ auf Höchststand</td>
+          <td class="neg">↓ sinkt</td>
+          <td class="neg">↓↓ negatives Wachstum</td>
+        </tr>
+        <tr>
+          <td class="td-label">Stimmung</td>
+          <td class="pos">optimistisch</td>
+          <td class="pos">euphorisch</td>
+          <td class="neg">unsicher</td>
+          <td class="neg">pessimistisch, gedrückt</td>
+        </tr>
+        <tr>
+          <td class="td-label">Konsum</td>
+          <td class="pos">↑ nimmt zu</td>
+          <td class="pos">↑↑ sehr hoch</td>
+          <td class="neg">↓ sinkt</td>
+          <td class="neg">↓↓ sehr tief</td>
+        </tr>
+        <tr>
+          <td class="td-label">Produktion</td>
+          <td class="pos">↑ ausgeweitet</td>
+          <td class="pos">Engpässe möglich</td>
+          <td class="neg">↓ reduziert</td>
+          <td class="neg">Überangebot</td>
+        </tr>
+        <tr>
+          <td class="td-label">Investitionen</td>
+          <td class="pos">↑ nehmen zu</td>
+          <td class="pos">↑↑ hoch</td>
+          <td class="neg">↓ zurückhaltend</td>
+          <td class="neg">↓↓ gestoppt</td>
+        </tr>
+        <tr>
+          <td class="td-label">Preise</td>
+          <td class="pos">↑ steigen</td>
+          <td class="pos">↑↑ hoch</td>
+          <td class="neg">stagnieren</td>
+          <td class="neg">↓ sinken</td>
+        </tr>
+        <tr>
+          <td class="td-label">Löhne / Gewinne</td>
+          <td class="pos">↑ steigen</td>
+          <td class="pos">↑↑ hoch</td>
+          <td class="neg">stagnieren</td>
+          <td class="neg">↓ sinken / Verluste</td>
+        </tr>
+        <tr>
+          <td class="td-label">Beschäftigung</td>
+          <td class="pos">↑ steigt</td>
+          <td class="pos">Vollbeschäftigung</td>
+          <td class="neg">↓ sinkt</td>
+          <td class="neg">↓↓ hohe Arbeitslosigkeit</td>
+        </tr>
+        <tr>
+          <td class="td-label">Zinsen</td>
+          <td class="pos">↑ steigen</td>
+          <td class="pos">↑↑ hoch</td>
+          <td class="neg">↓ sinken</td>
+          <td class="neg">↓↓ tief</td>
+        </tr>
+        <tr>
+          <td class="td-label">Sparverhalten</td>
+          <td>weniger Sparen</td>
+          <td>wenig Sparen</td>
+          <td class="neg">mehr Sparen</td>
+          <td class="neg">↑↑ sehr viel Sparen</td>
+        </tr>
+        <tr>
+          <td class="td-label">Staatshaushalt</td>
+          <td class="pos">Steuern ↑</td>
+          <td class="pos">Überschuss</td>
+          <td class="neg">Steuern ↓</td>
+          <td class="neg">Defizit</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Konjunkturpolitik -->
+  <div class="card">
+    <h3>Konjunkturpolitik des Staates</h3>
+    <div class="two-col">
+      <div class="highlight" style="margin-bottom:0;">
+        <strong>📉 Bei Rezession / Abschwung</strong>
+        • Staatsaufträge ausweiten<br>
+        • Steuererleichterungen<br>
+        • Kurzarbeit erlauben (statt Entlassungen)<br>
+        • Weiterbildung finanzieren
+      </div>
+      <div class="highlight orange" style="margin-bottom:0;">
+        <strong>📈 Bei Hochkonjunktur / Aufschwung</strong>
+        • Arbeitsbeschaffungsreserven bilden<br>
+        • Schulden abbauen<br>
+        • Schuldenbremse: Überschuss erwirtschaften
+      </div>
+    </div>
+    <div class="highlight blue" style="margin-top:0.8rem;margin-bottom:0;">
+      <strong>Schuldenbremse (seit 2002)</strong>
+      Hochkonjunktur → Überschuss erzwingen | Rezession → Defizit erlaubt. Ziel: langfristig ausgeglichene Bundesfinanzen.
+    </div>
+  </div>
+
+  <!-- Inflation / Deflation -->
+  <div class="card">
+    <h3>Inflation &amp; Deflation ★</h3>
+    <table class="kv-table">
+      <thead><tr><th>Aspekt</th><th>Inflation</th><th class="orange-th">Deflation</th></tr></thead>
+      <tbody>
+        <tr><td>Definition</td><td>Anhaltender Preisanstieg, Kaufkraft ↓</td><td>Anhaltender Preisrückgang, Kaufkraft ↑</td></tr>
+        <tr><td>Ursache</td><td>Geldstrom > Güterstrom</td><td>Güterstrom > Geldstrom</td></tr>
+        <tr><td>Häufigkeit</td><td>Regelmässig vorkommend</td><td>Sehr selten (CH: letztmals 1930er)</td></tr>
+        <tr><td>Bekämpfung</td><td>SNB verkleinert Geldmenge, Zinsen ↑</td><td>SNB erhöht Geldmenge, Zinsen ↓ (schwer!)</td></tr>
+        <tr><td>Gefahr</td><td>Soziale Ungleichheit, Sparflucht, Lohn-Preis-Spirale</td><td>Konsumverzögerung, Rezession, volkswirtschaftl. Kosten</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight orange" style="margin-top:0.8rem;margin-bottom:0;">
+      <strong>Lohn-Preis-Spirale</strong>
+      Löhne ↑ → Produktionskosten ↑ → Preise ↑ → Lohnforderungen ↑ → (Spirale) → Inflation verstärkt sich.
+    </div>
+    <div class="highlight" style="margin-top:0.8rem;margin-bottom:0;">
+      <strong>Rolle der SNB</strong>
+      Ziel: Inflationsrate &lt; 2 %. Werkzeug: Leitzins. Geld verknappen = Zins ↑ | Geld ausweiten = Zins ↓.
+    </div>
+  </div>
+
+  <!-- Wirtschaftssektoren -->
+  <div class="card">
+    <h3>Wirtschaftssektoren &amp; Strukturwandel</h3>
+    <table class="kv-table">
+      <thead><tr><th>Sektor</th><th>Tätigkeit</th><th>Branchen (Beispiele)</th><th>Anteil CH (2022)</th></tr></thead>
+      <tbody>
+        <tr><td>1. Primär</td><td>Rohstoffgewinnung</td><td>Landwirtschaft, Bergbau, Fischerei</td><td>~2,3 %</td></tr>
+        <tr><td>2. Sekundär</td><td>Produktion / Verarbeitung</td><td>Handwerk, Industrie, Bau</td><td>~20,2 %</td></tr>
+        <tr><td>3. Tertiär</td><td>Dienstleistungen</td><td>Banken, Gesundheit, Bildung, Handel</td><td>~77,4 %</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight" style="margin-top:0.8rem;margin-bottom:0;">
+      <strong>Strukturwandel der Schweiz</strong>
+      Agrargesellschaft (1860) → Industriestaat (1900–1960) → <strong>Dienstleistungsgesellschaft</strong> (heute). Der Tertiärsektor dominiert mit &gt;77 % der Erwerbstätigen.
+    </div>
+  </div>
+
+  <!-- Armut / Working Poor -->
+  <div class="card">
+    <h3>Armut &amp; Working Poor</h3>
+    <ul>
+      <li>Armutsgrenze (2022): ca. Fr. 2 284.–/Monat (Einzelperson)</li>
+      <li><strong>702 000 Personen</strong> (8,2 %) galten als arm</li>
+      <li><strong>Working Poor</strong>: ~155 000 Personen arm trotz Erwerbstätigkeit</li>
+      <li>Besonders betroffen: Alleinerziehende, Geschiedene, Familien mit &gt;3 Kindern</li>
+      <li>Bundesverfassung: Anspruch auf Hilfe bei Not (Kantone/Gemeinden)</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- ===== 7.8 ===== -->
+<div class="section" id="sec-78">
+  <div class="section-header">
+    <span class="section-num blue">7.8</span>
+    <h2>Globalisierung</h2>
+  </div>
+
+  <div class="card">
+    <h3>Definition &amp; Bereiche</h3>
+    <p>Zunehmende weltweite Verflechtung in <strong>Wirtschaft, Politik, Kultur, Technologie, Umwelt</strong>. Ursachen: technischer Fortschritt + Liberalisierung des Welthandels.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>Stärken Schweiz</h3>
+      <ul>
+        <li>Politische Stabilität &amp; Neutralität</li>
+        <li>Gut ausgebildete Fachkräfte</li>
+        <li>Gute Infrastruktur &amp; Verkehrslage</li>
+        <li>Attraktives Steuerniveau</li>
+        <li>Europas Wasserschloss</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>Schwächen Schweiz</h3>
+      <ul>
+        <li>Fehlende Rohstoffe</li>
+        <li>Hohes Lohnniveau</li>
+        <li>Kleiner Binnenmarkt</li>
+        <li>Binnenlage</li>
+        <li>Unproduktiver Boden</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Schweiz &amp; Internationaler Handel</h3>
+    <ul>
+      <li>Exporte 2023: <strong>Fr. 274 Mrd.</strong> | Importe: <strong>Fr. 226 Mrd.</strong></li>
+      <li>Wichtigster Handelspartner: <strong>EU (71 % Importe, 55 % Exporte)</strong></li>
+      <li>Wichtigste Exportgüter: Chemie/Pharma, Maschinen, Uhren, Präzisionsinstrumente</li>
+      <li>Schweiz verdient jeden 2. Franken durch internationalen Handel</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- ===== ÜBUNGEN ===== -->
+<div id="uebungen">
+  <div class="exercise-section">
+    <h2>✏ QV-Übungen</h2>
+    <div class="sub">Schwerpunkt Kapitel 7.7 · Konjunktur, Wirtschaftssysteme, Inflation</div>
+
+    <div class="score-bar">
+      <span class="score-label">PUNKTE</span>
+      <span class="score-num" id="score-display">0 / 0</span>
+      <button class="check-btn" onclick="resetAll()" style="background:rgba(255,255,255,0.15)">↺ Zurücksetzen</button>
+    </div>
+
+    <!-- ===== MC 1 ===== -->
+    <div class="exercise-card" id="q1">
+      <div class="q-num">FRAGE 01 · Multiple Choice</div>
+      <div class="question">In welcher Konjunkturphase herrscht Vollbeschäftigung und sind die Preise am höchsten?</div>
+      <div class="options">
+        <div class="opt" onclick="checkMC(this,'q1','A')"><span class="letter">A</span>Aufschwung</div>
+        <div class="opt" onclick="checkMC(this,'q1','B')"><span class="letter">B</span>Hochkonjunktur ✓</div>
+        <div class="opt" onclick="checkMC(this,'q1','C')"><span class="letter">C</span>Rezession</div>
+        <div class="opt" onclick="checkMC(this,'q1','D')"><span class="letter">D</span>Depression</div>
+      </div>
+      <div class="feedback" id="fb-q1-correct" data-correct="B"></div>
+    </div>
+
+    <!-- ===== MC 2 ===== -->
+    <div class="exercise-card" id="q2">
+      <div class="q-num">FRAGE 02 · Multiple Choice</div>
+      <div class="question">Wie bekämpft die SNB eine Inflation?</div>
+      <div class="options">
+        <div class="opt" onclick="checkMC(this,'q2','A')"><span class="letter">A</span>Sie senkt die Zinsen und weitet die Geldmenge aus</div>
+        <div class="opt" onclick="checkMC(this,'q2','B')"><span class="letter">B</span>Sie erhöht die Zinsen und verkleinert die Geldmenge ✓</div>
+        <div class="opt" onclick="checkMC(this,'q2','C')"><span class="letter">C</span>Sie erhöht die Steuern direkt</div>
+        <div class="opt" onclick="checkMC(this,'q2','D')"><span class="letter">D</span>Sie gibt mehr Staatsanleihen aus</div>
+      </div>
+      <div class="feedback" id="fb-q2-correct" data-correct="B"></div>
+    </div>
+
+    <!-- ===== MC 3 ===== -->
+    <div class="exercise-card" id="q3">
+      <div class="q-num">FRAGE 03 · Multiple Choice</div>
+      <div class="question">Was versteht man unter «Working Poor»?</div>
+      <div class="options">
+        <div class="opt" onclick="checkMC(this,'q3','A')"><span class="letter">A</span>Personen, die keine Arbeit finden</div>
+        <div class="opt" onclick="checkMC(this,'q3','B')"><span class="letter">B</span>Personen, die trotz Erwerbstätigkeit unter der Armutsgrenze leben ✓</div>
+        <div class="opt" onclick="checkMC(this,'q3','C')"><span class="letter">C</span>Arbeitnehmende mit befristetem Vertrag</div>
+        <div class="opt" onclick="checkMC(this,'q3','D')"><span class="letter">D</span>Rentner mit kleiner AHV-Rente</div>
+      </div>
+      <div class="feedback" id="fb-q3-correct" data-correct="B"></div>
+    </div>
+
+    <!-- ===== MC 4 ===== -->
+    <div class="exercise-card" id="q4">
+      <div class="q-num">FRAGE 04 · Multiple Choice</div>
+      <div class="question">Welches der folgenden Ziele ist KEIN wirtschaftspolitisches Ziel der Schweiz?</div>
+      <div class="options">
+        <div class="opt" onclick="checkMC(this,'q4','A')"><span class="letter">A</span>Hoher Wohlstand</div>
+        <div class="opt" onclick="checkMC(this,'q4','B')"><span class="letter">B</span>Tiefe Arbeitslosigkeit</div>
+        <div class="opt" onclick="checkMC(this,'q4','C')"><span class="letter">C</span>Maximale Exportquote ✓</div>
+        <div class="opt" onclick="checkMC(this,'q4','D')"><span class="letter">D</span>Stabile Preise</div>
+      </div>
+      <div class="feedback" id="fb-q4-correct" data-correct="C"></div>
+    </div>
+
+    <!-- ===== MC 5 ===== -->
+    <div class="exercise-card" id="q5">
+      <div class="q-num">FRAGE 05 · Multiple Choice</div>
+      <div class="question">In welcher Konjunkturphase spart die Bevölkerung am meisten?</div>
+      <div class="options">
+        <div class="opt" onclick="checkMC(this,'q5','A')"><span class="letter">A</span>Aufschwung</div>
+        <div class="opt" onclick="checkMC(this,'q5','B')"><span class="letter">B</span>Hochkonjunktur</div>
+        <div class="opt" onclick="checkMC(this,'q5','C')"><span class="letter">C</span>Abschwung / Rezession ✓</div>
+        <div class="opt" onclick="checkMC(this,'q5','D')"><span class="letter">D</span>In allen Phasen gleich</div>
+      </div>
+      <div class="feedback" id="fb-q5-correct" data-correct="C"></div>
+    </div>
+
+    <!-- ===== MC 6 ===== -->
+    <div class="exercise-card" id="q6">
+      <div class="q-num">FRAGE 06 · Multiple Choice</div>
+      <div class="question">Was beschreibt die Lohn-Preis-Spirale?</div>
+      <div class="options">
+        <div class="opt" onclick="checkMC(this,'q6','A')"><span class="letter">A</span>Steigende Löhne führen zu sinkenden Preisen</div>
+        <div class="opt" onclick="checkMC(this,'q6','B')"><span class="letter">B</span>Steigende Löhne → höhere Produktionskosten → höhere Preise → neue Lohnforderungen ✓</div>
+        <div class="opt" onclick="checkMC(this,'q6','C')"><span class="letter">C</span>Staatliche Lohnfixierung führt zu Preisstabilität</div>
+        <div class="opt" onclick="checkMC(this,'q6','D')"><span class="letter">D</span>Deflation führt zu steigenden Löhnen</div>
+      </div>
+      <div class="feedback" id="fb-q6-correct" data-correct="B"></div>
+    </div>
+
+    <!-- ===== MC 7 – Sektor ===== -->
+    <div class="exercise-card" id="q7">
+      <div class="q-num">FRAGE 07 · Multiple Choice</div>
+      <div class="question">Zu welchem Wirtschaftssektor gehört eine Krankenpflegerin?</div>
+      <div class="options">
+        <div class="opt" onclick="checkMC(this,'q7','A')"><span class="letter">A</span>1. Sektor (Primär)</div>
+        <div class="opt" onclick="checkMC(this,'q7','B')"><span class="letter">B</span>2. Sektor (Sekundär)</div>
+        <div class="opt" onclick="checkMC(this,'q7','C')"><span class="letter">C</span>3. Sektor (Tertiär) ✓</div>
+        <div class="opt" onclick="checkMC(this,'q7','D')"><span class="letter">D</span>Keinem Sektor</div>
+      </div>
+      <div class="feedback" id="fb-q7-correct" data-correct="C"></div>
+    </div>
+
+    <!-- ===== MC 8 ===== -->
+    <div class="exercise-card" id="q8">
+      <div class="q-num">FRAGE 08 · Multiple Choice</div>
+      <div class="question">Was ist eine Deflation?</div>
+      <div class="options">
+        <div class="opt" onclick="checkMC(this,'q8','A')"><span class="letter">A</span>Ein starker Anstieg des allgemeinen Preisniveaus</div>
+        <div class="opt" onclick="checkMC(this,'q8','B')"><span class="letter">B</span>Ein anhaltender Rückgang des Preisniveaus, Kaufkraft steigt ✓</div>
+        <div class="opt" onclick="checkMC(this,'q8','C')"><span class="letter">C</span>Eine kurzfristige Teuerung von mehr als 5 %</div>
+        <div class="opt" onclick="checkMC(this,'q8','D')"><span class="letter">D</span>Ein Rückgang der Staatsschulden</div>
+      </div>
+      <div class="feedback" id="fb-q8-correct" data-correct="B"></div>
+    </div>
+
+    <!-- ===== DRAG DROP ===== -->
+    <div class="exercise-card" id="q-drag">
+      <div class="q-num">FRAGE 09 · Zuordnung – Ziehe die Begriffe in die richtige Phase</div>
+      <div class="question">Ordne die Merkmale den Konjunkturphasen zu:</div>
+
+      <div class="drag-container" id="drag-pool">
+        <div class="drag-item" draggable="true" data-cat="aufschwung">BIP steigt</div>
+        <div class="drag-item" draggable="true" data-cat="hochkonjunktur">Vollbeschäftigung</div>
+        <div class="drag-item" draggable="true" data-cat="rezession">Staatsdefizit</div>
+        <div class="drag-item" draggable="true" data-cat="abschwung">Investitionen sinken</div>
+        <div class="drag-item" draggable="true" data-cat="hochkonjunktur">Preise auf Höchststand</div>
+        <div class="drag-item" draggable="true" data-cat="rezession">Arbeitslosigkeit hoch</div>
+        <div class="drag-item" draggable="true" data-cat="aufschwung">Optimismus</div>
+        <div class="drag-item" draggable="true" data-cat="abschwung">Konsum sinkt</div>
+      </div>
+
+      <div class="drop-zones">
+        <div class="drop-zone" id="zone-aufschwung" ondragover="allowDrop(event)" ondrop="dropItem(event,'aufschwung')">
+          <div class="drop-zone-label">① Aufschwung</div>
+        </div>
+        <div class="drop-zone" id="zone-hochkonjunktur" ondragover="allowDrop(event)" ondrop="dropItem(event,'hochkonjunktur')">
+          <div class="drop-zone-label">② Hochkonjunktur</div>
+        </div>
+        <div class="drop-zone" id="zone-abschwung" ondragover="allowDrop(event)" ondrop="dropItem(event,'abschwung')">
+          <div class="drop-zone-label">③ Abschwung</div>
+        </div>
+        <div class="drop-zone" id="zone-rezession" ondragover="allowDrop(event)" ondrop="dropItem(event,'rezession')">
+          <div class="drop-zone-label">④ Rezession</div>
+        </div>
+      </div>
+      <button class="check-btn orange-btn" onclick="checkDrag()">Überprüfen</button>
+      <div class="feedback" id="fb-drag"></div>
+    </div>
+
+    <!-- ===== MATCH ===== -->
+    <div class="exercise-card" id="q-match">
+      <div class="q-num">FRAGE 10 · Zuordnung – Wirtschaftsbegriffe</div>
+      <div class="question">Wähle die richtige Erklärung für jeden Begriff:</div>
+      <div class="match-grid" style="margin-bottom:0.8rem;">
+        <div class="match-left">
+          <div class="match-term">Konjunkturzyklus</div>
+          <div class="match-term">Schuldenbremse</div>
+          <div class="match-term">Kurzarbeit</div>
+          <div class="match-term">Kaufkraft</div>
+        </div>
+        <div class="match-right">
+          <select class="match-select" id="ms1">
+            <option value="">— wählen —</option>
+            <option value="a">Wellenförmiger Verlauf der Wirtschaft</option>
+            <option value="b">Staatliches Instrument: Überschuss in guten Zeiten erzwingen</option>
+            <option value="c">Vorübergehende Arbeitsreduktion statt Entlassung</option>
+            <option value="d">Menge Güter, die mit Geld kaufbar ist</option>
+          </select>
+          <select class="match-select" id="ms2">
+            <option value="">— wählen —</option>
+            <option value="a">Wellenförmiger Verlauf der Wirtschaft</option>
+            <option value="b">Staatliches Instrument: Überschuss in guten Zeiten erzwingen</option>
+            <option value="c">Vorübergehende Arbeitsreduktion statt Entlassung</option>
+            <option value="d">Menge Güter, die mit Geld kaufbar ist</option>
+          </select>
+          <select class="match-select" id="ms3">
+            <option value="">— wählen —</option>
+            <option value="a">Wellenförmiger Verlauf der Wirtschaft</option>
+            <option value="b">Staatliches Instrument: Überschuss in guten Zeiten erzwingen</option>
+            <option value="c">Vorübergehende Arbeitsreduktion statt Entlassung</option>
+            <option value="d">Menge Güter, die mit Geld kaufbar ist</option>
+          </select>
+          <select class="match-select" id="ms4">
+            <option value="">— wählen —</option>
+            <option value="a">Wellenförmiger Verlauf der Wirtschaft</option>
+            <option value="b">Staatliches Instrument: Überschuss in guten Zeiten erzwingen</option>
+            <option value="c">Vorübergehende Arbeitsreduktion statt Entlassung</option>
+            <option value="d">Menge Güter, die mit Geld kaufbar ist</option>
+          </select>
+        </div>
+      </div>
+      <button class="check-btn" onclick="checkMatch()">Überprüfen</button>
+      <div class="feedback" id="fb-match"></div>
+    </div>
+
+    <!-- ===== FREE TEXT 1 ===== -->
+    <div class="exercise-card" id="q-text1">
+      <div class="q-num">FRAGE 11 · Freitext</div>
+      <div class="question">Nenne zwei staatliche Massnahmen, die in einer Rezession ergriffen werden können:</div>
+      <textarea class="answer-area" id="ta-text1" placeholder="Schreibe deine Antwort hier..."></textarea>
+      <button class="check-btn" onclick="revealText('text1')">Musterlösung zeigen</button>
+      <div class="feedback" id="fb-text1">
+        <strong>Musterlösung:</strong> z.B. (1) Staatsaufträge ausweiten, um Arbeitsplätze zu sichern. (2) Steuererleichterungen gewähren, damit mehr Geld für Konsum/Investitionen verfügbar ist. (3) Kurzarbeit erlauben. (4) Weiterbildungsmassnahmen für Arbeitslose finanzieren.
+      </div>
+    </div>
+
+    <!-- ===== FREE TEXT 2 ===== -->
+    <div class="exercise-card" id="q-text2">
+      <div class="q-num">FRAGE 12 · Freitext</div>
+      <div class="question">Erkläre den Unterschied zwischen Überstunden und Überzeit:</div>
+      <textarea class="answer-area" id="ta-text2" placeholder="Schreibe deine Antwort hier..."></textarea>
+      <button class="check-btn" onclick="revealText('text2')">Musterlösung zeigen</button>
+      <div class="feedback" id="fb-text2">
+        <strong>Musterlösung:</strong> <strong>Überstunden</strong> entstehen, wenn über die vertraglich vereinbarte Arbeitszeit hinaus gearbeitet wird (OR 321c). <strong>Überzeit</strong> entsteht, wenn die gesetzliche Höchstarbeitszeit (45h/50h) ausnahmsweise überschritten wird, z.B. bei dringenden Arbeiten oder Betriebsstörungen (ArG 12/13). Beide werden mit +25% Lohnzuschlag oder Freizeit abgegolten.
+      </div>
+    </div>
+
+    <!-- ===== FALLSTUDIE ===== -->
+    <div class="exercise-card" id="q-case">
+      <div class="q-num">FRAGE 13 · Fallstudie</div>
+      <div class="question">🏭 Die Schweizer Wirtschaft wächst stark. Unternehmen berichten von Personalengpässen. Die Preise steigen monatlich, Konsumenten kaufen mehr als je zuvor. Die SNB ist besorgt. – In welcher Konjunkturphase befindet sich die Schweiz? Welche Massnahme sollte die SNB ergreifen?</div>
+      <textarea class="answer-area" id="ta-case" placeholder="Phase + Begründung + SNB-Massnahme..."></textarea>
+      <button class="check-btn orange-btn" onclick="revealText('case')">Musterlösung zeigen</button>
+      <div class="feedback" id="fb-case">
+        <strong>Musterlösung:</strong> Die Schweiz befindet sich in der <strong>Hochkonjunktur</strong> (Phase 2): BIP auf Höchststand, Vollbeschäftigung, steigende Preise, euphorische Stimmung, starker Konsum. Die SNB sollte die <strong>Geldmenge verknappen</strong> (Zinsen erhöhen), um eine Überhitzung und zu hohe Inflation zu verhindern. Das Ziel der SNB ist eine Inflationsrate unter 2 %.
+      </div>
+    </div>
+
+    <!-- ===== TRUE/FALSE ===== -->
+    <div class="exercise-card" id="q-tf">
+      <div class="q-num">FRAGE 14 · Wahr oder Falsch?</div>
+      <div class="question">Beantworte jede Aussage mit Wahr (W) oder Falsch (F):</div>
+      <div id="tf-list" style="display:flex;flex-direction:column;gap:0.5rem;margin-bottom:0.8rem;">
+      </div>
+      <button class="check-btn" onclick="checkTF()">Überprüfen</button>
+      <div class="feedback" id="fb-tf"></div>
+    </div>
+
+  </div><!-- /exercise-section -->
+</div><!-- /uebungen -->
+
+</main>
+
+<footer>
+  QV-Vorbereitung · Kapitel 7 Arbeit und Markt · Basierend auf Lehrmittel-Inhalten
+</footer>
+
+<script>
+// NAV
+function setActive(el) {
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// SCORE
+let score = 0, total = 0, answered = {};
+function updateScore() {
+  document.getElementById('score-display').textContent = score + ' / ' + total;
+}
+
+// MC
+function checkMC(el, qid, chosen) {
+  if (answered[qid]) return;
+  const container = document.getElementById(qid);
+  const opts = container.querySelectorAll('.opt');
+  // find correct by ✓ in text
+  let correctLetter = null;
+  opts.forEach(o => {
+    if (o.textContent.includes('✓')) correctLetter = o.querySelector('.letter').textContent.trim();
+  });
+  const correct = chosen === correctLetter;
+  opts.forEach(o => {
+    const letter = o.querySelector('.letter').textContent.trim();
+    if (letter === correctLetter) o.classList.add('correct');
+    else if (letter === chosen && !correct) o.classList.add('wrong');
+    o.style.pointerEvents = 'none';
+  });
+  total++;
+  if (correct) score++;
+  answered[qid] = true;
+  updateScore();
+}
+
+// FREE TEXT
+function revealText(id) {
+  const fb = document.getElementById('fb-' + id);
+  fb.classList.add('show', 'ok');
+}
+
+// TRUE/FALSE setup
+const tfData = [
+  { text: 'In der Rezession sinken die Zinsen.', ans: true },
+  { text: 'Deflation ist häufiger als Inflation.', ans: false },
+  { text: 'Die SNB bekämpft Inflation durch Erhöhung der Geldmenge.', ans: false },
+  { text: 'In der Hochkonjunktur herrscht Vollbeschäftigung.', ans: true },
+  { text: 'Der Tertiärsektor umfasst über 77% der Erwerbstätigen in der Schweiz.', ans: true },
+  { text: 'Überstunden werden mit mindestens 50% Lohnzuschlag abgegolten.', ans: false },
+];
+
+window.addEventListener('load', () => {
+  const tfList = document.getElementById('tf-list');
+  tfData.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.style.cssText = 'display:flex;align-items:center;gap:0.6rem;background:rgba(255,255,255,0.05);padding:0.5rem 0.7rem;border-radius:6px;font-size:13px;';
+    div.innerHTML = `
+      <span style="flex:1">${item.text}</span>
+      <label style="display:flex;align-items:center;gap:4px;cursor:pointer;">
+        <input type="radio" name="tf${i}" value="true" style="accent-color:#4caf77;"> W
+      </label>
+      <label style="display:flex;align-items:center;gap:4px;cursor:pointer;">
+        <input type="radio" name="tf${i}" value="false" style="accent-color:#e87070;"> F
+      </label>
+    `;
+    div.id = 'tf-item-' + i;
+    tfList.appendChild(div);
+  });
+});
+
+function checkTF() {
+  if (answered['tf']) return;
+  let correct = 0;
+  tfData.forEach((item, i) => {
+    const sel = document.querySelector(`input[name="tf${i}"]:checked`);
+    const div = document.getElementById('tf-item-' + i);
+    if (sel) {
+      const userAns = sel.value === 'true';
+      if (userAns === item.ans) {
+        div.style.background = 'rgba(40,140,70,0.2)';
+        div.style.border = '1px solid #4caf77';
+        correct++;
+      } else {
+        div.style.background = 'rgba(180,40,40,0.2)';
+        div.style.border = '1px solid #e87070';
+        // show correct
+        const span = document.createElement('span');
+        span.style.cssText = 'font-size:11px;color:#8dd4aa;white-space:nowrap;';
+        span.textContent = '→ ' + (item.ans ? 'W' : 'F');
+        div.appendChild(span);
+      }
+    }
+    document.querySelectorAll(`input[name="tf${i}"]`).forEach(r => r.disabled = true);
+  });
+  const fb = document.getElementById('fb-tf');
+  fb.classList.add('show');
+  if (correct === tfData.length) {
+    fb.classList.add('ok');
+    fb.textContent = '✓ Alle ' + correct + ' Aussagen richtig!';
+  } else {
+    fb.classList.add('bad');
+    fb.textContent = correct + ' von ' + tfData.length + ' richtig. Die roten Zeilen zeigen die falschen Antworten.';
+  }
+  total += tfData.length;
+  score += correct;
+  answered['tf'] = true;
+  updateScore();
+}
+
+// DRAG DROP
+let draggedItem = null;
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.drag-item').forEach(item => {
+    item.addEventListener('dragstart', e => {
+      draggedItem = item;
+      setTimeout(() => item.classList.add('dragging'), 0);
+      e.dataTransfer.setData('text/plain', item.dataset.cat + '|' + item.textContent.trim());
+    });
+    item.addEventListener('dragend', () => item.classList.remove('dragging'));
+  });
+});
+
+function allowDrop(e) {
+  e.preventDefault();
+  e.currentTarget.classList.add('over');
+}
+document.querySelectorAll ? (() => {})() : null;
+document.addEventListener('dragleave', e => {
+  if (e.target.classList && e.target.classList.contains('drop-zone'))
+    e.target.classList.remove('over');
+});
+
+function dropItem(e, zone) {
+  e.preventDefault();
+  e.currentTarget.classList.remove('over');
+  if (draggedItem) {
+    const pool = document.getElementById('drag-pool');
+    const zoneEl = document.getElementById('zone-' + zone);
+    // move item
+    const clone = draggedItem.cloneNode(true);
+    clone.draggable = false;
+    clone.style.cursor = 'default';
+    zoneEl.appendChild(clone);
+    draggedItem.remove();
+    draggedItem = null;
+  }
+}
+
+function checkDrag() {
+  if (answered['drag']) return;
+  let correct = 0, total_d = 0;
+  ['aufschwung','hochkonjunktur','abschwung','rezession'].forEach(zone => {
+    const zoneEl = document.getElementById('zone-' + zone);
+    zoneEl.querySelectorAll('.drag-item').forEach(item => {
+      total_d++;
+      if (item.dataset && item.dataset.cat === zone) {
+        item.style.background = 'rgba(40,140,70,0.3)';
+        item.style.borderColor = '#4caf77';
+        correct++;
+      } else {
+        item.style.background = 'rgba(180,40,40,0.3)';
+        item.style.borderColor = '#e87070';
+      }
+    });
+  });
+  // remaining in pool
+  document.querySelectorAll('#drag-pool .drag-item').forEach(item => {
+    item.style.opacity = '0.4';
+    total_d++;
+  });
+  const fb = document.getElementById('fb-drag');
+  fb.classList.add('show');
+  if (correct === 8) {
+    fb.classList.add('ok');
+    fb.textContent = '✓ Alle 8 Begriffe korrekt zugeordnet!';
+  } else {
+    fb.classList.add('bad');
+    fb.textContent = correct + ' von ' + total_d + ' korrekt zugeordnet. Grün = richtig, Rot = falsch.';
+  }
+  total += 8;
+  score += correct;
+  answered['drag'] = true;
+  updateScore();
+}
+
+// MATCH
+function checkMatch() {
+  if (answered['match']) return;
+  const correct = ['a','b','c','d'];
+  const ids = ['ms1','ms2','ms3','ms4'];
+  let c = 0;
+  ids.forEach((id, i) => {
+    const sel = document.getElementById(id);
+    if (sel.value === correct[i]) {
+      sel.classList.add('correct-sel');
+      c++;
+    } else {
+      sel.classList.add('wrong-sel');
+    }
+    sel.disabled = true;
+  });
+  const fb = document.getElementById('fb-match');
+  fb.classList.add('show');
+  if (c === 4) {
+    fb.classList.add('ok');
+    fb.textContent = '✓ Alle Begriffe richtig zugeordnet!';
+  } else {
+    fb.classList.add('bad');
+    fb.textContent = c + ' von 4 richtig. Die korrekten Antworten: Konjunkturzyklus=A, Schuldenbremse=B, Kurzarbeit=C, Kaufkraft=D.';
+  }
+  total += 4;
+  score += c;
+  answered['match'] = true;
+  updateScore();
+}
+
+// RESET
+function resetAll() {
+  location.reload();
+}
+
+// Update drag listeners after DOM loaded
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.drag-item').forEach(item => {
+    item.addEventListener('dragstart', e => {
+      draggedItem = item;
+      e.dataTransfer.setData('text/plain', item.dataset.cat);
+      setTimeout(() => item.classList.add('dragging'), 0);
+    });
+    item.addEventListener('dragend', () => item.classList.remove('dragging'));
+  });
+
+  document.querySelectorAll('.drop-zone').forEach(zone => {
+    zone.addEventListener('dragleave', () => zone.classList.remove('over'));
+  });
+});
+</script>
+</body>
+</html>

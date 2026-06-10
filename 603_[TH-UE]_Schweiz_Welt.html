@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schweiz und Welt</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+
+  :root {
+    --red: #c0392b;
+    --red-light: #e74c3c;
+    --cream: #faf7f2;
+    --dark: #1a1a1a;
+    --mid: #3d3d3d;
+    --muted: #888;
+    --border: #d9d0c5;
+    --accent: #2c6e49;
+    --accent2: #1a4d7a;
+    --highlight: #fff3cd;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--dark);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--dark);
+    color: white;
+    padding: 2.5rem 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: var(--red);
+  }
+  .header-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  header h1 span { color: var(--red-light); }
+  .header-sub {
+    color: #aaa;
+    font-size: 13px;
+    font-style: italic;
+  }
+
+  /* NAVIGATION */
+  nav {
+    background: white;
+    border-bottom: 2px solid var(--border);
+    padding: 0.8rem 3rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--mid);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 3px;
+    transition: all 0.2s;
+  }
+  nav a:hover { background: var(--dark); color: white; }
+
+  /* MAIN LAYOUT */
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+  }
+
+  /* CHAPTER BLOCK */
+  .chapter {
+    margin-bottom: 3.5rem;
+  }
+  .chapter-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    border-bottom: 2px solid var(--dark);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.8rem;
+  }
+  .chapter-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--red);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .chapter-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  /* SECTION */
+  .section {
+    margin-bottom: 2rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent2);
+    margin-bottom: 0.8rem;
+    padding-left: 0.8rem;
+    border-left: 3px solid var(--accent2);
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px; top: 6px; bottom: 6px;
+    width: 2px;
+    background: var(--border);
+  }
+  .tl-item {
+    position: relative;
+    margin-bottom: 0.9rem;
+    padding-left: 1rem;
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -1.55rem;
+    top: 7px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--red);
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--red);
+  }
+  .tl-year {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--red);
+    letter-spacing: 0.5px;
+    display: inline-block;
+    min-width: 45px;
+  }
+  .tl-text { display: inline; font-size: 14px; }
+
+  /* CARDS GRID */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.1rem;
+    border-top: 3px solid var(--accent2);
+  }
+  .card.green { border-top-color: var(--accent); }
+  .card.red { border-top-color: var(--red); }
+  .card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--dark);
+  }
+  .card p, .card ul { font-size: 13.5px; color: var(--mid); }
+  .card ul { padding-left: 1.2rem; }
+  .card ul li { margin-bottom: 0.2rem; }
+
+  /* TABLE */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 13.5px;
+  }
+  th {
+    background: var(--dark);
+    color: white;
+    padding: 0.5rem 0.8rem;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  td {
+    padding: 0.5rem 0.8rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f5f2ed; }
+  tr:hover td { background: var(--highlight); }
+
+  /* HIGHLIGHT BOX */
+  .box {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .box.green { border-left: 4px solid var(--accent); background: #f0faf4; }
+  .box.blue { border-left: 4px solid var(--accent2); background: #f0f6fa; }
+  .box.red { border-left: 4px solid var(--red); background: #fdf2f1; }
+  .box.yellow { border-left: 4px solid #d4a017; background: var(--highlight); }
+  .box h4 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+  .box p, .box ul { font-size: 13.5px; }
+  .box ul { padding-left: 1.3rem; }
+  .box ul li { margin-bottom: 0.25rem; }
+
+  /* DEFINITION LIST */
+  dl { margin-bottom: 1.2rem; }
+  dt {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--accent2);
+    letter-spacing: 0.3px;
+    margin-top: 0.6rem;
+  }
+  dd {
+    font-size: 13.5px;
+    margin-left: 1rem;
+    color: var(--mid);
+  }
+
+  /* PUSH/PULL */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 580px) {
+    .two-col { grid-template-columns: 1fr; }
+    .cards { grid-template-columns: 1fr; }
+    nav { padding: 0.6rem 1rem; }
+    main { padding: 1.2rem 1rem 3rem; }
+    header { padding: 1.5rem 1.5rem 1.2rem; }
+    header h1 { font-size: 1.6rem; }
+    .chapter-num { font-size: 2rem; }
+  }
+
+  /* EXERCISES */
+  .exercise-block {
+    background: var(--dark);
+    color: white;
+    border-radius: 5px;
+    padding: 1.5rem 1.8rem;
+    margin-top: 2rem;
+  }
+  .exercise-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--red-light);
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+  }
+  .exercise-block ol {
+    padding-left: 1.5rem;
+  }
+  .exercise-block li {
+    font-size: 13.5px;
+    margin-bottom: 0.7rem;
+    color: #ddd;
+    line-height: 1.5;
+  }
+  .exercise-block li::marker { color: var(--red-light); }
+
+  .answer-toggle {
+    background: none;
+    border: 1px solid #555;
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 0.4rem;
+    display: block;
+    transition: all 0.2s;
+  }
+  .answer-toggle:hover { background: #333; color: white; }
+  .answer {
+    display: none;
+    background: #2a2a2a;
+    border-left: 3px solid var(--accent);
+    padding: 0.6rem 0.9rem;
+    margin-top: 0.5rem;
+    border-radius: 0 3px 3px 0;
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.5;
+  }
+
+  /* MERKE BOX */
+  .merke {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    color: white;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .merke-icon { font-size: 1.6rem; flex-shrink: 0; }
+  .merke p { font-size: 13.5px; line-height: 1.6; color: #e0e0e0; }
+  .merke strong { color: #f9c74f; }
+
+  /* SEPARATOR */
+  .sep {
+    height: 1px;
+    background: linear-gradient(to right, var(--red), transparent);
+    margin: 2.5rem 0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-label">Kapitel 5</div>
+  <h1>Kapitel 5 · <span>Schweiz und Welt</span></h1>
+  <p class="header-sub">Schwerpunkte: 5.2 Schweiz im europäischen Umfeld &amp; 5.4 Migration</p>
+</header>
+
+<nav>
+  <a href="#efta">EFTA</a>
+  <a href="#bilaterale1">Bilaterale I</a>
+  <a href="#bilaterale2">Bilaterale II</a>
+  <a href="#bilaterale3">Bilaterale III</a>
+  <a href="#chronologie">Chronologie</a>
+  <a href="#migration">Migration</a>
+  <a href="#asyl">Asyl &amp; Einbürgerung</a>
+  <a href="#uebungen">Übungen</a>
+</nav>
+
+<main>
+
+  <!-- ======================== 5.2 ======================== -->
+  <div class="chapter" id="efta">
+    <div class="chapter-header">
+      <span class="chapter-num">5.2</span>
+      <span class="chapter-title">Schweiz im europäischen Umfeld</span>
+    </div>
+
+    <div class="section">
+      <div class="section-title" id="efta">EFTA – Europäische Freihandelsassoziation</div>
+      <div class="box blue">
+        <h4>Gründung &amp; Mitglieder</h4>
+        <p>1960 gegründet von der Schweiz, Grossbritannien, Österreich, Dänemark, Norwegen, Portugal und Schweden. Heute noch Mitglieder: <strong>Schweiz, Island, Liechtenstein, Norwegen</strong>.</p>
+      </div>
+      <div class="two-col">
+        <div class="box green">
+          <h4>Ziel der EFTA</h4>
+          <ul>
+            <li>Handel und Wohlstand unter Mitgliedsländern fördern</li>
+            <li>Handelsschranken (Zölle) schrittweise abbauen</li>
+            <li>Kein Eingriff in die politische Handlungsfreiheit</li>
+          </ul>
+        </div>
+        <div class="box red">
+          <h4>Unterschied zur EG</h4>
+          <ul>
+            <li>Landwirtschaft &amp; Fischerei ausgeschlossen</li>
+            <li>Keine politische Verbindlichkeit</li>
+            <li>Gegengewicht zu den politischen Zielen der EG</li>
+            <li>Verlor 1973 an Bedeutung (GB, DK, IRL traten zur EG über)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- BILATERALE I -->
+    <div class="section" id="bilaterale1">
+      <div class="section-title">Bilaterale Verträge I (1999/2000)</div>
+      <div class="box blue">
+        <h4>Ausgangslage</h4>
+        <p>Nach der <strong>Ablehnung des EWR-Beitritts</strong> (6. Dez. 1992: 50,3 % Nein) regelt die Schweiz ihre Beziehungen zur EU durch bilaterale Abkommen – zweiseitig zwischen Schweiz und EU. Die 7 Verträge wurden im Jahr 2000 mit <strong>Zweidrittelmehrheit</strong> vom Volk angenommen.</p>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Dossier</th>
+            <th>Inhalt</th>
+            <th>Wichtig für QV</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Personenfreizügigkeit</strong></td>
+            <td>Schweizer dürfen in der EU leben &amp; arbeiten und umgekehrt. Gegenseitige Anerkennung von Berufsdiplomen. Mindestlöhne gelten für alle (Schutz vor Lohndumping).</td>
+            <td>⭐ Kernstück</td>
+          </tr>
+          <tr>
+            <td><strong>Technische Handelshemmnisse</strong></td>
+            <td>Schweizer Produkte mit bestandener CH-Zulassung brauchen keine 2. Prüfung in der EU (und umgekehrt). Erleichtert den Marktzugang.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Öffentliches Beschaffungswesen</strong></td>
+            <td>Aufträge der öffentlichen Hand (Bund, Kantone, SBB, Post …) müssen ab bestimmtem Betrag EU-weit ausgeschrieben werden (Submissionsgesetz).</td>
+            <td>Vor- und Nachteile!</td>
+          </tr>
+          <tr>
+            <td><strong>Landverkehr</strong></td>
+            <td>EU gestattet Verlagerung des Alpentransits auf die Schiene. CH baut NEAT und erhöht LKW-Gewichtslimite 28 → 40 t. Einführung der LSVA.</td>
+            <td>NEAT / LSVA</td>
+          </tr>
+          <tr>
+            <td><strong>Luftverkehr</strong></td>
+            <td>Schweizer Fluggesellschaften erhalten Zugang zum EU-Binnenmarkt.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Landwirtschaft</strong></td>
+            <td>Abbau von Handelshemmnissen bei Agrarprodukten.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Forschung</strong></td>
+            <td>Beteiligung der Schweiz an EU-Forschungsprogrammen.</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="merke">
+        <div class="merke-icon">💡</div>
+        <p><strong>Merke:</strong> Die Schweiz verdient <strong>jeden dritten Franken</strong> im Austausch mit der EU. Pro Arbeitstag beträgt der wirtschaftliche Austausch <strong>1 Milliarde Franken</strong>. 430 000 Schweizerinnen und Schweizer leben in der EU, 1,4 Mio. EU-Bürger in der Schweiz.</p>
+      </div>
+    </div>
+
+    <!-- BILATERALE II -->
+    <div class="section" id="bilaterale2">
+      <div class="section-title">Bilaterale Verträge II (2004/2005)</div>
+      <div class="box blue">
+        <h4>Schwerpunkt</h4>
+        <p>Während Bilaterale I v. a. wirtschaftliche Aspekte regeln, liegt der Schwerpunkt der Bilateralen II auf <strong>politischen Fragen</strong>. 2004 abgeschlossen, 2005 vom Volk angenommen.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card green">
+          <h4>🛂 Schengen-Abkommen</h4>
+          <ul>
+            <li>Abschaffung der Grenzkontrollen zwischen beteiligten Staaten</li>
+            <li>Mobile Kontrollen im Landesinnern stattdessen</li>
+            <li>Verstärkte Überwachung der EU-Aussengrenze</li>
+            <li>Schengener Informationssystem (SIS) – europaweite Fahndung</li>
+            <li>Vereinfachte polizeiliche &amp; gerichtliche Zusammenarbeit</li>
+            <li>CH Mitglied seit Ende 2008</li>
+          </ul>
+        </div>
+        <div class="card blue">
+          <h4>📋 Dublin-Abkommen</h4>
+          <ul>
+            <li>Regelt Behandlung von Asylgesuchen</li>
+            <li>Abgelehntes Asylgesuch in einem Dublin-Staat gilt für alle</li>
+            <li>Fingerabdruckdatenbank <strong>EURODAC</strong> verhindert Mehrfachgesuche</li>
+          </ul>
+        </div>
+        <div class="card red">
+          <h4>🏦 Automatischer Informationsaustausch (AIA)</h4>
+          <ul>
+            <li>Steuerliche Transparenz gegenüber dem Ausland</li>
+            <li>CH &amp; EU erheben seit 2017 Kontodaten</li>
+            <li>Austausch seit 2018</li>
+            <li>Bekämpfung der Steuerhinterziehung</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHRONOLOGIE CH-EU -->
+    <div class="section" id="chronologie">
+      <div class="section-title">Chronologie: Schweiz &amp; Europa</div>
+      <div class="timeline">
+        <div class="tl-item"><span class="tl-year">1960</span><span class="tl-text">Gründung der EFTA (CH, GB, A, DK, N, P, S)</span></div>
+        <div class="tl-item"><span class="tl-year">1972</span><span class="tl-text">Freihandelsabkommen CH–EG (nur Industrieprodukte)</span></div>
+        <div class="tl-item"><span class="tl-year">1992</span><span class="tl-text">Ablehnung EWR-Beitritt: 50,3 % Nein, 18 Kantone Nein → Bundesrat «friert» EU-Beitrittsgesuch ein</span></div>
+        <div class="tl-item"><span class="tl-year">1999</span><span class="tl-text">Bilaterale I abgeschlossen</span></div>
+        <div class="tl-item"><span class="tl-year">2000</span><span class="tl-text">Volksabstimmung: Bilaterale I mit Zweidrittelmehrheit angenommen</span></div>
+        <div class="tl-item"><span class="tl-year">2001</span><span class="tl-text">Initiative «Ja zu Europa» mit 76,8 % abgelehnt</span></div>
+        <div class="tl-item"><span class="tl-year">2004</span><span class="tl-text">Bilaterale II abgeschlossen</span></div>
+        <div class="tl-item"><span class="tl-year">2005</span><span class="tl-text">Volksabstimmung: Bilaterale II (inkl. Schengen/Dublin) angenommen</span></div>
+        <div class="tl-item"><span class="tl-year">2008</span><span class="tl-text">CH tritt dem Schengenraum bei</span></div>
+        <div class="tl-item"><span class="tl-year">2014</span><span class="tl-text">Initiative «Masseneinwanderung» angenommen → Spannungen mit EU</span></div>
+        <div class="tl-item"><span class="tl-year">2021</span><span class="tl-text">Bundesrat bricht Rahmenabkommen-Verhandlungen ab</span></div>
+        <div class="tl-item"><span class="tl-year">2022</span><span class="tl-text">Sondierungsgespräche für neues Verhandlungspaket beginnen</span></div>
+        <div class="tl-item"><span class="tl-year">März 2024</span><span class="tl-text">Offizieller Verhandlungsstart Bilaterale III (CH &amp; EU)</span></div>
+        <div class="tl-item"><span class="tl-year">Dez. 2024</span><span class="tl-text">Materieller Abschluss der Verhandlungen über Bilaterale III</span></div>
+        <div class="tl-item"><span class="tl-year">Mai 2025</span><span class="tl-text">Formelle Paraphierung der Vertragstexte in Bern</span></div>
+        <div class="tl-item"><span class="tl-year">März 2026</span><span class="tl-text">Unterzeichnung durch Bundespräsident &amp; EU-Kommissionspräsidentin; Botschaft ans Parlament</span></div>
+      </div>
+    </div>
+
+    <!-- BILATERALE III -->
+    <div class="section" id="bilaterale3">
+      <div class="section-title">Bilaterale Verträge III (2024–2026) – Ausblick</div>
+
+      <div class="box blue">
+        <h4>Ausgangslage &amp; Ziel</h4>
+        <p>Nach dem Scheitern des Rahmenabkommens (2021) wurden ab 2022 Sondierungsgespräche aufgenommen. Ziel: Den bilateralen Weg <strong>stabilisieren und weiterentwickeln</strong> – ohne EU-Vollmitgliedschaft. Die Verhandlungen fanden in über <strong>200 Runden in 14 Themenbereichen</strong> statt. Am <strong>2. März 2026</strong> unterzeichneten Bundespräsident Guy Parmelin und EU-Kommissionspräsidentin Ursula von der Leyen die Abkommen. Das Paket geht nun ans Schweizer Parlament – danach voraussichtlich <strong>Volksabstimmung</strong>.</p>
+      </div>
+
+      <div class="section-title" style="margin-top:1.2rem;font-size:0.95rem;color:var(--accent)">a) Stabilisierung – Aktualisierung bestehender Abkommen</div>
+      <div class="cards">
+        <div class="card blue">
+          <h4>Personenfreizügigkeit (FZA)</h4>
+          <ul>
+            <li>Aktualisierung des bestehenden Abkommens</li>
+            <li>Teilweise Übernahme der EU-Unionsbürgerrichtlinie</li>
+            <li>Migration bleibt auf <strong>Erwerbstätigkeit ausgerichtet</strong></li>
+            <li>Neue <strong>Schutzklausel</strong> bei schwerwiegenden wirtschaftl./sozialen Problemen</li>
+            <li>Lohnschutz (flankierende Massnahmen) bleibt erhalten</li>
+          </ul>
+        </div>
+        <div class="card green">
+          <h4>Weitere aktualisierte Abkommen</h4>
+          <ul>
+            <li><strong>Landverkehr</strong> – Modernisierung</li>
+            <li><strong>Luftverkehr</strong> – Modernisierung</li>
+            <li><strong>Landwirtschaft</strong> – Modernisierung</li>
+            <li><strong>MRA</strong> (Anerkennung von Konformitätsbewertungen) – Update inkl. Marktüberwachung</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-top:0.5rem;font-size:0.95rem;color:var(--accent)">b) Weiterentwicklung – Neue Abkommen</div>
+      <div class="cards">
+        <div class="card red">
+          <h4>⚡ Strom</h4>
+          <p>Neues Abkommen: Schweiz erhält besseren Zugang zum europäischen Strommarkt und sichert so die <strong>Versorgungssicherheit</strong>.</p>
+        </div>
+        <div class="card blue">
+          <h4>🍎 Lebensmittelsicherheit</h4>
+          <p>Erweiterung des Landwirtschaftsabkommens um ein <strong>Protokoll zur Lebensmittelsicherheit</strong>.</p>
+        </div>
+        <div class="card green">
+          <h4>🏥 Gesundheit</h4>
+          <p>Neue Kooperation im Gesundheitsbereich, z.B. bei Pandemievorsorge und grenzüberschreitender Zusammenarbeit.</p>
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-top:0.5rem;font-size:0.95rem;color:var(--accent)">c) Kooperationen</div>
+      <div class="cards">
+        <div class="card blue">
+          <h4>🔬 Horizon Europe</h4>
+          <p>Volle Assoziierung am EU-Forschungsrahmenprogramm. Seit 2021 war die CH ausgeschlossen. Stärkt den <strong>Innovationsstandort Schweiz</strong>.</p>
+        </div>
+        <div class="card green">
+          <h4>🎓 Bildung &amp; Erasmus+</h4>
+          <p>Wiederherstellung der Beteiligung an europäischen Bildungsprogrammen wie <strong>Erasmus+</strong>.</p>
+        </div>
+        <div class="card red">
+          <h4>💰 Kohäsionsbeitrag</h4>
+          <p>Die Schweiz leistet ab 2030 einen neuen <strong>finanziellen Beitrag</strong> an ärmere EU-Mitgliedstaaten (Kohäsionsbeitrag). Einmalige Übergangszahlung für 2024–2030.</p>
+        </div>
+      </div>
+
+      <div class="merke">
+        <div class="merke-icon">⚖️</div>
+        <p><strong>Institutionelle Neuerung:</strong> Im Gegensatz zu Bilaterale I &amp; II enthalten die Bilateralen III <strong>institutionelle Elemente</strong>: Die Schweiz übernimmt schrittweise relevante EU-Rechtsanpassungen in den betroffenen Bereichen. Der Europäische Gerichtshof (EuGH) ist letzte Instanz bei Streitigkeiten. Dies war lange der <strong>Hauptstreitpunkt</strong> mit der EU.</p>
+      </div>
+
+      <div class="two-col">
+        <div class="box green">
+          <h4>✅ Argumente dafür</h4>
+          <ul>
+            <li>Sicherung des Marktzugangs für die Exportwirtschaft</li>
+            <li>Verlässliche Rahmenbedingungen für Unternehmen</li>
+            <li>Rückkehr zu Horizon Europe &amp; Erasmus+</li>
+            <li>Bessere Versorgungssicherheit Strom</li>
+            <li>Lohnschutz bleibt erhalten</li>
+          </ul>
+        </div>
+        <div class="box red">
+          <h4>⚠ Kritikpunkte / offene Fragen</h4>
+          <ul>
+            <li>Übernahme von EU-Recht (Souveränitätsfrage)</li>
+            <li>Rolle des EuGH als Schiedsrichter</li>
+            <li>Kostenpflichtiger Kohäsionsbeitrag</li>
+            <li>Auswirkungen auf Lohnschutz langfristig</li>
+            <li>Muss noch vom Volk angenommen werden (Volksabstimmung)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="box yellow">
+      <h4>⚠ Prüfungsrelevante Begriffe</h4>
+      <dl>
+        <dt>Bilateral</dt>
+        <dd>Zweiseitig – auf der einen Seite die EU, auf der anderen die Schweiz</dd>
+        <dt>EWR</dt>
+        <dd>Europäischer Wirtschaftsraum = EU-Binnenmarkt (von CH 1992 abgelehnt)</dd>
+        <dt>NEAT</dt>
+        <dd>Neue Eisenbahn-Alpentransversale (Gotthard- und Lötschberg-Basistunnel)</dd>
+        <dt>LSVA</dt>
+        <dd>Lastenabhängige Schwerverkehrsabgabe – Transitabgabe für LKW durch die Schweiz</dd>
+        <dt>Personenfreizügigkeit</dt>
+        <dd>Recht von CH-Bürgern und EU-Bürgern, im jeweils anderen Gebiet zu leben &amp; zu arbeiten</dd>
+        <dt>Schengenraum</dt>
+        <dd>Raum ohne Grenzkontrollen – CH ist seit 2008 dabei</dd>
+        <dt>EURODAC</dt>
+        <dd>Europäische Fingerabdruckdatenbank für Asylsuchende</dd>
+        <dt>AIA</dt>
+        <dd>Automatischer Informationsaustausch – Bankdaten werden mit EU-Staaten geteilt (seit 2018)</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <!-- ======================== 5.4 ======================== -->
+  <div class="chapter" id="migration">
+    <div class="chapter-header">
+      <span class="chapter-num">5.4</span>
+      <span class="chapter-title">Wohlstand, Armut &amp; Migration</span>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Push- und Pull-Faktoren der Migration</div>
+      <div class="two-col">
+        <div class="box red">
+          <h4>🚫 Push-Faktoren (Schubfaktoren)</h4>
+          <p style="font-size:12px;color:var(--muted);margin-bottom:0.4rem">Menschen werden aus ihrer Heimat «weggedrückt»</p>
+          <ul>
+            <li>Krieg und Verfolgung</li>
+            <li>Verfolgung wegen Religion, politischer Überzeugung, Rassismus</li>
+            <li>Umweltkatastrophen (Überschwemmungen, Hungersnöte)</li>
+            <li>Überbevölkerung, Armut, Arbeitslosigkeit</li>
+            <li>Fehlende Zukunftsperspektiven</li>
+          </ul>
+        </div>
+        <div class="box green">
+          <h4>✅ Pull-Faktoren (Sogfaktoren)</h4>
+          <p style="font-size:12px;color:var(--muted);margin-bottom:0.4rem">Menschen werden von einem anderen Gebiet «angezogen»</p>
+          <ul>
+            <li>Gute Verdienstmöglichkeiten &amp; hoher Lebensstandard</li>
+            <li>Sicherheit vor Verfolgung</li>
+            <li>Gewährleistung der Menschenrechte</li>
+            <li>Religionsfreiheit &amp; Toleranz</li>
+            <li>Gute Bildungsmöglichkeiten</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="merke">
+        <div class="merke-icon">💡</div>
+        <p><strong>Merke:</strong> Migranten bevorzugen Staaten, in denen sich bereits <strong>viele Landsleute</strong> aufhalten: <em>«Migration erzeugt weitere Migration.»</em> Weltweit halten sich <strong>über 281 Mio. Menschen</strong> fern ihrer Heimat auf; 26,4 Mio. gelten als Flüchtlinge.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Schweiz als Einwanderungsland</div>
+      <div class="cards">
+        <div class="card blue">
+          <h4>Migrationshintergrund CH</h4>
+          <p>2022: <strong>40 %</strong> der Wohnbevölkerung ab 15 J. haben einen Migrationshintergrund. Ein Viertel der Einwohner ist im Ausland geboren.</p>
+        </div>
+        <div class="card green">
+          <h4>Haupteinwanderungsgrund 2023</h4>
+          <ul>
+            <li><strong>53,9 %</strong> Erwerbstätigkeit</li>
+            <li><strong>25,5 %</strong> Familiennachzug</li>
+            <li><strong>10,4 %</strong> Aus- &amp; Weiterbildung</li>
+            <li>4,9 % Asylbereich</li>
+          </ul>
+        </div>
+        <div class="card red">
+          <h4>Ausländeranteil in der CH</h4>
+          <p>CH gehört zu den Staaten mit dem <strong>höchsten Ausländeranteil</strong> Europas. Gründe: stetige Zuwanderung + höhere Einbürgerungshürden als in anderen Staaten.</p>
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-top:1.5rem">Duales Zulassungssystem</div>
+      <div class="two-col">
+        <div class="box green">
+          <h4>EU/EFTA-Bürger</h4>
+          <p>Können vom <strong>Personenfreizügigkeitsabkommen</strong> profitieren. Sie sind Schweizer Arbeitnehmern gleichgestellt.</p>
+        </div>
+        <div class="box blue">
+          <h4>Drittstaaten-Angehörige</h4>
+          <p>Nur in beschränktem Mass: Führungskräfte, Spezialisten und qualifizierte Arbeitskräfte werden zugelassen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="asyl">
+      <div class="section-title">Aufenthaltsbewilligungen</div>
+      <table>
+        <thead>
+          <tr><th>Ausweis</th><th>Bezeichnung</th><th>Dauer / Bedingung</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>B</strong></td><td>Aufenthaltsbewilligung</td><td>5 Jahre; Arbeitsvertrag ≥ 1 Jahr oder unbefristet</td></tr>
+          <tr><td><strong>C</strong></td><td>Niederlassungsbewilligung</td><td>Nach 5–10 Jahren regelmässigem Aufenthalt; unbeschränkt</td></tr>
+          <tr><td><strong>L</strong></td><td>Kurzaufenthaltsbewilligung</td><td>Arbeitsvertrag &lt; 1 Jahr; verlängerbar</td></tr>
+          <tr><td><strong>N</strong></td><td>Asylsuchende</td><td>Während laufendem Asylverfahren</td></tr>
+          <tr><td><strong>F</strong></td><td>Vorläufig Aufgenommene</td><td>Abgelehntes Asylgesuch, aber Rückkehr unmöglich/unzumutbar</td></tr>
+          <tr><td><strong>S</strong></td><td>Schutzstatus</td><td>Für «Schutzbedürftige» nach Bundesratsbeschluss; ohne Asylverfahren</td></tr>
+          <tr><td><strong>G</strong></td><td>Grenzgängerbewilligung</td><td>Wohnt im Ausland, arbeitet in der Schweiz</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Asyl in der Schweiz</div>
+      <div class="box blue">
+        <h4>Definition Flüchtling (Asylgrund CH)</h4>
+        <p>Personen, die in ihrem Heimatstaat wegen <strong>Religion, Nationalität, sozialer Gruppe, politischer Anschauung oder Rassismus</strong> ernsthaften Nachteilen ausgesetzt sind (Freiheit oder Leben gefährdet).<br>
+        <strong>Krieg und Hunger allein berechtigen in der Schweiz nicht zu dauerhaftem Aufenthalt.</strong></p>
+      </div>
+      <div class="two-col">
+        <div class="box green">
+          <h4>Vorläufige Aufnahme (F)</h4>
+          <p>Gilt wenn Rückkehr:</p>
+          <ul>
+            <li><strong>unzulässig</strong> (konkrete Gefährdung)</li>
+            <li><strong>unzumutbar</strong> (z.B. Krieg, persönliche Notlage)</li>
+            <li><strong>unmöglich</strong> (Heimatland verweigert Aufnahme)</li>
+          </ul>
+        </div>
+        <div class="box blue">
+          <h4>Genfer Flüchtlingskonvention (1951)</h4>
+          <p>Internationale Schutzvereinbarung: Einzelpersonen sollen besser vor <strong>politischer Unterdrückung, Verfolgung, Gewalt und Rassismus</strong> geschützt werden.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Einbürgerung</div>
+      <div class="box yellow">
+        <h4>Voraussetzungen (Bundesebene)</h4>
+        <ul>
+          <li><strong>10 Jahre</strong> Aufenthalt in der Schweiz</li>
+          <li>Kenntnisse einer <strong>Landessprache</strong></li>
+          <li>Beachtung der öffentlichen Sicherheit &amp; Ordnung</li>
+          <li>Respekt der Bundesverfassung</li>
+          <li>Teilnahme am Wirtschaftsleben oder Bildung</li>
+          <li>Vertrautheit mit schweizerischen Lebensverhältnissen</li>
+          <li>Keine Gefährdung der inneren oder äusseren Sicherheit</li>
+        </ul>
+        <p style="margin-top:0.6rem;font-size:13px">Vollzug durch die <strong>Gemeinden</strong> → danach automatisch Schweizer Bürger/in.</p>
+      </div>
+
+      <div class="box blue">
+        <h4>Assimilation vs. Integration</h4>
+        <dl>
+          <dt>Assimilation</dt>
+          <dd>Völlige Anpassung an die neue Kultur; Verlust der kulturellen Bindung an das Herkunftsland</dd>
+          <dt>Integration</dt>
+          <dd>Anpassung an die neue Gesellschaft, aber Bewahrung von Elementen der ursprünglichen Kultur</dd>
+        </dl>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ======================== ÜBUNGEN ======================== -->
+  <div class="sep"></div>
+
+  <div id="uebungen">
+    <div class="chapter-header">
+      <span class="chapter-num" style="color:var(--accent)">✏</span>
+      <span class="chapter-title">Übungsfragen</span>
+    </div>
+
+    <div class="exercise-block">
+      <h3>Bilaterale Verträge (Kap. 5.2)</h3>
+      <ol>
+        <li>
+          Was bedeutet «bilateral»? Welche zwei Parteien sind bei den bilateralen Verträgen der Schweiz beteiligt?
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer">Bilateral = zweiseitig. Auf der einen Seite die <strong>EU</strong>, auf der anderen die <strong>Schweiz</strong>. Die Schweiz regelt ihre Beziehungen zur EU ohne Vollmitgliedschaft durch thematisch einzelne Abkommen.</div>
+        </li>
+        <li>
+          Warum beschloss die Schweiz nach 1992 den bilateralen Weg?
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer">Das Schweizer Volk lehnte den EWR-Beitritt am 6. Dezember 1992 knapp ab (50,3 % Nein, 18 Kantone Nein). Daraufhin «fror» der Bundesrat das EU-Beitrittsgesuch ein und entschied sich für bilaterale Abkommen.</div>
+        </li>
+        <li>
+          Nennen Sie drei der sieben Dossiers der Bilateralen I und erklären Sie je kurz, was sie beinhalten.
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer"><strong>Personenfreizügigkeit:</strong> Schweizer/EU-Bürger dürfen gegenseitig im anderen Gebiet wohnen und arbeiten.<br><strong>Landverkehr:</strong> Verlagerung des Alpentransits auf die Schiene; NEAT-Bau; LSVA-Einführung; LKW-Limite 28→40t.<br><strong>Öffentliches Beschaffungswesen:</strong> Aufträge ab bestimmter Grösse müssen EU-weit ausgeschrieben werden.</div>
+        </li>
+        <li>
+          Was regelt das Schengener Abkommen und seit wann ist die Schweiz dabei?
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer">Schengen schafft <strong>Grenzkontrollen zwischen Mitgliedstaaten ab</strong>. Stattdessen: mobile Inlandskontrollen, verstärkte Aussengrenzkontrolle und das europaweite Fahndungssystem SIS. Die Schweiz ist seit <strong>Ende 2008</strong> Teil des Schengenraums.</div>
+        </li>
+        <li>
+          Was ist der Unterschied zwischen dem Schengener und dem Dubliner Abkommen?
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer"><strong>Schengen:</strong> Regelt die Reisefreiheit und Grenzkontrollen.<br><strong>Dublin:</strong> Regelt Asylgesuche – ein abgelehntes Gesuch in einem Dublin-Staat gilt auch für alle anderen. EURODAC verhindert Mehrfachgesuche.</div>
+        </li>
+        <li>
+          Welche Vor- und Nachteile hat das Öffentliche Beschaffungswesen für Schweizer Firmen?
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer"><strong>Nachteil:</strong> Schweizer Firmen können öffentliche Aufträge im eigenen Land an ausländische Konkurrenz verlieren.<br><strong>Vorteil:</strong> Schweizer Firmen haben umgekehrt die Chance, öffentliche Aufträge im gesamten EU-Binnenmarkt zu erhalten.</div>
+        </li>
+        <li>
+          Was sind die Bilateralen III und warum wurden sie notwendig?
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer">Nach dem Scheitern des Rahmenabkommens (2021) drohten die bestehenden bilateralen Abkommen zu «erodieren» – d.h. nicht mehr aktuell zu bleiben. Die Bilateralen III sollen den bilateralen Weg <strong>stabilisieren und weiterentwickeln</strong>. Verhandlungen: März–Dezember 2024; Unterzeichnung: 2. März 2026; danach Volksabstimmung.</div>
+        </li>
+        <li>
+          Nennen Sie drei neue Elemente der Bilateralen III, die es in Bilaterale I oder II noch nicht gab.
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer">Neues Abkommen zum <strong>Strom</strong> (Versorgungssicherheit), Assoziierung an <strong>Horizon Europe</strong> (Forschung), Beteiligung an <strong>Erasmus+</strong> (Bildung), Kooperation im <strong>Gesundheitsbereich</strong>, neuer <strong>Kohäsionsbeitrag</strong> ab 2030. Zudem erstmals <strong>institutionelle Elemente</strong> (Übernahme von EU-Recht / EuGH als Schiedsrichter).</div>
+        </li>
+        <li>
+          Was ist der Hauptstreitpunkt bei den Bilateralen III und was ist die institutionelle Neuerung?
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer">Die Schweiz übernimmt in den geregelten Bereichen schrittweise relevante <strong>EU-Rechtsanpassungen</strong>. Bei Streitigkeiten ist letztlich der <strong>Europäische Gerichtshof (EuGH)</strong> zuständig – was Fragen der schweizerischen Souveränität aufwirft. Dies war der langjährige Hauptknackpunkt mit der EU.</div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="exercise-block" style="margin-top:1.5rem">
+      <h3>Migration (Kap. 5.4)</h3>
+      <ol>
+        <li>
+          Was ist der Unterschied zwischen Push- und Pull-Faktoren? Nennen Sie je zwei Beispiele.
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer"><strong>Push-Faktoren</strong> (Schubfaktoren) drücken Menschen aus ihrer Heimat weg, z.B. Krieg, Verfolgung, Armut.<br><strong>Pull-Faktoren</strong> (Sogfaktoren) ziehen Menschen in ein anderes Land, z.B. hoher Lebensstandard, Sicherheit, gute Bildung.</div>
+        </li>
+        <li>
+          Was bedeutet «Migration erzeugt weitere Migration»?
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer">Migranten wandern bevorzugt in Länder, wo bereits viele Landsleute leben. Dort finden sie soziale Netzwerke, Informationen und Unterstützung – was wiederum neue Zuwanderer aus denselben Herkunftsländern anzieht.</div>
+        </li>
+        <li>
+          Was ist der Unterschied zwischen einem Asylsuchenden und einem Flüchtling?
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer"><strong>Asylsuchende</strong> haben einen Antrag gestellt, über den noch entschieden wird.<br><strong>Flüchtlinge</strong> sind Personen, deren Verfolgung (wegen Religion, Nationalität, politischer Überzeugung, sozialer Gruppe oder Rassismus) anerkannt wird. Nur dieser Status berechtigt in der Schweiz zu Asyl.</div>
+        </li>
+        <li>
+          Wann erhält jemand in der Schweiz eine vorläufige Aufnahme (Ausweis F)?
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer">Wenn das Asylgesuch abgelehnt wurde, aber die Rückkehr: (1) <strong>unzulässig</strong> ist (konkrete Gefährdung), (2) <strong>unzumutbar</strong> ist (z.B. Krieg, Notlage) oder (3) <strong>unmöglich</strong> ist (Heimatland nimmt die Person nicht zurück).</div>
+        </li>
+        <li>
+          Welche Voraussetzungen muss man erfüllen, um sich in der Schweiz einbürgern zu lassen?
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer">10 Jahre Aufenthalt in der CH, Kenntnisse einer Landessprache, Respekt der Bundesverfassung, Beachtung der öffentlichen Sicherheit und Ordnung, Vertrautheit mit schweizerischen Lebensverhältnissen sowie keine Gefährdung der inneren oder äusseren Sicherheit der Schweiz.</div>
+        </li>
+        <li>
+          Was ist der Unterschied zwischen Assimilation und Integration?
+          <button class="answer-toggle" onclick="toggle(this)">Antwort anzeigen</button>
+          <div class="answer"><strong>Assimilation:</strong> Vollständige Anpassung an die neue Kultur; Aufgabe der eigenen kulturellen Identität.<br><strong>Integration:</strong> Anpassung an die Gesellschaft des Ziellandes, aber Bewahrung von Elementen der ursprünglichen Kultur.</div>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+</main>
+
+<footer>Kapitel 5.2 &amp; 5.4 · Schweiz und Welt</footer>
+
+<script>
+  function toggle(btn) {
+    const ans = btn.nextElementSibling;
+    if (ans.style.display === 'block') {
+      ans.style.display = 'none';
+      btn.textContent = 'Antwort anzeigen';
+    } else {
+      ans.style.display = 'block';
+      btn.textContent = 'Antwort verbergen';
+    }
+  }
+</script>
+
+</body>
+</html>

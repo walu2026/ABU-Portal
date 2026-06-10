@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A38 – Klimawandel / Nachhaltigkeit / Energiestrategie – Selbstkontrolle</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,600;0,8..60,700;1,8..60,300&family=JetBrains+Mono:wght@400;600&display=swap');
+  :root{
+    --bg:#f3f2f6;--paper:#fafaf9;--ink:#1a1a1e;--ink-light:#54546a;
+    --rule:#c8c8d8;--accent:#5a3e8a;--accent-light:#f0ecfb;
+    --gold:#b8860b;--green:#1a5c2a;--green-light:#eaf5ec;
+    --red:#8b1a1a;--red-light:#faeaea;
+    --correct-border:#2a7a3a;--wrong-border:#c0392b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--bg);color:var(--ink);min-height:100vh;}
+  .top-bar{background:var(--accent);color:white;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.25);}
+  .top-bar h1{font-size:15px;font-weight:600;flex:1;min-width:180px;letter-spacing:.03em;}
+  .name-wrap{display:flex;align-items:center;gap:8px;}
+  .name-wrap label{font-size:13px;opacity:.8;font-family:'JetBrains Mono',monospace;}
+  .name-wrap input{padding:6px 10px;border-radius:5px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:white;font-size:13px;width:175px;font-family:'Source Serif 4',serif;}
+  .name-wrap input::placeholder{color:rgba(255,255,255,.45);font-style:italic;}
+  .name-wrap input:focus{outline:none;border-color:#c8aaff;background:rgba(255,255,255,.2);}
+  .btn{padding:7px 16px;border-radius:5px;border:none;font-size:13px;font-weight:600;cursor:pointer;font-family:'JetBrains Mono',monospace;transition:all .18s;white-space:nowrap;}
+  .btn-check{background:var(--gold);color:white;}.btn-check:hover{background:#9a6e00;transform:translateY(-1px);}
+  .btn-reset{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-pdf{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-download{background:#1a5c8a;color:white;font-weight:700;}.btn-download:hover{background:#144a70;}
+  .score-banner{display:none;background:var(--accent);color:white;text-align:center;padding:10px;font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:.05em;}
+  .score-banner.visible{display:block;}
+  .worksheet{max-width:860px;margin:28px auto;background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--accent);box-shadow:0 4px 24px rgba(0,0,0,.09);padding:40px 44px 48px;}
+  .task-id{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.08em;margin-bottom:4px;}
+  .task-title{font-size:17px;font-weight:600;color:var(--ink);margin-bottom:26px;border-bottom:2px solid var(--accent);padding-bottom:10px;}
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin:28px 0 14px;}
+  .free-text{width:100%;padding:8px 10px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:14px;color:var(--ink);background:var(--paper);resize:vertical;min-height:70px;}
+  .free-text:focus{outline:none;border-color:var(--accent);}
+  .solution-badge{display:none;margin-top:5px;font-size:11.5px;font-family:'JetBrains Mono',monospace;padding:3px 8px;border-radius:3px;font-weight:600;letter-spacing:.04em;word-break:break-word;}
+  .solution-badge.correct{display:block;background:var(--green-light);color:var(--green);border:1px solid var(--correct-border);}
+  .solution-badge.wrong{display:block;background:var(--red-light);color:var(--red);border:1px solid var(--wrong-border);}
+  .solution-badge.hint{display:block;background:var(--accent-light);color:var(--accent);border:1px solid #a88ad4;}
+  .match-table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;}
+  .match-table thead th{background:var(--accent);color:white;padding:8px 12px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.05em;}
+  .match-table tbody tr{border-bottom:1px solid var(--rule);}
+  .match-table tbody tr:nth-child(even) td{background:#f5f4f9;}
+  .match-table tbody td{padding:9px 12px;vertical-align:middle;}
+  .match-table select{width:100%;padding:4px 6px;border:1.5px solid var(--rule);border-radius:4px;background:var(--paper);font-family:'Source Serif 4',serif;font-size:13px;color:var(--ink);cursor:pointer;}
+  .correct-sel{border-color:var(--correct-border)!important;background:var(--green-light)!important;}
+  .wrong-sel{border-color:var(--wrong-border)!important;background:var(--red-light)!important;}
+  .radio-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:15px;line-height:1.5;}
+  .radio-row:last-child{border-bottom:none;}
+  .radio-row input{margin-top:3px;flex-shrink:0;}
+  .cell-ta{width:100%;padding:5px 8px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:13px;color:var(--ink);background:var(--paper);resize:vertical;height:55px;}
+  .cell-ta:focus{outline:none;border-color:var(--accent);}
+  .sort-item{display:flex;align-items:flex-start;gap:10px;padding:9px 12px;border:1.5px solid var(--rule);border-radius:5px;margin-bottom:6px;background:var(--paper);font-size:14px;}
+  .sort-item select{width:60px;padding:3px 4px;border:1.5px solid var(--rule);border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;}
+  .lueck{padding:3px 6px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:14px;background:var(--paper);color:var(--ink);cursor:pointer;}
+  .info-footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-light);font-family:'JetBrains Mono',monospace;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+  @media print{
+    body{background:white;padding:1.6cm 2cm!important;margin:0!important;}
+    .top-bar{display:none;}.score-banner{display:none!important;}
+    .worksheet{box-shadow:none;border:none;margin:0;padding:0;max-width:100%;}
+    select,.free-text,.cell-ta{border:none;border-bottom:1px solid #aaa;border-radius:0;background:transparent!important;}
+    .solution-badge{display:none!important;}
+    @page{margin:0;size:A4 portrait;}
+  }
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <h1>🌍 A38 – Klimawandel / Nachhaltigkeit / Energiestrategie <span style="font-size:11px;opacity:.6;font-weight:400;margin-left:8px;">[ Selbstkontrolle ]</span></h1>
+  <div class="name-wrap"><label>Name:</label><input type="text" id="studentName" placeholder="Vor- und Nachname"/></div>
+  <button class="btn btn-download" onclick="downloadFile()" id="btnDownload">💾 Speichern</button>
+  <button class="btn btn-check" onclick="checkAll()">✓ Überprüfen</button>
+  <button class="btn btn-pdf" onclick="printAsPDF()">🖨 Als PDF</button>
+  <button class="btn btn-reset" onclick="resetAll()">↺ Reset</button>
+</div>
+<div class="score-banner" id="scoreBanner"></div>
+<div class="score-banner" id="resetConfirmBanner" style="background:#7a1a1a;"></div>
+<div class="worksheet">
+  <div class="task-id">THEMA 6 · ÖKOLOGISCHE HERAUSFORDERUNG · KAPITEL 4</div>
+  <div class="task-title">A38 – Klimawandel / Nachhaltigkeit / Energiestrategie</div>
+
+  <div class="section-label">A35 – Globale Erwärmung: Folgen</div>
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div><label style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);">a) Folgen weltweit</label>
+    <textarea class="free-text" id="e35a" rows="4" placeholder="Anstieg des Meeresspiegels / Hurrikane / Klimazonen..."></textarea>
+    <div class="solution-badge" id="bE35a"></div></div>
+    <div><label style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);">b) Folgen für die Schweiz</label>
+    <textarea class="free-text" id="e35b" rows="4" placeholder="Gletscherschwund / Schneefallgrenze / Permafrost..."></textarea>
+    <div class="solution-badge" id="bE35b"></div></div>
+  </div>
+
+  <div class="section-label" style="margin-top:28px;">A36 – Umweltinstrumente: Beispiele nennen</div>
+  <table class="match-table">
+    <thead><tr><th style="width:30%;">Instrument</th><th>Praxisbeispiel</th></tr></thead>
+    <tbody>
+      <tr><td style="font-weight:600;">Verbote</td><td><textarea class="cell-ta" id="ui_v" rows="2" placeholder="Beispiel..."></textarea><div class="solution-badge" id="bUIv"></div></td></tr>
+      <tr><td style="font-weight:600;">Appelle</td><td><textarea class="cell-ta" id="ui_a" rows="2" placeholder="Beispiel..."></textarea><div class="solution-badge" id="bUIa"></div></td></tr>
+      <tr><td style="font-weight:600;">Nachsorge</td><td><textarea class="cell-ta" id="ui_n" rows="2" placeholder="Beispiel..."></textarea><div class="solution-badge" id="bUIn"></div></td></tr>
+      <tr><td style="font-weight:600;">Anreize</td><td><textarea class="cell-ta" id="ui_r" rows="2" placeholder="Beispiel..."></textarea><div class="solution-badge" id="bUIr"></div></td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-label" style="margin-top:28px;">A37 – Nachhaltigkeit: Lückentext</div>
+  <p style="font-size:14px;color:var(--ink-light);font-family:'JetBrains Mono',monospace;margin-bottom:12px;">Wortliste: Ressourcen (2x), ökologischen, Substanz, Bedürfnisse, Gesellschaft (2x), Verschwendung, Erträgen, Generationen, Nachhaltigkeit</p>
+  <div style="font-size:15px;line-height:2.3;background:var(--accent-light);padding:18px 22px;border-radius:6px;border:1px solid #c8aaee;">
+    Nachhaltige Wirtschaftsentwicklung befriedigt <select class="lueck" id="n1"><option value="">…</option><option value="Ressourcen">Ressourcen</option><option value="ökologischen">ökologischen</option><option value="Substanz">Substanz</option><option value="Bedürfnisse">Bedürfnisse</option><option value="Gesellschaft">Gesellschaft</option><option value="Verschwendung">Verschwendung</option><option value="Erträgen">Erträgen</option><option value="Generationen">Generationen</option><option value="Nachhaltigkeit">Nachhaltigkeit</option></select> der gegenwärtigen <select class="lueck" id="n2"><option value="">…</option><option value="Ressourcen">Ressourcen</option><option value="ökologischen">ökologischen</option><option value="Substanz">Substanz</option><option value="Bedürfnisse">Bedürfnisse</option><option value="Gesellschaft">Gesellschaft</option><option value="Verschwendung">Verschwendung</option><option value="Erträgen">Erträgen</option><option value="Generationen">Generationen</option><option value="Nachhaltigkeit">Nachhaltigkeit</option></select>, ohne damit die Bedürfnisse späterer <select class="lueck" id="n3"><option value="">…</option><option value="Ressourcen">Ressourcen</option><option value="ökologischen">ökologischen</option><option value="Substanz">Substanz</option><option value="Bedürfnisse">Bedürfnisse</option><option value="Gesellschaft">Gesellschaft</option><option value="Verschwendung">Verschwendung</option><option value="Erträgen">Erträgen</option><option value="Generationen">Generationen</option><option value="Nachhaltigkeit">Nachhaltigkeit</option></select> zu gefährden.
+    Nachhaltigkeit steht im Gegensatz zu <select class="lueck" id="n4"><option value="">…</option><option value="Ressourcen">Ressourcen</option><option value="ökologischen">ökologischen</option><option value="Substanz">Substanz</option><option value="Bedürfnisse">Bedürfnisse</option><option value="Gesellschaft">Gesellschaft</option><option value="Verschwendung">Verschwendung</option><option value="Erträgen">Erträgen</option><option value="Generationen">Generationen</option><option value="Nachhaltigkeit">Nachhaltigkeit</option></select> und Plünderung von <select class="lueck" id="n5"><option value="">…</option><option value="Ressourcen">Ressourcen</option><option value="ökologischen">ökologischen</option><option value="Substanz">Substanz</option><option value="Bedürfnisse">Bedürfnisse</option><option value="Gesellschaft">Gesellschaft</option><option value="Verschwendung">Verschwendung</option><option value="Erträgen">Erträgen</option><option value="Generationen">Generationen</option><option value="Nachhaltigkeit">Nachhaltigkeit</option></select>.
+    Nachhaltigkeit heisst von den <select class="lueck" id="n6"><option value="">…</option><option value="Ressourcen">Ressourcen</option><option value="ökologischen">ökologischen</option><option value="Substanz">Substanz</option><option value="Bedürfnisse">Bedürfnisse</option><option value="Gesellschaft">Gesellschaft</option><option value="Verschwendung">Verschwendung</option><option value="Erträgen">Erträgen</option><option value="Generationen">Generationen</option><option value="Nachhaltigkeit">Nachhaltigkeit</option></select> leben, nicht von der <select class="lueck" id="n7"><option value="">…</option><option value="Ressourcen">Ressourcen</option><option value="ökologischen">ökologischen</option><option value="Substanz">Substanz</option><option value="Bedürfnisse">Bedürfnisse</option><option value="Gesellschaft">Gesellschaft</option><option value="Verschwendung">Verschwendung</option><option value="Erträgen">Erträgen</option><option value="Generationen">Generationen</option><option value="Nachhaltigkeit">Nachhaltigkeit</option></select>.
+    Die Artenvielfalt der Tiere oder das Klima zu schützen, gehört zur <select class="lueck" id="n8"><option value="">…</option><option value="Ressourcen">Ressourcen</option><option value="ökologischen">ökologischen</option><option value="Substanz">Substanz</option><option value="Bedürfnisse">Bedürfnisse</option><option value="Gesellschaft">Gesellschaft</option><option value="Verschwendung">Verschwendung</option><option value="Erträgen">Erträgen</option><option value="Generationen">Generationen</option><option value="Nachhaltigkeit">Nachhaltigkeit</option></select> Nachhaltigkeit.
+    Mit sozialer <select class="lueck" id="n9"><option value="">…</option><option value="Ressourcen">Ressourcen</option><option value="ökologischen">ökologischen</option><option value="Substanz">Substanz</option><option value="Bedürfnisse">Bedürfnisse</option><option value="Gesellschaft">Gesellschaft</option><option value="Verschwendung">Verschwendung</option><option value="Erträgen">Erträgen</option><option value="Generationen">Generationen</option><option value="Nachhaltigkeit">Nachhaltigkeit</option></select> meint man zum Beispiel eine lebenswerte <select class="lueck" id="n10"><option value="">…</option><option value="Ressourcen">Ressourcen</option><option value="ökologischen">ökologischen</option><option value="Substanz">Substanz</option><option value="Bedürfnisse">Bedürfnisse</option><option value="Gesellschaft">Gesellschaft</option><option value="Verschwendung">Verschwendung</option><option value="Erträgen">Erträgen</option><option value="Generationen">Generationen</option><option value="Nachhaltigkeit">Nachhaltigkeit</option></select> für alle.
+    Verantwortungsvoller Umgang mit den natürlichen <select class="lueck" id="n11"><option value="">…</option><option value="Ressourcen">Ressourcen</option><option value="ökologischen">ökologischen</option><option value="Substanz">Substanz</option><option value="Bedürfnisse">Bedürfnisse</option><option value="Gesellschaft">Gesellschaft</option><option value="Verschwendung">Verschwendung</option><option value="Erträgen">Erträgen</option><option value="Generationen">Generationen</option><option value="Nachhaltigkeit">Nachhaltigkeit</option></select> bedeutet auch ökonomische Nachhaltigkeit.
+  </div>
+  <div id="bN37" style="margin-top:8px;"></div>
+
+  <div class="section-label" style="margin-top:28px;">A38 – 2000-Watt-Gesellschaft</div>
+  <textarea class="free-text" id="e38" rows="4" placeholder="Auswirkungen auf Schweizer Bevölkerung / Wege zum Energiesparen..."></textarea>
+  <div class="solution-badge" id="bE38"></div>
+
+  <div class="section-label" style="margin-top:28px;">A39 – Energiestrategie 2050: Lückentext</div>
+  <p style="font-size:14px;color:var(--ink-light);font-family:'JetBrains Mono',monospace;margin-bottom:12px;">Wortliste: Solarenergie, Betriebsdauer, Kernkraftwerke, Stimmvolk, Senkung, Förderung, Atomenergie, energieeffiziente, Geothermie, Energiestrategie</p>
+  <div style="font-size:15px;line-height:2.3;background:var(--accent-light);padding:18px 22px;border-radius:6px;border:1px solid #c8aaee;">
+    2017 hat das Schweizer <select class="lueck" id="e1"><option value="">…</option><option value="Solarenergie">Solarenergie</option><option value="Betriebsdauer">Betriebsdauer</option><option value="Kernkraftwerke">Kernkraftwerke</option><option value="Stimmvolk">Stimmvolk</option><option value="Senkung">Senkung</option><option value="Förderung">Förderung</option><option value="Atomenergie">Atomenergie</option><option value="energieeffiziente">energieeffiziente</option><option value="Geothermie">Geothermie</option><option value="Energiestrategie">Energiestrategie</option></select> ein Massnahmenpaket angenommen, die sogenannte <select class="lueck" id="e2"><option value="">…</option><option value="Solarenergie">Solarenergie</option><option value="Betriebsdauer">Betriebsdauer</option><option value="Kernkraftwerke">Kernkraftwerke</option><option value="Stimmvolk">Stimmvolk</option><option value="Senkung">Senkung</option><option value="Förderung">Förderung</option><option value="Atomenergie">Atomenergie</option><option value="energieeffiziente">energieeffiziente</option><option value="Geothermie">Geothermie</option><option value="Energiestrategie">Energiestrategie</option></select> 2050.
+    Es baut auf drei Bereichen auf. Erstens steigt die Schweiz aus der <select class="lueck" id="e3"><option value="">…</option><option value="Solarenergie">Solarenergie</option><option value="Betriebsdauer">Betriebsdauer</option><option value="Kernkraftwerke">Kernkraftwerke</option><option value="Stimmvolk">Stimmvolk</option><option value="Senkung">Senkung</option><option value="Förderung">Förderung</option><option value="Atomenergie">Atomenergie</option><option value="energieeffiziente">energieeffiziente</option><option value="Geothermie">Geothermie</option><option value="Energiestrategie">Energiestrategie</option></select> aus.
+    Sie wird nach Ablauf der sicherheitstechnischen <select class="lueck" id="e4"><option value="">…</option><option value="Solarenergie">Solarenergie</option><option value="Betriebsdauer">Betriebsdauer</option><option value="Kernkraftwerke">Kernkraftwerke</option><option value="Stimmvolk">Stimmvolk</option><option value="Senkung">Senkung</option><option value="Förderung">Förderung</option><option value="Atomenergie">Atomenergie</option><option value="energieeffiziente">energieeffiziente</option><option value="Geothermie">Geothermie</option><option value="Energiestrategie">Energiestrategie</option></select> der bestehenden AKWs keine neuen <select class="lueck" id="e5"><option value="">…</option><option value="Solarenergie">Solarenergie</option><option value="Betriebsdauer">Betriebsdauer</option><option value="Kernkraftwerke">Kernkraftwerke</option><option value="Stimmvolk">Stimmvolk</option><option value="Senkung">Senkung</option><option value="Förderung">Förderung</option><option value="Atomenergie">Atomenergie</option><option value="energieeffiziente">energieeffiziente</option><option value="Geothermie">Geothermie</option><option value="Energiestrategie">Energiestrategie</option></select> mehr bauen.
+    Eine weitere Massnahme ist die <select class="lueck" id="e6"><option value="">…</option><option value="Solarenergie">Solarenergie</option><option value="Betriebsdauer">Betriebsdauer</option><option value="Kernkraftwerke">Kernkraftwerke</option><option value="Stimmvolk">Stimmvolk</option><option value="Senkung">Senkung</option><option value="Förderung">Förderung</option><option value="Atomenergie">Atomenergie</option><option value="energieeffiziente">energieeffiziente</option><option value="Geothermie">Geothermie</option><option value="Energiestrategie">Energiestrategie</option></select> des Energieverbrauchs.
+    Der Staat unterstützt Hauseigentümer finanziell, die ihre Häuser so sanieren, dass sie weniger Energie verbrauchen.
+    Zudem sollen <select class="lueck" id="e7"><option value="">…</option><option value="Solarenergie">Solarenergie</option><option value="Betriebsdauer">Betriebsdauer</option><option value="Kernkraftwerke">Kernkraftwerke</option><option value="Stimmvolk">Stimmvolk</option><option value="Senkung">Senkung</option><option value="Förderung">Förderung</option><option value="Atomenergie">Atomenergie</option><option value="energieeffiziente">energieeffiziente</option><option value="Geothermie">Geothermie</option><option value="Energiestrategie">Energiestrategie</option></select> Elektrogeräte und Fahrzeuge gefördert werden.
+    Der dritte Bereich betrifft die <select class="lueck" id="e8"><option value="">…</option><option value="Solarenergie">Solarenergie</option><option value="Betriebsdauer">Betriebsdauer</option><option value="Kernkraftwerke">Kernkraftwerke</option><option value="Stimmvolk">Stimmvolk</option><option value="Senkung">Senkung</option><option value="Förderung">Förderung</option><option value="Atomenergie">Atomenergie</option><option value="energieeffiziente">energieeffiziente</option><option value="Geothermie">Geothermie</option><option value="Energiestrategie">Energiestrategie</option></select> erneuerbarer Energien wie <select class="lueck" id="e9"><option value="">…</option><option value="Solarenergie">Solarenergie</option><option value="Betriebsdauer">Betriebsdauer</option><option value="Kernkraftwerke">Kernkraftwerke</option><option value="Stimmvolk">Stimmvolk</option><option value="Senkung">Senkung</option><option value="Förderung">Förderung</option><option value="Atomenergie">Atomenergie</option><option value="energieeffiziente">energieeffiziente</option><option value="Geothermie">Geothermie</option><option value="Energiestrategie">Energiestrategie</option></select> oder <select class="lueck" id="e10"><option value="">…</option><option value="Solarenergie">Solarenergie</option><option value="Betriebsdauer">Betriebsdauer</option><option value="Kernkraftwerke">Kernkraftwerke</option><option value="Stimmvolk">Stimmvolk</option><option value="Senkung">Senkung</option><option value="Förderung">Förderung</option><option value="Atomenergie">Atomenergie</option><option value="energieeffiziente">energieeffiziente</option><option value="Geothermie">Geothermie</option><option value="Energiestrategie">Energiestrategie</option></select>.
+  </div>
+  <div id="bE39" style="margin-top:8px;"></div>
+
+  <div class="section-label" style="margin-top:28px;">A40 – Energiestrategie 2050: Drei Bereiche</div>
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div><label style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);">Energieverbrauch senken – Ihr Beitrag?</label>
+    <textarea class="free-text" id="e40a" rows="3" placeholder="..."></textarea><div class="solution-badge" id="bE40a"></div></div>
+    <div><label style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);">Erneuerbare Energien stärker fördern – Chancen und Risiken?</label>
+    <textarea class="free-text" id="e40b" rows="3" placeholder="..."></textarea><div class="solution-badge" id="bE40b"></div></div>
+    <div><label style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);">Keine neuen Kernkraftwerke – machbar?</label>
+    <textarea class="free-text" id="e40c" rows="3" placeholder="..."></textarea><div class="solution-badge" id="bE40c"></div></div>
+  </div>
+<div class="info-footer"><span>Thema 6 · Weltgeschehen · A38 Energie/Klima</span><span id="footerName"></span></div>
+</div>
+<script>
+const FILENAME='A38_2000_Watt_Gesellschaft';
+
+var A37C=["Bed\u00fcrfnisse", "Gesellschaft", "Generationen", "Verschwendung", "Ressourcen", "Ertr\u00e4gen", "Substanz", "\u00f6kologischen", "Nachhaltigkeit", "Gesellschaft", "Ressourcen"];var E39C=["Stimmvolk", "Energiestrategie", "Atomenergie", "Betriebsdauer", "Kernkraftwerke", "Senkung", "energieeffiziente", "F\u00f6rderung", "Solarenergie", "Geothermie"];
+var EL={"e35a": "Anstieg des Meeresspiegels / Fl\u00fcchtlingsstr\u00f6me / zunehmende Extremwetter (Hurrikane) / Verschiebung Klimazonen / Versteppung / Auswirkungen auf Landwirtschaft", "e35b": "Gletscherschwund (Verlust Trinkwasserspeicher) / Anstieg Schneefallgrenze (Wintertourismus) / Auftauen Permafrost / Felsst\u00fcrze / Hitzewellen", "ui_v": "Fahrverbote / Rauchverbot in Geb\u00e4uden / Verbot von FCKW / Plastikt\u00fctenverbot", "ui_a": "Energiespar-Kampagnen / \u00abIch bewege was\u00bb-Initiative / Umweltbildung / Aufkl\u00e4rungskampagnen", "ui_n": "Altlastensanierung / Renaturierung von Fl\u00fcssen / Waldaufforstung / Schadstoffsanierung", "ui_r": "Steuererleichterungen f\u00fcr E-Autos / CO\u2082-Abgabe / Subventionen f\u00fcr Solaranlagen / \u00d6kologische Steuerreform", "e38": "Wir m\u00fcssten Energiekonsum drastisch reduzieren: Stromsparen durch Verzicht, technologische Effizienzverbesserung, Einsparungen belohnen, Verschwendung bestrafen.", "e40a": "Individuelle L\u00f6sung: \u00d6ffentlicher Verkehr statt Auto, weniger Fliegen, energieeffiziente Ger\u00e4te, gute Isolation Wohnung...", "e40b": "Chancen: klimaneutral, unabh\u00e4ngig von Importen. Risiken: Abh\u00e4ngigkeit von Wetter, Netzstabilit\u00e4t, hohe Investitionskosten.", "e40c": "Individuelle Meinung \u2013 Argumente: technisch machbar mit Alternativen; aber Versorgungssicherheit als Herausforderung."};
+function checkAll(){
+  var c=0,t=0;
+  // A37
+  var a37ok=true;
+  A37C.forEach(function(ans,i){
+    var el=document.getElementById('n'+(i+1));
+    if(!el||el.value===''){a37ok=false;return;}
+    if(el.value===ans){el.style.borderColor='var(--correct-border)';el.style.background='var(--green-light)';}
+    else{el.style.borderColor='var(--wrong-border)';el.style.background='var(--red-light)';a37ok=false;}
+    t++;if(el.value===ans)c++;
+  });
+  var bN37=document.getElementById('bN37');
+  bN37.style.display='block';
+  bN37.className='solution-badge '+(a37ok&&A37C.every((a,i)=>{var e=document.getElementById('n'+(i+1));return e&&e.value===a;})?'correct':'wrong');
+  bN37.textContent=a37ok?'✔ Alle Lücken korrekt!':'✘ Musterlösung: '+A37C.join(' / ');
+  // A39
+  var a39ok=true;
+  E39C.forEach(function(ans,i){
+    var el=document.getElementById('e'+(i+1));
+    if(!el||el.value===''){a39ok=false;return;}
+    if(el.value===ans){el.style.borderColor='var(--correct-border)';el.style.background='var(--green-light)';}
+    else{el.style.borderColor='var(--wrong-border)';el.style.background='var(--red-light)';a39ok=false;}
+    t++;if(el.value===ans)c++;
+  });
+  var bE39=document.getElementById('bE39');
+  bE39.style.display='block';
+  bE39.className='solution-badge '+(a39ok?'correct':'wrong');
+  bE39.textContent=a39ok?'✔ Alle Lücken korrekt!':'✘ Musterlösung: '+E39C.join(' / ');
+  // open questions
+  Object.keys(EL).forEach(function(id){
+    var el=document.getElementById(id);var bid='b'+id.charAt(0).toUpperCase()+id.slice(1);
+    var bmap={'e35a':'bE35a','e35b':'bE35b','ui_v':'bUIv','ui_a':'bUIa','ui_n':'bUIn','ui_r':'bUIr','e38':'bE38','e40a':'bE40a','e40b':'bE40b','e40c':'bE40c'};
+    var b=document.getElementById(bmap[id]);
+    if(el&&el.value.trim()&&b){b.className='solution-badge hint';b.textContent='📋 '+EL[id];}
+    else if(b) b.className='solution-badge';
+  });
+  document.getElementById('scoreBanner').className='score-banner visible';
+  document.getElementById('scoreBanner').textContent=t?('✓ Lückentexte: '+c+' von '+t+' korrekt; offene Aufgaben: Musterlösung eingeblendet'):'⚠️ Bitte Antworten eintragen.';
+}
+function doReset(){
+  for(var i=1;i<=11;i++){var e=document.getElementById('n'+i);if(e){e.value='';e.style.borderColor='';e.style.background='';}}
+  for(var i=1;i<=10;i++){var e=document.getElementById('e'+i);if(e){e.value='';e.style.borderColor='';e.style.background='';}}
+  ['e35a','e35b','ui_v','ui_a','ui_n','ui_r','e38','e40a','e40b','e40c'].forEach(function(id){var e=document.getElementById(id);if(e)e.value='';});
+  ['bN37','bE39'].forEach(function(id){var b=document.getElementById(id);if(b){b.className='solution-badge';b.textContent='';b.style.display='none';} });
+  document.querySelectorAll('.solution-badge').forEach(b=>{b.className='solution-badge';b.textContent='';});
+  document.getElementById('scoreBanner').classList.remove('visible');
+  document.getElementById('resetConfirmBanner').classList.remove('visible');
+}
+function resetAll(){
+  var c=document.getElementById('resetConfirmBanner');
+  if(!c.classList.contains('visible')){
+    c.innerHTML='<span style="margin-right:12px;">Alle Eingaben wirklich löschen?</span><button onclick="doReset()" style="background:#c0392b;color:white;border:none;padding:5px 14px;border-radius:4px;cursor:pointer;font-weight:600;margin-right:8px;">Ja</button><button onclick="document.getElementById(\'resetConfirmBanner\').classList.remove(\'visible\')" style="background:rgba(255,255,255,.2);color:white;border:1px solid rgba(255,255,255,.4);padding:5px 12px;border-radius:4px;cursor:pointer;">Abbrechen</button>';
+    c.classList.add('visible');return;
+  }doReset();
+}
+
+function printAsPDF(){
+  var name=document.getElementById('studentName').value.trim();
+  document.title=name?(FILENAME+'_'+name.replace(/\s+/g,'_')):FILENAME;
+  setTimeout(function(){window.print();},100);
+}
+function downloadFile(){
+  var name=document.getElementById('studentName').value.trim();
+  if(!name){alert('Bitte zuerst Vor- und Nachname eingeben!');document.getElementById('studentName').focus();return;}
+  var html=document.documentElement.outerHTML;
+  var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;a.download=FILENAME+'_'+name.replace(/\s+/g,'_')+'.html';
+  document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(url);document.body.removeChild(a);},500);
+  var btn=document.getElementById('btnDownload');
+  btn.textContent='✔ Gespeichert!';btn.style.background='rgba(30,150,80,.8)';
+  setTimeout(function(){btn.textContent='💾 Speichern';btn.style.background='';},2500);
+}
+document.getElementById('studentName').addEventListener('input',function(){
+  document.getElementById('footerName').textContent=this.value.trim();
+});
+
+</script>
+</body>
+</html>

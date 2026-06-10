@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A7 – EAV: 15 Rechtsfälle lösen – Selbstkontrolle</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,600;0,8..60,700;1,8..60,300&family=JetBrains+Mono:wght@400;600&display=swap');
+  :root{
+    --bg:#f3f2f6;--paper:#fafaf9;--ink:#1a1a1e;--ink-light:#54546a;
+    --rule:#c8c8d8;--accent:#5a3e8a;--accent-light:#f0ecfb;
+    --gold:#b8860b;--green:#1a5c2a;--green-light:#eaf5ec;
+    --red:#8b1a1a;--red-light:#faeaea;
+    --correct-border:#2a7a3a;--wrong-border:#c0392b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--bg);color:var(--ink);min-height:100vh;}
+  .top-bar{background:var(--accent);color:white;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.25);}
+  .top-bar h1{font-size:15px;font-weight:600;flex:1;min-width:180px;}
+  .name-wrap{display:flex;align-items:center;gap:8px;}
+  .name-wrap label{font-size:13px;opacity:.8;font-family:'JetBrains Mono',monospace;}
+  .name-wrap input{padding:6px 10px;border-radius:5px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:white;font-size:13px;width:175px;}
+  .name-wrap input::placeholder{color:rgba(255,255,255,.45);font-style:italic;}
+  .name-wrap input:focus{outline:none;border-color:#c8aaff;}
+  .btn{padding:7px 16px;border-radius:5px;border:none;font-size:13px;font-weight:600;cursor:pointer;font-family:'JetBrains Mono',monospace;transition:all .18s;white-space:nowrap;}
+  .btn-check{background:var(--gold);color:white;}
+  .btn-reset{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-pdf{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.3);}
+  .btn-download{background:#1a5c8a;color:white;font-weight:700;}
+  .score-banner{display:none;background:var(--accent);color:white;text-align:center;padding:10px;font-family:'JetBrains Mono',monospace;font-size:14px;}
+  .score-banner.visible{display:block;}
+  .worksheet{max-width:860px;margin:28px auto;background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--accent);box-shadow:0 4px 24px rgba(0,0,0,.09);padding:40px 44px 48px;}
+  .task-id{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.08em;margin-bottom:4px;}
+  .task-title{font-size:17px;font-weight:600;margin-bottom:26px;border-bottom:2px solid var(--accent);padding-bottom:10px;}
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin:28px 0 14px;}
+  .free-text{width:100%;padding:8px 10px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:14px;color:var(--ink);background:var(--paper);resize:vertical;min-height:70px;}
+  .free-text:focus{outline:none;border-color:var(--accent);}
+  .solution-badge{display:none;margin-top:5px;font-size:11.5px;font-family:'JetBrains Mono',monospace;padding:3px 8px;border-radius:3px;font-weight:600;word-break:break-word;}
+  .solution-badge.correct{display:block;background:var(--green-light);color:var(--green);border:1px solid var(--correct-border);}
+  .solution-badge.wrong{display:block;background:var(--red-light);color:var(--red);border:1px solid var(--wrong-border);}
+  .solution-badge.hint{display:block;background:var(--accent-light);color:var(--accent);border:1px solid #a88ad4;}
+  .match-table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;}
+  .match-table thead th{background:var(--accent);color:white;padding:8px 12px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;}
+  .match-table tbody tr{border-bottom:1px solid var(--rule);}
+  .match-table tbody tr:nth-child(even) td{background:#f5f4f9;}
+  .match-table tbody td{padding:9px 12px;vertical-align:middle;}
+  .cell-ta{width:100%;padding:5px 8px;border:1.5px solid var(--rule);border-radius:4px;font-family:'Source Serif 4',serif;font-size:13px;color:var(--ink);background:var(--paper);resize:vertical;height:55px;}
+  .info-footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-light);font-family:'JetBrains Mono',monospace;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+  @media print{
+    body{background:white;padding:1.6cm 2cm!important;}
+    .top-bar{display:none;}.score-banner{display:none!important;}
+    .worksheet{box-shadow:none;border:none;margin:0;padding:0;max-width:100%;}
+    .solution-badge{display:none!important;}
+    @page{margin:0;size:A4 portrait;}
+  }
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <h1>⚖️ A7 – EAV: 15 Rechtsfälle lösen</h1>
+  <div class="name-wrap"><label>Name:</label><input type="text" id="studentName" placeholder="Vor- und Nachname"/></div>
+  <button class="btn btn-download" onclick="downloadFile()" id="btnDownload">💾 Speichern</button>
+  <button class="btn btn-check" onclick="checkAll()">✓ Überprüfen</button>
+  <button class="btn btn-pdf" onclick="printAsPDF()">🖨 Als PDF</button>
+  <button class="btn btn-reset" onclick="resetAll()">↺ Reset</button>
+</div>
+<div class="score-banner" id="scoreBanner"></div>
+<div class="score-banner" id="resetConfirmBanner" style="background:#7a1a1a;"></div>
+<div class="worksheet">
+  <div class="task-id">THEMA 7 · ARBEITSRECHT · KAPITEL 7</div>
+  <div class="task-title">A7 – EAV: 15 Rechtsfälle lösen</div>
+
+  <p style="font-size:15px;line-height:1.7;margin-bottom:16px;">Lösen Sie die Rechtsfälle: Um was geht es? Wonach suche ich im Gesetz? Was sagt das Gesetz dazu?</p>
+  <table class="match-table">
+    <thead><tr><th style="width:3%;"></th><th style="width:35%;">Fall</th><th style="width:20%;">Gesetz/Artikel</th><th>Beurteilung</th></tr></thead>
+    <tbody><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">1.</td>
+  <td style="font-size:14px;">Stellenantritt – Jolanda Bütsch erhält mündlich eine Stelle, findet aber ein besseres Angebot. Ist der Vertrag gültig?</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art0" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu0" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF0"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">2.</td>
+  <td style="font-size:14px;">Arbeitsvertrag Daniela – Coiffeuse, Vertrag mit 48h/Woche, 8 Monate Probezeit, 2 Wochen Ferien, 3 Wochen Kündigungsfrist. Was ist gesetzeswidrig?</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art1" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu1" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF1"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">3.</td>
+  <td style="font-size:14px;">Formvorschrift – Hans Mettler arbeitet 2 Wochen ohne schriftlichen Vertrag. Arbeitgeber verweigert Entschädigung.</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art2" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu2" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF2"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">4.</td>
+  <td style="font-size:14px;">Teilzeitarbeit – Kollegin meint, EAV gelte nur für 100%-Jobs.</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art3" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu3" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF3"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">5.</td>
+  <td style="font-size:14px;">Arbeitsleistung – Andrea Leupi lässt einen Kollegen ihre Arbeit als Hauswartin erledigen.</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art4" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu4" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF4"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">6.</td>
+  <td style="font-size:14px;">Haftung – 17-jähriger Urs Bamert richtet als Handlanger einen Schaden an.</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art5" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu5" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF5"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">7.</td>
+  <td style="font-size:14px;">Überstunden – Petra will zum Fussballtraining, Chef verlangt Überstunden.</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art6" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu6" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF6"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">8.</td>
+  <td style="font-size:14px;">Überstunden Zahlung – Petra will mehr Lohn für Überstunden.</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art7" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu7" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF7"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">9.</td>
+  <td style="font-size:14px;">Berufsgeheimnis – Salome teilt Forschungsergebnisse mit neuem Arbeitgeber.</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art8" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu8" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF8"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">10.</td>
+  <td style="font-size:14px;">Schwarzarbeit – Adrian Regens macht auf eigene Rechnung Gartenarbeiten in der Freizeit.</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art9" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu9" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF9"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">11.</td>
+  <td style="font-size:14px;">Ferien – Arbeitnehmer bestimmt den Ferientermin selber.</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art10" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu10" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF10"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">12.</td>
+  <td style="font-size:14px;">Ferien/Erkrankung – Marco Rossi ist in der 3. Ferienwoche krank.</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art11" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu11" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF11"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">13.</td>
+  <td style="font-size:14px;">Krankheit – Ariane Müller war 3 Monate krank, 4 Wochen Ferien um 2/12 gekürzt.</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art12" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu12" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF12"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">14.</td>
+  <td style="font-size:14px;">Arbeitszeugnis – Cyril verlangt nach 2,5 Jahren ein Zwischenzeugnis.</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art13" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu13" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF13"></div></td>
+</tr><tr>
+  <td style="font-size:13px;font-weight:600;color:var(--accent);width:5%;">15.</td>
+  <td style="font-size:14px;">Kündigung – Roman Kamber (5 Dienstjahre) kündigt Mitte April.</td>
+  <td><input class="cell-ta" style="height:36px;" id="rf_art14" placeholder="Artikel..."></td>
+  <td><textarea class="cell-ta" id="rf_beu14" rows="3" placeholder="Beurteilung..."></textarea>
+  <div class="solution-badge" id="bRF14"></div></td>
+</tr></tbody>
+  </table>
+<div class="info-footer"><span>THEMA 7 · ARBEITSRECHT · KAPITEL 7</span><span id="footerName"></span></div>
+</div>
+<script>
+const FILENAME='A7_EAV_Rechtsfaelle';
+
+var RFL=[["OR 320 Abs. 1 / OR 337d", "Ja, der EAV ist formfrei, also auch m\u00fcndlich g\u00fcltig. Jolanda muss die Stelle antreten. Tritt sie nicht an, kann der Arbeitgeber Entsch\u00e4digung (\u00bc Monatslohn) und weiteren Schadenersatz verlangen."], ["ArG 9 / OR 335b / OR 329a / OR 335c", "Alle 4 Punkte sind gesetzeswidrig: Arbeitszeit max. 45h (ArG 9), Probezeit max. 3 Monate (OR 335b), Ferien mind. 4 Wochen (OR 329a), K\u00fcndigungsfrist mind. 1 Monat im 1. Dienstjahr (OR 335c)."], ["OR 320 Abs. 2", "Ja, der Vertrag ist g\u00fcltig. Der EAV braucht keine bestimmte Form. Hans kann eine Entsch\u00e4digung erwarten."], ["OR 319 ff.", "Falsch. Der EAV gilt auch f\u00fcr Teilzeitarbeit. Es gibt keinen separaten Vertrag."], ["OR 321", "Nein. Die Arbeitnehmerin hat eine pers\u00f6nliche Arbeitspflicht. Sie kann die Arbeit nicht einfach delegieren."], ["OR 321e Abs. 1 & 2", "Vermutlich nicht. Da der Schaden nicht absichtlich verursacht wurde und er noch unerfahren ist, haftet er wohl nicht vollst\u00e4ndig."], ["OR 321c", "Nein, Petra kann sich nicht weigern. Sind \u00dcberstunden betrieblich notwendig und zumutbar, ist sie verpflichtet, sie zu leisten."], ["OR 321c Abs. 2 & 3", "Petra hat Recht. \u00dcberstunden sind grunds\u00e4tzlich mit Freizeit auszugleichen, sonst mit 25% Zuschlag auszubezahlen."], ["OR 321a Abs. 4", "Nein. Salome untersteht dem Berufsgeheimnis \u2013 auch nach Ende des Arbeitsverh\u00e4ltnisses darf sie Betriebsgeheimnisse nicht preisgeben."], ["OR 321a Abs. 3 / OR 340 Abs. 2", "Nein. Er verst\u00f6sst gegen die Treuepflicht, weil er seine Chefin konkurriert."], ["OR 329c Abs. 2", "Falsch. Der Arbeitgeber bestimmt den Ferientermin, muss aber wenn m\u00f6glich auf W\u00fcnsche R\u00fccksicht nehmen."], ["OR 329b Abs. 2", "Falsch. Er kann die Ferientage, an denen er krank war, nachbeziehen \u2013 wenn er ein Arztzeugnis vorweist."], ["OR 329b Abs. 1, 2 & 3", "Ja, die Arbeitgeberin hat korrekt gehandelt. Der erste Monat Krankheit pro Dienstjahr ist gesch\u00fctzt, danach 1/12 K\u00fcrzung pro weiteren vollen Krankheitsmonat."], ["OR 330a", "Nein, der Arbeitgeber ist im Unrecht. Der Arbeitnehmer kann jederzeit ein Zwischenzeugnis verlangen."], ["OR 335c", "K\u00fcndigungsfrist im 2.\u20139. Dienstjahr: 2 Monate. K\u00fcndigung gilt auf Ende eines Monats \u2192 K\u00fcndigungstermin: 30. Juni."]];
+function checkAll(){
+  var filled=0;
+  RFL.forEach(function(al,i){
+    var el=document.getElementById('rf_beu'+i);var b=document.getElementById('bRF'+i);
+    if(el&&el.value.trim()){filled++;b.className='solution-badge hint';b.textContent='📋 Art: '+al[0]+' – '+al[1];}
+    else b.className='solution-badge';
+  });
+  document.getElementById('scoreBanner').className='score-banner visible';
+  document.getElementById('scoreBanner').textContent=filled?'📋 Musterlösungen eingeblendet.':'⚠️ Bitte Antworten eintragen.';
+}
+function doReset(){
+  for(var i=0;i<15;i++){['rf_art','rf_beu'].forEach(function(p){var e=document.getElementById(p+i);if(e)e.value='';} );}
+  document.querySelectorAll('.solution-badge').forEach(b=>{b.className='solution-badge';b.textContent='';});
+  document.getElementById('scoreBanner').classList.remove('visible');
+  document.getElementById('resetConfirmBanner').classList.remove('visible');
+}
+function resetAll(){var c=document.getElementById('resetConfirmBanner');
+if(!c.classList.contains('visible')){
+c.innerHTML='<span style="margin-right:12px;">Alle Eingaben wirklich löschen?</span><button onclick="doReset()" style="background:#c0392b;color:white;border:none;padding:5px 14px;border-radius:4px;cursor:pointer;font-weight:600;margin-right:8px;">Ja</button><button onclick="document.getElementById(\'resetConfirmBanner\').classList.remove(\'visible\')" style="background:rgba(255,255,255,.2);color:white;border:1px solid rgba(255,255,255,.4);padding:5px 12px;border-radius:4px;cursor:pointer;">Abbrechen</button>';
+c.classList.add('visible');return;}doReset();}
+
+function printAsPDF(){
+  var name=document.getElementById('studentName').value.trim();
+  document.title=name?(FILENAME+'_'+name.replace(/\s+/g,'_')):FILENAME;
+  setTimeout(function(){window.print();},100);
+}
+function downloadFile(){
+  var name=document.getElementById('studentName').value.trim();
+  if(!name){alert('Bitte zuerst Vor- und Nachname eingeben!');document.getElementById('studentName').focus();return;}
+  var html=document.documentElement.outerHTML;
+  var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;a.download=FILENAME+'_'+name.replace(/\s+/g,'_')+'.html';
+  document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(url);document.body.removeChild(a);},500);
+  var btn=document.getElementById('btnDownload');
+  btn.textContent='✔ Gespeichert!';btn.style.background='rgba(30,150,80,.8)';
+  setTimeout(function(){btn.textContent='💾 Speichern';btn.style.background='';},2500);
+}
+document.getElementById('studentName').addEventListener('input',function(){
+  document.getElementById('footerName').textContent=this.value.trim();
+});
+
+</script>
+</body>
+</html>

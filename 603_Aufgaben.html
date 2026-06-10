@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>603 – Aufgaben wählen</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --accent:#27ae60; --g9:#111827; --g7:#374151; --g5:#6B7280; --g3:#D1D5DB; --g1:#F3F4F6; }
+  *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'DM Sans',sans-serif; background:#F0F2F5; color:var(--g7); min-height:100vh; }
+  .wrap { max-width:680px; margin:0 auto; padding:2rem 1.5rem 5rem; }
+  .back-btn { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; color:var(--g5); text-decoration:none; margin-bottom:1.75rem; transition:color .15s; }
+  .back-btn:hover { color:var(--g9); }
+  .d-header { border-radius:14px; overflow:hidden; margin-bottom:1.75rem; display:grid; grid-template-columns:5px 1fr; box-shadow:0 2px 12px rgba(0,0,0,0.07); background:white; }
+  .d-stripe { background:var(--accent); }
+  .d-head-body { padding:20px 22px; display:flex; align-items:flex-start; gap:14px; }
+  .d-big-num { font-family:'Barlow Condensed',sans-serif; font-size:60px; font-weight:800; line-height:1; opacity:.15; flex-shrink:0; min-width:56px; color:var(--accent); }
+  .d-label { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:3px; }
+  .d-title { font-family:'Barlow Condensed',sans-serif; font-size:26px; font-weight:800; text-transform:uppercase; color:var(--g9); line-height:1.1; margin-bottom:4px; }
+  .d-desc { font-size:12px; color:var(--g5); line-height:1.5; }
+  .no-ue-banner { display:flex; align-items:center; gap:12px; padding:12px 16px; background:#FFFBEB; border:1px solid #FDE68A; border-radius:10px; margin-bottom:1.5rem; font-size:12px; color:#92400E; line-height:1.5; }
+  .no-ue-banner span { font-size:22px; flex-shrink:0; }
+  .toggle-bar { display:flex; gap:6px; margin-bottom:1.25rem; }
+  .toggle-btn { display:flex; align-items:center; gap:6px; padding:7px 14px; border-radius:8px; border:1.5px solid var(--g3); background:white; font-size:12px; font-weight:600; color:var(--g5); cursor:pointer; transition:all .15s; }
+  .toggle-btn.active { background:var(--accent); border-color:var(--accent); color:white; }
+  .toggle-btn:hover:not(.active) { border-color:var(--accent); color:var(--accent); }
+  .section-label { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--g5); margin:0 0 8px 2px; }
+
+  /* Lernziel-Zeilen: nur Display, kein Hover-Effekt auf die Zeile */
+  .lz-list { display:flex; flex-direction:column; gap:7px; margin-bottom:1.75rem; }
+  .lz-row { display:grid; grid-template-columns:4px 48px 1fr 12px; align-items:stretch; background:white; border-radius:10px; border:1px solid var(--g3); overflow:hidden; }
+  .lz-inactive { opacity:.5; }
+  .lz-bar { background:var(--fc, var(--accent)); }
+  .lz-inactive .lz-bar { background:var(--g3); }
+  .lz-num { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px 0; border-right:1px solid var(--g3); background:#FAFAFA; gap:3px; }
+  .lz-num-digit { font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:800; line-height:1; color:var(--fc, var(--accent)); }
+  .lz-inactive .lz-num-digit { color:var(--g5); }
+  .lz-fach { font-size:8px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; color:var(--fc, var(--accent)); opacity:.75; }
+  .lz-body { padding:10px 13px; }
+  .lz-title { font-size:13px; font-weight:600; color:var(--g9); margin-bottom:3px; }
+  .lz-ziel { font-size:11px; color:var(--g5); line-height:1.45; margin-bottom:8px; }
+  .lz-pills { display:flex; flex-wrap:wrap; gap:5px; }
+  .lz-arrow { display:flex; align-items:center; font-size:10px; color:var(--g3); padding-right:4px; }
+
+  /* Pills: jede ein Link */
+  .a-pill { font-size:11px; font-weight:500; padding:4px 10px; border-radius:20px; background:var(--g1); color:var(--g5); border:1px solid var(--g3); white-space:nowrap; }
+  .a-pill-link { text-decoration:none; transition:all .15s; cursor:pointer; }
+  .a-pill-link:hover { background:var(--accent); color:white; border-color:var(--accent); transform:translateY(-1px); box-shadow:0 2px 6px rgba(0,0,0,.12); }
+  .a-pill-none { background:#FEF3C7; color:#92400E; border-color:#FDE68A; font-style:italic; }
+
+  /* Aufgaben-Nr-Liste */
+  .a-list { display:flex; flex-direction:column; gap:5px; margin-bottom:1.75rem; }
+  .a-row { display:grid; grid-template-columns:4px 52px 1fr 28px; align-items:stretch; background:white; border-radius:9px; border:1px solid var(--g3); overflow:hidden; text-decoration:none; color:inherit; transition:box-shadow .15s, transform .15s; }
+  .a-row:hover { transform:translateX(3px); box-shadow:0 2px 10px rgba(0,0,0,.07); border-color:#cbd5e1; }
+  .a-bar { background:var(--accent); }
+  .a-code { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:8px 4px; border-right:1px solid var(--g3); background:#FAFAFA; gap:2px; }
+  .a-code-id { font-family:'Barlow Condensed',sans-serif; font-size:16px; font-weight:800; line-height:1; color:var(--accent); }
+  .a-code-lz { font-size:8px; font-weight:600; color:var(--g5); opacity:.7; }
+  .a-body { padding:9px 13px; display:flex; flex-direction:column; justify-content:center; }
+  .a-title { font-size:13px; font-weight:600; color:var(--g9); margin-bottom:1px; }
+  .a-type { display:inline-flex; align-items:center; gap:3px; font-size:9px; font-weight:600; padding:1px 6px; border-radius:10px; margin-top:3px; width:fit-content; background:#EDE9FE; color:#5B21B6; }
+  .a-arrow { display:flex; align-items:center; justify-content:center; font-size:14px; color:var(--g3); transition:all .15s; }
+  .a-row:hover .a-arrow { color:var(--accent); transform:translateX(2px); }
+  .empty-hint { padding:20px; text-align:center; font-size:13px; color:var(--g5); background:white; border-radius:10px; border:1px dashed var(--g3); }
+
+  .ls-inactive-list { display:flex; flex-direction:column; gap:6px; margin-bottom:2rem; }
+  .ls-inactive { display:grid; grid-template-columns:4px 52px 1fr; align-items:stretch; background:white; border-radius:10px; border:1px solid var(--g3); overflow:hidden; opacity:.5; }
+  .ls-inactive-bar { background:var(--g3); }
+  .ls-inactive-code { display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:800; color:var(--g5); background:#FAFAFA; border-right:1px solid var(--g3); min-width:52px; }
+  .ls-inactive-body { padding:10px 14px; }
+  .ls-inactive-title { font-size:13px; font-weight:600; color:var(--g9); }
+  .ls-inactive-hint { font-size:11px; color:var(--g5); margin-top:1px; }
+  .hidden { display:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back-btn" href="javascript:history.back()">← Zurück zur Übersicht</a>
+  <div class="d-header">
+    <div class="d-stripe"></div>
+    <div class="d-head-body">
+      <div class="d-big-num">603</div>
+      <div>
+        <div class="d-label">Thema 6 · Unsere Welt · Übungen</div>
+        <div class="d-title">Vernetzung &amp; Globalisierung</div>
+        <div class="d-desc">Die Vernetzung der Schweiz mit der Welt verstehen</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toggle-bar">
+    <button class="toggle-btn active" id="btnLz" onclick="showView('lz')">📚 Nach Lernzielen</button>
+    <button class="toggle-btn" id="btnA"  onclick="showView('a')">🔢 Nach Aufgaben-Nr.</button>
+  </div>
+
+  <div id="viewLz">
+    <div class="section-label">SLP-Lernziele – Kapitel 603</div>
+    <div class="lz-list">
+      <div class="lz-row" style="--fc:#27ae60">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">1</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Europäische Union</div>
+          <div class="lz-ziel">Ich erkläre Entstehung, Grundfreiheiten und Organe der EU.</div>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A1_EU_Flagge.html">A1 EU Flagge</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A2_Schuman_Plan.html">A2 Schuman Plan</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A3_EU_Grundfreiheiten.html">A3 EU Grundfreiheiten</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A4_EU_Geschichte.html">A4 EU Geschichte</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A5_EU_Aussagen.html">A5 EU Aussagen</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A6_EU_Karte.html">A6 EU Karte</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A7_EU_Organe.html">A7 EU Organe</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A8_EU_Organe_Aussagen.html">A8 EU Organe Aussagen</a>
+            </div>
+        </div>
+        <div class="lz-arrow"></div>
+      </div>
+      <div class="lz-row" style="--fc:#27ae60">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">2</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Schweiz &amp; Europa</div>
+          <div class="lz-ziel">Ich beurteile den bilateralen Weg der Schweiz und erkläre die wichtigsten Abkommen.</div>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A9_Schweiz_Europa.html">A9 Schweiz Europa</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A10_EU_Beitritt.html">A10 EU Beitritt</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A11_Meinung_EU_Beitritt.html">A11 Meinung EU Beitritt</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A12_Bilaterale_Vertraege.html">A12 Bilaterale Vertraege</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A13_Bilaterale_I.html">A13 Bilaterale I</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A14_Bilaterale_II.html">A14 Bilaterale II</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A15_Bilaterale_Dossiers.html">A15 Bilaterale Dossiers</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A16_Bilateraler_Weg.html">A16 Bilateraler Weg</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A17_Personenfreizuegigkeit.html">A17 Personenfreizuegigkeit</a>
+            </div>
+        </div>
+        <div class="lz-arrow"></div>
+      </div>
+      <div class="lz-row" style="--fc:#27ae60">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">3</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Internationale Organisationen</div>
+          <div class="lz-ziel">Ich erkläre Aufgaben und Bedeutung von UNO, NATO, WTO, NGOs und IKRK.</div>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A18_UNO_NATO_WTO.html">A18 UNO NATO WTO</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A19_NGO_Ziele.html">A19 NGO Ziele</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A20_IKRK_Symbole.html">A20 IKRK Symbole</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A21_Industrie_Entwicklungsland.html">A21 Industrie Entwicklungsland</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 5_A22_DEZA_Projekte.html">A22 DEZA Projekte</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 7_A23_Globalisierung.html">A23 Globalisierung</a>
+            </div>
+        </div>
+        <div class="lz-arrow"></div>
+      </div>
+      <div class="lz-row" style="--fc:#27ae60">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">4</span><span class="lz-fach">GES</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Globalisierung</div>
+          <div class="lz-ziel">Ich erkläre Ursachen und Folgen der Globalisierung und beurteile Chancen und Risiken für die Schweiz.</div>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="603_[UE]_Kapitel 7_A24_Globalisierung_Beispiele.html">A24 Globalisierung Beispiele</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 7_A25_Standort_Schweiz.html">A25 Standort Schweiz</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 7_A26_Schweiz_globalisiert.html">A26 Schweiz globalisiert</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 7_A27_Globalisierung_Risiken.html">A27 Globalisierung Risiken</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 7_A28_Weltgueterhandel.html">A28 Weltgueterhandel</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 7_A29_Exportgueter.html">A29 Exportgueter</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 7_A30_Handelspartner.html">A30 Handelspartner</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 7_A31_Handelspartner_Aussagen.html">A31 Handelspartner Aussagen</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 7_A32_Swissness.html">A32 Swissness</a>
+            <a class="a-pill a-pill-link" href="603_[UE]_Kapitel 7_A33_Globalisierung_Gewinner.html">A33 Globalisierung Gewinner</a>
+            </div>
+        </div>
+        <div class="lz-arrow"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="viewA" class="hidden">
+    <div class="section-label">Alle interaktiven Übungen – Kapitel 603</div>
+    <div class="a-list">
+      <a class="a-row" href="603_[UE]_Kapitel 5_A1_EU_Flagge.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A1</span><span class="a-code-lz">LZ 1</span></div>
+        <div class="a-body">
+          <div class="a-title">EU Flagge</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A2_Schuman_Plan.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A2</span><span class="a-code-lz">LZ 1</span></div>
+        <div class="a-body">
+          <div class="a-title">Schuman Plan</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A3_EU_Grundfreiheiten.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A3</span><span class="a-code-lz">LZ 1</span></div>
+        <div class="a-body">
+          <div class="a-title">EU Grundfreiheiten</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A4_EU_Geschichte.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A4</span><span class="a-code-lz">LZ 1</span></div>
+        <div class="a-body">
+          <div class="a-title">EU Geschichte</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A5_EU_Aussagen.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A5</span><span class="a-code-lz">LZ 1</span></div>
+        <div class="a-body">
+          <div class="a-title">EU Aussagen</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A6_EU_Karte.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A6</span><span class="a-code-lz">LZ 1</span></div>
+        <div class="a-body">
+          <div class="a-title">EU Karte</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A7_EU_Organe.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A7</span><span class="a-code-lz">LZ 1</span></div>
+        <div class="a-body">
+          <div class="a-title">EU Organe</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A8_EU_Organe_Aussagen.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A8</span><span class="a-code-lz">LZ 1</span></div>
+        <div class="a-body">
+          <div class="a-title">EU Organe Aussagen</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A9_Schweiz_Europa.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A9</span><span class="a-code-lz">LZ 2</span></div>
+        <div class="a-body">
+          <div class="a-title">Schweiz Europa</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A10_EU_Beitritt.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A10</span><span class="a-code-lz">LZ 2</span></div>
+        <div class="a-body">
+          <div class="a-title">EU Beitritt</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A11_Meinung_EU_Beitritt.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A11</span><span class="a-code-lz">LZ 2</span></div>
+        <div class="a-body">
+          <div class="a-title">Meinung EU Beitritt</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A12_Bilaterale_Vertraege.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A12</span><span class="a-code-lz">LZ 2</span></div>
+        <div class="a-body">
+          <div class="a-title">Bilaterale Vertraege</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A13_Bilaterale_I.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A13</span><span class="a-code-lz">LZ 2</span></div>
+        <div class="a-body">
+          <div class="a-title">Bilaterale I</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A14_Bilaterale_II.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A14</span><span class="a-code-lz">LZ 2</span></div>
+        <div class="a-body">
+          <div class="a-title">Bilaterale II</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A15_Bilaterale_Dossiers.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A15</span><span class="a-code-lz">LZ 2</span></div>
+        <div class="a-body">
+          <div class="a-title">Bilaterale Dossiers</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A16_Bilateraler_Weg.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A16</span><span class="a-code-lz">LZ 2</span></div>
+        <div class="a-body">
+          <div class="a-title">Bilateraler Weg</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A17_Personenfreizuegigkeit.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A17</span><span class="a-code-lz">LZ 2</span></div>
+        <div class="a-body">
+          <div class="a-title">Personenfreizuegigkeit</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A18_UNO_NATO_WTO.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A18</span><span class="a-code-lz">LZ 3</span></div>
+        <div class="a-body">
+          <div class="a-title">UNO NATO WTO</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A19_NGO_Ziele.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A19</span><span class="a-code-lz">LZ 3</span></div>
+        <div class="a-body">
+          <div class="a-title">NGO Ziele</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A20_IKRK_Symbole.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A20</span><span class="a-code-lz">LZ 3</span></div>
+        <div class="a-body">
+          <div class="a-title">IKRK Symbole</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A21_Industrie_Entwicklungsland.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A21</span><span class="a-code-lz">LZ 3</span></div>
+        <div class="a-body">
+          <div class="a-title">Industrie Entwicklungsland</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 5_A22_DEZA_Projekte.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A22</span><span class="a-code-lz">LZ 3</span></div>
+        <div class="a-body">
+          <div class="a-title">DEZA Projekte</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 7_A23_Globalisierung.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A23</span><span class="a-code-lz">LZ 3</span></div>
+        <div class="a-body">
+          <div class="a-title">Globalisierung</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 7_A24_Globalisierung_Beispiele.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A24</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Globalisierung Beispiele</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 7_A25_Standort_Schweiz.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A25</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Standort Schweiz</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 7_A26_Schweiz_globalisiert.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A26</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Schweiz globalisiert</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 7_A27_Globalisierung_Risiken.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A27</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Globalisierung Risiken</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 7_A28_Weltgueterhandel.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A28</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Weltgueterhandel</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 7_A29_Exportgueter.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A29</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Exportgueter</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 7_A30_Handelspartner.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A30</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Handelspartner</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 7_A31_Handelspartner_Aussagen.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A31</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Handelspartner Aussagen</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 7_A32_Swissness.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A32</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Swissness</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+      <a class="a-row" href="603_[UE]_Kapitel 7_A33_Globalisierung_Gewinner.html">
+        <div class="a-bar"></div>
+        <div class="a-code"><span class="a-code-id">A33</span><span class="a-code-lz">LZ 4</span></div>
+        <div class="a-body">
+          <div class="a-title">Globalisierung Gewinner</div>
+          <span class="a-type">🎯 Interaktiv</span>
+        </div>
+        <div class="a-arrow">›</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="section-label">Weitere Unterkapitel – Thema 6</div>
+  <div class="ls-inactive-list">
+    <div class="ls-inactive">
+      <div class="ls-inactive-bar"></div>
+      <div class="ls-inactive-code">602</div>
+      <div class="ls-inactive-body">
+        <div class="ls-inactive-title">Ökologische Herausforderungen</div>
+        <div class="ls-inactive-hint">→ 602 Ökologie</div>
+      </div>
+    </div>
+    <div class="ls-inactive">
+      <div class="ls-inactive-bar"></div>
+      <div class="ls-inactive-code">604</div>
+      <div class="ls-inactive-body">
+        <div class="ls-inactive-title">Migration &amp; Bevölkerung</div>
+        <div class="ls-inactive-hint">→ 604 Migration</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function showView(v) {
+  document.getElementById('viewLz').classList.toggle('hidden', v !== 'lz');
+  document.getElementById('viewA').classList.toggle('hidden',  v !== 'a');
+  document.getElementById('btnLz').classList.toggle('active',  v === 'lz');
+  document.getElementById('btnA').classList.toggle('active',   v === 'a');
+}
+</script>
+</body>
+</html>
