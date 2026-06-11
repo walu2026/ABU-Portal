@@ -6,7 +6,7 @@
 <title>204 – Aufgaben wählen</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root { --accent:#8e44ad; --g9:#111827; --g7:#374151; --g5:#6B7280; --g3:#D1D5DB; --g1:#F3F4F6; }
+  :root { --accent:#c0581a; --g9:#111827; --g7:#374151; --g5:#6B7280; --g3:#D1D5DB; --g1:#F3F4F6; }
   *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
   body { font-family:'DM Sans',sans-serif; background:#F0F2F5; color:var(--g7); min-height:100vh; }
   .wrap { max-width:680px; margin:0 auto; padding:2rem 1.5rem 5rem; }
@@ -95,7 +95,6 @@
     </div>
   </div>
 
-  <div class="no-ue-banner"><span>🔜</span><div><strong>Interaktive Übungen folgen</strong><br>Für dieses Unterkapitel werden die HTML-Übungen noch aufgeschaltet.</div></div>
   <div class="toggle-bar">
     <button class="toggle-btn active" id="btnLz" onclick="showView('lz')">📚 Nach Lernzielen</button>
     <button class="toggle-btn" id="btnA"  onclick="showView('a')">🔢 Nach Aufgaben-Nr.</button>
@@ -104,32 +103,32 @@
   <div id="viewLz">
     <div class="section-label">SLP-Lernziele – Kapitel 204</div>
     <div class="lz-list">
-      <div class="lz-row lz-inactive" style="--fc:#8e44ad">
+      <div class="lz-row" style="--fc:#c0581a">
         <div class="lz-bar"></div>
-        <div class="lz-num"><span class="lz-num-digit">1</span><span class="lz-fach">GES</span></div>
+        <div class="lz-num"><span class="lz-num-digit">1</span><span class="lz-fach">D1</span></div>
         <div class="lz-body">
-          <div class="lz-title">Anschaffungsplanung</div>
-          <div class="lz-ziel">Ich plane eine grössere Anschaffung systematisch.</div>
+          <div class="lz-title">Finanzierungsarten</div>
+          <div class="lz-ziel">Ich vergleiche mögliche Finanzierungsarten für grössere Anschaffungen.</div>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="204_[UE]_Kapitel 2_A22_Finanzierungsarten.html">A22 Kaufvertrags- und Finanzierungsarten</a><a class="a-pill a-pill-link" href="204_[UE]_Kapitel 2_A23_Kaufarten.html">A23 Kaufarten</a><a class="a-pill a-pill-link" href="204_[UE]_Kapitel 2_A24_Leasing.html">A24 Leasing</a><a class="a-pill a-pill-link" href="204_[UE]_Kapitel 2_A25_Autofinanzierung.html">A25 Autofinanzierung</a></div>
+        </div>
+        <div class="lz-arrow">›</div>
+      </div>
+      <div class="lz-row lz-inactive" style="--fc:#c0581a">
+        <div class="lz-bar"></div>
+        <div class="lz-num"><span class="lz-num-digit">2</span><span class="lz-fach">D2</span></div>
+        <div class="lz-body">
+          <div class="lz-title">Sparstrategien</div>
+          <div class="lz-ziel">Ich vergleiche verschiedene Strategien des Sparens und beurteile deren Vor- und Nachteile.</div>
           <div class="lz-pills"><span class="a-pill a-pill-none">Noch keine interaktiven Übungen</span></div>
         </div>
         <div class="lz-arrow">–</div>
       </div>
-      <div class="lz-row lz-inactive" style="--fc:#8e44ad">
+      <div class="lz-row lz-inactive" style="--fc:#c0581a">
         <div class="lz-bar"></div>
-        <div class="lz-num"><span class="lz-num-digit">2</span><span class="lz-fach">GES</span></div>
+        <div class="lz-num"><span class="lz-num-digit">3</span><span class="lz-fach">D3</span></div>
         <div class="lz-body">
-          <div class="lz-title">Kreditarten</div>
-          <div class="lz-ziel">Ich vergleiche Kreditformen und beurteile deren Kosten.</div>
-          <div class="lz-pills"><span class="a-pill a-pill-none">Noch keine interaktiven Übungen</span></div>
-        </div>
-        <div class="lz-arrow">–</div>
-      </div>
-      <div class="lz-row lz-inactive" style="--fc:#8e44ad">
-        <div class="lz-bar"></div>
-        <div class="lz-num"><span class="lz-num-digit">3</span><span class="lz-fach">GES</span></div>
-        <div class="lz-body">
-          <div class="lz-title">Verschuldungsrisiko</div>
-          <div class="lz-ziel">Ich erkläre Ursachen und Folgen von Überschuldung.</div>
+          <div class="lz-title">Vermögensaufbau</div>
+          <div class="lz-ziel">Ich verstehe verschiedene Möglichkeiten des Vermögensaufbaus und schätze ihre Chancen und Risiken ein.</div>
           <div class="lz-pills"><span class="a-pill a-pill-none">Noch keine interaktiven Übungen</span></div>
         </div>
         <div class="lz-arrow">–</div>
@@ -139,36 +138,72 @@
 
   <div id="viewA" class="hidden">
     <div class="section-label">Alle interaktiven Übungen – Kapitel 204</div>
-    <div class="a-list"><div class="empty-hint">🔜 Noch keine interaktiven Übungen verfügbar.</div>
+    <div class="a-list">
+        <a class="a-row" href="204_[UE]_Kapitel 2_A22_Finanzierungsarten.html" target="_blank" rel="noopener noreferrer">
+          <div class="a-bar"></div>
+          <div class="a-code"><span class="a-code-id">A22</span><span class="a-code-lz">D1</span></div>
+          <div class="a-body">
+            <div class="a-title">Kaufvertrags- und Finanzierungsarten</div>
+            <div class="a-hint">Interaktive Selbstkontrolle</div>
+          </div>
+          <div class="a-arrow">→</div>
+        </a>
+        <a class="a-row" href="204_[UE]_Kapitel 2_A23_Kaufarten.html" target="_blank" rel="noopener noreferrer">
+          <div class="a-bar"></div>
+          <div class="a-code"><span class="a-code-id">A23</span><span class="a-code-lz">D1</span></div>
+          <div class="a-body">
+            <div class="a-title">Kaufarten</div>
+            <div class="a-hint">Interaktive Selbstkontrolle</div>
+          </div>
+          <div class="a-arrow">→</div>
+        </a>
+        <a class="a-row" href="204_[UE]_Kapitel 2_A24_Leasing.html" target="_blank" rel="noopener noreferrer">
+          <div class="a-bar"></div>
+          <div class="a-code"><span class="a-code-id">A24</span><span class="a-code-lz">D1</span></div>
+          <div class="a-body">
+            <div class="a-title">Leasing: richtig oder falsch?</div>
+            <div class="a-hint">Interaktive Selbstkontrolle</div>
+          </div>
+          <div class="a-arrow">→</div>
+        </a>
+        <a class="a-row" href="204_[UE]_Kapitel 2_A25_Autofinanzierung.html" target="_blank" rel="noopener noreferrer">
+          <div class="a-bar"></div>
+          <div class="a-code"><span class="a-code-id">A25</span><span class="a-code-lz">D1</span></div>
+          <div class="a-body">
+            <div class="a-title">Autofinanzierung</div>
+            <div class="a-hint">Interaktive Selbstkontrolle</div>
+          </div>
+          <div class="a-arrow">→</div>
+        </a>
     </div>
   </div>
 
   <div class="section-label">Weitere Unterkapitel – Thema 2</div>
   <div class="ls-inactive-list">
-    <div class="ls-inactive">
+    <a class="ls-inactive" href="201_Aufgaben.html">
       <div class="ls-inactive-bar"></div>
       <div class="ls-inactive-code">201</div>
       <div class="ls-inactive-body">
         <div class="ls-inactive-title">Budget &amp; Zahlungsverkehr</div>
         <div class="ls-inactive-hint">→ 201 Lohn &amp; Geld</div>
       </div>
-    </div>
-    <div class="ls-inactive">
+    </a>
+    <a class="ls-inactive" href="202_Aufgaben.html">
       <div class="ls-inactive-bar"></div>
       <div class="ls-inactive-code">202</div>
       <div class="ls-inactive-body">
-        <div class="ls-inactive-title">Konsum &amp; Beeinflussung</div>
+        <div class="ls-inactive-title">Konsum &amp; Werbung</div>
         <div class="ls-inactive-hint">→ 202 Konsum</div>
       </div>
-    </div>
-    <div class="ls-inactive">
+    </a>
+    <a class="ls-inactive" href="203_Aufgaben.html">
       <div class="ls-inactive-bar"></div>
       <div class="ls-inactive-code">203</div>
       <div class="ls-inactive-body">
-        <div class="ls-inactive-title">Einkaufen &amp; Verträge</div>
+        <div class="ls-inactive-title">Kaufvertrag</div>
         <div class="ls-inactive-hint">→ 203 Kaufvertrag</div>
       </div>
-    </div>
+    </a>
   </div>
 </div>
 <script>
