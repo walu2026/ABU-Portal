@@ -10,8 +10,13 @@
   *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
   body { font-family:'DM Sans',sans-serif; background:#F0F2F5; color:var(--g7); min-height:100vh; }
   .wrap { max-width:680px; margin:0 auto; padding:2rem 1.5rem 5rem; }
-  .back-btn { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; color:var(--g5); text-decoration:none; margin-bottom:1.75rem; transition:color .15s; }
+  .back-btn { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; color:var(--g5); text-decoration:none; transition:color .15s; }
   .back-btn:hover { color:var(--g9); }
+  .nav-bar { display:flex; justify-content:space-between; align-items:center; margin-bottom:1.75rem; }
+  .next-btn { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; color:var(--g5); text-decoration:none; transition:color .15s; }
+  .next-btn:hover { color:var(--g9); }
+  .next-label { text-align:right; }
+  .next-sub { display:block; font-size:11px; font-weight:400; color:var(--g4); }
   .d-header { border-radius:14px; overflow:hidden; margin-bottom:1.75rem; display:grid; grid-template-columns:5px 1fr; box-shadow:0 2px 12px rgba(0,0,0,0.07); background:white; }
   .d-stripe { background:var(--accent); }
   .d-head-body { padding:20px 22px; display:flex; align-items:flex-start; gap:14px; }
@@ -76,7 +81,12 @@
 </head>
 <body>
 <div class="wrap">
-  <a class="back-btn" href="javascript:history.back()">← Zurück zur Übersicht</a>
+  <div class="nav-bar">
+    <a class="back-btn" href="javascript:history.back()">← Zurück zur Übersicht</a>
+    <a class="next-btn" href="702_Aufgaben.html">
+      <span class="next-label"><span class="next-sub">Thema 7 · Meine Zukunft · Übungen</span>Stellensuche &amp; Arbeitsrecht</span> →
+    </a>
+  </div>
   <div class="d-header">
     <div class="d-stripe"></div>
     <div class="d-head-body">
@@ -103,12 +113,12 @@
         <div class="lz-body">
           <div class="lz-title">BIP &amp; Wirtschaftskreislauf</div>
           <div class="lz-ziel">Ich erkläre den erweiterten Wirtschaftskreislauf, das BIP und seine Grenzen als Wohlstandsmass.</div>
-          <div class="lz-pills"><a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A41_Wohlfahrt.html">A41 Wohlfahrt</a>
-            <a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A42_BIP_Schweiz.html">A42 BIP Schweiz</a>
-            <a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A43_BIP_Vergleich.html">A43 BIP Vergleich</a>
-            <a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A44_Lebensqualitaet.html">A44 Lebensqualitaet</a>
-            <a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A45_BIP_Nicht_Erfasst.html">A45 BIP Nicht Erfasst</a>
-            <a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A46_Lorenzkurve.html">A46 Lorenzkurve</a>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="701_[UE]_Kapitel 2_A41_Wohlfahrt.html">A41 Wohlfahrt</a>
+            <a class="a-pill a-pill-link" href="701_[UE]_Kapitel 2_A42_BIP_Schweiz.html">A42 BIP Schweiz</a>
+            <a class="a-pill a-pill-link" href="701_[UE]_Kapitel 2_A43_BIP_Vergleich.html">A43 BIP Vergleich</a>
+            <a class="a-pill a-pill-link" href="701_[UE]_Kapitel 2_A44_Lebensqualitaet.html">A44 Lebensqualitaet</a>
+            <a class="a-pill a-pill-link" href="701_[UE]_Kapitel 2_A45_BIP_Nicht_Erfasst.html">A45 BIP Nicht Erfasst</a>
+            <a class="a-pill a-pill-link" href="701_[UE]_Kapitel 2_A46_Lorenzkurve.html">A46 Lorenzkurve</a>
             </div>
         </div>
         <div class="lz-arrow"></div>
@@ -119,8 +129,8 @@
         <div class="lz-body">
           <div class="lz-title">Produktionsfaktoren</div>
           <div class="lz-ziel">Ich nenne und erkläre die klassischen Produktionsfaktoren und Kapitalarten.</div>
-          <div class="lz-pills"><a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A39_Produktionsfaktoren.html">A39 Produktionsfaktoren</a>
-            <a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A40_Kapitalarten.html">A40 Kapitalarten</a>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="701_[UE]_Kapitel 2_A39_Produktionsfaktoren.html">A39 Produktionsfaktoren</a>
+            <a class="a-pill a-pill-link" href="701_[UE]_Kapitel 2_A40_Kapitalarten.html">A40 Kapitalarten</a>
             </div>
         </div>
         <div class="lz-arrow"></div>
@@ -131,11 +141,11 @@
         <div class="lz-body">
           <div class="lz-title">Konjunktur &amp; Inflation</div>
           <div class="lz-ziel">Ich beschreibe die Konjunkturphasen, Massnahmen der Wirtschaftspolitik und die Inflationsmessung.</div>
-          <div class="lz-pills"><a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A12_Konjunkturphasen.html">A12 Konjunkturphasen</a>
-            <a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A13_Konjunktur_Massnahmen.html">A13 Konjunktur Massnahmen</a>
-            <a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A14_Arbeitslosenquote.html">A14 Arbeitslosenquote</a>
-            <a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A16_Inflation_Lueckentext.html">A16 Inflation Lueckentext</a>
-            <a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A17_Warenkorb.html">A17 Warenkorb</a>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="701_[UE]_Kapitel 7_A12_Konjunkturphasen.html">A12 Konjunkturphasen</a>
+            <a class="a-pill a-pill-link" href="701_[UE]_Kapitel 7_A13_Konjunktur_Massnahmen.html">A13 Konjunktur Massnahmen</a>
+            <a class="a-pill a-pill-link" href="701_[UE]_Kapitel 7_A14_Arbeitslosenquote.html">A14 Arbeitslosenquote</a>
+            <a class="a-pill a-pill-link" href="701_[UE]_Kapitel 7_A16_Inflation_Lueckentext.html">A16 Inflation Lueckentext</a>
+            <a class="a-pill a-pill-link" href="701_[UE]_Kapitel 7_A17_Warenkorb.html">A17 Warenkorb</a>
             </div>
         </div>
         <div class="lz-arrow"></div>
@@ -146,8 +156,8 @@
         <div class="lz-body">
           <div class="lz-title">Wirtschaftssektoren</div>
           <div class="lz-ziel">Ich erkläre den Strukturwandel und verorte Branchen in den drei Wirtschaftssektoren.</div>
-          <div class="lz-pills"><a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A20_Wirtschaftssektoren.html">A20 Wirtschaftssektoren</a>
-            <a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A22_Branchen_Sektoren.html">A22 Branchen Sektoren</a>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="701_[UE]_Kapitel 7_A20_Wirtschaftssektoren.html">A20 Wirtschaftssektoren</a>
+            <a class="a-pill a-pill-link" href="701_[UE]_Kapitel 7_A22_Branchen_Sektoren.html">A22 Branchen Sektoren</a>
             </div>
         </div>
         <div class="lz-arrow"></div>
@@ -158,8 +168,8 @@
         <div class="lz-body">
           <div class="lz-title">Arbeitslosigkeit &amp; Sozialversicherung</div>
           <div class="lz-ziel">Ich erkläre Ursachen und Folgen von Arbeitslosigkeit sowie die Eingliederung durch die IV.</div>
-          <div class="lz-pills"><a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%208_A4_Arbeitslosigkeit.html">A4 Arbeitslosigkeit</a>
-            <a class="a-pill a-pill-link" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A37_Too_Big_To_Fail.html">A37 Too Big To Fail</a>
+          <div class="lz-pills"><a class="a-pill a-pill-link" href="701_[UE]_Kapitel 8_A4_Arbeitslosigkeit.html">A4 Arbeitslosigkeit</a>
+            <a class="a-pill a-pill-link" href="701_[UE]_Kapitel 2_A37_Too_Big_To_Fail.html">A37 Too Big To Fail</a>
             </div>
         </div>
         <div class="lz-arrow"></div>
@@ -170,7 +180,7 @@
   <div id="viewA" class="hidden">
     <div class="section-label">Alle interaktiven Übungen – Kapitel 701</div>
     <div class="a-list">
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%208_A4_Arbeitslosigkeit.html">
+      <a class="a-row" href="701_[UE]_Kapitel 8_A4_Arbeitslosigkeit.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A4</span><span class="a-code-lz">LZ 5</span></div>
         <div class="a-body">
@@ -179,7 +189,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A12_Konjunkturphasen.html">
+      <a class="a-row" href="701_[UE]_Kapitel 7_A12_Konjunkturphasen.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A12</span><span class="a-code-lz">LZ 3</span></div>
         <div class="a-body">
@@ -188,7 +198,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A13_Konjunktur_Massnahmen.html">
+      <a class="a-row" href="701_[UE]_Kapitel 7_A13_Konjunktur_Massnahmen.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A13</span><span class="a-code-lz">LZ 3</span></div>
         <div class="a-body">
@@ -197,7 +207,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A14_Arbeitslosenquote.html">
+      <a class="a-row" href="701_[UE]_Kapitel 7_A14_Arbeitslosenquote.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A14</span><span class="a-code-lz">LZ 3</span></div>
         <div class="a-body">
@@ -206,7 +216,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A16_Inflation_Lueckentext.html">
+      <a class="a-row" href="701_[UE]_Kapitel 7_A16_Inflation_Lueckentext.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A16</span><span class="a-code-lz">LZ 3</span></div>
         <div class="a-body">
@@ -215,7 +225,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A17_Warenkorb.html">
+      <a class="a-row" href="701_[UE]_Kapitel 7_A17_Warenkorb.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A17</span><span class="a-code-lz">LZ 3</span></div>
         <div class="a-body">
@@ -224,7 +234,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A20_Wirtschaftssektoren.html">
+      <a class="a-row" href="701_[UE]_Kapitel 7_A20_Wirtschaftssektoren.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A20</span><span class="a-code-lz">LZ 4</span></div>
         <div class="a-body">
@@ -233,7 +243,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%207_A22_Branchen_Sektoren.html">
+      <a class="a-row" href="701_[UE]_Kapitel 7_A22_Branchen_Sektoren.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A22</span><span class="a-code-lz">LZ 4</span></div>
         <div class="a-body">
@@ -242,7 +252,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A37_Too_Big_To_Fail.html">
+      <a class="a-row" href="701_[UE]_Kapitel 2_A37_Too_Big_To_Fail.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A37</span><span class="a-code-lz">LZ 5</span></div>
         <div class="a-body">
@@ -251,7 +261,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A39_Produktionsfaktoren.html">
+      <a class="a-row" href="701_[UE]_Kapitel 2_A39_Produktionsfaktoren.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A39</span><span class="a-code-lz">LZ 2</span></div>
         <div class="a-body">
@@ -260,7 +270,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A40_Kapitalarten.html">
+      <a class="a-row" href="701_[UE]_Kapitel 2_A40_Kapitalarten.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A40</span><span class="a-code-lz">LZ 2</span></div>
         <div class="a-body">
@@ -269,7 +279,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A41_Wohlfahrt.html">
+      <a class="a-row" href="701_[UE]_Kapitel 2_A41_Wohlfahrt.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A41</span><span class="a-code-lz">LZ 1</span></div>
         <div class="a-body">
@@ -278,7 +288,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A42_BIP_Schweiz.html">
+      <a class="a-row" href="701_[UE]_Kapitel 2_A42_BIP_Schweiz.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A42</span><span class="a-code-lz">LZ 1</span></div>
         <div class="a-body">
@@ -287,7 +297,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A43_BIP_Vergleich.html">
+      <a class="a-row" href="701_[UE]_Kapitel 2_A43_BIP_Vergleich.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A43</span><span class="a-code-lz">LZ 1</span></div>
         <div class="a-body">
@@ -296,7 +306,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A44_Lebensqualitaet.html">
+      <a class="a-row" href="701_[UE]_Kapitel 2_A44_Lebensqualitaet.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A44</span><span class="a-code-lz">LZ 1</span></div>
         <div class="a-body">
@@ -305,7 +315,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A45_BIP_Nicht_Erfasst.html">
+      <a class="a-row" href="701_[UE]_Kapitel 2_A45_BIP_Nicht_Erfasst.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A45</span><span class="a-code-lz">LZ 1</span></div>
         <div class="a-body">
@@ -314,7 +324,7 @@
         </div>
         <div class="a-arrow">›</div>
       </a>
-      <a class="a-row" href="../../00_ABU-Portal/701_[UE]_Kapitel%202_A46_Lorenzkurve.html">
+      <a class="a-row" href="701_[UE]_Kapitel 2_A46_Lorenzkurve.html">
         <div class="a-bar"></div>
         <div class="a-code"><span class="a-code-id">A46</span><span class="a-code-lz">LZ 1</span></div>
         <div class="a-body">

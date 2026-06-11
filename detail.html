@@ -16,8 +16,13 @@
 
   .wrap { max-width:700px; margin:0 auto; padding:2rem 1.5rem 5rem; }
 
-  .back-btn { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; color:var(--g5); text-decoration:none; margin-bottom:1.75rem; transition:color .15s; }
+  .back-btn { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; color:var(--g5); text-decoration:none; transition:color .15s; }
   .back-btn:hover { color:var(--g9); }
+  .nav-bar { display:flex; justify-content:space-between; align-items:center; margin-bottom:1.75rem; }
+  .next-btn { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; color:var(--g5); text-decoration:none; transition:color .15s; }
+  .next-btn:hover { color:var(--g9); }
+  .next-label { text-align:right; }
+  .next-sub { display:block; font-size:11px; font-weight:400; color:var(--g4); }
 
   .d-header { border-radius:14px; overflow:hidden; margin-bottom:1.75rem; display:grid; grid-template-columns:5px 1fr; box-shadow:0 3px 14px rgba(0,0,0,0.08); }
   .d-stripe { }
@@ -50,7 +55,12 @@
 </head>
 <body>
 <div class="wrap">
-  <a class="back-btn" href="#" onclick="event.preventDefault(); history.back();">← Zurück zur Übersicht</a>
+  <div class="nav-bar">
+    <a class="back-btn" href="#" onclick="event.preventDefault(); history.back();">← Zurück zur Übersicht</a>
+    <a class="next-btn" id="nextBtn" href="#" style="display:none;">
+      <span class="next-label"><span class="next-sub" id="nextLabel"></span><span id="nextTitle"></span></span> →
+    </a>
+  </div>
 
   <div class="d-header" id="dHeader">
     <div class="d-stripe" id="dStripe"></div>
@@ -121,23 +131,23 @@ const LINKS = {
   '101_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/101_Lehrvertrag/101_Theorie?csf=1&web=1',
   '101_Übungen': '101_Aufgaben.html',
   '101_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/101_Lehrvertrag/101_Quiz?csf=1&web=1',
-  '102_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/102_Rechtsgrundlagen/102_Theorie?csf=1&web=1',
+  '102_Theorie': 'https://bldsg.sharepoint.com/:f:/t/ABULernportal/IgDDsfthHY4GRYVolDqCvznlAQhARf6fcZzgTH71JKHoBn4?e=PlwSST',
   '102_Übungen': '102_Aufgaben.html',
-  '102_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/102_Rechtsgrundlagen/102_Quiz?csf=1&web=1',
+  '102_Quiz': 'https://bldsg.sharepoint.com/:f:/t/ABULernportal/IgAuVqRJb1hfRbXwR90jjizLARgPU21ayRn-LKwJMvrhWu0?e=pCXxWN',
   '103_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/103_Kommunikation/103_Theorie?csf=1&web=1',
   '103_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/103_Kommunikation/103_Uebungen?csf=1&web=1',
   '103_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/01_Mein_Lehrbeginn/103_Kommunikation/103_Quiz?csf=1&web=1',
   '201_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/201_Lohn/201_Theorie?csf=1&web=1',
-  '201_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/201_Lohn/201_Uebungen?csf=1&web=1',
+  '201_Übungen': '201_Aufgaben.html',
   '201_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/201_Lohn/201_Quiz?csf=1&web=1',
   '202_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/202_Konsum/202_Theorie?csf=1&web=1',
-  '202_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/202_Konsum/202_Uebungen?csf=1&web=1',
+  '202_Übungen': '202_Aufgaben.html',
   '202_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/202_Konsum/202_Quiz?csf=1&web=1',
   '203_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/203_Kaufvertrag/203_Theorie?csf=1&web=1',
-  '203_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/203_Kaufvertrag/203_Uebungen?csf=1&web=1',
+  '203_Übungen': '203_Aufgaben.html',
   '203_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/203_Kaufvertrag/203_Quiz?csf=1&web=1',
   '204_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/204_Investition/204_Theorie?csf=1&web=1',
-  '204_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/204_Investition/204_Uebungen?csf=1&web=1',
+  '204_Übungen': '204_Aufgaben.html',
   '204_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/02_Mein_Geld/204_Investition/204_Quiz?csf=1&web=1',
   '301_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/03_Meine_Gesundheit/301_Gesundheitsfaktoren/301_Theorie?csf=1&web=1',
   '301_Übungen': '301_Aufgaben.html',
@@ -199,9 +209,9 @@ const LINKS = {
   '703_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/07_Meine_Zukunft/703_Lohn_erhalten/703_Theorie?csf=1&web=1',
   '703_Übungen': '703_Aufgaben.html',
   '703_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/07_Meine_Zukunft/703_Lohn_erhalten/703_Quiz?csf=1&web=1',
-  '704_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/07_Meine_Zukunft/704_Zukunftsperspektiven/704_Theorie?csf=1&web=1',
+  '704_Theorie': 'https://bldsg.sharepoint.com/:f:/t/ABULernportal/IgDB4gwezS9tQ4ulqh8PYol3Adm76LJ8ccO66VXIe_7MTmc?e=wqGFrV',
   '704_Übungen': '704_Aufgaben.html',
-  '704_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/07_Meine_Zukunft/704_Zukunftsperspektiven/704_Quiz?csf=1&web=1',
+  '704_Quiz': 'https://bldsg.sharepoint.com/:f:/t/ABULernportal/IgDEqg6EP_YWQLUnStkVClIFAa6AtfjQCYXkfvZ7EsRY1AU?e=BVUn8W',
   '801_Theorie': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/801_Mein_Lehrbeginn/801_Theorie?csf=1&web=1',
   '801_Übungen': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/801_Mein_Lehrbeginn/801_Uebungen?csf=1&web=1',
   '801_Quiz': 'https://bldsg.sharepoint.com/:f:/r/teams/ABULernportal/Freigegebene%20Dokumente/General/Lernportal/08_Qualifikationsverfahren/801_Mein_Lehrbeginn/801_Quiz?csf=1&web=1',
@@ -244,6 +254,19 @@ window.onload = function() {
   const d = DATA[id];
   if (!d) { document.body.innerHTML = '<div style="padding:2rem">Nicht gefunden. <a href="https://bldsg.sharepoint.com/:f:/t/ABULernportal/IgARC7kSs6RURa9TJyrnBVH8AZPe0HR_0OutEDgeFoGXprg?e=99OxCs">Zurück</a></div>'; return; }
 
+  // Nächstes Unterthema Navigation
+  const allCodes = Object.keys(DATA);
+  const currentIdx = allCodes.indexOf(id);
+  if (currentIdx !== -1 && currentIdx < allCodes.length - 1) {
+    const nextCode = allCodes[currentIdx + 1];
+    const nextData = DATA[nextCode];
+    const nextBtn = document.getElementById('nextBtn');
+    document.getElementById('nextLabel').textContent = nextData.label;
+    document.getElementById('nextTitle').textContent = nextData.title;
+    nextBtn.href = 'detail.html#' + nextCode;
+    nextBtn.style.display = 'inline-flex';
+  }
+
   document.title = 'ABU – ' + d.title;
   document.getElementById('dStripe').style.background = d.tc;
   document.getElementById('dHeadBody').style.background = d.tbg;
@@ -272,7 +295,7 @@ window.onload = function() {
     a.className = 'file-card' + (url ? '' : ' not-linked');
     a.style.setProperty('--tc', d.tc);
     a.href = url || '#';
-    if (url && url.startsWith('http')) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+    if (url) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
     a.innerHTML = `
       <div class="file-icon ${f.cls}">${f.icon}</div>
       <div class="file-body">
