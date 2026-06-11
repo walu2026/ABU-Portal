@@ -1,6 +1,27 @@
 {
   "1": [
     {
+      "id": "art-20260611-03",
+      "date": "11.06.",
+      "title": "Standortnachteil Kündigungsschutz: Wieso ein Stellenabbau in Deutschland zwölfmal so viel kostet wie in der Schweiz",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/standortnachteil-kuendigungsschutz-wieso-ein-stellenabbau-in-deutschland-zwoelfmal-so-viel-kostet-wie-in-der-schweiz-ld.10009903",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Standortnachteil Kündigungsschutz: Wieso ein Stellenabbau in Deutschland zwölfmal so viel kostet wie in der Schweiz»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Unternehmerischer Misserfolg wird in Deutschland teuer bestraft. Die Schweiz zeigt: Es ginge auch an"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260605-06",
       "date": "04.06.",
       "title": "Panikverkäufe bei Partners Group: Das «Saubermann-Image» der Zuger Beteiligungsgesellschaft leidet",
@@ -23,6 +44,69 @@
     }
   ],
   "2": [
+    {
+      "id": "art-20260611-00",
+      "date": "11.06.",
+      "title": "Die Preise in Amerika steigen immer schneller an: Der Iran-Krieg hinterlässt deutliche Spuren in der US-Wirtschaft",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-preise-in-amerika-steigen-immer-schneller-an-der-iran-krieg-hinterlaesst-deutliche-spuren-in-der-us-wirtschaft-ld.10010725",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Die Preise in Amerika steigen immer schneller an: Der Iran-Krieg hinterlässt deutliche Spuren in der US-Wirtschaft»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Teuerung und der robuste Arbeitsmarkt bescheren dem neuen Chef der amerikanischen Notenbank Prob"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260611-05",
+      "date": "10.06.",
+      "title": "Die Angst vor der Inflation ist eine zweite Chance für Christine Lagarde",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-angst-vor-der-inflation-ist-eine-zweite-chance-fuer-christine-lagarde-ld.10010428",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn die Preise im Supermarkt ständig steigen, wer ist schuld – der Bäcker, der Staat oder die Notenbank?"
+        },
+        {
+          "phase": "TH",
+          "text": "Das Konzept der Inflation wird sichtbar: Wenn Geld an Wert verliert, kann man sich weniger kaufen. Die Notenbank (EZB) hat die Aufgabe, Inflation zu bekämpfen und die Kaufkraft zu schützen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Wie haben sich die Preise für drei alltägliche Produkte (Brot, Benzin, Kaugummi) in den letzten 12 Monaten entwickelt? Erstellt eine kleine Übersicht und überlegt: Wie wirkt sich das auf euer Taschengeld aus?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260611-06",
+      "date": "10.06.",
+      "title": "Frauen wollen finanzielle Unabhängigkeit – doch beim Investieren bleiben sie viel zu zögerlich",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/frauen-wollen-finanzielle-unabhaengigkeit-doch-beim-investieren-bleiben-sie-viel-zu-zoegerlich-ld.10010642",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Frauen wollen finanzielle Unabhängigkeit – doch beim Investieren bleiben sie viel zu zögerlich»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Ihre Alltagsfinanzen haben Frauen zwar fest im Griff, sie verschenken beim langfristigen Vermögensau"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260609-09",
       "date": "07.06.",
@@ -169,69 +253,6 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260531-03",
-      "date": "31.05.",
-      "title": "Falsche Inflationserwartungen und der «kranke Mann Europas»",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/falsche-inflationserwartungen-und-der-kranke-mann-europas-ld.10008506",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Falsche Inflationserwartungen und der «kranke Mann Europas»»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Demokraten haben die Wahlen 2024 auch wegen der «Eggflation» verloren. Und die deutsche Regierun"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260531-04",
-      "date": "31.05.",
-      "title": "Oldtimer sehen alt aus: Die neue Generation von Autofans steht auf Youngtimer",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/oldtimer-sehen-alt-aus-die-neue-generation-von-autofans-steht-auf-youngtimer-ld.10008091",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Würdet ihr euer Geld eher in ein altes Auto von 1920 oder in einen coolen BMW aus den 1970ern investieren – und warum?"
-        },
-        {
-          "phase": "TH",
-          "text": "Der Artikel zeigt, wie Wertveränderungen entstehen: nicht alle alten Dinge werden teurer, sondern nur jene, die Nachfrage haben. Lernende verstehen hier den Zusammenhang zwischen Angebot, Nachfrage und Wertentwicklung als Grundlage für finanzielle Entscheidungen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert zwei Autotypen aus verschiedenen Jahrzehnten und vergleicht ihre aktuellen Marktwerte. Erstellt eine kurze Begründung, warum der eine mehr wert ist als der andere – und was das über eure eigenen Kaufentscheidungen aussagt."
-        }
-      ]
-    },
-    {
-      "id": "art-20260531-06",
-      "date": "30.05.",
-      "title": "Geheime «tax holidays» und die 10-Millionen-Schweiz: So fördern Kantone Firmenansiedelungen – und die Zuwanderung",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/geheime-tax-holidays-und-die-10-millionen-schweiz-so-foerdern-kantone-firmenansiedelungen-und-die-zuwanderung-ld.10007809",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Geheime «tax holidays» und die 10-Millionen-Schweiz: So fördern Kantone Firmenansiedelungen – und die Zuwanderung»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Hinter verschlossenen Rathaustüren befreien die Kantonsregierungen ausgewählte Konzerne von den Steu"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "3": [
@@ -279,6 +300,27 @@
     }
   ],
   "4": [
+    {
+      "id": "art-20260611-02",
+      "date": "11.06.",
+      "title": "Getäuscht mit Gold aus der Schweiz? Ein Finanzskandal in Indien führt nach Luzern und ins Tessin",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/valcambi-schweizer-goldraffinerie-steht-im-zentrum-von-bilanzskandal-in-indien-ld.10010591",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Getäuscht mit Gold aus der Schweiz? Ein Finanzskandal in Indien führt nach Luzern und ins Tessin»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Valcambi, die grösste Schweizer Goldraffinerie, ist in indischer Hand. Doch der Eigentümer soll ihre"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260610-03",
       "date": "10.06.",
@@ -467,32 +509,11 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260606-03",
-      "date": "06.06.",
-      "title": "Die KI-Euphorie macht den Schweizer Industriekonzern Huber + Suhner zum Börsenstar",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/huber-suhner-ki-und-datenzentren-treiben-aktienkurs-an-ld.10009515",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Die KI-Euphorie macht den Schweizer Industriekonzern Huber + Suhner zum Börsenstar»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Aktienkurs von Huber + Suhner ist allein seit Jahresbeginn um über 80 Prozent gestiegen. Die Ost"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "5": [
     {
-      "id": "art-20260610-02",
+      "id": "art-20260611-09",
       "date": "10.06.",
       "title": "Die Millionärsmaschine: Der SpaceX-Börsengang macht auch Handwerker und Ingenieurinnen reich – und die Banken liegen auf der Lauer",
       "source": "NZZ",
@@ -500,15 +521,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn eine Firma an die Börse geht und plötzlich alle Angestellten reich werden – ist das gerecht oder nur Glück?"
+          "text": "Wenn eine Firma an die Börse geht und plötzlich normale Angestellte Millionäre werden – ist das gerecht oder nur Glück?"
         },
         {
           "phase": "TH",
-          "text": "Sichtbar wird hier, wie Vermögensverteilung und wirtschaftliche Chancen funktionieren: nicht alle haben gleiche Startbedingungen, um an Wohlstand zu gelangen. Das zeigt die Spannung zwischen Leistung, Glück und strukturellen Unterschieden in unserer Gesellschaft."
+          "text": "Wirtschaftliche Chancenverteilung und soziale Mobilität: Wie entstehen Vermögensunterschiede in modernen Gesellschaften? Das Konzept zeigt, dass Wohlstand nicht nur durch Arbeit, sondern auch durch Kapitalbesitz und Unternehmertum entsteht."
         },
         {
           "phase": "UE",
-          "text": "Recherchiert: Wer profitiert beim SpaceX-Börsengang alles (Angestellte, Banken, Gründer) und wer nicht? Erstellt eine Liste und diskutiert, ob das 'fair' ist."
+          "text": "Recherchiert: Welche Voraussetzungen brauchte es, dass SpaceX-Mitarbeiter reich werden konnten? Erstellt eine Liste mit 5 Faktoren (Bildung, Risiko, Glück, Timing, Branche) und diskutiert, welche davon jeder beeinflussen kann."
         }
       ]
     },
@@ -704,6 +725,48 @@
   ],
   "6": [
     {
+      "id": "art-20260611-01",
+      "date": "11.06.",
+      "title": "ERKLÄRT - SpaceX wird der grösste Börsengang der Geschichte: Das sind die zehn wichtigsten Fragen und Antworten",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/boersengang-von-elon-musks-spacex-das-groesste-ipo-der-geschichte-erklaert-ld.10010689",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «ERKLÄRT - SpaceX wird der grösste Börsengang der Geschichte: Das sind die zehn wichtigsten Fragen und Antworten»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Das Raumfahrtunternehmen SpaceX kommt an die Börse und heizt die Euphorie im Technologiesektor an. A"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260611-04",
+      "date": "10.06.",
+      "title": "KURZMELDUNGEN - Wirtschaft: Donald Trump lässt den Dax auf ein Dreiwochentief rutschen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-die-neusten-meldungen-ld.10010807",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Donald Trump lässt den Dax auf ein Dreiwochentief rutschen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260610-05",
       "date": "09.06.",
       "title": "Ein deutscher Versicherer will mit Lionel Messi die USA erobern",
@@ -870,53 +933,11 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260605-01",
-      "date": "05.06.",
-      "title": "KURZMELDUNGEN - Wirtschaft: KI-Unternehmen Anthropic schlägt Pause im KI-Wettbewerb vor",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-die-neusten-meldungen-ld.10006777",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: KI-Unternehmen Anthropic schlägt Pause im KI-Wettbewerb vor»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260605-07",
-      "date": "04.06.",
-      "title": "Elon Musk strebt beim Börsengang von SpaceX eine Bewertung von 1,8 Billionen Dollar an – und spielt einmal mehr nach eigenen Regeln",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/elon-musk-strebt-beim-boersengang-von-spacex-eine-bewertung-von-18-billionen-dollar-an-und-spielt-einmal-mehr-nach-eigenen-regeln-ld.10009810",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Elon Musk strebt beim Börsengang von SpaceX eine Bewertung von 1,8 Billionen Dollar an – und spielt einmal mehr nach eigenen Regeln»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Beim IPO von SpaceX setzt Elon Musk neue Massstäbe. Doch die spektakulärste Zahl könnte am Ende sein"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "7": [
     {
-      "id": "art-20260610-00",
+      "id": "art-20260611-07",
       "date": "10.06.",
       "title": "Florentino Pérez ist Präsident von Real Madrid, Bauunternehmer und der heimliche König in der spanischen Hauptstadt",
       "source": "NZZ",
@@ -924,20 +945,20 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Florentino Pérez ist Präsident von Real Madrid, Bauunternehmer und der heimliche König in der spanischen Hauptstadt»?"
+          "text": "Kann man wirklich erfolgreich sein, wenn man sich nur auf eine Sache konzentriert – oder braucht es mehrere «Standbeine» wie Pérez?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Pérez ist mehr als nur Präsident eines legendären Fussballvereins. Er ist einer der grössten Bauunte"
+          "text": "Lernziel: Diversifikation und Unternehmertum verstehen. Der Artikel zeigt, wie erfolgreiche Menschen ihre Fähigkeiten und ihr Kapital in verschiedene Bereiche investieren, um Risiken zu minimieren und Chancen zu nutzen."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Recherchiere eine Person aus deiner Branche oder deinem Interesse (Sport, Handwerk, Technologie), die ähnlich wie Pérez mehrere erfolgreiche Projekte verfolgt. Notiere: Welche 2–3 Geschäftsfelder hat sie? Was sind die Vorteile davon?"
         }
       ]
     },
     {
-      "id": "art-20260610-01",
+      "id": "art-20260611-08",
       "date": "10.06.",
       "title": "Nvidia will sich mit einer Partnerschaft in Südkorea die Zukunft sichern. Die Firma braucht Nachschub bei Hochleistungsspeichern",
       "source": "NZZ",
