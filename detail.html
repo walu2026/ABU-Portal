@@ -54,7 +54,7 @@
 <body>
 <div class="wrap">
   <div class="nav-bar">
-    <a class="back-btn" href="#" onclick="event.preventDefault(); history.back();">← Zurück zur Übersicht</a>
+    <a class="back-btn" href="index.html">← Zurück zur Übersicht</a>
     <a class="next-btn" id="nextBtn" href="#" style="display:none;"></a>
   </div>
 
@@ -245,7 +245,7 @@ function getParam(name) {
   return new URLSearchParams(window.location.search).get(name);
 }
 
-window.onload = function() {
+function render() {
   const id = getParam('id');
   const d = DATA[id];
   if (!d) { document.body.innerHTML = '<div style="padding:2rem">Nicht gefunden. <a href="https://bldsg.sharepoint.com/:f:/t/ABULernportal/IgARC7kSs6RURa9TJyrnBVH8AZPe0HR_0OutEDgeFoGXprg?e=99OxCs">Zurück</a></div>'; return; }
@@ -300,7 +300,9 @@ window.onload = function() {
       <span class="file-arrow">${url ? '→' : ''}</span>`;
     container.appendChild(a);
   });
-};
+}
+window.addEventListener('hashchange', render);
+window.addEventListener('load', render);
 </script>
 </body>
 </html>
