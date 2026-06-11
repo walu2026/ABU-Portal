@@ -19,10 +19,8 @@
   .back-btn { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; color:var(--g5); text-decoration:none; transition:color .15s; }
   .back-btn:hover { color:var(--g9); }
   .nav-bar { display:flex; justify-content:space-between; align-items:center; margin-bottom:1.75rem; }
-  .next-btn { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; color:var(--g5); text-decoration:none; transition:color .15s; }
+  .next-btn { font-size:13px; font-weight:500; color:var(--g5); text-decoration:none; transition:color .15s; }
   .next-btn:hover { color:var(--g9); }
-  .next-label { text-align:right; }
-  .next-sub { display:block; font-size:11px; font-weight:400; color:var(--g4); }
 
   .d-header { border-radius:14px; overflow:hidden; margin-bottom:1.75rem; display:grid; grid-template-columns:5px 1fr; box-shadow:0 3px 14px rgba(0,0,0,0.08); }
   .d-stripe { }
@@ -57,9 +55,7 @@
 <div class="wrap">
   <div class="nav-bar">
     <a class="back-btn" href="#" onclick="event.preventDefault(); history.back();">← Zurück zur Übersicht</a>
-    <a class="next-btn" id="nextBtn" href="#" style="display:none;">
-      <span class="next-label"><span class="next-sub" id="nextLabel"></span><span id="nextTitle"></span></span> →
-    </a>
+    <a class="next-btn" id="nextBtn" href="#" style="display:none;"></a>
   </div>
 
   <div class="d-header" id="dHeader">
@@ -261,8 +257,7 @@ window.onload = function() {
     const nextCode = allCodes[currentIdx + 1];
     const nextData = DATA[nextCode];
     const nextBtn = document.getElementById('nextBtn');
-    document.getElementById('nextLabel').textContent = nextData.label;
-    document.getElementById('nextTitle').textContent = nextData.title;
+    nextBtn.textContent = nextCode + ' →';
     nextBtn.href = 'detail.html#' + nextCode;
     nextBtn.style.display = 'inline-flex';
   }
