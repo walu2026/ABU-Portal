@@ -9,15 +9,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Standortnachteil Kündigungsschutz: Wieso ein Stellenabbau in Deutschland zwölfmal so viel kostet wie in der Schweiz»?"
+          "text": "Würde es dir beim Berufseinstieg mehr Sicherheit geben, wenn dein Arbeitgeber dich nicht so einfach kündigen darf – oder würde das eher Betriebe davon abhalten, junge Leute wie dich einzustellen?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Unternehmerischer Misserfolg wird in Deutschland teuer bestraft. Die Schweiz zeigt: Es ginge auch an"
+          "text": "Kündigungsschutzgesetze sind ein zentrales Element der Arbeitsmarktregulation und beeinflussen sowohl die Chancen von Lernenden auf dem Stellenmarkt als auch die unternehmerische Flexibilität. Das Verhältnis zwischen Arbeitnehmerschutz und wirtschaftlicher Effizienz prägt unterschiedliche nationale Rechtskulturen."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Recherchiert die Kündigungsfristen in der Schweiz und Deutschland (z.B. in eurer Branche) und erstellt eine Pro-Contra-Tabelle: Welche Vorteile/Nachteile hat starker Kündigungsschutz für Lernende und für Betriebe?"
         }
       ]
     },
@@ -53,15 +53,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn die Preise im Supermarkt steigen, warum erhöht die EZB dann ausgerechnet die Zinsen – macht das alles nicht noch teurer?"
+          "text": "Wenn die Preise im Supermarkt steigen, warum macht die Bank dann auch noch die Sparen weniger attraktiv?"
         },
         {
           "phase": "TH",
-          "text": "Lernende verstehen den Zusammenhang zwischen Inflation, Geldpolitik und Leitzinsen als zentrale wirtschaftliche Steuerungsinstrumente. Sie erkennen, dass höhere Zinsen das Geldausgeben unattraktiver machen und damit die Inflation bremsen sollen."
+          "text": "Inflation ist ein wirtschaftliches Phänomen, das den Wert des Geldes reduziert und zum Handeln zwingt. Die Leitzinserhöhung ist ein klassisches Steuerungsinstrument der Zentralbank, um Inflation zu bekämpfen."
         },
         {
           "phase": "UE",
-          "text": "Vergleicht eure monatlichen Ausgaben für Lebensmittel/Mobilität von vor 6 Monaten mit heute: Um wie viel Prozent sind die Preise gestiegen? Notiert drei Beispiele und diskutiert, wer von höheren Zinsen profitiert (Sparer) und wer leidet (Kreditnehmer)."
+          "text": "Berechnet: Ein Produkt kostet heute 10 Euro. Mit 2% Inflation: Was kostet es in 1 Jahr? Mit 5% Inflation: Was kostet es in 1 Jahr? Diskutiert: Wie wirkt sich das auf euer Taschengeld aus?"
         }
       ]
     },
@@ -754,15 +754,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn die Weltwirtschaft schwächer wächst, bedeutet das auch weniger Aufträge für Schweizer Betriebe – spürt ihr das in eurem Lehrbetrieb?"
+          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: IWF senkt Wachstums-Prognosen für Euro-Zone +++ Weltbank rechnet mit schwächstem Weltwirtschaftswachstum seit Corona-Pandemie»?"
         },
         {
           "phase": "TH",
-          "text": "Wirtschaftsprognosen von internationalen Organisationen (IWF, Weltbank) zeigen, wie vernetzt die globale Wirtschaft ist und welche Auswirkungen auf einzelne Länder und Betriebe entstehen. Die Lernenden verstehen, dass makroökonomische Trends auch ihre eigene berufliche Zukunft beeinflussen."
+          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
         },
         {
           "phase": "UE",
-          "text": "Recherchiert: Welche Produkte oder Dienstleistungen aus eurem Lehrbetrieb werden exportiert? Notiert, in welche Länder/Regionen – und überlegt, wie eine schwächere Wirtschaft dort unser Geschäft treffen könnte."
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     },
