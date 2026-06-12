@@ -1,7 +1,7 @@
 {
   "1": [
     {
-      "id": "art-20260611-03",
+      "id": "art-20260612-08",
       "date": "11.06.",
       "title": "Standortnachteil Kündigungsschutz: Wieso ein Stellenabbau in Deutschland zwölfmal so viel kostet wie in der Schweiz",
       "source": "NZZ",
@@ -45,7 +45,49 @@
   ],
   "2": [
     {
-      "id": "art-20260611-00",
+      "id": "art-20260612-03",
+      "date": "11.06.",
+      "title": "Die EZB nimmt den Kampf gegen die Inflation ernst und erhöht erstmals seit drei Jahren wieder die Leitzinsen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-ezb-nimmt-den-kampf-gegen-die-inflation-auf-und-erhoeht-erstmals-seit-drei-jahren-wieder-die-leitzinsen-ld.10010704",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn die Preise im Supermarkt steigen, warum erhöht die EZB dann ausgerechnet die Zinsen – macht das alles nicht noch teurer?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernende verstehen den Zusammenhang zwischen Inflation, Geldpolitik und Leitzinsen als zentrale wirtschaftliche Steuerungsinstrumente. Sie erkennen, dass höhere Zinsen das Geldausgeben unattraktiver machen und damit die Inflation bremsen sollen."
+        },
+        {
+          "phase": "UE",
+          "text": "Vergleicht eure monatlichen Ausgaben für Lebensmittel/Mobilität von vor 6 Monaten mit heute: Um wie viel Prozent sind die Preise gestiegen? Notiert drei Beispiele und diskutiert, wer von höheren Zinsen profitiert (Sparer) und wer leidet (Kreditnehmer)."
+        }
+      ]
+    },
+    {
+      "id": "art-20260612-04",
+      "date": "11.06.",
+      "title": "Mike Ashley macht ein Übernahmeangebot für Hugo Boss – was will der streitbare britische Grossaktionär?",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/mike-ashley-bietet-fuer-hugo-boss-was-will-der-streitbare-britische-grossaktionaer-ld.10010828",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Mike Ashley macht ein Übernahmeangebot für Hugo Boss – was will der streitbare britische Grossaktionär?»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Frasers Group von Mike Ashley legt eine Offerte für Hugo Boss vor. Der vom Schweizer Daniel Grie"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260612-05",
       "date": "11.06.",
       "title": "Die Preise in Amerika steigen immer schneller an: Der Iran-Krieg hinterlässt deutliche Spuren in der US-Wirtschaft",
       "source": "NZZ",
@@ -211,48 +253,6 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260602-06",
-      "date": "01.06.",
-      "title": "Schweizer Wohnungen werden immer kleiner – die Möbel ebenso: Händler wie Ikea und Pfister passen sich an",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/schweizer-wohnungen-werden-immer-kleiner-die-moebel-ebenso-haendler-wie-ikea-und-pfister-passen-sich-an-ld.10008740",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Schweizer Wohnungen werden immer kleiner – die Möbel ebenso: Händler wie Ikea und Pfister passen sich an»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Konsumenten setzen zunehmend auf kompakte Multifunktionsmöbel und optimieren so ihre schrumpfende Wo"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260601-03",
-      "date": "01.06.",
-      "title": "Die Rückkehr der Inflationsangst: Der festgefahrene Iran-Krieg wird zur wirtschaftlichen Dauerbelastung",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-rueckkehr-der-inflationsangst-der-festgefahrene-iran-krieg-wird-zur-wirtschaftlichen-dauerbelastung-ld.10008654",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Die Rückkehr der Inflationsangst: Der festgefahrene Iran-Krieg wird zur wirtschaftlichen Dauerbelastung»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Hoffnung war gross, der Iran-Krieg sei nur ein kurzer Schock. Doch die Angebotsengpässe halten a"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "3": [
@@ -301,7 +301,28 @@
   ],
   "4": [
     {
-      "id": "art-20260611-02",
+      "id": "art-20260612-00",
+      "date": "12.06.",
+      "title": "Michael Pieper hält die Zügel auch mit 80 in der Hand. Doch der Tod seines Sohnes Alexander Pieper zwingt den schwerreichen Unternehmer zu einer Zäsur",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/tod-von-alexander-pieper-zwingt-franke-und-artemis-zu-neubestimmung-ld.10010851",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Michael Pieper hält die Zügel auch mit 80 in der Hand. Doch der Tod seines Sohnes Alexander Pieper zwingt den schwerreichen Unternehmer zu einer Zäsur»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Im Besitz von Michael Pieper befinden sich neben dem Küchenausstatter Franke Beteiligungen an divers"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260612-07",
       "date": "11.06.",
       "title": "Getäuscht mit Gold aus der Schweiz? Ein Finanzskandal in Indien führt nach Luzern und ins Tessin",
       "source": "NZZ",
@@ -482,27 +503,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Die Schweiz erfüllt ihre Versprechen gegenüber den USA. Ob es etwas nützt, ist ungewiss. Die Trump-A"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260607-06",
-      "date": "06.06.",
-      "title": "Die Entstehung der «Lex On»: Der Sportartikelhersteller drohte der Schweiz mit einer Staatshaftungsklage",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-entstehung-der-lex-on-der-sportartikelhersteller-drohte-der-schweiz-mit-einer-staatshaftungsklage-ld.10009456",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Die Entstehung der «Lex On»: Der Sportartikelhersteller drohte der Schweiz mit einer Staatshaftungsklage»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: On setzte die Behörden massiv unter Druck, um weiterhin das Schweizerkreuz verwenden zu dürfen. Vert"
         },
         {
           "phase": "UE",
@@ -725,7 +725,49 @@
   ],
   "6": [
     {
-      "id": "art-20260611-01",
+      "id": "art-20260612-01",
+      "date": "11.06.",
+      "title": "SpaceX drängt an die Börse: Kleinanleger reissen sich um die SpaceX-Titel",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/spacex-draengt-an-die-boerse-kleinanleger-reissen-sich-um-die-spacex-titel-ld.10011006",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «SpaceX drängt an die Börse: Kleinanleger reissen sich um die SpaceX-Titel»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Das Raumfahrtunternehmen hat erfolgreich 75 Milliarden Dollar an Aktienkapital aufgenommen. Der näch"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260612-02",
+      "date": "11.06.",
+      "title": "KURZMELDUNGEN - Wirtschaft: IWF senkt Wachstums-Prognosen für Euro-Zone +++ Weltbank rechnet mit schwächstem Weltwirtschaftswachstum seit Corona-Pandemie",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-die-neusten-meldungen-ld.10010807",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn die Weltwirtschaft schwächer wächst, bedeutet das auch weniger Aufträge für Schweizer Betriebe – spürt ihr das in eurem Lehrbetrieb?"
+        },
+        {
+          "phase": "TH",
+          "text": "Wirtschaftsprognosen von internationalen Organisationen (IWF, Weltbank) zeigen, wie vernetzt die globale Wirtschaft ist und welche Auswirkungen auf einzelne Länder und Betriebe entstehen. Die Lernenden verstehen, dass makroökonomische Trends auch ihre eigene berufliche Zukunft beeinflussen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche Produkte oder Dienstleistungen aus eurem Lehrbetrieb werden exportiert? Notiert, in welche Länder/Regionen – und überlegt, wie eine schwächere Wirtschaft dort unser Geschäft treffen könnte."
+        }
+      ]
+    },
+    {
+      "id": "art-20260612-06",
       "date": "11.06.",
       "title": "ERKLÄRT - SpaceX wird der grösste Börsengang der Geschichte: Das sind die zehn wichtigsten Fragen und Antworten",
       "source": "NZZ",
@@ -889,48 +931,6 @@
         {
           "phase": "UE",
           "text": "Recherchiert ein Produkt, das ihr regelmässig nutzt (Handy, Kleidung, Lebensmittel): Wo wird es hergestellt, was würde ein 25%-Zoll kosten, wer profitiert/verliert? Erstellt ein einseitiges Faktenblatt."
-        }
-      ]
-    },
-    {
-      "id": "art-20260606-04",
-      "date": "06.06.",
-      "title": "Fast jeder neue Fed-Chef musste schwere Börsen-Crashs meistern. Auch für Kevin Warsh ist die Gefahr einer Krise sehr real",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/fast-jeder-neue-fed-chef-musste-schwere-boersen-crashs-meistern-auch-fuer-kevin-warsh-ist-die-gefahr-einer-krise-sehr-real-ld.10009454",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Fast jeder neue Fed-Chef musste schwere Börsen-Crashs meistern. Auch für Kevin Warsh ist die Gefahr einer Krise sehr real»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die US-Notenbank ist regelmässig mit grossen Marktturbulenzen konfrontiert. Alan Greenspan hatte den"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260606-06",
-      "date": "05.06.",
-      "title": "DIE NEUESTEN ENTWICKLUNGEN - Zollverhandlungen Schweiz-USA: Schweiz verhandelt trotz neuen Zusatzzöllen weiter",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/zollschock-fuer-die-schweiz-antworten-auf-die-wichtigsten-fragen-ld.1896220",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «DIE NEUESTEN ENTWICKLUNGEN - Zollverhandlungen Schweiz-USA: Schweiz verhandelt trotz neuen Zusatzzöllen weiter»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Nach schwierigen Verhandlungen mit den USA liegen die US-Zölle auf Schweizer Importgüter seit Mitte "
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     }
