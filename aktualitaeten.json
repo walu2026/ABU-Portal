@@ -45,6 +45,48 @@
   ],
   "2": [
     {
+      "id": "art-20260613-00",
+      "date": "13.06.",
+      "title": "Anthropic-Börsengang: Eine Basler Gruppe gehört zu den frühesten Investoren des wertvollsten KI-Startups der Welt",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/anthropic-boersengang-eine-basler-gruppe-gehoert-zu-den-fruehesten-investoren-des-wertvollsten-ki-startups-der-welt-ld.10010965",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Anthropic-Börsengang: Eine Basler Gruppe gehört zu den frühesten Investoren des wertvollsten KI-Startups der Welt»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der Verein Macroscopic Ventures warnt vor KI-Risiken und landet gleichzeitig mit einer eigenen KI-In"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260613-02",
+      "date": "13.06.",
+      "title": "Bis zu 150 Euro für ein WM-Trikot: So lukrativ ist das Geschäft für Adidas und Puma",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/bis-zu-150-euro-fuer-ein-wm-trikot-so-lukrativ-ist-das-geschaeft-fuer-adidas-und-puma-ld.10011008",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Bis zu 150 Euro für ein WM-Trikot: So lukrativ ist das Geschäft für Adidas und Puma»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Mit immer neuen Varianten heizen die Hersteller die Nachfrage an, hohe Preise schrecken die Konsumen"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260612-03",
       "date": "11.06.",
       "title": "Die EZB nimmt den Kampf gegen die Inflation ernst und erhöht erstmals seit drei Jahren wieder die Leitzinsen",
@@ -211,48 +253,6 @@
           "text": "Recherchiere drei Produkte, die du regelmäßig kaufst (z.B. Kaffee, Handy-Abo, Kleidung). Notiere die heutigen Preise und überlege: Um wie viel Prozent müssten sie steigen, damit du es dir nicht mehr leisten kannst?"
         }
       ]
-    },
-    {
-      "id": "art-20260603-07",
-      "date": "02.06.",
-      "title": "In der südspanischen Provinz Almería züchten Tausende von Bauern unser Gemüse – zum Teil unter prekären Bedingungen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/plastikmeer-auch-coop-und-edeka-beziehen-gemuese-aus-almeria-ld.10007490",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «In der südspanischen Provinz Almería züchten Tausende von Bauern unser Gemüse – zum Teil unter prekären Bedingungen»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Über ein Drittel des Gemüses, das in der EU und in der Schweiz verzehrt wird, stammt aus südspanisch"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260602-04",
-      "date": "01.06.",
-      "title": "Referenzzinssatz bleibt bei 1,25 Prozent",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/referenzzinssatz-bleibt-bei-125-prozent-ld.10009278",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Referenzzinssatz bleibt bei 1,25 Prozent»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der hypothekarische Referenzzinssatz verharrt weiter auf dem Tiefstand. Mieterinnen und Mieter in de"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "3": [
@@ -300,6 +300,48 @@
     }
   ],
   "4": [
+    {
+      "id": "art-20260613-04",
+      "date": "13.06.",
+      "title": "Was könnte sich Elon Musk mit seinem neuen Reichtum kaufen? Eine fiktive Shoppingtour durch die Schweiz",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/was-koennte-sich-elon-musk-mit-seinem-neuen-reichtum-kaufen-eine-fiktive-shoppingtour-durch-die-schweiz-ld.10010413",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Was könnte sich Elon Musk mit seinem neuen Reichtum kaufen? Eine fiktive Shoppingtour durch die Schweiz»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Elon Musk ist der erste Dollar-Billionär der Geschichte. Was kann man sich mit so viel Geld leisten?"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260613-05",
+      "date": "13.06.",
+      "title": "Immer mehr Einwohner: München stemmt sich gegen den Kollaps der Bahn – mit Lehren für die Schweiz",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/ausbau-der-bahn-muenchens-neue-stammstrecke-bietet-lehren-fuer-die-schweiz-ld.10009687",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Immer mehr Einwohner: München stemmt sich gegen den Kollaps der Bahn – mit Lehren für die Schweiz»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Um die S-Bahn zu entlasten, errichten Schweizer Tunnelbauer mitten in München den tiefsten Bahnhof D"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260612-00",
       "date": "12.06.",
@@ -467,51 +509,30 @@
           "text": "Recherchiert ein Schweizer Unternehmen in eurer Branche und überlegt: Könnte KI dort eingesetzt werden? Erstellt eine einfache Kosten-Nutzen-Tabelle (KI-Kosten vs. eingesparte Arbeitszeit)."
         }
       ]
-    },
-    {
-      "id": "art-20260608-06",
-      "date": "07.06.",
-      "title": "Historischer Glücksfall für Hausbesitzer: Die Bevölkerungszunahme lässt Vermögen explodieren",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/historischer-gluecksfall-fuer-hausbesitzer-die-bevoelkerungszunahme-laesst-vermoegen-explodieren-ld.10009517",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Warum werden manche Menschen durch das Kaufen eines Hauses steinreich, während andere das nie schaffen können?"
-        },
-        {
-          "phase": "TH",
-          "text": "Das Konzept der Vermögensbildung zeigt, wie wirtschaftliche Faktoren (Migration, Nachfrage, Preise) das Leben von Menschen konkret verändern. Gleichzeitig wird sichtbar, wie Chancenungleichheit entsteht: Wer früh kaufen konnte, profitiert heute massiv – andere haben nie diese Möglichkeit gehabt."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Wie haben sich die Immobilienpreise in eurer Region in den letzten 20 Jahren entwickelt? Erstellt eine kleine Grafik und diskutiert: Ist das fair?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260607-05",
-      "date": "06.06.",
-      "title": "«Wir sind die Musterschüler»: Schweizer Firmen haben bereits 27 Milliarden in den USA investiert",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wir-sind-die-musterschueler-schweizer-firmen-haben-bereits-27-milliarden-in-den-usa-investiert-ld.10009847",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: ««Wir sind die Musterschüler»: Schweizer Firmen haben bereits 27 Milliarden in den USA investiert»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Schweiz erfüllt ihre Versprechen gegenüber den USA. Ob es etwas nützt, ist ungewiss. Die Trump-A"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "5": [
+    {
+      "id": "art-20260613-01",
+      "date": "13.06.",
+      "title": "Zu wenige AKW-Fachleute: Bleibt das Neubauverbot bestehen, wackelt auch der Langzeitbetrieb von Gösgen und Leibstadt",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/zu-wenige-akw-arbeiter-bleibt-das-neubauverbot-bestehen-wackelt-auch-der-langzeitbetrieb-von-goesgen-und-leibstadt-ld.10011099",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn niemand mehr Atomkraftwerk-Ingenieur werden will – wer schaltet dann in 20 Jahren den Strom ab?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieses Beispiel zeigt, wie politische Entscheidungen (Neubauverbot) unmittelbare Auswirkungen auf Berufswahl und Fachkräftemangel haben. Es verdeutlicht die gegenseitige Abhängigkeit zwischen Gesellschaftspolitik, Wirtschaft und persönlichen Karrierechancen."
+        },
+        {
+          "phase": "UE",
+          "text": "Interviewt drei Personen (Familie, Bekannte, Lehrmeister) zur Frage: 'Was würde dich davon abhalten, einen Beruf zu ergreifen?' Notiert die Antworten und diskutiert Parallelen zum AKW-Problem."
+        }
+      ]
+    },
     {
       "id": "art-20260611-09",
       "date": "10.06.",
@@ -700,30 +721,72 @@
           "text": "Recherchiert ein Produkt/eine Marke, die bewusst knapp hält (z.B. bestimmte Sneaker, Restaurant-Reservierungen). Erklärt, welche Wirkung diese Strategie auf Konsument:innen hat und ob das fair ist."
         }
       ]
-    },
+    }
+  ],
+  "6": [
     {
-      "id": "art-20260605-05",
-      "date": "04.06.",
-      "title": "Donald Trump Jr. zeigt sich bei seinem Auftritt in Zürich als Sprachrohr des Vaters. Für die Schweiz könnte dies ein Vorteil sein",
+      "id": "art-20260613-03",
+      "date": "13.06.",
+      "title": "Kritische Rohstoffe: Mit ihrer bisherigen Strategie bleibt die EU vom chinesischen Wohlwollen abhängig",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/donald-trump-jr-zeigt-sich-bei-seinem-auftritt-in-zuerich-als-sprachrohr-des-vaters-fuer-die-schweiz-koennte-dies-ein-vorteil-sein-ld.10009702",
+      "url": "https://www.nzz.ch/wirtschaft/kritische-rohstoffe-mit-ihrer-bisherigen-strategie-bleibt-die-eu-vom-chinesischen-wohlwollen-abhaengig-ld.10010419",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Donald Trump Jr. zeigt sich bei seinem Auftritt in Zürich als Sprachrohr des Vaters. Für die Schweiz könnte dies ein Vorteil sein»?"
+          "text": "Was denkst du zu: «Kritische Rohstoffe: Mit ihrer bisherigen Strategie bleibt die EU vom chinesischen Wohlwollen abhängig»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Ex-Botschafter Thomas Borer nutzt die Visite des Präsidentensohnes in Zürich für eine Charmeoffe"
+          "text": "Dieser Artikel zeigt: Für das Rüstungswesen und die Industrie ist das Reich der Mitte der mit Abstand wichtigste Lieferant"
         },
         {
           "phase": "UE",
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    }
-  ],
-  "6": [
+    },
+    {
+      "id": "art-20260613-06",
+      "date": "13.06.",
+      "title": "Dank diesem Tal mitten in der Provinz stieg Amerika zur Supermacht auf – heute hat der Ort ein Image-Problem. Schuld daran ist auch Billy Joel",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/american-dream-aus-stahl-wie-die-usa-zur-supermacht-wurden-ld.10004841",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Dank diesem Tal mitten in der Provinz stieg Amerika zur Supermacht auf – heute hat der Ort ein Image-Problem. Schuld daran ist auch Billy Joel»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Besuch im Lehigh Valley, dessen Erfolgsgeschichte mit einem Betrug an seinen Ureinwohnern begann."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260613-07",
+      "date": "12.06.",
+      "title": "KURZMELDUNGEN - Wirtschaft: Anthropic sperrt Top-KI-Modell nach Anordnung der Regierung +++ Ex-Krypto-König Bankman-Fried scheitert mit Berufungsantrag",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-ex-krypto-koenig-bankman-fried-scheitert-mit-berufungsantrag-iwf-senkt-wachstums-prognosen-fuer-euro-zone-ld.10010807",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Anthropic sperrt Top-KI-Modell nach Anordnung der Regierung +++ Ex-Krypto-König Bankman-Fried scheitert mit Berufungsantrag»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260612-01",
       "date": "11.06.",
@@ -868,69 +931,6 @@
         {
           "phase": "UE",
           "text": "Recherchiert online, welche Produkte/Gewohnheiten eure Generation (Gen Z) anders konsumiert als eure Eltern – und überlegt: Welche Schweizer Traditionsunternehmen könnten davon profitieren, solche Trends früh zu erkennen?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260608-07",
-      "date": "07.06.",
-      "title": "Abschied vom Autoland? In vielen deutschen Werken geht die Angst um",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/abschied-vom-autoland-in-vielen-deutschen-werken-geht-die-angst-um-ld.10009395",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Abschied vom Autoland? In vielen deutschen Werken geht die Angst um»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Zu teuer und zu wenig ausgelastet: Viele Autofabriken in Deutschland sind kaum noch wettbewerbsfähig"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260607-07",
-      "date": "06.06.",
-      "title": "Babymilch-Skandal: Nach dem Tod eines St. Galler Säuglings drohten in der Schweiz halb leere Regale",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/babymilch-skandal-nach-dem-tod-eines-st-galler-saeuglings-drohten-in-der-schweiz-halb-leere-regale-ld.10009326",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Babymilch-Skandal: Nach dem Tod eines St. Galler Säuglings drohten in der Schweiz halb leere Regale»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: In der Affäre um verunreinigte Säuglingsnahrung reagierte der Lebensmittelkonzern Danone sehr zögerl"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260606-02",
-      "date": "06.06.",
-      "title": "«Realitätsfern» und «scheingenau»: Der US-Handelsbeauftragte liest den Ökonomen die Leviten – und bricht eine Lanze für Zölle",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/realitaetsfern-und-scheingenau-der-us-handelsbeauftragte-liest-den-oekonomen-die-leviten-und-bricht-eine-lanze-fuer-zoelle-ld.10009672",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn Produkte billiger wären, wenn sie hier statt in Asien hergestellt würden – würde das euch interessieren, auch wenn sie dann teurer sind?"
-        },
-        {
-          "phase": "TH",
-          "text": "Der Artikel zeigt den Konflikt zwischen Globalisierung (billige Importe) und nationaler Wirtschaftspolitik (Zölle zum Schutz). Lernende erkennen, dass wirtschaftliche Entscheidungen politische Wertungen sind, nicht nur rationale Kalkulationen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert ein Produkt, das ihr regelmässig nutzt (Handy, Kleidung, Lebensmittel): Wo wird es hergestellt, was würde ein 25%-Zoll kosten, wer profitiert/verliert? Erstellt ein einseitiges Faktenblatt."
         }
       ]
     }
