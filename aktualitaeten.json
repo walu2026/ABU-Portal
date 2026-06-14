@@ -45,7 +45,28 @@
   ],
   "2": [
     {
-      "id": "art-20260613-00",
+      "id": "art-20260614-08",
+      "date": "13.06.",
+      "title": "Bis zu 150 Euro für ein WM-Trikot: So lukrativ ist das Geschäft für Adidas und Puma",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/bis-zu-150-euro-fuer-ein-wm-trikot-so-lukrativ-ist-das-geschaeft-fuer-adidas-und-puma-ld.10011008",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Würdest du 150 Euro für ein Fussball-Trikot ausgeben, das du vielleicht nächste Saison nicht mehr tragen willst?"
+        },
+        {
+          "phase": "TH",
+          "text": "Konsumentverhalten und Marketingstrategien: Unternehmen nutzen emotionale Bindung (Lieblingsteam, neue Varianten) und Knappheit, um hohe Preise zu rechtfertigen. Lernende sollen erkennen, wie Werbung und Psychologie ihre Kaufentscheidungen beeinflussen."
+        },
+        {
+          "phase": "UE",
+          "text": "Vergleiche die Herstellungskosten eines Trikots mit dem Verkaufspreis von 150 Euro. Wo geht das Geld hin? (Material, Arbeit, Gewinn, Marketing?) Erstelle eine Kostenaufteilung als Kreisdiagramm."
+        }
+      ]
+    },
+    {
+      "id": "art-20260614-09",
       "date": "13.06.",
       "title": "Anthropic-Börsengang: Eine Basler Gruppe gehört zu den frühesten Investoren des wertvollsten KI-Startups der Welt",
       "source": "NZZ",
@@ -58,27 +79,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Der Verein Macroscopic Ventures warnt vor KI-Risiken und landet gleichzeitig mit einer eigenen KI-In"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260613-02",
-      "date": "13.06.",
-      "title": "Bis zu 150 Euro für ein WM-Trikot: So lukrativ ist das Geschäft für Adidas und Puma",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/bis-zu-150-euro-fuer-ein-wm-trikot-so-lukrativ-ist-das-geschaeft-fuer-adidas-und-puma-ld.10011008",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Bis zu 150 Euro für ein WM-Trikot: So lukrativ ist das Geschäft für Adidas und Puma»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Mit immer neuen Varianten heizen die Hersteller die Nachfrage an, hohe Preise schrecken die Konsumen"
         },
         {
           "phase": "UE",
@@ -301,6 +301,48 @@
   ],
   "4": [
     {
+      "id": "art-20260614-01",
+      "date": "14.06.",
+      "title": "Er hat die Ökonomie vermenschlicht und das Fach an der Uni Zürich an die Spitze geführt. Jetzt sagt Ernst Fehr: «Ich sorge mich um die Resilienz der Demokratie»",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/er-hat-die-oekonomie-vermenschlicht-und-das-fach-an-der-uni-zuerich-an-die-spitze-gefuehrt-jetzt-sagt-ernst-fehr-ich-sorge-mich-um-die-resilienz-der-demokratie-ld.10010839",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Er hat die Ökonomie vermenschlicht und das Fach an der Uni Zürich an die Spitze geführt. Jetzt sagt Ernst Fehr: «Ich sorge mich um die Resilienz der Demokratie»»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der im deutschsprachigen Raum meistzitierte Ökonom vermittelt eine positive Botschaft: Der Mensch is"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260614-06",
+      "date": "13.06.",
+      "title": "Die Politik will die «Lex On» rückgängig machen – und beruft sich auf Simonetta Sommaruga",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-politik-will-die-lex-on-rueckgaengig-machen-und-beruft-sich-auf-simonetta-sommaruga-ld.10010650",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Sollte eine Schweizer Schuhfirma wichtiger sein als unsere nationale Identität – oder ist das ein falscher Gegensatz?"
+        },
+        {
+          "phase": "TH",
+          "text": "Hier wird sichtbar, wie Lobbyismus und Wirtschaftsinteressen in der Schweizer Demokratie funktionieren. Es geht um die Balance zwischen Innovation/Wirtschaft und nationalen Symbolen sowie um die Transparenz von politischen Entscheidungsprozessen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Was ist das Schweizerkreuz und welche Regeln galten bisher dafür? Notiert, welche Gründe die On-Schuh-Firma für eine Lockerung hatte und welche Gründe die Politik jetzt für einen Rückgang hat."
+        }
+      ]
+    },
+    {
       "id": "art-20260613-04",
       "date": "13.06.",
       "title": "Was könnte sich Elon Musk mit seinem neuen Reichtum kaufen? Eine fiktive Shoppingtour durch die Schweiz",
@@ -467,53 +509,11 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260609-04",
-      "date": "08.06.",
-      "title": "Späte Strafe: Lex Greensill darf neun Jahre keine britischen Firmen mehr leiten",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/spaete-strafe-lex-greensill-darf-9-jahre-keine-britischen-firmen-mehr-leiten-ld.10010213",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Späte Strafe: Lex Greensill darf neun Jahre keine britischen Firmen mehr leiten»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Kollaps seiner Finanzfirma hat den Untergang der Credit Suisse beschleunigt. Jetzt wird der Fina"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260608-01",
-      "date": "08.06.",
-      "title": "«Je mehr KI ich anzapfe, desto mehr Tokens verbrauche ich. Deshalb kann das exponentiell teuer werden»",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/je-mehr-ki-ich-anzapfe-desto-mehr-tokens-verbrauche-ich-deshalb-kann-das-sehr-schnell-exponentiell-teuer-werden-ld.10010028",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn eine KI pro Wort, das sie schreibt, Geld kostet – wer trägt am Ende diese Rechnung: das Unternehmen, die Angestellten oder der Kunde?"
-        },
-        {
-          "phase": "TH",
-          "text": "Lernende erkennen, dass neue Technologien nicht nur technische, sondern auch wirtschaftliche und ökologische Folgen haben. Dies verbindet sich mit dem Verständnis von Nachhaltigkeit und verantwortungsvollem Ressourceneinsatz in der Schweizer Wirtschaft."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert ein Schweizer Unternehmen in eurer Branche und überlegt: Könnte KI dort eingesetzt werden? Erstellt eine einfache Kosten-Nutzen-Tabelle (KI-Kosten vs. eingesparte Arbeitszeit)."
-        }
-      ]
     }
   ],
   "5": [
     {
-      "id": "art-20260613-01",
+      "id": "art-20260614-07",
       "date": "13.06.",
       "title": "Zu wenige AKW-Fachleute: Bleibt das Neubauverbot bestehen, wackelt auch der Langzeitbetrieb von Gösgen und Leibstadt",
       "source": "NZZ",
@@ -521,15 +521,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn niemand mehr Atomkraftwerk-Ingenieur werden will – wer schaltet dann in 20 Jahren den Strom ab?"
+          "text": "Was denkst du zu: «Zu wenige AKW-Fachleute: Bleibt das Neubauverbot bestehen, wackelt auch der Langzeitbetrieb von Gösgen und Leibstadt»?"
         },
         {
           "phase": "TH",
-          "text": "Dieses Beispiel zeigt, wie politische Entscheidungen (Neubauverbot) unmittelbare Auswirkungen auf Berufswahl und Fachkräftemangel haben. Es verdeutlicht die gegenseitige Abhängigkeit zwischen Gesellschaftspolitik, Wirtschaft und persönlichen Karrierechancen."
+          "text": "Dieser Artikel zeigt: Kernenergie-Spezialisten sind bereits heute rar. Fehlt dem Nachwuchs in der Schweiz die Perspektive,"
         },
         {
           "phase": "UE",
-          "text": "Interviewt drei Personen (Familie, Bekannte, Lehrmeister) zur Frage: 'Was würde dich davon abhalten, einen Beruf zu ergreifen?' Notiert die Antworten und diskutiert Parallelen zum AKW-Problem."
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     },
@@ -725,6 +725,27 @@
   ],
   "6": [
     {
+      "id": "art-20260614-00",
+      "date": "14.06.",
+      "title": "SpaceX für den Heimgebrauch: Elon Musks Satelliteninternet hat in der Schweiz viele Fans",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/spacex-fuer-den-heimgebrauch-elon-musks-satelliteninternet-hat-in-der-schweiz-viele-fans-ld.10011204",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «SpaceX für den Heimgebrauch: Elon Musks Satelliteninternet hat in der Schweiz viele Fans»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Starlink ist deutlich billiger geworden. Eine Konkurrenz für Swisscom und Sunrise wird das Interneta"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260613-03",
       "date": "13.06.",
       "title": "Kritische Rohstoffe: Mit ihrer bisherigen Strategie bleibt die EU vom chinesischen Wohlwollen abhängig",
@@ -912,30 +933,72 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260609-07",
-      "date": "07.06.",
-      "title": "Der Gen-Z-Flüsterer aus Vevey: Der Nestlé-Chef Philipp Navratil verordnet seinem Konzern eine Verjüngungskur",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/der-gen-z-fluesterer-aus-vevey-nestle-chef-philipp-navratil-verordnet-seinem-konzern-eine-verjuengungskur-ld.10010057",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Warum kauft ein 160-jähriges Schweizer Unternehmen plötzlich ein deutsches Start-up für Trinkmahlzeiten – könnte Nestlé auch einfach selbst so ein Produkt erfinden?"
-        },
-        {
-          "phase": "TH",
-          "text": "Konzernstrategie und Marktadaption: Große Unternehmen müssen sich kontinuierlich an verändernde Konsumentenbedürfnisse anpassen, um relevant zu bleiben. Der Zukauf von Yfood zeigt, wie Traditionsunternehmen durch gezielte Übernahmen jüngere Zielgruppen erschließen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert online, welche Produkte/Gewohnheiten eure Generation (Gen Z) anders konsumiert als eure Eltern – und überlegt: Welche Schweizer Traditionsunternehmen könnten davon profitieren, solche Trends früh zu erkennen?"
-        }
-      ]
     }
   ],
   "7": [
+    {
+      "id": "art-20260614-02",
+      "date": "14.06.",
+      "title": "Die Aktie, die den Investoren um die Ohren fliegen könnte: Der Hype um Musk, KI und Raumfahrt trägt alle Züge einer Spekulationsblase",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-aktie-die-vom-himmel-fallen-koennte-der-hype-um-musk-ki-und-raumfahrt-traegt-alle-zuege-einer-spekulationsblase-ld.10010688",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Die Aktie, die den Investoren um die Ohren fliegen könnte: Der Hype um Musk, KI und Raumfahrt trägt alle Züge einer Spekulationsblase»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der fulminante Börsengang verschafft SpaceX eine Bewertung, die selbst Musk-gläubige Anleger ins Grü"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260614-03",
+      "date": "14.06.",
+      "title": "Der Königsmacher platziert sich selbst: Der Headhunter Björn Johansson verkauft seine Firma an seinen liebsten Konkurrenten",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/der-koenigsmacher-platziert-sich-selbst-der-headhunter-bjoern-johansson-verkauft-seine-firma-an-seinen-liebsten-konkurrenten-ld.10010685",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Der Königsmacher platziert sich selbst: Der Headhunter Björn Johansson verkauft seine Firma an seinen liebsten Konkurrenten»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Spencer Stuart übernimmt das Office von Björn Johansson. Mit dem Deal kehrt der schillerndste Person"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260614-04",
+      "date": "14.06.",
+      "title": "Keynes, KI und die Stempeluhr: Kommt nun die 15-Stunden-Woche?",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/keynes-ki-und-die-stempeluhr-verhilft-uns-die-kuenstliche-intelligenz-zur-15-stunden-wochen-ld.10010684",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Würdet ihr lieber 15 Stunden pro Woche arbeiten und den Rest frei gestalten – oder braucht ihr mehr Einkommen und Struktur?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernziel: Schüler reflektieren, wie technologischer Wandel (KI) die Arbeitswelt und Lebensplanung verändern kann. Sie verstehen, dass Prognosen von Experten nicht automatisch eintreffen und eigene Zukunftsentwürfe vom Kontext abhängen."
+        },
+        {
+          "phase": "UE",
+          "text": "Schreibt einen Brief an euer 25-jähriges Ich: Wie stellt ihr euch euer Arbeitsleben vor – 15-Stunden-Woche oder anders? Was müsste dafür passieren?"
+        }
+      ]
+    },
     {
       "id": "art-20260611-07",
       "date": "10.06.",
