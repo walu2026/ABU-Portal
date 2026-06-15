@@ -301,7 +301,7 @@
   ],
   "4": [
     {
-      "id": "art-20260614-01",
+      "id": "art-20260615-03",
       "date": "14.06.",
       "title": "Er hat die Ökonomie vermenschlicht und das Fach an der Uni Zürich an die Spitze geführt. Jetzt sagt Ernst Fehr: «Ich sorge mich um die Resilienz der Demokratie»",
       "source": "NZZ",
@@ -322,7 +322,7 @@
       ]
     },
     {
-      "id": "art-20260614-06",
+      "id": "art-20260615-08",
       "date": "13.06.",
       "title": "Die Politik will die «Lex On» rückgängig machen – und beruft sich auf Simonetta Sommaruga",
       "source": "NZZ",
@@ -330,15 +330,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Sollte eine Schweizer Schuhfirma wichtiger sein als unsere nationale Identität – oder ist das ein falscher Gegensatz?"
+          "text": "Was denkst du zu: «Die Politik will die «Lex On» rückgängig machen – und beruft sich auf Simonetta Sommaruga»?"
         },
         {
           "phase": "TH",
-          "text": "Hier wird sichtbar, wie Lobbyismus und Wirtschaftsinteressen in der Schweizer Demokratie funktionieren. Es geht um die Balance zwischen Innovation/Wirtschaft und nationalen Symbolen sowie um die Transparenz von politischen Entscheidungsprozessen."
+          "text": "Dieser Artikel zeigt: Die Lockerung der Schweizerkreuz-Regeln – entstanden auf Druck der Schuhmarke On – stösst im Parlame"
         },
         {
           "phase": "UE",
-          "text": "Recherchiert: Was ist das Schweizerkreuz und welche Regeln galten bisher dafür? Notiert, welche Gründe die On-Schuh-Firma für eine Lockerung hatte und welche Gründe die Politik jetzt für einen Rückgang hat."
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     },
@@ -513,7 +513,7 @@
   ],
   "5": [
     {
-      "id": "art-20260614-07",
+      "id": "art-20260615-09",
       "date": "13.06.",
       "title": "Zu wenige AKW-Fachleute: Bleibt das Neubauverbot bestehen, wackelt auch der Langzeitbetrieb von Gösgen und Leibstadt",
       "source": "NZZ",
@@ -725,7 +725,49 @@
   ],
   "6": [
     {
-      "id": "art-20260614-00",
+      "id": "art-20260615-00",
+      "date": "15.06.",
+      "title": "Sie ärgern sich über Trumps krumme Aktiengeschäfte? Bundesräte und der deutsche Kanzler könnten unbemerkt dasselbe tun",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/sie-aergern-sich-ueber-trumps-krumme-aktiengeschaefte-bundesraete-und-der-deutsche-kanzler-koennten-unbemerkt-dasselbe-tun-ld.10009362",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Sie ärgern sich über Trumps krumme Aktiengeschäfte? Bundesräte und der deutsche Kanzler könnten unbemerkt dasselbe tun»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Amerikanische Politiker müssen ihre Aktientransaktionen ausweisen. In der Schweiz und in Deutschland"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260615-01",
+      "date": "15.06.",
+      "title": "KURZMELDUNGEN - Dax steigt nach Ankündigung von Iran-Abkommen über 25 000 Punkte",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-ex-krypto-koenig-bankman-fried-scheitert-mit-berufungsantrag-iwf-senkt-wachstums-prognosen-fuer-euro-zone-ld.10010807",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «KURZMELDUNGEN - Dax steigt nach Ankündigung von Iran-Abkommen über 25 000 Punkte»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260615-02",
       "date": "14.06.",
       "title": "SpaceX für den Heimgebrauch: Elon Musks Satelliteninternet hat in der Schweiz viele Fans",
       "source": "NZZ",
@@ -891,53 +933,11 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260610-05",
-      "date": "09.06.",
-      "title": "Ein deutscher Versicherer will mit Lionel Messi die USA erobern",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/ein-deutscher-versicherer-will-mit-lionel-messi-die-usa-erobern-ld.10010103",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Ein deutscher Versicherer will mit Lionel Messi die USA erobern»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: In keiner anderen Branche zählen deutsche Konzerne deutlicher zur Weltspitze als bei den Versicherun"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260610-06",
-      "date": "09.06.",
-      "title": "Nach historischem Kurssturz: Die Führungsriege von Partners Group kauft eigene Aktien in Millionenhöhe",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/nach-historischem-kurssturz-die-fuehrungsriege-von-partners-group-kauft-eigene-aktien-in-millionenhoehe-ld.10010494",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Nach historischem Kurssturz: Die Führungsriege von Partners Group kauft eigene Aktien in Millionenhöhe»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Aktie von Partners Group stürzte vergangene Woche an einem einzelnen Handelstag um 16 Prozent ab"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "7": [
     {
-      "id": "art-20260614-02",
+      "id": "art-20260615-04",
       "date": "14.06.",
       "title": "Die Aktie, die den Investoren um die Ohren fliegen könnte: Der Hype um Musk, KI und Raumfahrt trägt alle Züge einer Spekulationsblase",
       "source": "NZZ",
@@ -958,7 +958,7 @@
       ]
     },
     {
-      "id": "art-20260614-03",
+      "id": "art-20260615-05",
       "date": "14.06.",
       "title": "Der Königsmacher platziert sich selbst: Der Headhunter Björn Johansson verkauft seine Firma an seinen liebsten Konkurrenten",
       "source": "NZZ",
@@ -979,7 +979,7 @@
       ]
     },
     {
-      "id": "art-20260614-04",
+      "id": "art-20260615-06",
       "date": "14.06.",
       "title": "Keynes, KI und die Stempeluhr: Kommt nun die 15-Stunden-Woche?",
       "source": "NZZ",
@@ -987,15 +987,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Würdet ihr lieber 15 Stunden pro Woche arbeiten und den Rest frei gestalten – oder braucht ihr mehr Einkommen und Struktur?"
+          "text": "Würdet ihr lieber 15 Stunden pro Woche arbeiten und dafür weniger verdienen, oder lieber 40 Stunden für mehr Geld?"
         },
         {
           "phase": "TH",
-          "text": "Lernziel: Schüler reflektieren, wie technologischer Wandel (KI) die Arbeitswelt und Lebensplanung verändern kann. Sie verstehen, dass Prognosen von Experten nicht automatisch eintreffen und eigene Zukunftsentwürfe vom Kontext abhängen."
+          "text": "Die Lernenden erkennen, dass technologischer Fortschritt (KI) Arbeitszeit und Lebensqualität grundlegend verändern kann. Sie verstehen, dass Prognosen über die Zukunft der Arbeitswelt sich irren können und dass ihre eigene Karriere von solchen Megatrends beeinflusst wird."
         },
         {
           "phase": "UE",
-          "text": "Schreibt einen Brief an euer 25-jähriges Ich: Wie stellt ihr euch euer Arbeitsleben vor – 15-Stunden-Woche oder anders? Was müsste dafür passieren?"
+          "text": "Schreib auf, welche drei Tätigkeiten in deinem Lehrberuf könnten durch KI automatisiert werden – und welche drei bleiben unverzichtbar menschlich?"
         }
       ]
     },
