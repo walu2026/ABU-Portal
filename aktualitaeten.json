@@ -45,6 +45,69 @@
   ],
   "2": [
     {
+      "id": "art-20260616-00",
+      "date": "16.06.",
+      "title": "Die Wirtschaftsprüfer geraten zunehmend in eine Vertrauenskrise: Auch KPMG stolpert über Datenlecks",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-wirtschaftspruefer-geraten-zunehmend-in-eine-vertrauenskrise-auch-kpmg-stolpert-ueber-datenlecks-ld.10010878",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Die Wirtschaftsprüfer geraten zunehmend in eine Vertrauenskrise: Auch KPMG stolpert über Datenlecks»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Nach dem PwC-Skandal in Australien steht mit KPMG bereits der nächste Riese der Big Four unter Besch"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260616-04",
+      "date": "16.06.",
+      "title": "Die SNB geht eigene Wege. Sie wird sich der Zinswende der EZB kaum anschliessen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-snb-geht-eigene-wege-sie-wird-sich-der-zinswende-der-ezb-kaum-anschliessen-ld.10011027",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Die SNB geht eigene Wege. Sie wird sich der Zinswende der EZB kaum anschliessen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Angst vor einer neuen Inflationswelle geht um. Nicht so bei der Schweizerischen Nationalbank. Fü"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260616-06",
+      "date": "15.06.",
+      "title": "Verspätete Flüge, teure Familientarife: Flugpassagiere in der EU und in der Schweiz erhalten mehr Rechte",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/verspaetete-fluege-teure-familientarife-flugpassagiere-in-der-eu-und-der-schweiz-erhalten-mehr-rechte-ld.10011376",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Verspätete Flüge, teure Familientarife: Flugpassagiere in der EU und in der Schweiz erhalten mehr Rechte»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Fluggesellschaften werben oft mit intransparenten Tarifen. Zudem handhaben sie Entschädigungen bei V"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260614-08",
       "date": "13.06.",
       "title": "Bis zu 150 Euro für ein WM-Trikot: So lukrativ ist das Geschäft für Adidas und Puma",
@@ -190,69 +253,6 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260609-09",
-      "date": "07.06.",
-      "title": "Gleichstellung neu denken: Nicht jede Ungleichheit ist ungerecht",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/gleichstellung-neu-denken-nicht-jede-ungleichheit-ist-ungerecht-ld.10009535",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Gleichstellung neu denken: Nicht jede Ungleichheit ist ungerecht»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Lohnunterschiede zwischen Mann und Frau zeigen sich besonders eindrücklich bei Müttern und Vätern. W"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260606-07",
-      "date": "05.06.",
-      "title": "Die EU will mehr Lohngleichheit zwischen Mann und Frau, doch die Mitgliedsländer spielen nicht mit",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-eu-will-mehr-lohngleichheit-zwischen-mann-und-frau-doch-die-mitgliedslaender-spielen-nicht-mit-ld.10009838",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Würdet ihr es fair finden, wenn zwei Personen die gleiche Arbeit machen, aber eine davon weniger Lohn erhält – nur weil sie eine Frau ist?"
-        },
-        {
-          "phase": "TH",
-          "text": "Die Lohngleichheit ist ein zentrales Thema der Lohnfairness und Geschlechtergerechtigkeit. Lernende verstehen, dass Transparenz (Offenlegung von Lohndaten) ein wichtiges Werkzeug ist, um Diskriminierung sichtbar zu machen und zu bekämpfen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Was verdienen verschiedene Berufe in der Schweiz nach Geschlecht? Nutzt lohngleichheit.ch oder ähnliche Tools und haltet fest, in welchen Branchen es die grössten Unterschiede gibt."
-        }
-      ]
-    },
-    {
-      "id": "art-20260604-07",
-      "date": "03.06.",
-      "title": "Die OECD sieht Gefahren für die globale Wirtschaft: Der Iran-Krieg erhöht das Risiko einer Rezession",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-oecd-sieht-gefahren-fuer-die-globale-wirtschaft-der-iran-krieg-erhoeht-das-risiko-einer-rezession-ld.10009652",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn Kriege in der Welt teurer machen, was passiert dann mit deinem Taschengeld oder deinem ersten Lohn?"
-        },
-        {
-          "phase": "TH",
-          "text": "Schüler verstehen, wie globale politische Ereignisse die Inflation beeinflussen und damit ihre persönliche Kaufkraft ändern. Sie lernen den Zusammenhang zwischen Weltpolitik, Wirtschaft und ihrem eigenen Portemonnaie."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere drei Produkte, die du regelmäßig kaufst (z.B. Kaffee, Handy-Abo, Kleidung). Notiere die heutigen Preise und überlege: Um wie viel Prozent müssten sie steigen, damit du es dir nicht mehr leisten kannst?"
-        }
-      ]
     }
   ],
   "3": [
@@ -300,6 +300,27 @@
     }
   ],
   "4": [
+    {
+      "id": "art-20260616-08",
+      "date": "15.06.",
+      "title": "INTERVIEW - «Wenn wir länger arbeiten würden, könnten wir die Zuwanderung reduzieren», sagt die Direktorin von Economiesuisse nach dem Nein zur 10-Millionen-Schweiz",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wenn-wir-laenger-arbeiten-wuerden-koennten-wir-die-zuwanderung-reduzieren-sagt-die-direktorin-von-economiesuisse-nach-dem-nein-zur-10-millionen-schweiz-ld.10011115",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «INTERVIEW - «Wenn wir länger arbeiten würden, könnten wir die Zuwanderung reduzieren», sagt die Direktorin von Economiesuisse nach dem Nein zur 10-Millionen-Schweiz»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Monika Rühl will die Abhängigkeit von ausländischen Arbeitskräften verringern und wirft dem Bundesra"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260615-03",
       "date": "14.06.",
@@ -482,27 +503,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Beim grössten Schweizer Onlinehändler dürfen ab sofort nur noch Käufer Produkte bewerten. Damit schä"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260609-03",
-      "date": "09.06.",
-      "title": "«Kein weiteres Rekordjahr»: Die Amerikaner reisen diesen Sommer in die Schweiz, doch es fehlen die Gäste von anderswo",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/fuer-2026-erwarten-wir-kein-weiteres-rekordjahr-welche-touristen-diesen-sommer-fehlen-und-wer-trotzdem-in-die-schweiz-kommt-ld.10010330",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: ««Kein weiteres Rekordjahr»: Die Amerikaner reisen diesen Sommer in die Schweiz, doch es fehlen die Gäste von anderswo»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Iran-Krieg vermiest den Schweizer Top-Destinationen das Geschäftsjahr. Hoffnung gibt es trotzdem"
         },
         {
           "phase": "UE",
@@ -725,6 +725,69 @@
   ],
   "6": [
     {
+      "id": "art-20260616-02",
+      "date": "16.06.",
+      "title": "Neue Anklage gegen René Benko: Es geht um Betrug und ein wertvolles Jagdgewehr",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/signa-pleite-neue-anklage-gegen-rene-benko-wegen-betrugs-in-millionenhoehe-ld.10011364",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn ein reicher und erfolgreicher Geschäftsmann plötzlich wegen Betrug angeklagt wird – was sagt uns das über die Kontrolle von Macht und Geld in unserer Wirtschaft?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieses Beispiel zeigt, wie wichtig rechtliche Kontrollen und Transparenz in der Wirtschaft sind, um Missbrauch zu verhindern. Es illustriert das Konzept von Verantwortung und Konsequenzen, auch für einflussreiche Personen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert in Gruppen: Was sind die Aufgaben von Staatsanwaltschaft und Gericht? Erklärt anschliessend, warum solche Prozesse für eine funktionierende Gesellschaft wichtig sind."
+        }
+      ]
+    },
+    {
+      "id": "art-20260616-03",
+      "date": "16.06.",
+      "title": "Trotz Frieden mit Iran: Das Öl vom Persischen Golf wird auf sich warten lassen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/iran-krieg-trotz-friedensabkommen-braucht-die-rueckkehr-der-oel-lieferungen-zeit-ld.10011340",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Trotz Frieden mit Iran: Das Öl vom Persischen Golf wird auf sich warten lassen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Strasse von Hormuz soll nach über hundert Tagen Iran-Krieg wieder geöffnet werden. Die Folgen we"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260616-05",
+      "date": "16.06.",
+      "title": "INTERVIEW - «Europa kann in der neuen Ordnung nur gemeinsam souverän sein», sagt der Chef eines der mächtigsten Rüstungskonzerne",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/europa-kann-in-der-neuen-ordnung-nur-gemeinsam-souveraen-sein-sagt-der-chef-einer-der-maechtigsten-ruestungskonzerne-ld.10009298",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «INTERVIEW - «Europa kann in der neuen Ordnung nur gemeinsam souverän sein», sagt der Chef eines der mächtigsten Rüstungskonzerne»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Das gescheiterte deutsch-französische Kampfflugzeugprojekt FCAS war auf der Berliner Luftfahrtmesse "
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260615-00",
       "date": "15.06.",
       "title": "Sie ärgern sich über Trumps krumme Aktiengeschäfte? Bundesräte und der deutsche Kanzler könnten unbemerkt dasselbe tun",
@@ -864,69 +927,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Das Raumfahrtunternehmen hat erfolgreich 75 Milliarden Dollar an Aktienkapital aufgenommen. Der näch"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260612-02",
-      "date": "11.06.",
-      "title": "KURZMELDUNGEN - Wirtschaft: IWF senkt Wachstums-Prognosen für Euro-Zone +++ Weltbank rechnet mit schwächstem Weltwirtschaftswachstum seit Corona-Pandemie",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-die-neusten-meldungen-ld.10010807",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: IWF senkt Wachstums-Prognosen für Euro-Zone +++ Weltbank rechnet mit schwächstem Weltwirtschaftswachstum seit Corona-Pandemie»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260612-06",
-      "date": "11.06.",
-      "title": "ERKLÄRT - SpaceX wird der grösste Börsengang der Geschichte: Das sind die zehn wichtigsten Fragen und Antworten",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/boersengang-von-elon-musks-spacex-das-groesste-ipo-der-geschichte-erklaert-ld.10010689",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «ERKLÄRT - SpaceX wird der grösste Börsengang der Geschichte: Das sind die zehn wichtigsten Fragen und Antworten»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Das Raumfahrtunternehmen SpaceX kommt an die Börse und heizt die Euphorie im Technologiesektor an. A"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260611-04",
-      "date": "10.06.",
-      "title": "KURZMELDUNGEN - Wirtschaft: Donald Trump lässt den Dax auf ein Dreiwochentief rutschen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-die-neusten-meldungen-ld.10010807",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Donald Trump lässt den Dax auf ein Dreiwochentief rutschen»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
         },
         {
           "phase": "UE",
