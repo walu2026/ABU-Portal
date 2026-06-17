@@ -45,7 +45,7 @@
   ],
   "2": [
     {
-      "id": "art-20260616-00",
+      "id": "art-20260617-05",
       "date": "16.06.",
       "title": "Die Wirtschaftsprüfer geraten zunehmend in eine Vertrauenskrise: Auch KPMG stolpert über Datenlecks",
       "source": "NZZ",
@@ -66,7 +66,7 @@
       ]
     },
     {
-      "id": "art-20260616-04",
+      "id": "art-20260617-09",
       "date": "16.06.",
       "title": "Die SNB geht eigene Wege. Sie wird sich der Zinswende der EZB kaum anschliessen",
       "source": "NZZ",
@@ -301,6 +301,27 @@
   ],
   "4": [
     {
+      "id": "art-20260617-03",
+      "date": "16.06.",
+      "title": "Abnehmspritzen kosten Krankenkassen 200 Millionen Franken: «Die Behandlung wird heute relativ rasch eingesetzt»",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/abnehmspritzen-kosten-krankenkassen-200-millionen-franken-die-behandlung-wird-heute-relativ-rasch-eingesetzt-ld.10011486",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Abnehmspritzen kosten Krankenkassen 200 Millionen Franken: «Die Behandlung wird heute relativ rasch eingesetzt»»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Verbandschefin der Schweizer Krankenkassen kritisiert die Verschreibungspraxis für Abnehmspritze"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260616-08",
       "date": "15.06.",
       "title": "INTERVIEW - «Wenn wir länger arbeiten würden, könnten wir die Zuwanderung reduzieren», sagt die Direktorin von Economiesuisse nach dem Nein zur 10-Millionen-Schweiz",
@@ -486,27 +507,6 @@
         {
           "phase": "UE",
           "text": "Recherchiert: Welche Aufgaben hat der Bundesrat beim Schutz der Schweizer Wirtschaft? Erstellt eine Liste von 3–4 Massnahmen, die der Staat ergreifen kann, wenn eine Grossbank wackelt."
-        }
-      ]
-    },
-    {
-      "id": "art-20260610-09",
-      "date": "09.06.",
-      "title": "Digitec Galaxus löscht 380 000 Produktbewertungen – der Auslöser heisst «Kevin»",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/digitec-galaxus-loescht-380-000-produktbewertungen-der-ausloeser-heisst-kevin-ld.10010335",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Digitec Galaxus löscht 380 000 Produktbewertungen – der Auslöser heisst «Kevin»»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Beim grössten Schweizer Onlinehändler dürfen ab sofort nur noch Käufer Produkte bewerten. Damit schä"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     }
@@ -725,7 +725,49 @@
   ],
   "6": [
     {
-      "id": "art-20260616-02",
+      "id": "art-20260617-02",
+      "date": "16.06.",
+      "title": "SpaceX nutzt seinen Börsenboom und kauft das KI-Startup Cursor für 60 Milliarden Dollar",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/spacex-nutzt-seinen-boersen-boom-und-kauft-das-ki-startup-cursor-fuer-60-milliarden-dollar-ld.10011557",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Warum zahlt ein Raumfahrt-Unternehmen 60 Milliarden Dollar für ein KI-Startup – und nicht für neue Raketen?"
+        },
+        {
+          "phase": "TH",
+          "text": "Schüler verstehen, wie Unternehmen durch strategische Akquisitionen wettbewerbsfähig bleiben und wie Technologie-Märkte funktionieren. Sie erkennen, dass wirtschaftlicher Erfolg heute nicht nur von klassischen Produkten abhängt, sondern von innovativer Software und Datenverarbeitung."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche anderen Tech-Giganten (Google, Meta, Microsoft) haben in den letzten 2 Jahren Startups gekauft? Erstellt eine Tabelle mit Kaufpreis und erklärt in 2 Sätzen, warum diese Akquisitionen sinnvoll waren."
+        }
+      ]
+    },
+    {
+      "id": "art-20260617-04",
+      "date": "16.06.",
+      "title": "DIE NEUESTEN ENTWICKLUNGEN - Handelsstreit: EU-Parlament billigt tiefere Zölle auf US-Waren",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/trump-und-zoelle-aktuelle-news-und-hintergruende-ld.1869433",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn der US-Präsident Zölle auf europäische Waren erhebt, wird dein Smartphone oder deine Kleidung teurer – warum sollte dich das interessieren?"
+        },
+        {
+          "phase": "TH",
+          "text": "Schüler:innen verstehen, wie nationale Wirtschaftspolitik globale Lieferketten und Preise beeinflusst. Das Konzept der Interdependenz zeigt, dass wirtschaftliche Entscheidungen in einem Land unmittelbare Auswirkungen auf andere Länder und Konsument:innen haben."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche Schweizer Produkte werden in die USA exportiert? Erstellt eine Liste und überlegt, wie höhere US-Zölle Schweizer Unternehmen treffen könnten."
+        }
+      ]
+    },
+    {
+      "id": "art-20260617-07",
       "date": "16.06.",
       "title": "Neue Anklage gegen René Benko: Es geht um Betrug und ein wertvolles Jagdgewehr",
       "source": "NZZ",
@@ -733,15 +775,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn ein reicher und erfolgreicher Geschäftsmann plötzlich wegen Betrug angeklagt wird – was sagt uns das über die Kontrolle von Macht und Geld in unserer Wirtschaft?"
+          "text": "Was denkst du zu: «Neue Anklage gegen René Benko: Es geht um Betrug und ein wertvolles Jagdgewehr»?"
         },
         {
           "phase": "TH",
-          "text": "Dieses Beispiel zeigt, wie wichtig rechtliche Kontrollen und Transparenz in der Wirtschaft sind, um Missbrauch zu verhindern. Es illustriert das Konzept von Verantwortung und Konsequenzen, auch für einflussreiche Personen."
+          "text": "Dieser Artikel zeigt: Der gefallene Immobilienmogul muss sich in einem dritten Prozess verantworten, in dem es erstmals um"
         },
         {
           "phase": "UE",
-          "text": "Recherchiert in Gruppen: Was sind die Aufgaben von Staatsanwaltschaft und Gericht? Erklärt anschliessend, warum solche Prozesse für eine funktionierende Gesellschaft wichtig sind."
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     },
@@ -891,51 +933,30 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260613-07",
-      "date": "12.06.",
-      "title": "KURZMELDUNGEN - Wirtschaft: Anthropic sperrt Top-KI-Modell nach Anordnung der Regierung +++ Ex-Krypto-König Bankman-Fried scheitert mit Berufungsantrag",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-ex-krypto-koenig-bankman-fried-scheitert-mit-berufungsantrag-iwf-senkt-wachstums-prognosen-fuer-euro-zone-ld.10010807",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Anthropic sperrt Top-KI-Modell nach Anordnung der Regierung +++ Ex-Krypto-König Bankman-Fried scheitert mit Berufungsantrag»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260612-01",
-      "date": "11.06.",
-      "title": "SpaceX drängt an die Börse: Kleinanleger reissen sich um die SpaceX-Titel",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/spacex-draengt-an-die-boerse-kleinanleger-reissen-sich-um-die-spacex-titel-ld.10011006",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «SpaceX drängt an die Börse: Kleinanleger reissen sich um die SpaceX-Titel»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Das Raumfahrtunternehmen hat erfolgreich 75 Milliarden Dollar an Aktienkapital aufgenommen. Der näch"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "7": [
+    {
+      "id": "art-20260617-00",
+      "date": "17.06.",
+      "title": "Uber und WeRide planen Einführung von kommerziellen Robotaxis in der Region Zürich",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/uber-und-weride-planen-einfuehrung-von-kommerziellen-robotaxis-in-der-region-zuerich-ld.10011680",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Uber und WeRide planen Einführung von kommerziellen Robotaxis in der Region Zürich»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der Start soll noch in diesem Jahr in Zusammenarbeit mit den Behörden erfolgen. Die Fahrten soll man"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260615-04",
       "date": "14.06.",
