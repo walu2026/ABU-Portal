@@ -45,6 +45,48 @@
   ],
   "2": [
     {
+      "id": "art-20260618-01",
+      "date": "18.06.",
+      "title": "Die Schweizerische Nationalbank bleibt den Nullzinsen treu – und folgt nicht der Zinswende anderer Zentralbanken",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-schweizerische-nationalbank-bleibt-den-nullzinsen-treu-und-folgt-nicht-der-zinswende-anderer-zentralbanken-ld.10011506",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Die Schweizerische Nationalbank bleibt den Nullzinsen treu – und folgt nicht der Zinswende anderer Zentralbanken»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Inflation ist durch den Iran-Krieg zwar auch in der Schweiz gestiegen. Sie liegt aber immer noch"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260618-03",
+      "date": "18.06.",
+      "title": "Auch Kevin Warsh lässt Trump warten: Das Fed belässt den Leitzins unverändert",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/auch-kevin-warsh-laesst-trump-warten-das-fed-behaelt-den-leitzins-unveraendert-ld.10011731",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Auch Kevin Warsh lässt Trump warten: Das Fed belässt den Leitzins unverändert»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die hohe Inflation und der starke Arbeitsmarkt in den USA lassen Zinssenkungen in weite Ferne rücken"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260617-05",
       "date": "16.06.",
       "title": "Die Wirtschaftsprüfer geraten zunehmend in eine Vertrauenskrise: Auch KPMG stolpert über Datenlecks",
@@ -211,48 +253,6 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260611-05",
-      "date": "10.06.",
-      "title": "Die Angst vor der Inflation ist eine zweite Chance für Christine Lagarde",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-angst-vor-der-inflation-ist-eine-zweite-chance-fuer-christine-lagarde-ld.10010428",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn die Preise im Supermarkt ständig steigen, wer ist schuld – der Bäcker, der Staat oder die Notenbank?"
-        },
-        {
-          "phase": "TH",
-          "text": "Das Konzept der Inflation wird sichtbar: Wenn Geld an Wert verliert, kann man sich weniger kaufen. Die Notenbank (EZB) hat die Aufgabe, Inflation zu bekämpfen und die Kaufkraft zu schützen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Wie haben sich die Preise für drei alltägliche Produkte (Brot, Benzin, Kaugummi) in den letzten 12 Monaten entwickelt? Erstellt eine kleine Übersicht und überlegt: Wie wirkt sich das auf euer Taschengeld aus?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260611-06",
-      "date": "10.06.",
-      "title": "Frauen wollen finanzielle Unabhängigkeit – doch beim Investieren bleiben sie viel zu zögerlich",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/frauen-wollen-finanzielle-unabhaengigkeit-doch-beim-investieren-bleiben-sie-viel-zu-zoegerlich-ld.10010642",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Frauen wollen finanzielle Unabhängigkeit – doch beim Investieren bleiben sie viel zu zögerlich»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Ihre Alltagsfinanzen haben Frauen zwar fest im Griff, sie verschenken beim langfristigen Vermögensau"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "3": [
@@ -300,6 +300,69 @@
     }
   ],
   "4": [
+    {
+      "id": "art-20260618-04",
+      "date": "18.06.",
+      "title": "10-Millionen-Schweiz: Eine freiwillige Abgabe könnte mithelfen, dass Firmen weniger Zuwanderer einstellen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/10-millionen-schweiz-eine-freiwillige-abgabe-koennte-mithelfen-dass-firmen-weniger-zuwanderer-einstellen-ld.10011694",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «10-Millionen-Schweiz: Eine freiwillige Abgabe könnte mithelfen, dass Firmen weniger Zuwanderer einstellen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Nach der Abstimmung über die 10-Millionen-Schweiz fordern die Wirtschaftsverbände, das inländische A"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260618-05",
+      "date": "18.06.",
+      "title": "Nach der gewonnenen Abstimmung über die 10-Millionen-Schweiz: Die Europafreunde bringen sich in Stellung",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/nach-der-gewonnen-abstimmung-ueber-die-10-millionen-schweiz-die-europafreunde-bringen-sich-in-stellung-ld.10011690",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Warum stimmt die Schweiz gegen einen Zuwanderungsdeckel, wenn Immigration den Menschen Sorgen bereitet?"
+        },
+        {
+          "phase": "TH",
+          "text": "Die Schüler lernen, dass politische Abstimmungen komplexe Abwägungen zwischen wirtschaftlichen Interessen, Sorgen der Bevölkerung und demokratischen Werten widerspiegeln. Hier wird sichtbar, wie direkte Demokratie funktioniert und dass Wahlergebnisse nicht einfach die gesamte öffentliche Meinung abbilden."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere die Pro- und Contra-Argumente zur Abstimmung und erstelle eine zweiteilige Tabelle: Welche Gründe sprachen gegen den Deckel, welche Bedenken hat die Bevölkerung trotzdem?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260618-08",
+      "date": "17.06.",
+      "title": "Uber und WeRide wollen Robotaxis nach Zürich bringen. Haben die Schweizer den Mut, in ein fahrerloses Auto zu steigen?",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/uber-und-weride-planen-einfuehrung-von-kommerziellen-robotaxis-in-der-region-zuerich-ld.10011680",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Uber und WeRide wollen Robotaxis nach Zürich bringen. Haben die Schweizer den Mut, in ein fahrerloses Auto zu steigen?»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Noch dieses Jahr sollen Kunden Robotaxi-Fahrten über die Uber-App buchen können. Selbstfahrende Auto"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260617-03",
       "date": "16.06.",
@@ -444,69 +507,6 @@
         {
           "phase": "UE",
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260612-07",
-      "date": "11.06.",
-      "title": "Getäuscht mit Gold aus der Schweiz? Ein Finanzskandal in Indien führt nach Luzern und ins Tessin",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/valcambi-schweizer-goldraffinerie-steht-im-zentrum-von-bilanzskandal-in-indien-ld.10010591",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Getäuscht mit Gold aus der Schweiz? Ein Finanzskandal in Indien führt nach Luzern und ins Tessin»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Valcambi, die grösste Schweizer Goldraffinerie, ist in indischer Hand. Doch der Eigentümer soll ihre"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260610-03",
-      "date": "10.06.",
-      "title": "Die Schweizer Wirtschaft will sich dem Druck aus Washington nicht beugen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-schweizer-wirtschaft-ist-gegen-ein-importverbot-fuer-gueter-aus-zwangsarbeit-und-stemmt-sich-damit-gegen-den-druck-der-usa-im-zollstreit-ld.10010347",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Die Schweizer Wirtschaft will sich dem Druck aus Washington nicht beugen»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die USA begründen die neuen Strafzölle damit, dass die Schweiz zu wenig gegen die globale Zwangsarbe"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260610-04",
-      "date": "09.06.",
-      "title": "Bundesbern ringt um Kompromiss beim UBS-Eigenkapital: Krisenanleihen rücken wieder ins Zentrum",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/bundesbern-ringt-um-kompromiss-beim-ubs-eigenkapital-krisenanleihen-ruecken-wieder-ins-zentrum-ld.10010495",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn die grösste Bank der Schweiz in Schieflage gerät – warum kümmert sich dann der Bundesrat persönlich darum und nicht nur die Bankenaufsicht?"
-        },
-        {
-          "phase": "TH",
-          "text": "Lernziel: Verständnis für die Rolle des Staates in der Wirtschaft und die Verflechtung von Politik, Finanzsektor und Gesellschaftsverantwortung. Konzept: Systemische Risiken und staatliche Handlungsfähigkeit in Krisensituationen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Welche Aufgaben hat der Bundesrat beim Schutz der Schweizer Wirtschaft? Erstellt eine Liste von 3–4 Massnahmen, die der Staat ergreifen kann, wenn eine Grossbank wackelt."
         }
       ]
     }
@@ -725,6 +725,69 @@
   ],
   "6": [
     {
+      "id": "art-20260618-00",
+      "date": "18.06.",
+      "title": "KURZMELDUNGEN - Wirtschaft: Mehrheit der Bevölkerung für strengere Kapitalauflagen für UBS",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-mehrheit-der-bevoelkerung-fuer-strengere-kapitalauflagen-fuer-ubs-ld.10010807",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Mehrheit der Bevölkerung für strengere Kapitalauflagen für UBS»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260618-02",
+      "date": "18.06.",
+      "title": "Die Schweiz und Deutschland fallen bei der globalen Wettbewerbsfähigkeit zurück. Doch zwischen den Ländern liegen Welten",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-schweiz-und-deutschland-fallen-bei-der-globalen-wettbewerbsfaehigkeit-zurueck-doch-zwischen-den-laendern-liegen-welten-ld.10011505",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Die Schweiz und Deutschland fallen bei der globalen Wettbewerbsfähigkeit zurück. Doch zwischen den Ländern liegen Welten»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Im globalen Vergleich gehört die Schweiz zu den konkurrenzfähigsten Standorten der Welt, für Deutsch"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260618-06",
+      "date": "18.06.",
+      "title": "Der bodenständige Rene Haas: CEO des Chipdesigners ARM, Ingenieur, Stratege und dank Superbonus wohl bald Milliardär",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/der-bodenstaendige-rene-haas-ingenieur-stratege-und-dank-superbonus-wohl-bald-milliardaer-ld.10009861",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Warum kennt ihr den CEO von ARM nicht, obwohl seine Chips in fast jedem Smartphone stecken – während ihr Elon Musk oder Steve Jobs kennt?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernziel: Unterschied zwischen sichtbarer und unsichtbarer Wirtschaftsmacht verstehen. Konzept: Nicht jeder erfolgreiche Unternehmer muss ein bekanntes Gesicht sein – manche arbeiten im Hintergrund und prägen trotzdem unser Leben."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche ARM-Chips findet ihr in euren eigenen Geräten (Handy, Tablet, Smart-Watch)? Notiert 3 Beispiele und erklärt, warum ARM trotzdem unbekannt bleibt."
+        }
+      ]
+    },
+    {
       "id": "art-20260617-02",
       "date": "16.06.",
       "title": "SpaceX nutzt seinen Börsenboom und kauft das KI-Startup Cursor für 60 Milliarden Dollar",
@@ -864,69 +927,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260615-02",
-      "date": "14.06.",
-      "title": "SpaceX für den Heimgebrauch: Elon Musks Satelliteninternet hat in der Schweiz viele Fans",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/spacex-fuer-den-heimgebrauch-elon-musks-satelliteninternet-hat-in-der-schweiz-viele-fans-ld.10011204",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «SpaceX für den Heimgebrauch: Elon Musks Satelliteninternet hat in der Schweiz viele Fans»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Starlink ist deutlich billiger geworden. Eine Konkurrenz für Swisscom und Sunrise wird das Interneta"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260613-03",
-      "date": "13.06.",
-      "title": "Kritische Rohstoffe: Mit ihrer bisherigen Strategie bleibt die EU vom chinesischen Wohlwollen abhängig",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/kritische-rohstoffe-mit-ihrer-bisherigen-strategie-bleibt-die-eu-vom-chinesischen-wohlwollen-abhaengig-ld.10010419",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Kritische Rohstoffe: Mit ihrer bisherigen Strategie bleibt die EU vom chinesischen Wohlwollen abhängig»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Für das Rüstungswesen und die Industrie ist das Reich der Mitte der mit Abstand wichtigste Lieferant"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260613-06",
-      "date": "13.06.",
-      "title": "Dank diesem Tal mitten in der Provinz stieg Amerika zur Supermacht auf – heute hat der Ort ein Image-Problem. Schuld daran ist auch Billy Joel",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/american-dream-aus-stahl-wie-die-usa-zur-supermacht-wurden-ld.10004841",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Dank diesem Tal mitten in der Provinz stieg Amerika zur Supermacht auf – heute hat der Ort ein Image-Problem. Schuld daran ist auch Billy Joel»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Besuch im Lehigh Valley, dessen Erfolgsgeschichte mit einem Betrug an seinen Ureinwohnern begann."
         },
         {
           "phase": "UE",
