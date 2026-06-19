@@ -45,19 +45,19 @@
   ],
   "2": [
     {
-      "id": "art-20260618-01",
+      "id": "art-20260619-03",
       "date": "18.06.",
-      "title": "Die Schweizerische Nationalbank bleibt den Nullzinsen treu – und folgt nicht der Zinswende anderer Zentralbanken",
+      "title": "Der neue Fed-Chef Kevin Warsh tritt selbstbewusst auf – und macht klar, dass er kein Befehlsempfänger von Trump ist",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-schweizerische-nationalbank-bleibt-den-nullzinsen-treu-und-folgt-nicht-der-zinswende-anderer-zentralbanken-ld.10011506",
+      "url": "https://www.nzz.ch/wirtschaft/der-neue-fed-chef-kevin-warsh-tritt-selbstbewusst-auf-und-macht-klar-dass-er-kein-befehlsempfaenger-von-trump-ist-ld.10011915",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Die Schweizerische Nationalbank bleibt den Nullzinsen treu – und folgt nicht der Zinswende anderer Zentralbanken»?"
+          "text": "Was denkst du zu: «Der neue Fed-Chef Kevin Warsh tritt selbstbewusst auf – und macht klar, dass er kein Befehlsempfänger von Trump ist»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Inflation ist durch den Iran-Krieg zwar auch in der Schweiz gestiegen. Sie liegt aber immer noch"
+          "text": "Dieser Artikel zeigt: Der Kampf gegen die Inflation soll unter Kevin Warsh klare Priorität haben. Der wichtigste Zentralba"
         },
         {
           "phase": "UE",
@@ -66,7 +66,28 @@
       ]
     },
     {
-      "id": "art-20260618-03",
+      "id": "art-20260619-07",
+      "date": "18.06.",
+      "title": "Die Schweizerische Nationalbank bleibt den Nullzinsen treu – und folgt nicht der Zinswende anderer Zentralbanken",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-schweizerische-nationalbank-bleibt-den-nullzinsen-treu-und-folgt-nicht-der-zinswende-anderer-zentralbanken-ld.10011506",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn die Zinsen null sind, verdient die Bank mit deinem Sparkonto eigentlich Geld – oder verlierst du es?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernziel: Verstehen, wie Zentralbanken mit Zinssätzen die Wirtschaft steuern und welche Auswirkungen das auf persönliche Ersparnisse hat. Das Konzept der Geldpolitik wird erfahrbar gemacht: niedrige Zinsen fördern Konsum und Investitionen, schaden aber Sparern."
+        },
+        {
+          "phase": "UE",
+          "text": "Vergleicht in Zweierteams drei verschiedene Sparkonten (0,0%, 0,5%, 2,0% Zinsen) für 5'000 CHF über 5 Jahre – wieviel Ertrag bringt jedes Konto? Diskutiert: Wo würdet ihr sparen und warum?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260619-09",
       "date": "18.06.",
       "title": "Auch Kevin Warsh lässt Trump warten: Das Fed belässt den Leitzins unverändert",
       "source": "NZZ",
@@ -232,27 +253,6 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260612-05",
-      "date": "11.06.",
-      "title": "Die Preise in Amerika steigen immer schneller an: Der Iran-Krieg hinterlässt deutliche Spuren in der US-Wirtschaft",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-preise-in-amerika-steigen-immer-schneller-an-der-iran-krieg-hinterlaesst-deutliche-spuren-in-der-us-wirtschaft-ld.10010725",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Die Preise in Amerika steigen immer schneller an: Der Iran-Krieg hinterlässt deutliche Spuren in der US-Wirtschaft»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Teuerung und der robuste Arbeitsmarkt bescheren dem neuen Chef der amerikanischen Notenbank Prob"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "3": [
@@ -300,6 +300,27 @@
     }
   ],
   "4": [
+    {
+      "id": "art-20260619-00",
+      "date": "19.06.",
+      "title": "Sieben Jahre nach dem Untergang der Baselworld: Die MCH Group lanciert eine neue Schmuck- und Uhrenmesse",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/sieben-jahre-nach-dem-untergang-der-baselworld-die-mch-group-lanciert-eine-neue-schmuck-und-uhrenmesse-ld.10011861",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Sieben Jahre nach dem Untergang der Baselworld: Die MCH Group lanciert eine neue Schmuck- und Uhrenmesse»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Basel bekommt mit Basilia wieder eine Messe für Schmuck und Uhren. Die MCH Group holt sich dafür ein"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260618-04",
       "date": "18.06.",
@@ -488,30 +509,51 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
+    }
+  ],
+  "5": [
     {
-      "id": "art-20260612-00",
-      "date": "12.06.",
-      "title": "Michael Pieper hält die Zügel auch mit 80 in der Hand. Doch der Tod seines Sohnes Alexander Pieper zwingt den schwerreichen Unternehmer zu einer Zäsur",
+      "id": "art-20260619-04",
+      "date": "18.06.",
+      "title": "Sebastian Kurz: Der frühere Bundeskanzler ist jetzt ein ambitionierter KI-Unternehmer",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/tod-von-alexander-pieper-zwingt-franke-und-artemis-zu-neubestimmung-ld.10010851",
+      "url": "https://www.nzz.ch/wirtschaft/sebastian-kurz-der-fruehere-bundeskanzler-ist-jetzt-ein-ambitionierter-ki-unternehmer-ld.10011886",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Michael Pieper hält die Zügel auch mit 80 in der Hand. Doch der Tod seines Sohnes Alexander Pieper zwingt den schwerreichen Unternehmer zu einer Zäsur»?"
+          "text": "Was denkst du zu: «Sebastian Kurz: Der frühere Bundeskanzler ist jetzt ein ambitionierter KI-Unternehmer»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Im Besitz von Michael Pieper befinden sich neben dem Küchenausstatter Franke Beteiligungen an divers"
+          "text": "Dieser Artikel zeigt: Sein Unternehmen entwickelt KI-Lösungen für Geheimdienste, Armeen oder Banken, die von amerikanische"
         },
         {
           "phase": "UE",
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    }
-  ],
-  "5": [
+    },
+    {
+      "id": "art-20260619-05",
+      "date": "18.06.",
+      "title": "Apple fehlen die Chips: iPhones werden bald auch in der Schweiz massiv teurer",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/apple-fehlen-die-chips-iphones-werden-bald-auch-in-der-schweiz-massiv-teurer-ld.10011880",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Apple fehlen die Chips: iPhones werden bald auch in der Schweiz massiv teurer»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Das populärste Smartphone könnte bis zu 200 Franken mehr kosten. Der KI-Ausbau hat Speicherchips um "
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260615-09",
       "date": "13.06.",
@@ -679,53 +721,11 @@
           "text": "Rollenspiel: Ihr seid Kundenberater. Ein nervöser Kunde will sein Geld aus der Partners Group abziehen. Versucht, mit Argumenten zu zeigen, warum Stabilität und Vertrauen wichtig sind – ohne zu lügen."
         }
       ]
-    },
-    {
-      "id": "art-20260605-03",
-      "date": "05.06.",
-      "title": "New York verfällt dem Knicks-Fieber: Warum Basketball-Tickets plötzlich 7000 Dollar kosten",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/new-york-verfaellt-dem-knicks-fieber-warum-basketball-tickets-ploetzlich-7000-dollar-kosten-ld.10009912",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «New York verfällt dem Knicks-Fieber: Warum Basketball-Tickets plötzlich 7000 Dollar kosten»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Basketballer der New York Knicks könnten die erste grosse Sporttrophäe seit Jahren in die amerik"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260605-04",
-      "date": "05.06.",
-      "title": "INTERVIEW - «Wir wollen nicht überall verfügbar sein», sagt der Modechef des legendären Hauses Chanel",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/chanel-modechef-wir-wollen-nicht-ueberall-verfuegbar-sein-ld.10007256",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Warum ist es manchmal besser, NICHT überall und für jeden verfügbar zu sein – auch wenn man mehr verdienen könnte?"
-        },
-        {
-          "phase": "TH",
-          "text": "Knappheit und Exklusivität als Gestaltungsprinzipien sozialer Hierarchien: Wer Zugang kontrolliert, hat Macht. Das Konzept zeigt, wie Unternehmen durch bewusste Begrenzung Wert und Begehren erzeugen – eine Strategie, die auch in anderen Bereichen unseres Zusammenlebens wirkt."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert ein Produkt/eine Marke, die bewusst knapp hält (z.B. bestimmte Sneaker, Restaurant-Reservierungen). Erklärt, welche Wirkung diese Strategie auf Konsument:innen hat und ob das fair ist."
-        }
-      ]
     }
   ],
   "6": [
     {
-      "id": "art-20260618-00",
+      "id": "art-20260619-06",
       "date": "18.06.",
       "title": "KURZMELDUNGEN - Wirtschaft: Mehrheit der Bevölkerung für strengere Kapitalauflagen für UBS",
       "source": "NZZ",
@@ -746,7 +746,7 @@
       ]
     },
     {
-      "id": "art-20260618-02",
+      "id": "art-20260619-08",
       "date": "18.06.",
       "title": "Die Schweiz und Deutschland fallen bei der globalen Wettbewerbsfähigkeit zurück. Doch zwischen den Ländern liegen Welten",
       "source": "NZZ",
@@ -754,15 +754,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Die Schweiz und Deutschland fallen bei der globalen Wettbewerbsfähigkeit zurück. Doch zwischen den Ländern liegen Welten»?"
+          "text": "Warum verliert die Schweiz ihre Spitzenposition – und was bedeutet das für eure Lehrstelle?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Im globalen Vergleich gehört die Schweiz zu den konkurrenzfähigsten Standorten der Welt, für Deutsch"
+          "text": "Wettbewerbsfähigkeit ist ein Schlüsselkonzept der Globalisierung: Länder konkurrieren um Fachkräfte, Investitionen und wirtschaftliche Stabilität. Verstehen, wie wirtschaftliche Stärke funktioniert, hilft euch, eure eigene berufliche Zukunft in einem internationalen Kontext zu planen."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Sammelt in Gruppen: Welche 3 Faktoren machen die Schweiz als Arbeitsort attraktiv? Diskutiert dann, welche dieser Faktoren in den nächsten 10 Jahren gefährdet sein könnten."
         }
       ]
     },
@@ -936,6 +936,27 @@
     }
   ],
   "7": [
+    {
+      "id": "art-20260619-02",
+      "date": "18.06.",
+      "title": "Hitzewelle in der Schweiz: Gibt es bald mehr Klimaanlagen? Das fordert ein GLP-Nationalrat",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/hitzewelle-in-der-schweiz-gibt-es-bald-mehr-klimaanlagen-das-fordert-ein-glp-nationalrat-ld.10011878",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Hitzewelle in der Schweiz: Gibt es bald mehr Klimaanlagen? Das fordert ein GLP-Nationalrat»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Patrick Hässig will, dass gerade vulnerable Personen in Zukunft besser vor extrem hohen Temperaturen"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260617-00",
       "date": "17.06.",
