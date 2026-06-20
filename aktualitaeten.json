@@ -45,6 +45,69 @@
   ],
   "2": [
     {
+      "id": "art-20260620-01",
+      "date": "20.06.",
+      "title": "Gutes Timing oder Glück? Der Benzinpreis fällt rechtzeitig zur amerikanischen Feriensaison",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/gutes-timing-oder-glueck-der-benzinpreis-faellt-rechtzeitig-zur-amerikanischen-feriensaison-ld.10012135",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Gutes Timing oder Glück? Der Benzinpreis fällt rechtzeitig zur amerikanischen Feriensaison»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Donald Trump kann vorerst aufatmen: Der Spritpreis an Amerikas Tankstellen ist unter die psychologis"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260620-02",
+      "date": "20.06.",
+      "title": "Trump geht in Sachen Medikamentenpreise gegen Deutschland vor – für die Schweiz sind das keine guten Nachrichten",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/trump-geht-in-sachen-medikamentenpreise-gegen-deutschland-vor-fuer-die-schweiz-sind-das-keine-guten-nachrichten-ld.10012078",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn Medikamente in Amerika doppelt so teuer sind wie in der Schweiz – wer zahlt am Ende dafür, dass wir alle gesund bleiben?"
+        },
+        {
+          "phase": "TH",
+          "text": "Schüler:innen verstehen, wie Preise international entstehen und welche Auswirkungen nationale Entscheidungen auf den eigenen Geldbeutel haben. Dies ist zentral für das Konzept \"Globale Wirtschaft und persönliche Finanzen\" im ABU."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Wie viel kostet ein häufiges Medikament (z.B. gegen Grippe) in der Schweiz vs. USA? Berechnet, wie sich eine Preiserhöhung um 20% auf eine Familie mit CHF 3500 Monatseinkommen auswirkt."
+        }
+      ]
+    },
+    {
+      "id": "art-20260620-05",
+      "date": "19.06.",
+      "title": "Die neue Sparsamkeit der Deutschen gefährdet die Konjunktur",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-neue-sparsamkeit-der-deutschen-gefaehrdet-die-konjunktur-ld.10012061",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn du weniger Geld ausgibst, tust du etwas Gutes für deine Ersparnisse – aber schadet das gleichzeitig der ganzen Wirtschaft?"
+        },
+        {
+          "phase": "TH",
+          "text": "Hier zeigt sich das Spannungsfeld zwischen persönlicher Sparsamkeit (Mikro) und gesamtwirtschaftlichen Folgen (Makro). Lernende verstehen, dass ihre Ausgabenentscheidungen Teil eines grösseren Systems sind und Konsequenzen für Arbeitsplätze und Wirtschaft haben."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert eine Branche, die unter weniger Konsum leidet (z.B. Gastronomie, Einzelhandel), und notiert drei konkrete Folgen für Arbeitnehmende dort."
+        }
+      ]
+    },
+    {
       "id": "art-20260619-03",
       "date": "18.06.",
       "title": "Der neue Fed-Chef Kevin Warsh tritt selbstbewusst auf – und macht klar, dass er kein Befehlsempfänger von Trump ist",
@@ -190,72 +253,30 @@
           "text": "Vergleiche die Herstellungskosten eines Trikots mit dem Verkaufspreis von 150 Euro. Wo geht das Geld hin? (Material, Arbeit, Gewinn, Marketing?) Erstelle eine Kostenaufteilung als Kreisdiagramm."
         }
       ]
-    },
-    {
-      "id": "art-20260614-09",
-      "date": "13.06.",
-      "title": "Anthropic-Börsengang: Eine Basler Gruppe gehört zu den frühesten Investoren des wertvollsten KI-Startups der Welt",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/anthropic-boersengang-eine-basler-gruppe-gehoert-zu-den-fruehesten-investoren-des-wertvollsten-ki-startups-der-welt-ld.10010965",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Anthropic-Börsengang: Eine Basler Gruppe gehört zu den frühesten Investoren des wertvollsten KI-Startups der Welt»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Verein Macroscopic Ventures warnt vor KI-Risiken und landet gleichzeitig mit einer eigenen KI-In"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260612-03",
-      "date": "11.06.",
-      "title": "Die EZB nimmt den Kampf gegen die Inflation ernst und erhöht erstmals seit drei Jahren wieder die Leitzinsen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-ezb-nimmt-den-kampf-gegen-die-inflation-auf-und-erhoeht-erstmals-seit-drei-jahren-wieder-die-leitzinsen-ld.10010704",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn die Preise im Supermarkt steigen, warum macht die Bank dann auch noch die Sparen weniger attraktiv?"
-        },
-        {
-          "phase": "TH",
-          "text": "Inflation ist ein wirtschaftliches Phänomen, das den Wert des Geldes reduziert und zum Handeln zwingt. Die Leitzinserhöhung ist ein klassisches Steuerungsinstrument der Zentralbank, um Inflation zu bekämpfen."
-        },
-        {
-          "phase": "UE",
-          "text": "Berechnet: Ein Produkt kostet heute 10 Euro. Mit 2% Inflation: Was kostet es in 1 Jahr? Mit 5% Inflation: Was kostet es in 1 Jahr? Diskutiert: Wie wirkt sich das auf euer Taschengeld aus?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260612-04",
-      "date": "11.06.",
-      "title": "Mike Ashley macht ein Übernahmeangebot für Hugo Boss – was will der streitbare britische Grossaktionär?",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/mike-ashley-bietet-fuer-hugo-boss-was-will-der-streitbare-britische-grossaktionaer-ld.10010828",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Mike Ashley macht ein Übernahmeangebot für Hugo Boss – was will der streitbare britische Grossaktionär?»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Frasers Group von Mike Ashley legt eine Offerte für Hugo Boss vor. Der vom Schweizer Daniel Grie"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "3": [
+    {
+      "id": "art-20260620-04",
+      "date": "20.06.",
+      "title": "Nicole Brändle war beruflich sehr erfolgreich. Dann wurde ihr Mann Präsident der Schweizerischen Nationalbank – und sie trat für ihn zurück. Was hat das mit ihr gemacht?",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/nicole-braendle-im-portraet-der-weg-zwischen-eigener-karriere-und-snb-praesident-martin-schlegel-ld.10011454",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Würdet ihr für die Karriere eures Partners/eurer Partnerin auf eure eigene Karriere verzichten – und wie würde sich das auf eure Gesundheit auswirken?"
+        },
+        {
+          "phase": "TH",
+          "text": "Das Lernziel ist die Reflexion von Work-Life-Balance und deren Auswirkungen auf die psychische und physische Gesundheit. Lernende sollen erkennen, dass Identität, Selbstwertgefühl und Gesundheit eng mit beruflicher Erfüllung und Lebenszufriedenheit verknüpft sind."
+        },
+        {
+          "phase": "UE",
+          "text": "Erstellt ein Gedankenprotokoll: Was passiert mit eurer Gesundheit (Stress, Schlaf, Motivation, Selbstvertrauen), wenn ihr etwas aufgebt, das euch wichtig ist? Notiert körperliche und emotionale Folgen."
+        }
+      ]
+    },
     {
       "id": "art-20260610-07",
       "date": "09.06.",
@@ -301,7 +322,28 @@
   ],
   "4": [
     {
-      "id": "art-20260619-00",
+      "id": "art-20260620-06",
+      "date": "19.06.",
+      "title": "Debatte um die Attraktivität des Standorts: Der Bundesrat will bei der OECD-Mindeststeuer nichts überstürzen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/debatte-um-die-attraktivitaet-des-standorts-der-bundesrat-will-bei-der-oecd-mindeststeuer-nichts-ueberstuerzen-ld.10012114",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Debatte um die Attraktivität des Standorts: Der Bundesrat will bei der OECD-Mindeststeuer nichts überstürzen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Schweiz sei zu attraktiv für ausländische Firmen, sagen Kritiker der Zuwanderung. Der Standort l"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260620-07",
       "date": "19.06.",
       "title": "Sieben Jahre nach dem Untergang der Baselworld: Die MCH Group lanciert eine neue Schmuck- und Uhrenmesse",
       "source": "NZZ",
@@ -482,27 +524,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Elon Musk ist der erste Dollar-Billionär der Geschichte. Was kann man sich mit so viel Geld leisten?"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260613-05",
-      "date": "13.06.",
-      "title": "Immer mehr Einwohner: München stemmt sich gegen den Kollaps der Bahn – mit Lehren für die Schweiz",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/ausbau-der-bahn-muenchens-neue-stammstrecke-bietet-lehren-fuer-die-schweiz-ld.10009687",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Immer mehr Einwohner: München stemmt sich gegen den Kollaps der Bahn – mit Lehren für die Schweiz»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Um die S-Bahn zu entlasten, errichten Schweizer Tunnelbauer mitten in München den tiefsten Bahnhof D"
         },
         {
           "phase": "UE",
@@ -725,6 +746,48 @@
   ],
   "6": [
     {
+      "id": "art-20260620-00",
+      "date": "13.06.",
+      "title": "Europa findet bei kritischen Rohstoffen kaum Wege aus der chinesischen Knechtschaft – das ist ein Risiko für die Verteidigung",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/kritische-rohstoffe-mit-ihrer-bisherigen-strategie-bleibt-die-eu-vom-chinesischen-wohlwollen-abhaengig-ld.10010419",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Europa findet bei kritischen Rohstoffen kaum Wege aus der chinesischen Knechtschaft – das ist ein Risiko für die Verteidigung»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Für Europas Verteidigung und die Industrie ist das Reich der Mitte der mit Abstand wichtigste Liefer"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260620-03",
+      "date": "20.06.",
+      "title": "Ladenschluss bei Galeria? Der Warenhauskonzern kämpft erneut um seine Zukunft",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/ladenschluss-bei-galeria-der-warenhauskonzern-kaempft-erneut-um-seine-zukunft-ld.10011594",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Warum verschwinden traditionsreiche Kaufhäuser wie Galeria aus unseren Innenstädten, obwohl es sie seit Jahrzehnten gibt?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernziel: Schüler*innen verstehen, wie wirtschaftliche Faktoren (Konkurrenz, Konsumverhalten, Digitalisierung) zum Scheitern von Unternehmen führen. Dies zeigt die Dynamik von Märkten und die Notwendigkeit von Anpassung in der modernen Wirtschaft."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert, welche Galeria-Filialen in eurer Region betroffen sind und interviewt eine Person, die dort gerne einkauft oder arbeitete – was fehlte dem Laden im Vergleich zu anderen Einkaufsorten?"
+        }
+      ]
+    },
+    {
       "id": "art-20260619-06",
       "date": "18.06.",
       "title": "KURZMELDUNGEN - Wirtschaft: Mehrheit der Bevölkerung für strengere Kapitalauflagen für UBS",
@@ -891,53 +954,11 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260615-00",
-      "date": "15.06.",
-      "title": "Sie ärgern sich über Trumps krumme Aktiengeschäfte? Bundesräte und der deutsche Kanzler könnten unbemerkt dasselbe tun",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/sie-aergern-sich-ueber-trumps-krumme-aktiengeschaefte-bundesraete-und-der-deutsche-kanzler-koennten-unbemerkt-dasselbe-tun-ld.10009362",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Sie ärgern sich über Trumps krumme Aktiengeschäfte? Bundesräte und der deutsche Kanzler könnten unbemerkt dasselbe tun»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Amerikanische Politiker müssen ihre Aktientransaktionen ausweisen. In der Schweiz und in Deutschland"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260615-01",
-      "date": "15.06.",
-      "title": "KURZMELDUNGEN - Dax steigt nach Ankündigung von Iran-Abkommen über 25 000 Punkte",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-ex-krypto-koenig-bankman-fried-scheitert-mit-berufungsantrag-iwf-senkt-wachstums-prognosen-fuer-euro-zone-ld.10010807",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «KURZMELDUNGEN - Dax steigt nach Ankündigung von Iran-Abkommen über 25 000 Punkte»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "7": [
     {
-      "id": "art-20260619-02",
+      "id": "art-20260620-09",
       "date": "18.06.",
       "title": "Hitzewelle in der Schweiz: Gibt es bald mehr Klimaanlagen? Das fordert ein GLP-Nationalrat",
       "source": "NZZ",
