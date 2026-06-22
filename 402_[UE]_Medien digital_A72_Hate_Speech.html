@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Hate Speech – Selbstkontrolle</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  background: #f4f1ea;
+  color: #232323;
+  margin: 0;
+  padding: 0;
+  line-height: 1.55;
+}
+.top-bar {
+  background: #2c3e50;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 18px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.top-bar h1 {
+  font-size: 1.02rem;
+  margin: 0;
+  font-weight: 600;
+  flex: 1 1 auto;
+  font-family: 'Source Serif 4', Georgia, serif;
+  letter-spacing: .2px;
+}
+.name-wrap { display:flex; align-items:center; gap:6px; font-size:.82rem; }
+.name-wrap label { opacity:.85; }
+.name-wrap input {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .8rem;
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,.3);
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  width: 150px;
+}
+.name-wrap input::placeholder { color: rgba(255,255,255,.55); }
+.btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .78rem;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  transition: filter .15s, transform .1s;
+  white-space: nowrap;
+}
+.btn:hover { filter: brightness(1.15); }
+.btn:active { transform: scale(.96); }
+.btn-download { background: rgba(15,110,110,.85); }
+.btn-check { background: rgba(40,140,90,.85); }
+.btn-copy { background: rgba(120,95,40,.85); }
+.btn-pdf { background: rgba(90,90,100,.85); }
+.btn-reset { background: rgba(150,40,40,.85); }
+.score-banner {
+  display: none;
+  background: rgba(15,110,110,.92);
+  color: #fff;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .85rem;
+  padding: 8px;
+}
+.score-banner.visible { display: block; }
+.worksheet {
+  max-width: 860px;
+  margin: 28px auto 60px;
+  background: #fffdf9;
+  border-left: 6px solid #0f6e6e;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  padding: 30px 34px 40px;
+}
+.task-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem;
+  color: #0f6e6e;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.task-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #1c1c1c;
+}
+.task-subtitle {
+  font-size: .92rem;
+  color: #555;
+  margin: 0 0 22px;
+  font-style: italic;
+}
+.intro {
+  background: #f0ece1;
+  border-radius: 6px;
+  padding: 14px 18px;
+  font-size: .92rem;
+  margin-bottom: 26px;
+  color: #3c3c3c;
+}
+.at {
+  margin: 26px 0 12px;
+}
+.at .qno {
+  display: inline-block;
+  background: #0f6e6e;
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem;
+  font-weight: 700;
+  border-radius: 12px;
+  min-width: 24px; height: 24px;
+  padding: 0 7px;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+.at .qtext { font-weight: 600; font-size: 1.02rem; }
+.subtask { margin: 10px 0 18px 32px; }
+.subtask .sublabel { font-weight: 600; font-size: .92rem; color: #2c2c2c; display:block; margin-bottom:6px; }
+
+textarea, input[type=text] {
+  width: 100%;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: .95rem;
+  padding: 9px 11px;
+  border-radius: 6px;
+  border: 1.5px solid #cfc8b8;
+  background: #fff;
+  resize: vertical;
+  color: #232323;
+}
+textarea:focus, input[type=text]:focus {
+  outline: none;
+  border-color: #0f6e6e;
+  box-shadow: 0 0 0 3px rgba(15,110,110,.15);
+}
+
+table.ws-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0 22px;
+  font-size: .9rem;
+}
+table.ws-table th {
+  background: #2c3e50;
+  color: #fff;
+  text-align: left;
+  padding: 8px 10px;
+  font-weight: 600;
+  font-size: .82rem;
+}
+table.ws-table td {
+  border-bottom: 1px solid #e4ddc9;
+  padding: 8px 10px;
+  vertical-align: top;
+}
+table.ws-table tr:nth-child(even) td { background: #f8f5ec; }
+
+.radio-row, .check-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin: 6px 0 14px;
+}
+.radio-row label, .check-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .92rem;
+  cursor: pointer;
+}
+.mc-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 6px 0;
+  font-size: .94rem;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 5px;
+}
+.mc-option:hover { background: #f0ece1; }
+.mc-option input { margin-top: 3px; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .78rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 5px;
+  margin-top: 6px;
+}
+.badge.correct { background: rgba(40,140,90,.15); color: #1e6b3f; }
+.badge.wrong { background: rgba(180,50,50,.15); color: #9c2b2b; }
+.badge.hint { background: rgba(15,110,110,.13); color: #0a4f4f; }
+.badge-block { margin-top: 6px; }
+.hint-text { font-size: .87rem; color: #0a4f4f; background: rgba(15,110,110,.08); border-radius: 6px; padding: 10px 13px; margin-top: 8px; line-height: 1.5; }
+.hint-text b { color: #0f6e6e; }
+
+/* Kompakte Live-Hints für Tabellenzellen: kleine Box direkt unter dem Feld in der Zelle */
+td .hint-text, td .cell-hint {
+  font-size: .76rem;
+  padding: 5px 8px;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+.cell-hint { background: rgba(15,110,110,.1); color: #0a4f4f; border-radius: 5px; display:block; }
+
+/* Immer sichtbare Musterlösungs-Spalte (z.B. AB 01) */
+td.model-answer {
+  background: rgba(15,110,110,.07) !important;
+  color: #0a4f4f;
+  font-style: italic;
+  font-size: .85rem;
+  border-left: 2px solid rgba(15,110,110,.3);
+}
+
+/* Erzähltext-Block z.B. für Lisas Tagesablauf (AB 04) */
+.lisa-day {
+  background: #f8f5ec;
+  border-left: 3px solid #f0a93a;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin: 18px 0 6px;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+.lisa-day p { margin: 0; }
+.lisa-day b { color: #0a4f4f; font-family: 'JetBrains Mono', monospace; font-size: .85rem; }
+.lisa-day + table.ws-table { margin-top: 4px; }
+
+/* Vorausgefülltes Beispiel in einer Tabellenzeile (z.B. AB 01, erste Zeile) */
+.example-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem;
+  font-weight: 700;
+  color: #0f6e6e;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+.example-filled {
+  font-style: italic;
+  color: #555;
+  background: #f0ece1;
+  border: 1.5px dashed #cfc8b8;
+  border-radius: 6px;
+  padding: 9px 11px;
+  font-size: .95rem;
+  font-family: 'Source Serif 4', Georgia, serif;
+  min-height: 1.4em;
+}
+
+/* Kategorien-Zwischenzeile innerhalb einer Tabelle (z.B. AB 02) */
+tr.category-row td {
+  background: #0f6e6e !important;
+  color: #fff;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .8rem;
+  letter-spacing: .3px;
+  padding: 7px 10px;
+}
+
+/* Zitierter Quelltext (z.B. AB 21, Q1) als eigene, klar abgegrenzte Box */
+.source-quote {
+  background: #fdf6e3;
+  border: 1px solid #e8d9a8;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 14px 0 20px;
+  font-size: .92rem;
+  line-height: 1.55;
+  color: #3c3c30;
+}
+.source-quote-title {
+  font-weight: 700;
+  font-size: .98rem;
+  color: #1c1c1c;
+  margin-bottom: 4px;
+}
+.source-quote-meta {
+  font-weight: 400;
+  font-style: italic;
+  color: #777;
+  font-size: .82rem;
+}
+.source-quote p { margin: 10px 0; }
+.source-quote-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .76rem;
+  color: #8a8060;
+  margin-top: 10px;
+}
+
+/* Visuelles Häkchen direkt am Feld bei korrekter Antwort (z.B. AB 02 Jahreszahlen) */
+.field-correct-wrap { position: relative; display: inline-block; width: 100%; }
+.field-correct-wrap input.is-correct {
+  border-color: #1e6b3f !important;
+  background: rgba(40,140,90,.08);
+  padding-right: 28px;
+}
+.field-correct-wrap input.is-wrong {
+  border-color: #9c2b2b !important;
+  background: rgba(180,50,50,.06);
+}
+.field-checkmark {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1e6b3f;
+  font-weight: 700;
+  font-size: 1rem;
+  display: none;
+  pointer-events: none;
+}
+.field-correct-wrap input.is-correct ~ .field-checkmark { display: inline; }
+
+.info-footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem;
+  color: #8a8473;
+  margin-top: 30px;
+  padding-top: 14px;
+  border-top: 1px dashed #d8d0bb;
+}
+.nav-foot {
+  max-width: 860px;
+  margin: -20px auto 50px;
+  padding: 0 34px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .8rem;
+}
+.nav-foot a {
+  color: #0a4f4f;
+  text-decoration: none;
+  font-weight: 600;
+}
+.nav-foot a:hover { text-decoration: underline; }
+
+.next-cta-wrap {
+  text-align: center;
+  margin: 34px 0 4px;
+}
+.next-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #0f6e6e;
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .95rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 13px 26px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(15,110,110,.3);
+  transition: filter .15s, transform .1s;
+}
+.next-cta:hover { filter: brightness(1.1); transform: translateY(-1px); }
+.next-cta .arrow { font-size: 1.1rem; }
+.next-cta-sub {
+  text-align: center;
+  font-size: .78rem;
+  color: #8a8473;
+  margin-top: 6px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+@media (max-width: 600px) {
+  .worksheet { padding: 22px 18px 30px; margin: 14px 10px 40px; }
+  .top-bar h1 { font-size: .9rem; }
+  .name-wrap input { width: 110px; }
+  .subtask { margin-left: 14px; }
+}
+
+#sandboxBanner {
+  display:none;
+  background:#7a1a1a;color:#fff;text-align:center;
+  font-family:'JetBrains Mono',monospace;font-size:.78rem;
+  padding:8px;
+}
+
+.btn-task-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem;
+  font-weight: 700;
+  border: none;
+  background: rgba(40,140,90,.12);
+  color: #1e6b3f;
+  padding: 5px 11px;
+  border-radius: 14px;
+  cursor: pointer;
+  margin: 10px 0 22px 2px;
+  transition: filter .15s, transform .1s;
+}
+.btn-task-check:hover { filter: brightness(.95); background: rgba(40,140,90,.2); }
+.btn-task-check:active { transform: scale(.96); }
+
+.source-credit {
+  text-align: center;
+  font-size: .72rem;
+  color: #8a8473;
+  font-family: 'JetBrains Mono', monospace;
+  margin: 14px 0 0;
+}
+</style>
+</head>
+<body>
+<div id="sandboxBanner"></div>
+<div class="top-bar">
+  <h1>📰 Hate Speech</h1>
+  <div class="name-wrap"><label>Name:</label><input type="text" id="studentName" placeholder="Vor- und Nachname"/></div>
+  <button class="btn btn-download" onclick="downloadFile()" id="btnDownload">💾 Speichern</button>
+  <button class="btn btn-check" onclick="checkAll()">✓ Überprüfen</button>
+  <button class="btn btn-copy" onclick="copyAllAnswers()" id="btnCopy">📋 Kopieren</button>
+  <button class="btn btn-pdf" onclick="printAsPDF()">🖨 Als PDF</button>
+  <button class="btn btn-reset" onclick="resetAll()">↺ Reset</button>
+</div>
+<div class="score-banner" id="scoreBanner"></div>
+<div class="score-banner" id="resetConfirmBanner" style="background:#7a1a1a;"></div>
+<div class="worksheet">
+  <div class="task-id">AB 30</div>
+  <div class="task-title">Hate Speech</div>
+  <div class="task-subtitle">Medien und ihre Herausforderungen</div>
+
+<div class="intro">Hate Speech = abwertende/angreifende Kommentare im Netz gegen bestimmte Personen/Gruppen. In der JIM-Studie 2020 gab über die Hälfte der Jugendlichen an, im letzten Monat Hassbotschaften begegnet zu sein.</div>
+
+<div class="at" id="atblk_1"><span class="qno">1a</span><span class="qtext">«Alle Frösche sind faul?» — Ordne die Hate-Speech-Methoden (A–H) den Tier-Beispielen zu: A) bewusste Falschaussagen / B) Tarnung als Humor / C) sexistische/rassistische Äußerungen / D) Stereotype/Vorurteile / E) Wir-Die-Sprache / F) Verschwörungserzählungen / G) Gleichsetzungen / H) Aufrufe zur Gewalt.</span></div>
+<table class="ws-table">
+  <tr><th>Tier-Beispiel</th><th>Methode(n) (Buchstaben)</th></tr>
+  <tr><td>Frosch («Alle Frösche sind faul»)</td><td><input type="text" id="a30_frosch" data-livehint="1"><span class="cell-hint" id="a30_frosch_livehint" style="display:none;">💡 Lösung: G, D</span></td></tr>
+  <tr><td>Delfin («Delfin-Asylanten ... teure Handys»)</td><td><input type="text" id="a30_delfin" data-livehint="1"><span class="cell-hint" id="a30_delfin_livehint" style="display:none;">💡 Lösung: B, D, A</span></td></tr>
+  <tr><td>Esel («Widernatürlicher Perversling! ...»)</td><td><input type="text" id="a30_esel" data-livehint="1"><span class="cell-hint" id="a30_esel_livehint" style="display:none;">💡 Lösung: C</span></td></tr>
+  <tr><td>Hase («Hasen-Asylanten raus...»)</td><td><input type="text" id="a30_hase" data-livehint="1"><span class="cell-hint" id="a30_hase_livehint" style="display:none;">💡 Lösung: D</span></td></tr>
+  <tr><td>Katze («Lass die Katzenklappe auf... Elektroschocker»)</td><td><input type="text" id="a30_katze" data-livehint="1"><span class="cell-hint" id="a30_katze_livehint" style="display:none;">💡 Lösung: E, D, A</span></td></tr>
+  <tr><td>Ameise («Dreckige Ameisen!...»)</td><td><input type="text" id="a30_ameise" data-livehint="1"><span class="cell-hint" id="a30_ameise_livehint" style="display:none;">💡 Lösung: A, D</span></td></tr>
+  <tr><td>Ziege («Deutschland schafft sich ab...»)</td><td><input type="text" id="a30_ziege" data-livehint="1"><span class="cell-hint" id="a30_ziege_livehint" style="display:none;">💡 Lösung: A, C, D, E, F</span></td></tr>
+  <tr><td>Henne («Du dumme Glucke...»)</td><td><input type="text" id="a30_henne" data-livehint="1"><span class="cell-hint" id="a30_henne_livehint" style="display:none;">💡 Lösung: H, D, A</span></td></tr>
+</table>
+<div id="a30_badge" class="badge-block"></div>
+<button type="button" class="btn-task-check" data-for="atblk_1" onclick="checkTask(this)">✓ Aufgabe prüfen</button>
+<button class="btn btn-check" style="background:#0f6e6e;" onclick="checkA30()">✓ Überprüfen</button>
+
+<div class="at" id="atblk_2"><span class="qno">1b</span><span class="qtext">Beschreibe, warum Social-Media-Angebote so anfällig für Hate Speech sind.</span></div>
+<textarea id="a30_1b" data-livehint="1" rows="3"></textarea><div class="hint-text" id="a30_1b_livehint" style="display:none;">💡 Social-Media-Angebote zielen auf möglichst lange Nutzungszeiten ab – das schaffen sie u.a. dadurch, dass sie immer neue, häufig extremere Inhalte anzeigen, was emotionalisierende Reaktionen begünstigt.</div>
+
+<button type="button" class="btn-task-check" data-for="atblk_2" onclick="checkTask(this)">✓ Aufgabe prüfen</button>
+<div class="at" id="atblk_3"><span class="qno">2a</span><span class="qtext">Stimmst du dem Zitat von Anatol Stefanowitsch zu: «Die Hassrede ist keine Konsequenz der Sozialen Netze, sondern die Sozialen Netze liefern ihr nur einen bequemen Weg von den Stammtischen direkt in die Öffentlichkeit»?</span></div>
+<div class="radio-row">
+  <label><input type="radio" name="a30_2a" value="Ja"> Ja</label>
+  <label><input type="radio" name="a30_2a" value="Nein"> Nein</label>
+  <label><input type="radio" name="a30_2a" value="Jein"> Jein</label>
+</div>
+<textarea id="a30_2a_begr" data-livehint="1" rows="2" placeholder="Begründung..."></textarea><div class="hint-text" id="a30_2a_begr_livehint" style="display:none;">💡 Begründe deine Position mit einem eigenen Beispiel aus deinem Medienalltag.</div>
+
+<button type="button" class="btn-task-check" data-for="atblk_3" onclick="checkTask(this)">✓ Aufgabe prüfen</button>
+<div class="at" id="atblk_4"><span class="qno">Notiere</span><span class="qtext">Was kannst du gegen Hate Speech tun? (Kontern / Melden / Helfen)</span></div>
+<textarea id="a30_tun" data-livehint="1" rows="2"></textarea><div class="hint-text" id="a30_tun_livehint" style="display:none;">💡 Lösung aus dem Infokasten: KONTERN (Counter-Speech) · MELDEN (an Anbieter und Jugendschutzorganisationen wie hass-im-netz.info/melden) · HELFEN (den Opfern).</div>
+
+<button type="button" class="btn-task-check" data-for="atblk_4" onclick="checkTask(this)">✓ Aufgabe prüfen</button>
+<div class="info-footer"><span>MEDIEN FÜR EINSTEIGER · bpb · AB 30</span><span id="footerName"></span></div>
+<div class="next-cta-wrap">
+  <a class="next-cta" href="402_[UE]_Medien digital_A73_Cyber_Mobbing.html">Weiter zu «Cyber-Mobbing» <span class="arrow">→</span></a>
+</div>
+<div class="next-cta-sub">Deine Eingaben auf dieser Seite bleiben erhalten, bis du Reset klickst oder die Seite schliesst.</div>
+<div class="source-credit">Fileccia, Marco: „Medien für Einsteiger“, bpb (Hrsg.)</div>
+</div>
+<div class="nav-foot">
+  <a href="402_[UE]_Medien digital_A71_Fake_News.html">← Fake News</a>
+  <a href="402_[UE]_Medien digital_A49_Uebersicht.html">⌂ Übersicht</a>
+  <a href="402_[UE]_Medien digital_A73_Cyber_Mobbing.html">Cyber-Mobbing →</a>
+</div>
+<script>
+const FILENAME = '30_Hate_Speech';
+
+var A30_SOL = {
+  frosch:['G','D'], delfin:['B','D','A'], esel:['C'], hase:['D'],
+  katze:['E','D','A'], ameise:['A','D'], ziege:['A','C','D','E','F'], henne:['H','D','A']
+};
+function normLetters(s){ return s.toUpperCase().replace(/[^A-H]/g,'').split('').sort(); }
+function checkA30(){
+  var html = '';
+  for(var key in A30_SOL){
+    var el = document.getElementById('a30_' + key);
+    if(!el) continue;
+    var v = el.value.trim();
+    if(v === ''){ continue; }
+    var given = normLetters(v);
+    var correct = A30_SOL[key].slice().sort();
+    var ok = given.join('') === correct.join('');
+    html += badgeHTML(ok, key + ': ' + (ok ? 'richtig' : 'Lösung: ' + correct.join(', '))) + ' ';
+  }
+  document.getElementById('a30_badge').innerHTML = html || '<span class="hint-text">Bitte zuerst ausfüllen.</span>';
+}
+
+
+// --- Sandbox/iframe-Erkennung ---
+(function(){
+  try {
+    if (window.self !== window.top) {
+      document.getElementById('sandboxBanner').style.display = 'block';
+      document.getElementById('sandboxBanner').textContent = '⚠ Diese Seite läuft eingebettet (z.B. SharePoint-Vorschau). Speichern funktioniert evtl. nicht – Datei direkt öffnen.';
+    }
+  } catch(e){
+    document.getElementById('sandboxBanner').style.display = 'block';
+    document.getElementById('sandboxBanner').textContent = '⚠ Eingebettete Ansicht erkannt – Datei ggf. direkt öffnen.';
+  }
+})();
+
+function downloadFile(){
+  var name = document.getElementById('studentName').value.trim();
+  if(!name){
+    alert('Bitte zuerst deinen Namen eingeben.');
+    document.getElementById('studentName').focus();
+    return;
+  }
+  var html = document.documentElement.outerHTML;
+  var blob = new Blob([html], {type:'text/html;charset=utf-8'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url; a.download = FILENAME + '_' + name.replace(/\s+/g,'_') + '.html';
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(url); document.body.removeChild(a); }, 500);
+  var btn = document.getElementById('btnDownload');
+  var old = btn.textContent;
+  btn.textContent = '✔ Gespeichert!';
+  setTimeout(function(){ btn.textContent = old; }, 2200);
+}
+
+function printAsPDF(){ window.print(); }
+
+// --- Alles kopieren: Aufgabenstellung + Antworten der Lernenden, OHNE Musterlösungen ---
+function copyAllAnswers(){
+  var lines = [];
+  var title = document.querySelector('.task-title');
+  var subtitle = document.querySelector('.task-subtitle');
+  if(title) lines.push(title.textContent.trim());
+  if(subtitle) lines.push(subtitle.textContent.trim());
+  lines.push('');
+
+  document.querySelectorAll('.at').forEach(function(atBlock){
+    var qno = atBlock.querySelector('.qno');
+    var qtext = atBlock.querySelector('.qtext');
+    if(qtext) {
+      var prefix = qno ? ('Aufgabe ' + qno.textContent.trim() + ': ') : '';
+      lines.push('• ' + prefix + qtext.textContent.trim());
+    }
+
+    // Sammle alle Eingabefelder, die zu dieser Aufgabe gehören (bis zum nächsten .at)
+    var node = atBlock.nextElementSibling;
+    while(node && !node.classList.contains('at')){
+      collectAnswersFromNode(node, lines);
+      node = node.nextElementSibling;
+    }
+    lines.push('');
+  });
+
+  var text = lines.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+  navigator.clipboard.writeText(text).then(function(){
+    var btn = document.getElementById('btnCopy');
+    var old = btn.textContent;
+    btn.textContent = '✔ Kopiert!';
+    setTimeout(function(){ btn.textContent = old; }, 2200);
+  }).catch(function(){
+    alert('Kopieren nicht möglich. Bitte Text manuell markieren.');
+  });
+}
+
+function collectAnswersFromNode(node, lines){
+  // Einzelnes Eingabefeld direkt als Geschwisterknoten (z.B. nach .at ohne Wrapper)
+  if(node.matches && node.matches('textarea, input[type=text]')){
+    if(node.value.trim() !== '') lines.push('  → ' + node.value.trim());
+    return;
+  }
+
+  if(!node.querySelectorAll) return;
+
+  // Subtask-Block mit eigenem Label (z.B. "Beschreibung Q1:")
+  if(node.classList && node.classList.contains('subtask')){
+    var sublabel = node.querySelector('.sublabel');
+    var prefix = sublabel ? sublabel.textContent.trim().replace(/:\s*$/, '') + ': ' : '';
+    node.querySelectorAll('textarea, input[type=text]').forEach(function(el){
+      if(el.value.trim() !== '') lines.push('  ' + prefix + el.value.trim());
+    });
+    return;
+  }
+
+  // Tabellenzeilen: erste Zelle = Frage/Label, übrige Zellen = Eingaben
+  if(node.tagName === 'TABLE' || node.querySelector('table')){
+    var table = node.tagName === 'TABLE' ? node : node.querySelector('table');
+    table.querySelectorAll('tr').forEach(function(tr){
+      if(tr.querySelector('th')) return; // Kopfzeile überspringen
+      var cells = tr.querySelectorAll('td');
+      if(cells.length === 0) return;
+      var label = cells[0].textContent.trim();
+      var hasOwnInput = cells[0].querySelector('textarea, input[type=text], input[type=radio], input[type=checkbox]');
+      var answers = [];
+      var startIdx = hasOwnInput ? 0 : 1;
+      for(var i = startIdx; i < cells.length; i++){
+        cells[i].querySelectorAll('textarea, input[type=text]').forEach(function(el){
+          if(el.value.trim() !== '') answers.push(el.value.trim());
+        });
+        var radioSeenLocal = {};
+        cells[i].querySelectorAll('input[type=radio]:checked').forEach(function(el){
+          if(!radioSeenLocal[el.name]){
+            var lbl = el.closest('label');
+            answers.push(lbl ? lbl.textContent.trim() : (el.value || el.id));
+            radioSeenLocal[el.name] = true;
+          }
+        });
+        cells[i].querySelectorAll('input[type=checkbox]:checked').forEach(function(el){
+          var lbl = el.closest('label');
+          answers.push('☑ ' + (lbl ? lbl.textContent.trim() : el.id));
+        });
+      }
+      if(answers.length > 0){
+        if(startIdx === 1 && label){
+          lines.push('  ' + label + ': ' + answers.join(' / '));
+        } else {
+          answers.forEach(function(a){ lines.push('  → ' + a); });
+        }
+      }
+    });
+    return;
+  }
+
+  // Standardfall: alle Eingabefelder im Knoten sammeln
+  node.querySelectorAll('textarea, input[type=text]').forEach(function(el){
+    if(el.value.trim() !== '') lines.push('  → ' + el.value.trim());
+  });
+  var radioSeen = {};
+  node.querySelectorAll('input[type=radio]:checked').forEach(function(el){
+    if(!radioSeen[el.name]){
+      var lbl = el.closest('label');
+      lines.push('  → ' + (lbl ? lbl.textContent.trim() : (el.value || el.id)));
+      radioSeen[el.name] = true;
+    }
+  });
+  node.querySelectorAll('input[type=checkbox]:checked').forEach(function(el){
+    var lbl = el.closest('label');
+    var txt = lbl ? lbl.textContent.trim() : el.id;
+    lines.push('  ☑ ' + txt);
+  });
+}
+
+function resetAll(){
+  var c = document.getElementById('resetConfirmBanner');
+  if(!c.classList.contains('visible')){
+    c.innerHTML = '<span style="margin-right:12px;">Alle Eingaben wirklich löschen?</span>' +
+      '<button onclick="doReset()" style="background:#c0392b;color:#fff;border:none;padding:5px 14px;border-radius:4px;cursor:pointer;font-weight:600;margin-right:8px;">Ja</button>' +
+      '<button onclick="document.getElementById(\'resetConfirmBanner\').classList.remove(\'visible\')" style="background:rgba(255,255,255,.2);color:#fff;border:1px solid rgba(255,255,255,.4);padding:5px 12px;border-radius:4px;cursor:pointer;">Abbrechen</button>';
+    c.classList.add('visible');
+    return;
+  }
+  doReset();
+}
+
+function doReset(){
+  document.querySelectorAll('textarea, input[type=text]').forEach(function(el){ el.value=''; });
+  document.querySelectorAll('input[type=radio], input[type=checkbox]').forEach(function(el){ el.checked=false; });
+  document.querySelectorAll('.badge-block').forEach(function(el){ el.innerHTML=''; });
+  document.getElementById('resetConfirmBanner').classList.remove('visible');
+  document.getElementById('resetConfirmBanner').innerHTML='';
+  document.getElementById('scoreBanner').classList.remove('visible');
+}
+
+document.getElementById('studentName').addEventListener('input', function(){
+  document.getElementById('footerName').textContent = this.value.trim();
+});
+
+// --- Hilfsfunktionen für Aufgabentypen ---
+
+function badgeHTML(ok, text){
+  if(ok === null){
+    return '<span class="badge hint">💡 ' + text + '</span>';
+  }
+  return ok
+    ? '<span class="badge correct">✔ ' + text + '</span>'
+    : '<span class="badge wrong">✘ ' + text + '</span>';
+}
+
+// Freitext: zeigt immer Musterlösung als Hinweis, wenn etwas eingetragen wurde
+function checkFreitext(taId, modelAnswer){
+  var ta = document.getElementById(taId);
+  var out = document.getElementById(taId + '_badge');
+  if(!ta || !out) return;
+  if(ta.value.trim() === ''){ out.innerHTML = ''; return; }
+  out.innerHTML = '<div class="hint-text"><b>Musterlösung / Denkanstoss:</b><br>' + modelAnswer + '</div>';
+}
+
+// Radio (richtig/falsch oder MC mit einer richtigen Antwort)
+function checkRadio(groupName, correctValue){
+  var radios = document.getElementsByName(groupName);
+  var out = document.getElementById(groupName + '_badge');
+  var checked = null;
+  radios.forEach(function(r){ if(r.checked) checked = r.value; });
+  if(!out) return;
+  if(checked === null){ out.innerHTML = ''; return; }
+  out.innerHTML = badgeHTML(checked === correctValue, checked === correctValue ? 'Richtig!' : 'Leider falsch. Richtig wäre: ' + correctValue);
+}
+
+// Checkbox-Set-Vergleich: prüft nur angekreuzte Boxen (onlyticked-Logik)
+function checkCheckboxSet(ids, correctIds){
+  ids.forEach(function(id){
+    var cb = document.getElementById(id);
+    var out = document.getElementById(id + '_badge');
+    if(!cb || !out) return;
+    if(!cb.checked){ out.innerHTML = ''; return; }
+    var shouldBeChecked = correctIds.indexOf(id) !== -1;
+    out.innerHTML = badgeHTML(shouldBeChecked, shouldBeChecked ? 'Richtig angekreuzt' : 'Das gehört nicht dazu');
+  });
+}
+
+// Einzel-Checkbox mit eigener richtig/falsch-Erwartung
+function checkCheckboxSingle(id, expectedChecked){
+  var cb = document.getElementById(id);
+  var out = document.getElementById(id + '_badge');
+  if(!cb || !out) return;
+  out.innerHTML = badgeHTML(cb.checked === expectedChecked, cb.checked === expectedChecked ? 'Richtig' : 'Nochmal überlegen');
+}
+
+function checkAll(){
+  document.querySelectorAll('[data-checkfn]').forEach(function(el){
+    try { window[el.getAttribute('data-checkfn')](); } catch(e){}
+  });
+  revealAllHints();
+  var banner = document.getElementById('scoreBanner');
+  banner.textContent = '✓ Aufgabe überprüft – Musterlösungen und Rückmeldungen siehe oben.';
+  banner.classList.add('visible');
+  setTimeout(function(){ banner.classList.remove('visible'); }, 4000);
+}
+
+// --- Hinweise/Musterlösungen erscheinen erst nach Klick auf "✓ Überprüfen" ---
+// (nicht mehr automatisch beim Tippen). Nur Felder, die bereits ausgefüllt sind,
+// zeigen ihren Hinweis; leere Felder bleiben ohne Hinweis, bis dort etwas steht
+// UND erneut "Überprüfen" geklickt wurde.
+
+// --- Einzelne Aufgabe pruefen: zeigt nur Hinweise/Musterloesungen INNERHALB dieser Aufgabe ---
+function checkTask(btn){
+  var atBlock = document.getElementById(btn.getAttribute('data-for'));
+  if(!atBlock) return;
+  var node = atBlock.nextElementSibling;
+  var any = false;
+  function revealIn(field){
+    var hintBox = document.getElementById(field.id + '_livehint');
+    if(!hintBox) return;
+    if(field.value.trim() === ''){
+      hintBox.style.display = 'none';
+    } else {
+      hintBox.style.display = 'block';
+      any = true;
+    }
+  }
+  while(node && node !== btn && !node.classList.contains('at')){
+    if(node.matches && node.matches('[data-livehint]')) revealIn(node);
+    if(node.querySelectorAll) node.querySelectorAll('[data-livehint]').forEach(revealIn);
+    node = node.nextElementSibling;
+  }
+  var old = btn.textContent;
+  btn.textContent = any ? '✔ geprüft' : '… nichts eingetragen';
+  setTimeout(function(){ btn.textContent = old; }, 1800);
+}
+
+function revealAllHints(){
+  document.querySelectorAll('[data-livehint]').forEach(function(field){
+    var hintBox = document.getElementById(field.id + '_livehint');
+    if(!hintBox) return;
+    hintBox.style.display = field.value.trim() === '' ? 'none' : 'block';
+  });
+}
+
+document.querySelectorAll('[data-livehint]').forEach(function(field){
+  var hintBox = document.getElementById(field.id + '_livehint');
+  if(!hintBox) return;
+  // Hinweis wieder verbergen, sobald die Antwort verändert wird, damit der Lernende
+  // erneut "Überprüfen" anklicken muss, um die (ggf. aktualisierte) Lösung zu sehen.
+  field.addEventListener('input', function(){
+    hintBox.style.display = 'none';
+  });
+});
+
+</script>
+</body>
+</html>
