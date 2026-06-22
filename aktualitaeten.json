@@ -1,6 +1,48 @@
 {
   "1": [
     {
+      "id": "art-20260621-02",
+      "date": "20.06.",
+      "title": "Wer Katastrophenrisiken auf der Blockchain rückversichert, verdient kräftig",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wer-katastrophenrisiken-auf-der-blockchain-rueckversichert-verdient-kraeftig-ld.10012194",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Wer Katastrophenrisiken auf der Blockchain rückversichert, verdient kräftig»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Privatinvestoren können dank der Blockchain-Technologie Versicherungsrisiken übernehmen und so in ei"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260612-08",
+      "date": "11.06.",
+      "title": "Standortnachteil Kündigungsschutz: Wieso ein Stellenabbau in Deutschland zwölfmal so viel kostet wie in der Schweiz",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/standortnachteil-kuendigungsschutz-wieso-ein-stellenabbau-in-deutschland-zwoelfmal-so-viel-kostet-wie-in-der-schweiz-ld.10009903",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Würde es dir beim Berufseinstieg mehr Sicherheit geben, wenn dein Arbeitgeber dich nicht so einfach kündigen darf – oder würde das eher Betriebe davon abhalten, junge Leute wie dich einzustellen?"
+        },
+        {
+          "phase": "TH",
+          "text": "Kündigungsschutzgesetze sind ein zentrales Element der Arbeitsmarktregulation und beeinflussen sowohl die Chancen von Lernenden auf dem Stellenmarkt als auch die unternehmerische Flexibilität. Das Verhältnis zwischen Arbeitnehmerschutz und wirtschaftlicher Effizienz prägt unterschiedliche nationale Rechtskulturen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert die Kündigungsfristen in der Schweiz und Deutschland (z.B. in eurer Branche) und erstellt eine Pro-Contra-Tabelle: Welche Vorteile/Nachteile hat starker Kündigungsschutz für Lernende und für Betriebe?"
+        }
+      ]
+    },
+    {
       "id": "art-20260605-06",
       "date": "04.06.",
       "title": "Panikverkäufe bei Partners Group: Das «Saubermann-Image» der Zuger Beteiligungsgesellschaft leidet",
@@ -24,19 +66,19 @@
   ],
   "2": [
     {
-      "id": "art-20260609-09",
-      "date": "07.06.",
-      "title": "Gleichstellung neu denken: Nicht jede Ungleichheit ist ungerecht",
+      "id": "art-20260622-05",
+      "date": "21.06.",
+      "title": "INTERVIEW - Kieler Forscher: «Wir sollten Chinas Subventionen ausbeuten. Wenn uns China seine Produkte billig anbietet, sollten wir dieses Geschenk annehmen»",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/gleichstellung-neu-denken-nicht-jede-ungleichheit-ist-ungerecht-ld.10009535",
+      "url": "https://www.nzz.ch/wirtschaft/kieler-forscher-wir-sollten-chinas-subventionen-ausbeuten-wenn-uns-china-seine-produkte-billig-anbietet-sollten-wir-dieses-geschenk-annehmen-ld.10012136",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Gleichstellung neu denken: Nicht jede Ungleichheit ist ungerecht»?"
+          "text": "Was denkst du zu: «INTERVIEW - Kieler Forscher: «Wir sollten Chinas Subventionen ausbeuten. Wenn uns China seine Produkte billig anbietet, sollten wir dieses Geschenk annehmen»»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Lohnunterschiede zwischen Mann und Frau zeigen sich besonders eindrücklich bei Müttern und Vätern. W"
+          "text": "Dieser Artikel zeigt: Der Konjunkturchef des Kieler Instituts für Weltwirtschaft, Stefan Kooths, warnt davor, Schutzzölle "
         },
         {
           "phase": "UE",
@@ -45,61 +87,19 @@
       ]
     },
     {
-      "id": "art-20260606-07",
-      "date": "05.06.",
-      "title": "Die EU will mehr Lohngleichheit zwischen Mann und Frau, doch die Mitgliedsländer spielen nicht mit",
+      "id": "art-20260621-01",
+      "date": "21.06.",
+      "title": "Kieler Forscher: «Wir sollten Chinas Subventionen ausbeuten. Wenn uns China seine Produkte billig anbietet, sollten wir dieses Geschenk annehmen»",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-eu-will-mehr-lohngleichheit-zwischen-mann-und-frau-doch-die-mitgliedslaender-spielen-nicht-mit-ld.10009838",
+      "url": "https://www.nzz.ch/wirtschaft/kieler-forscher-wir-sollten-chinas-subventionen-ausbeuten-wenn-uns-china-seine-produkte-billig-anbietet-sollten-wir-dieses-geschenk-annehmen-ld.10012136",
       "varianten": [
         {
           "phase": "E",
-          "text": "Würdet ihr es fair finden, wenn zwei Personen die gleiche Arbeit machen, aber eine davon weniger Lohn erhält – nur weil sie eine Frau ist?"
+          "text": "Was denkst du zu: «Kieler Forscher: «Wir sollten Chinas Subventionen ausbeuten. Wenn uns China seine Produkte billig anbietet, sollten wir dieses Geschenk annehmen»»?"
         },
         {
           "phase": "TH",
-          "text": "Die Lohngleichheit ist ein zentrales Thema der Lohnfairness und Geschlechtergerechtigkeit. Lernende verstehen, dass Transparenz (Offenlegung von Lohndaten) ein wichtiges Werkzeug ist, um Diskriminierung sichtbar zu machen und zu bekämpfen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Was verdienen verschiedene Berufe in der Schweiz nach Geschlecht? Nutzt lohngleichheit.ch oder ähnliche Tools und haltet fest, in welchen Branchen es die grössten Unterschiede gibt."
-        }
-      ]
-    },
-    {
-      "id": "art-20260604-07",
-      "date": "03.06.",
-      "title": "Die OECD sieht Gefahren für die globale Wirtschaft: Der Iran-Krieg erhöht das Risiko einer Rezession",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-oecd-sieht-gefahren-fuer-die-globale-wirtschaft-der-iran-krieg-erhoeht-das-risiko-einer-rezession-ld.10009652",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn Kriege in der Welt teurer machen, was passiert dann mit deinem Taschengeld oder deinem ersten Lohn?"
-        },
-        {
-          "phase": "TH",
-          "text": "Schüler verstehen, wie globale politische Ereignisse die Inflation beeinflussen und damit ihre persönliche Kaufkraft ändern. Sie lernen den Zusammenhang zwischen Weltpolitik, Wirtschaft und ihrem eigenen Portemonnaie."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere drei Produkte, die du regelmäßig kaufst (z.B. Kaffee, Handy-Abo, Kleidung). Notiere die heutigen Preise und überlege: Um wie viel Prozent müssten sie steigen, damit du es dir nicht mehr leisten kannst?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260603-07",
-      "date": "02.06.",
-      "title": "In der südspanischen Provinz Almería züchten Tausende von Bauern unser Gemüse – zum Teil unter prekären Bedingungen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/plastikmeer-auch-coop-und-edeka-beziehen-gemuese-aus-almeria-ld.10007490",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «In der südspanischen Provinz Almería züchten Tausende von Bauern unser Gemüse – zum Teil unter prekären Bedingungen»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Über ein Drittel des Gemüses, das in der EU und in der Schweiz verzehrt wird, stammt aus südspanisch"
+          "text": "Dieser Artikel zeigt: Der Konjunkturchef des Kieler Instituts für Weltwirtschaft, Stefan Kooths, warnt davor, Schutzzölle "
         },
         {
           "phase": "UE",
@@ -108,19 +108,40 @@
       ]
     },
     {
-      "id": "art-20260602-04",
-      "date": "01.06.",
-      "title": "Referenzzinssatz bleibt bei 1,25 Prozent",
+      "id": "art-20260621-08",
+      "date": "20.06.",
+      "title": "Gutes Timing oder Glück? Der Benzinpreis fällt rechtzeitig zur amerikanischen Feriensaison",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/referenzzinssatz-bleibt-bei-125-prozent-ld.10009278",
+      "url": "https://www.nzz.ch/wirtschaft/gutes-timing-oder-glueck-der-benzinpreis-faellt-rechtzeitig-zur-amerikanischen-feriensaison-ld.10012135",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Referenzzinssatz bleibt bei 1,25 Prozent»?"
+          "text": "Würdet ihr für eure Ferien eine lange Autofahrt machen, wenn das Benzin plötzlich günstiger wird – oder spart ihr das Geld lieber?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der hypothekarische Referenzzinssatz verharrt weiter auf dem Tiefstand. Mieterinnen und Mieter in de"
+          "text": "Lernende verstehen, wie Rohstoffpreise (Benzin) ihre persönlichen Ausgaben und Entscheidungen beeinflussen. Sie erkennen den Zusammenhang zwischen globalen Ereignissen (politische Konflikte, Energiemärkte) und ihrem Portemonnaie."
+        },
+        {
+          "phase": "UE",
+          "text": "Berechnet: Wie viel Euro spart eine Familie mit einem 60-Liter-Tank, wenn der Liter Benzin um 20 Rappen sinkt? Überlegt, wofür ihr dieses gesparte Geld ausgeben würdet."
+        }
+      ]
+    },
+    {
+      "id": "art-20260621-09",
+      "date": "20.06.",
+      "title": "Trump geht in Sachen Medikamentenpreise gegen Deutschland vor – für die Schweiz sind das keine guten Nachrichten",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/trump-geht-in-sachen-medikamentenpreise-gegen-deutschland-vor-fuer-die-schweiz-sind-das-keine-guten-nachrichten-ld.10012078",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Trump geht in Sachen Medikamentenpreise gegen Deutschland vor – für die Schweiz sind das keine guten Nachrichten»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die USA erhöhen den Druck auf die anderen Industrieländer und fordern eine höhere Beteiligung an den"
         },
         {
           "phase": "UE",
@@ -129,19 +150,40 @@
       ]
     },
     {
-      "id": "art-20260602-06",
-      "date": "01.06.",
-      "title": "Schweizer Wohnungen werden immer kleiner – die Möbel ebenso: Händler wie Ikea und Pfister passen sich an",
+      "id": "art-20260620-05",
+      "date": "19.06.",
+      "title": "Die neue Sparsamkeit der Deutschen gefährdet die Konjunktur",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/schweizer-wohnungen-werden-immer-kleiner-die-moebel-ebenso-haendler-wie-ikea-und-pfister-passen-sich-an-ld.10008740",
+      "url": "https://www.nzz.ch/wirtschaft/die-neue-sparsamkeit-der-deutschen-gefaehrdet-die-konjunktur-ld.10012061",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Schweizer Wohnungen werden immer kleiner – die Möbel ebenso: Händler wie Ikea und Pfister passen sich an»?"
+          "text": "Wenn du weniger Geld ausgibst, tust du etwas Gutes für deine Ersparnisse – aber schadet das gleichzeitig der ganzen Wirtschaft?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Konsumenten setzen zunehmend auf kompakte Multifunktionsmöbel und optimieren so ihre schrumpfende Wo"
+          "text": "Hier zeigt sich das Spannungsfeld zwischen persönlicher Sparsamkeit (Mikro) und gesamtwirtschaftlichen Folgen (Makro). Lernende verstehen, dass ihre Ausgabenentscheidungen Teil eines grösseren Systems sind und Konsequenzen für Arbeitsplätze und Wirtschaft haben."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert eine Branche, die unter weniger Konsum leidet (z.B. Gastronomie, Einzelhandel), und notiert drei konkrete Folgen für Arbeitnehmende dort."
+        }
+      ]
+    },
+    {
+      "id": "art-20260619-03",
+      "date": "18.06.",
+      "title": "Der neue Fed-Chef Kevin Warsh tritt selbstbewusst auf – und macht klar, dass er kein Befehlsempfänger von Trump ist",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/der-neue-fed-chef-kevin-warsh-tritt-selbstbewusst-auf-und-macht-klar-dass-er-kein-befehlsempfaenger-von-trump-ist-ld.10011915",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Der neue Fed-Chef Kevin Warsh tritt selbstbewusst auf – und macht klar, dass er kein Befehlsempfänger von Trump ist»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der Kampf gegen die Inflation soll unter Kevin Warsh klare Priorität haben. Der wichtigste Zentralba"
         },
         {
           "phase": "UE",
@@ -150,19 +192,19 @@
       ]
     },
     {
-      "id": "art-20260601-03",
-      "date": "01.06.",
-      "title": "Die Rückkehr der Inflationsangst: Der festgefahrene Iran-Krieg wird zur wirtschaftlichen Dauerbelastung",
+      "id": "art-20260619-07",
+      "date": "18.06.",
+      "title": "Die Schweizerische Nationalbank bleibt den Nullzinsen treu – und folgt nicht der Zinswende anderer Zentralbanken",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-rueckkehr-der-inflationsangst-der-festgefahrene-iran-krieg-wird-zur-wirtschaftlichen-dauerbelastung-ld.10008654",
+      "url": "https://www.nzz.ch/wirtschaft/die-schweizerische-nationalbank-bleibt-den-nullzinsen-treu-und-folgt-nicht-der-zinswende-anderer-zentralbanken-ld.10011506",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Die Rückkehr der Inflationsangst: Der festgefahrene Iran-Krieg wird zur wirtschaftlichen Dauerbelastung»?"
+          "text": "Was denkst du zu: «Die Schweizerische Nationalbank bleibt den Nullzinsen treu – und folgt nicht der Zinswende anderer Zentralbanken»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Hoffnung war gross, der Iran-Krieg sei nur ein kurzer Schock. Doch die Angebotsengpässe halten a"
+          "text": "Dieser Artikel zeigt: Die Inflation ist durch den Iran-Krieg zwar auch in der Schweiz gestiegen. Sie liegt aber immer noch"
         },
         {
           "phase": "UE",
@@ -171,19 +213,19 @@
       ]
     },
     {
-      "id": "art-20260531-03",
-      "date": "31.05.",
-      "title": "Falsche Inflationserwartungen und der «kranke Mann Europas»",
+      "id": "art-20260619-09",
+      "date": "18.06.",
+      "title": "Auch Kevin Warsh lässt Trump warten: Das Fed belässt den Leitzins unverändert",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/falsche-inflationserwartungen-und-der-kranke-mann-europas-ld.10008506",
+      "url": "https://www.nzz.ch/wirtschaft/auch-kevin-warsh-laesst-trump-warten-das-fed-behaelt-den-leitzins-unveraendert-ld.10011731",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Falsche Inflationserwartungen und der «kranke Mann Europas»»?"
+          "text": "Was denkst du zu: «Auch Kevin Warsh lässt Trump warten: Das Fed belässt den Leitzins unverändert»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Demokraten haben die Wahlen 2024 auch wegen der «Eggflation» verloren. Und die deutsche Regierun"
+          "text": "Dieser Artikel zeigt: Die hohe Inflation und der starke Arbeitsmarkt in den USA lassen Zinssenkungen in weite Ferne rücken"
         },
         {
           "phase": "UE",
@@ -192,40 +234,40 @@
       ]
     },
     {
-      "id": "art-20260531-04",
-      "date": "31.05.",
-      "title": "Oldtimer sehen alt aus: Die neue Generation von Autofans steht auf Youngtimer",
+      "id": "art-20260617-05",
+      "date": "16.06.",
+      "title": "Die Wirtschaftsprüfer geraten zunehmend in eine Vertrauenskrise: Auch KPMG stolpert über Datenlecks",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/oldtimer-sehen-alt-aus-die-neue-generation-von-autofans-steht-auf-youngtimer-ld.10008091",
+      "url": "https://www.nzz.ch/wirtschaft/die-wirtschaftspruefer-geraten-zunehmend-in-eine-vertrauenskrise-auch-kpmg-stolpert-ueber-datenlecks-ld.10010878",
       "varianten": [
         {
           "phase": "E",
-          "text": "Würdet ihr euer Geld eher in ein altes Auto von 1920 oder in einen coolen BMW aus den 1970ern investieren – und warum?"
+          "text": "Was denkst du zu: «Die Wirtschaftsprüfer geraten zunehmend in eine Vertrauenskrise: Auch KPMG stolpert über Datenlecks»?"
         },
         {
           "phase": "TH",
-          "text": "Der Artikel zeigt, wie Wertveränderungen entstehen: nicht alle alten Dinge werden teurer, sondern nur jene, die Nachfrage haben. Lernende verstehen hier den Zusammenhang zwischen Angebot, Nachfrage und Wertentwicklung als Grundlage für finanzielle Entscheidungen."
+          "text": "Dieser Artikel zeigt: Nach dem PwC-Skandal in Australien steht mit KPMG bereits der nächste Riese der Big Four unter Besch"
         },
         {
           "phase": "UE",
-          "text": "Recherchiert zwei Autotypen aus verschiedenen Jahrzehnten und vergleicht ihre aktuellen Marktwerte. Erstellt eine kurze Begründung, warum der eine mehr wert ist als der andere – und was das über eure eigenen Kaufentscheidungen aussagt."
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     },
     {
-      "id": "art-20260531-06",
-      "date": "30.05.",
-      "title": "Geheime «tax holidays» und die 10-Millionen-Schweiz: So fördern Kantone Firmenansiedelungen – und die Zuwanderung",
+      "id": "art-20260617-09",
+      "date": "16.06.",
+      "title": "Die SNB geht eigene Wege. Sie wird sich der Zinswende der EZB kaum anschliessen",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/geheime-tax-holidays-und-die-10-millionen-schweiz-so-foerdern-kantone-firmenansiedelungen-und-die-zuwanderung-ld.10007809",
+      "url": "https://www.nzz.ch/wirtschaft/die-snb-geht-eigene-wege-sie-wird-sich-der-zinswende-der-ezb-kaum-anschliessen-ld.10011027",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Geheime «tax holidays» und die 10-Millionen-Schweiz: So fördern Kantone Firmenansiedelungen – und die Zuwanderung»?"
+          "text": "Was denkst du zu: «Die SNB geht eigene Wege. Sie wird sich der Zinswende der EZB kaum anschliessen»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Hinter verschlossenen Rathaustüren befreien die Kantonsregierungen ausgewählte Konzerne von den Steu"
+          "text": "Dieser Artikel zeigt: Die Angst vor einer neuen Inflationswelle geht um. Nicht so bei der Schweizerischen Nationalbank. Fü"
         },
         {
           "phase": "UE",
@@ -235,6 +277,27 @@
     }
   ],
   "3": [
+    {
+      "id": "art-20260620-04",
+      "date": "20.06.",
+      "title": "Nicole Brändle war beruflich sehr erfolgreich. Dann wurde ihr Mann Präsident der Schweizerischen Nationalbank – und sie trat für ihn zurück. Was hat das mit ihr gemacht?",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/nicole-braendle-im-portraet-der-weg-zwischen-eigener-karriere-und-snb-praesident-martin-schlegel-ld.10011454",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Würdet ihr für die Karriere eures Partners/eurer Partnerin auf eure eigene Karriere verzichten – und wie würde sich das auf eure Gesundheit auswirken?"
+        },
+        {
+          "phase": "TH",
+          "text": "Das Lernziel ist die Reflexion von Work-Life-Balance und deren Auswirkungen auf die psychische und physische Gesundheit. Lernende sollen erkennen, dass Identität, Selbstwertgefühl und Gesundheit eng mit beruflicher Erfüllung und Lebenszufriedenheit verknüpft sind."
+        },
+        {
+          "phase": "UE",
+          "text": "Erstellt ein Gedankenprotokoll: Was passiert mit eurer Gesundheit (Stress, Schlaf, Motivation, Selbstvertrauen), wenn ihr etwas aufgebt, das euch wichtig ist? Notiert körperliche und emotionale Folgen."
+        }
+      ]
+    },
     {
       "id": "art-20260610-07",
       "date": "09.06.",
@@ -280,19 +343,40 @@
   ],
   "4": [
     {
-      "id": "art-20260610-03",
-      "date": "10.06.",
-      "title": "Die Schweizer Wirtschaft will sich dem Druck aus Washington nicht beugen",
+      "id": "art-20260622-06",
+      "date": "20.06.",
+      "title": "Bauernaufstand gegen Parmelin: Die Schweizer Landwirte lassen ihren engsten Verbündeten im Bundesrat im Stich",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-schweizer-wirtschaft-ist-gegen-ein-importverbot-fuer-gueter-aus-zwangsarbeit-und-stemmt-sich-damit-gegen-den-druck-der-usa-im-zollstreit-ld.10010347",
+      "url": "https://www.nzz.ch/wirtschaft/bauernaufstand-gegen-parmelin-die-schweizer-landwirte-lassen-ihren-engsten-verbuendeten-im-bundesrat-im-stich-ld.10012133",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Die Schweizer Wirtschaft will sich dem Druck aus Washington nicht beugen»?"
+          "text": "Warum lehnen Bauern ein Handelsabkommen ab, das eigentlich der ganzen Schweizer Wirtschaft nutzen könnte?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die USA begründen die neuen Strafzölle damit, dass die Schweiz zu wenig gegen die globale Zwangsarbe"
+          "text": "Interessenskonflikte und Lobbyismus: In der Schweiz vertreten verschiedene Gruppen unterschiedliche wirtschaftliche Interessen, die sich widersprechen können. Das Mercosur-Beispiel zeigt, wie Berufsverbände politischen Druck ausüben, um ihre Mitglieder zu schützen – auch gegen Bundesräte aus dem eigenen Berufsstand."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche Produkte würden durch Mercosur billiger in die Schweiz kommen? Macht eine Pro/Contra-Liste aus der Perspektive eines Schweizer Bauern und eines Schweizer Konsumenten."
+        }
+      ]
+    },
+    {
+      "id": "art-20260621-00",
+      "date": "20.06.",
+      "title": "INTERVIEW - «Das waren keine Drohungen»: Die On-Gründer rechtfertigen ihren harten Kampf um das Schweizerkreuz",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/das-waren-keine-drohungen-die-on-gruender-rechtfertigen-ihren-harten-kampf-um-das-schweizerkreuz-ld.10010109",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «INTERVIEW - «Das waren keine Drohungen»: Die On-Gründer rechtfertigen ihren harten Kampf um das Schweizerkreuz»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Sportschuhfirma On drohte dem Bund mit Klagen und setzte die Behörden unter Druck, um weiterhin "
         },
         {
           "phase": "UE",
@@ -301,40 +385,19 @@
       ]
     },
     {
-      "id": "art-20260610-04",
-      "date": "09.06.",
-      "title": "Bundesbern ringt um Kompromiss beim UBS-Eigenkapital: Krisenanleihen rücken wieder ins Zentrum",
+      "id": "art-20260620-06",
+      "date": "19.06.",
+      "title": "Debatte um die Attraktivität des Standorts: Der Bundesrat will bei der OECD-Mindeststeuer nichts überstürzen",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/bundesbern-ringt-um-kompromiss-beim-ubs-eigenkapital-krisenanleihen-ruecken-wieder-ins-zentrum-ld.10010495",
+      "url": "https://www.nzz.ch/wirtschaft/debatte-um-die-attraktivitaet-des-standorts-der-bundesrat-will-bei-der-oecd-mindeststeuer-nichts-ueberstuerzen-ld.10012114",
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn die grösste Bank der Schweiz in Schieflage gerät – warum kümmert sich dann der Bundesrat persönlich darum und nicht nur die Bankenaufsicht?"
+          "text": "Was denkst du zu: «Debatte um die Attraktivität des Standorts: Der Bundesrat will bei der OECD-Mindeststeuer nichts überstürzen»?"
         },
         {
           "phase": "TH",
-          "text": "Lernziel: Verständnis für die Rolle des Staates in der Wirtschaft und die Verflechtung von Politik, Finanzsektor und Gesellschaftsverantwortung. Konzept: Systemische Risiken und staatliche Handlungsfähigkeit in Krisensituationen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Welche Aufgaben hat der Bundesrat beim Schutz der Schweizer Wirtschaft? Erstellt eine Liste von 3–4 Massnahmen, die der Staat ergreifen kann, wenn eine Grossbank wackelt."
-        }
-      ]
-    },
-    {
-      "id": "art-20260610-09",
-      "date": "09.06.",
-      "title": "Digitec Galaxus löscht 380 000 Produktbewertungen – der Auslöser heisst «Kevin»",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/digitec-galaxus-loescht-380-000-produktbewertungen-der-ausloeser-heisst-kevin-ld.10010335",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Digitec Galaxus löscht 380 000 Produktbewertungen – der Auslöser heisst «Kevin»»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Beim grössten Schweizer Onlinehändler dürfen ab sofort nur noch Käufer Produkte bewerten. Damit schä"
+          "text": "Dieser Artikel zeigt: Die Schweiz sei zu attraktiv für ausländische Firmen, sagen Kritiker der Zuwanderung. Der Standort l"
         },
         {
           "phase": "UE",
@@ -343,19 +406,19 @@
       ]
     },
     {
-      "id": "art-20260609-03",
-      "date": "09.06.",
-      "title": "«Kein weiteres Rekordjahr»: Die Amerikaner reisen diesen Sommer in die Schweiz, doch es fehlen die Gäste von anderswo",
+      "id": "art-20260620-07",
+      "date": "19.06.",
+      "title": "Sieben Jahre nach dem Untergang der Baselworld: Die MCH Group lanciert eine neue Schmuck- und Uhrenmesse",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/fuer-2026-erwarten-wir-kein-weiteres-rekordjahr-welche-touristen-diesen-sommer-fehlen-und-wer-trotzdem-in-die-schweiz-kommt-ld.10010330",
+      "url": "https://www.nzz.ch/wirtschaft/sieben-jahre-nach-dem-untergang-der-baselworld-die-mch-group-lanciert-eine-neue-schmuck-und-uhrenmesse-ld.10011861",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: ««Kein weiteres Rekordjahr»: Die Amerikaner reisen diesen Sommer in die Schweiz, doch es fehlen die Gäste von anderswo»?"
+          "text": "Was denkst du zu: «Sieben Jahre nach dem Untergang der Baselworld: Die MCH Group lanciert eine neue Schmuck- und Uhrenmesse»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Iran-Krieg vermiest den Schweizer Top-Destinationen das Geschäftsjahr. Hoffnung gibt es trotzdem"
+          "text": "Dieser Artikel zeigt: Basel bekommt mit Basilia wieder eine Messe für Schmuck und Uhren. Die MCH Group holt sich dafür ein"
         },
         {
           "phase": "UE",
@@ -364,19 +427,19 @@
       ]
     },
     {
-      "id": "art-20260609-04",
-      "date": "08.06.",
-      "title": "Späte Strafe: Lex Greensill darf neun Jahre keine britischen Firmen mehr leiten",
+      "id": "art-20260618-04",
+      "date": "18.06.",
+      "title": "10-Millionen-Schweiz: Eine freiwillige Abgabe könnte mithelfen, dass Firmen weniger Zuwanderer einstellen",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/spaete-strafe-lex-greensill-darf-9-jahre-keine-britischen-firmen-mehr-leiten-ld.10010213",
+      "url": "https://www.nzz.ch/wirtschaft/10-millionen-schweiz-eine-freiwillige-abgabe-koennte-mithelfen-dass-firmen-weniger-zuwanderer-einstellen-ld.10011694",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Späte Strafe: Lex Greensill darf neun Jahre keine britischen Firmen mehr leiten»?"
+          "text": "Was denkst du zu: «10-Millionen-Schweiz: Eine freiwillige Abgabe könnte mithelfen, dass Firmen weniger Zuwanderer einstellen»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Kollaps seiner Finanzfirma hat den Untergang der Credit Suisse beschleunigt. Jetzt wird der Fina"
+          "text": "Dieser Artikel zeigt: Nach der Abstimmung über die 10-Millionen-Schweiz fordern die Wirtschaftsverbände, das inländische A"
         },
         {
           "phase": "UE",
@@ -385,61 +448,40 @@
       ]
     },
     {
-      "id": "art-20260608-01",
-      "date": "08.06.",
-      "title": "«Je mehr KI ich anzapfe, desto mehr Tokens verbrauche ich. Deshalb kann das exponentiell teuer werden»",
+      "id": "art-20260618-05",
+      "date": "18.06.",
+      "title": "Nach der gewonnenen Abstimmung über die 10-Millionen-Schweiz: Die Europafreunde bringen sich in Stellung",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/je-mehr-ki-ich-anzapfe-desto-mehr-tokens-verbrauche-ich-deshalb-kann-das-sehr-schnell-exponentiell-teuer-werden-ld.10010028",
+      "url": "https://www.nzz.ch/wirtschaft/nach-der-gewonnen-abstimmung-ueber-die-10-millionen-schweiz-die-europafreunde-bringen-sich-in-stellung-ld.10011690",
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn eine KI pro Wort, das sie schreibt, Geld kostet – wer trägt am Ende diese Rechnung: das Unternehmen, die Angestellten oder der Kunde?"
+          "text": "Warum stimmt die Schweiz gegen einen Zuwanderungsdeckel, wenn Immigration den Menschen Sorgen bereitet?"
         },
         {
           "phase": "TH",
-          "text": "Lernende erkennen, dass neue Technologien nicht nur technische, sondern auch wirtschaftliche und ökologische Folgen haben. Dies verbindet sich mit dem Verständnis von Nachhaltigkeit und verantwortungsvollem Ressourceneinsatz in der Schweizer Wirtschaft."
+          "text": "Die Schüler lernen, dass politische Abstimmungen komplexe Abwägungen zwischen wirtschaftlichen Interessen, Sorgen der Bevölkerung und demokratischen Werten widerspiegeln. Hier wird sichtbar, wie direkte Demokratie funktioniert und dass Wahlergebnisse nicht einfach die gesamte öffentliche Meinung abbilden."
         },
         {
           "phase": "UE",
-          "text": "Recherchiert ein Schweizer Unternehmen in eurer Branche und überlegt: Könnte KI dort eingesetzt werden? Erstellt eine einfache Kosten-Nutzen-Tabelle (KI-Kosten vs. eingesparte Arbeitszeit)."
+          "text": "Recherchiere die Pro- und Contra-Argumente zur Abstimmung und erstelle eine zweiteilige Tabelle: Welche Gründe sprachen gegen den Deckel, welche Bedenken hat die Bevölkerung trotzdem?"
         }
       ]
     },
     {
-      "id": "art-20260608-06",
-      "date": "07.06.",
-      "title": "Historischer Glücksfall für Hausbesitzer: Die Bevölkerungszunahme lässt Vermögen explodieren",
+      "id": "art-20260618-08",
+      "date": "17.06.",
+      "title": "Uber und WeRide wollen Robotaxis nach Zürich bringen. Haben die Schweizer den Mut, in ein fahrerloses Auto zu steigen?",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/historischer-gluecksfall-fuer-hausbesitzer-die-bevoelkerungszunahme-laesst-vermoegen-explodieren-ld.10009517",
+      "url": "https://www.nzz.ch/wirtschaft/uber-und-weride-planen-einfuehrung-von-kommerziellen-robotaxis-in-der-region-zuerich-ld.10011680",
       "varianten": [
         {
           "phase": "E",
-          "text": "Warum werden manche Menschen durch das Kaufen eines Hauses steinreich, während andere das nie schaffen können?"
+          "text": "Was denkst du zu: «Uber und WeRide wollen Robotaxis nach Zürich bringen. Haben die Schweizer den Mut, in ein fahrerloses Auto zu steigen?»?"
         },
         {
           "phase": "TH",
-          "text": "Das Konzept der Vermögensbildung zeigt, wie wirtschaftliche Faktoren (Migration, Nachfrage, Preise) das Leben von Menschen konkret verändern. Gleichzeitig wird sichtbar, wie Chancenungleichheit entsteht: Wer früh kaufen konnte, profitiert heute massiv – andere haben nie diese Möglichkeit gehabt."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Wie haben sich die Immobilienpreise in eurer Region in den letzten 20 Jahren entwickelt? Erstellt eine kleine Grafik und diskutiert: Ist das fair?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260607-05",
-      "date": "06.06.",
-      "title": "«Wir sind die Musterschüler»: Schweizer Firmen haben bereits 27 Milliarden in den USA investiert",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wir-sind-die-musterschueler-schweizer-firmen-haben-bereits-27-milliarden-in-den-usa-investiert-ld.10009847",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: ««Wir sind die Musterschüler»: Schweizer Firmen haben bereits 27 Milliarden in den USA investiert»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Schweiz erfüllt ihre Versprechen gegenüber den USA. Ob es etwas nützt, ist ungewiss. Die Trump-A"
+          "text": "Dieser Artikel zeigt: Noch dieses Jahr sollen Kunden Robotaxi-Fahrten über die Uber-App buchen können. Selbstfahrende Auto"
         },
         {
           "phase": "UE",
@@ -448,19 +490,19 @@
       ]
     },
     {
-      "id": "art-20260607-06",
-      "date": "06.06.",
-      "title": "Die Entstehung der «Lex On»: Der Sportartikelhersteller drohte der Schweiz mit einer Staatshaftungsklage",
+      "id": "art-20260617-03",
+      "date": "16.06.",
+      "title": "Abnehmspritzen kosten Krankenkassen 200 Millionen Franken: «Die Behandlung wird heute relativ rasch eingesetzt»",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-entstehung-der-lex-on-der-sportartikelhersteller-drohte-der-schweiz-mit-einer-staatshaftungsklage-ld.10009456",
+      "url": "https://www.nzz.ch/wirtschaft/abnehmspritzen-kosten-krankenkassen-200-millionen-franken-die-behandlung-wird-heute-relativ-rasch-eingesetzt-ld.10011486",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Die Entstehung der «Lex On»: Der Sportartikelhersteller drohte der Schweiz mit einer Staatshaftungsklage»?"
+          "text": "Was denkst du zu: «Abnehmspritzen kosten Krankenkassen 200 Millionen Franken: «Die Behandlung wird heute relativ rasch eingesetzt»»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: On setzte die Behörden massiv unter Druck, um weiterhin das Schweizerkreuz verwenden zu dürfen. Vert"
+          "text": "Dieser Artikel zeigt: Die Verbandschefin der Schweizer Krankenkassen kritisiert die Verschreibungspraxis für Abnehmspritze"
         },
         {
           "phase": "UE",
@@ -469,19 +511,40 @@
       ]
     },
     {
-      "id": "art-20260606-03",
-      "date": "06.06.",
-      "title": "Die KI-Euphorie macht den Schweizer Industriekonzern Huber + Suhner zum Börsenstar",
+      "id": "art-20260616-08",
+      "date": "15.06.",
+      "title": "INTERVIEW - «Wenn wir länger arbeiten würden, könnten wir die Zuwanderung reduzieren», sagt die Direktorin von Economiesuisse nach dem Nein zur 10-Millionen-Schweiz",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/huber-suhner-ki-und-datenzentren-treiben-aktienkurs-an-ld.10009515",
+      "url": "https://www.nzz.ch/wirtschaft/wenn-wir-laenger-arbeiten-wuerden-koennten-wir-die-zuwanderung-reduzieren-sagt-die-direktorin-von-economiesuisse-nach-dem-nein-zur-10-millionen-schweiz-ld.10011115",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Die KI-Euphorie macht den Schweizer Industriekonzern Huber + Suhner zum Börsenstar»?"
+          "text": "Was denkst du zu: «INTERVIEW - «Wenn wir länger arbeiten würden, könnten wir die Zuwanderung reduzieren», sagt die Direktorin von Economiesuisse nach dem Nein zur 10-Millionen-Schweiz»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Aktienkurs von Huber + Suhner ist allein seit Jahresbeginn um über 80 Prozent gestiegen. Die Ost"
+          "text": "Dieser Artikel zeigt: Monika Rühl will die Abhängigkeit von ausländischen Arbeitskräften verringern und wirft dem Bundesra"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260615-03",
+      "date": "14.06.",
+      "title": "Er hat die Ökonomie vermenschlicht und das Fach an der Uni Zürich an die Spitze geführt. Jetzt sagt Ernst Fehr: «Ich sorge mich um die Resilienz der Demokratie»",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/er-hat-die-oekonomie-vermenschlicht-und-das-fach-an-der-uni-zuerich-an-die-spitze-gefuehrt-jetzt-sagt-ernst-fehr-ich-sorge-mich-um-die-resilienz-der-demokratie-ld.10010839",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Er hat die Ökonomie vermenschlicht und das Fach an der Uni Zürich an die Spitze geführt. Jetzt sagt Ernst Fehr: «Ich sorge mich um die Resilienz der Demokratie»»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der im deutschsprachigen Raum meistzitierte Ökonom vermittelt eine positive Botschaft: Der Mensch is"
         },
         {
           "phase": "UE",
@@ -492,7 +555,112 @@
   ],
   "5": [
     {
-      "id": "art-20260610-02",
+      "id": "art-20260622-01",
+      "date": "22.06.",
+      "title": "Was schafft tatsächlich mehr Wohnungen – und was ist reine Symbolpolitik? Das Rating zu den laufenden Massnahmen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/nach-der-10-millionen-abstimmung-die-schweizer-wohnungspolitik-im-haertetest-ld.10011722",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn eine Stadt mehr Wohnungen bauen will – warum dauert das so lange und wer blockiert das eigentlich?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernende verstehen, dass gesellschaftliche Probleme (Wohnungsmangel) nicht einfach durch Abstimmungen gelöst werden, sondern komplexe Umsetzungsprozesse brauchen. Sie erkennen die Spannung zwischen Mehrheitswille und praktischer Machbarkeit in der Demokratie."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche drei Gründe können Bauprojekte in eurer Stadt verzögern? (z.B. Einsprachen, Behördengänge, Finanzierung). Notiert sie und diskutiert, ob diese Gründe sinnvoll sind oder eher Blockaden darstellen."
+        }
+      ]
+    },
+    {
+      "id": "art-20260621-07",
+      "date": "20.06.",
+      "title": "«Viele Läden sehen fast so aus wie vor bald 20 Jahren»: Die Denner-Krise kratzt am Image von Migros-Chef Mario Irminger",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/viele-laeden-sehen-fast-so-aus-wie-vor-bald-20-jahren-die-denner-krise-kratzt-am-image-von-migros-chef-mario-irminger-ld.10011613",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: ««Viele Läden sehen fast so aus wie vor bald 20 Jahren»: Die Denner-Krise kratzt am Image von Migros-Chef Mario Irminger»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Knapp zwei Jahrzehnte nach der Übernahme durch die Migros befindet sich Denner in einer Identitätskr"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260619-04",
+      "date": "18.06.",
+      "title": "Sebastian Kurz: Der frühere Bundeskanzler ist jetzt ein ambitionierter KI-Unternehmer",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/sebastian-kurz-der-fruehere-bundeskanzler-ist-jetzt-ein-ambitionierter-ki-unternehmer-ld.10011886",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Sebastian Kurz: Der frühere Bundeskanzler ist jetzt ein ambitionierter KI-Unternehmer»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Sein Unternehmen entwickelt KI-Lösungen für Geheimdienste, Armeen oder Banken, die von amerikanische"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260619-05",
+      "date": "18.06.",
+      "title": "Apple fehlen die Chips: iPhones werden bald auch in der Schweiz massiv teurer",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/apple-fehlen-die-chips-iphones-werden-bald-auch-in-der-schweiz-massiv-teurer-ld.10011880",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn dein liebstes Smartphone plötzlich 200 Franken mehr kostet – zahlst du einfach, oder suchst du dir ein anderes Gerät?"
+        },
+        {
+          "phase": "TH",
+          "text": "Wirtschaftliche Entscheidungen beeinflussen unser Zusammenleben: Wenn Preise steigen, müssen wir Prioritäten setzen und das beeinflusst auch unsere sozialen Beziehungen (Freunde mit gleichem Handy, finanzielle Ungleichheit). Globale Lieferketten zeigen, wie verflochten unsere Wirtschaft ist und wie Engpässe in fernen Ländern unser Leben in der Schweiz direkt treffen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Jobs in der Schweiz könnten leiden, wenn iPhones teurer werden? (z.B. Einzelhandel, Reparatur) Diskutiert anschliessend: Wer trägt die Verantwortung – Hersteller, Konsumenten oder Politik?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260615-09",
+      "date": "13.06.",
+      "title": "Zu wenige AKW-Fachleute: Bleibt das Neubauverbot bestehen, wackelt auch der Langzeitbetrieb von Gösgen und Leibstadt",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/zu-wenige-akw-arbeiter-bleibt-das-neubauverbot-bestehen-wackelt-auch-der-langzeitbetrieb-von-goesgen-und-leibstadt-ld.10011099",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Zu wenige AKW-Fachleute: Bleibt das Neubauverbot bestehen, wackelt auch der Langzeitbetrieb von Gösgen und Leibstadt»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Kernenergie-Spezialisten sind bereits heute rar. Fehlt dem Nachwuchs in der Schweiz die Perspektive,"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260611-09",
       "date": "10.06.",
       "title": "Die Millionärsmaschine: Der SpaceX-Börsengang macht auch Handwerker und Ingenieurinnen reich – und die Banken liegen auf der Lauer",
       "source": "NZZ",
@@ -500,15 +668,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn eine Firma an die Börse geht und plötzlich alle Angestellten reich werden – ist das gerecht oder nur Glück?"
+          "text": "Wenn eine Firma an die Börse geht und plötzlich normale Angestellte Millionäre werden – ist das gerecht oder nur Glück?"
         },
         {
           "phase": "TH",
-          "text": "Sichtbar wird hier, wie Vermögensverteilung und wirtschaftliche Chancen funktionieren: nicht alle haben gleiche Startbedingungen, um an Wohlstand zu gelangen. Das zeigt die Spannung zwischen Leistung, Glück und strukturellen Unterschieden in unserer Gesellschaft."
+          "text": "Wirtschaftliche Chancenverteilung und soziale Mobilität: Wie entstehen Vermögensunterschiede in modernen Gesellschaften? Das Konzept zeigt, dass Wohlstand nicht nur durch Arbeit, sondern auch durch Kapitalbesitz und Unternehmertum entsteht."
         },
         {
           "phase": "UE",
-          "text": "Recherchiert: Wer profitiert beim SpaceX-Börsengang alles (Angestellte, Banken, Gründer) und wer nicht? Erstellt eine Liste und diskutiert, ob das 'fair' ist."
+          "text": "Recherchiert: Welche Voraussetzungen brauchte es, dass SpaceX-Mitarbeiter reich werden konnten? Erstellt eine Liste mit 5 Faktoren (Bildung, Risiko, Glück, Timing, Branche) und diskutiert, welche davon jeder beeinflussen kann."
         }
       ]
     },
@@ -595,128 +763,44 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260607-09",
-      "date": "06.06.",
-      "title": "«Eco on the rocks»: Macht Zuwanderung die Schweiz reicher – oder nur voller?",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/eco-on-the-rocks-macht-zuwanderung-die-schweiz-reicher-oder-nur-voller-ld.10010158",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: ««Eco on the rocks»: Macht Zuwanderung die Schweiz reicher – oder nur voller?»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Initiative «Keine 10-Millionen-Schweiz» will die Einwanderung und Bevölkerung deckeln. Im wirtsc"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260606-01",
-      "date": "06.06.",
-      "title": "Trotz Aktienabsturz: Banken stellen sich hinter Partners Group und Private Equity",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/trotz-aktien-absturz-banken-stellen-sich-hinter-partners-group-und-private-equity-ld.10010020",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn eine bekannte Finanzfirma Probleme hat – sollten alle ihre Kunden sofort das Geld abziehen, oder ist Vertrauen wichtiger?"
-        },
-        {
-          "phase": "TH",
-          "text": "Das Lernziel zeigt, wie wirtschaftliche Vertrauensbeziehungen und gegenseitige Abhängigkeiten in der Gesellschaft funktionieren. Lernende verstehen, dass stabile Beziehungen oft wichtiger sind als kurzfristige Angstreaktionen."
-        },
-        {
-          "phase": "UE",
-          "text": "Rollenspiel: Ihr seid Kundenberater. Ein nervöser Kunde will sein Geld aus der Partners Group abziehen. Versucht, mit Argumenten zu zeigen, warum Stabilität und Vertrauen wichtig sind – ohne zu lügen."
-        }
-      ]
-    },
-    {
-      "id": "art-20260605-03",
-      "date": "05.06.",
-      "title": "New York verfällt dem Knicks-Fieber: Warum Basketball-Tickets plötzlich 7000 Dollar kosten",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/new-york-verfaellt-dem-knicks-fieber-warum-basketball-tickets-ploetzlich-7000-dollar-kosten-ld.10009912",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «New York verfällt dem Knicks-Fieber: Warum Basketball-Tickets plötzlich 7000 Dollar kosten»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Basketballer der New York Knicks könnten die erste grosse Sporttrophäe seit Jahren in die amerik"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260605-04",
-      "date": "05.06.",
-      "title": "INTERVIEW - «Wir wollen nicht überall verfügbar sein», sagt der Modechef des legendären Hauses Chanel",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/chanel-modechef-wir-wollen-nicht-ueberall-verfuegbar-sein-ld.10007256",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Warum ist es manchmal besser, NICHT überall und für jeden verfügbar zu sein – auch wenn man mehr verdienen könnte?"
-        },
-        {
-          "phase": "TH",
-          "text": "Knappheit und Exklusivität als Gestaltungsprinzipien sozialer Hierarchien: Wer Zugang kontrolliert, hat Macht. Das Konzept zeigt, wie Unternehmen durch bewusste Begrenzung Wert und Begehren erzeugen – eine Strategie, die auch in anderen Bereichen unseres Zusammenlebens wirkt."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert ein Produkt/eine Marke, die bewusst knapp hält (z.B. bestimmte Sneaker, Restaurant-Reservierungen). Erklärt, welche Wirkung diese Strategie auf Konsument:innen hat und ob das fair ist."
-        }
-      ]
-    },
-    {
-      "id": "art-20260605-05",
-      "date": "04.06.",
-      "title": "Donald Trump Jr. zeigt sich bei seinem Auftritt in Zürich als Sprachrohr des Vaters. Für die Schweiz könnte dies ein Vorteil sein",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/donald-trump-jr-zeigt-sich-bei-seinem-auftritt-in-zuerich-als-sprachrohr-des-vaters-fuer-die-schweiz-koennte-dies-ein-vorteil-sein-ld.10009702",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Donald Trump Jr. zeigt sich bei seinem Auftritt in Zürich als Sprachrohr des Vaters. Für die Schweiz könnte dies ein Vorteil sein»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Ex-Botschafter Thomas Borer nutzt die Visite des Präsidentensohnes in Zürich für eine Charmeoffe"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "6": [
     {
-      "id": "art-20260610-05",
-      "date": "09.06.",
-      "title": "Ein deutscher Versicherer will mit Lionel Messi die USA erobern",
+      "id": "art-20260622-00",
+      "date": "22.06.",
+      "title": "In der Biotechnologiebranche grassiert das Übernahmefieber",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/ein-deutscher-versicherer-will-mit-lionel-messi-die-usa-erobern-ld.10010103",
+      "url": "https://www.nzz.ch/wirtschaft/biotechsektor-auch-roche-und-novartis-sind-auf-einkaufstour-ld.10011953",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Ein deutscher Versicherer will mit Lionel Messi die USA erobern»?"
+          "text": "Wenn eine grosse Pharmafirma eine kleinere Biotechfirma kauft – gewinnen wir Patienten dann bessere Medikamente, oder verlieren die innovativen Köpfe ihre Freiheit?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: In keiner anderen Branche zählen deutsche Konzerne deutlicher zur Weltspitze als bei den Versicherun"
+          "text": "Lernziel: Verstehen, wie Wirtschaftsmacht funktioniert und warum Unternehmen fusionieren. Das Konzept zeigt, dass Innovation oft mit Kapital verbunden ist und dass Konzerne ihre Marktposition durch Übernahmen sichern oder ausbauen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Was macht eine Biotechfirma? Erstellt eine einfache Tabelle mit Vor- und Nachteilen, wenn Roche oder Novartis eine kleinere Biotechfirma aufkauft (z.B. mehr Geld für Forschung vs. Verlust von Unabhängigkeit)."
+        }
+      ]
+    },
+    {
+      "id": "art-20260622-02",
+      "date": "22.06.",
+      "title": "«Zu anspruchsvoll und anstrengend»: Die Generation Z interessiert sich immer weniger für technische Berufe. Jetzt schlagen Experten Alarm",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/zu-anspruchsvoll-und-anstrengend-die-generation-z-interessiert-sich-immer-weniger-fuer-technische-berufe-jetzt-schlagen-experten-alarm-ld.10011053",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: ««Zu anspruchsvoll und anstrengend»: Die Generation Z interessiert sich immer weniger für technische Berufe. Jetzt schlagen Experten Alarm»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die deutschsprachigen Länder galten als Hochburg der «Tüftler und Erfinder». Doch die Jungen meiden "
         },
         {
           "phase": "UE",
@@ -725,19 +809,19 @@
       ]
     },
     {
-      "id": "art-20260610-06",
-      "date": "09.06.",
-      "title": "Nach historischem Kurssturz: Die Führungsriege von Partners Group kauft eigene Aktien in Millionenhöhe",
+      "id": "art-20260622-04",
+      "date": "22.06.",
+      "title": "Der mächtigste Mann von Siemens in der Schweiz tritt ab",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/nach-historischem-kurssturz-die-fuehrungsriege-von-partners-group-kauft-eigene-aktien-in-millionenhoehe-ld.10010494",
+      "url": "https://www.nzz.ch/wirtschaft/der-maechtigste-mann-von-siemens-in-der-schweiz-tritt-ab-ld.10010333",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Nach historischem Kurssturz: Die Führungsriege von Partners Group kauft eigene Aktien in Millionenhöhe»?"
+          "text": "Was denkst du zu: «Der mächtigste Mann von Siemens in der Schweiz tritt ab»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Aktie von Partners Group stürzte vergangene Woche an einem einzelnen Handelstag um 16 Prozent ab"
+          "text": "Dieser Artikel zeigt: Nach 36 Jahren verlässt Matthias Rebellius den deutschen Industriekonzern. Irgendwann sei auch einfa"
         },
         {
           "phase": "UE",
@@ -746,40 +830,19 @@
       ]
     },
     {
-      "id": "art-20260609-07",
-      "date": "07.06.",
-      "title": "Der Gen-Z-Flüsterer aus Vevey: Der Nestlé-Chef Philipp Navratil verordnet seinem Konzern eine Verjüngungskur",
+      "id": "art-20260621-04",
+      "date": "20.06.",
+      "title": "«Zwischen Nahtod und Euphorie»: Das Fintech-Startup Ellexx wehrt sich gegen Untergangsgerüchte",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/der-gen-z-fluesterer-aus-vevey-nestle-chef-philipp-navratil-verordnet-seinem-konzern-eine-verjuengungskur-ld.10010057",
+      "url": "https://www.nzz.ch/wirtschaft/zwischen-nahtod-und-euphorie-das-fintech-startup-ellexx-wehrt-sich-gegen-untergangsgeruechte-ld.10011862",
       "varianten": [
         {
           "phase": "E",
-          "text": "Warum kauft ein 160-jähriges Schweizer Unternehmen plötzlich ein deutsches Start-up für Trinkmahlzeiten – könnte Nestlé auch einfach selbst so ein Produkt erfinden?"
+          "text": "Was denkst du zu: ««Zwischen Nahtod und Euphorie»: Das Fintech-Startup Ellexx wehrt sich gegen Untergangsgerüchte»?"
         },
         {
           "phase": "TH",
-          "text": "Konzernstrategie und Marktadaption: Große Unternehmen müssen sich kontinuierlich an verändernde Konsumentenbedürfnisse anpassen, um relevant zu bleiben. Der Zukauf von Yfood zeigt, wie Traditionsunternehmen durch gezielte Übernahmen jüngere Zielgruppen erschließen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert online, welche Produkte/Gewohnheiten eure Generation (Gen Z) anders konsumiert als eure Eltern – und überlegt: Welche Schweizer Traditionsunternehmen könnten davon profitieren, solche Trends früh zu erkennen?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260608-07",
-      "date": "07.06.",
-      "title": "Abschied vom Autoland? In vielen deutschen Werken geht die Angst um",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/abschied-vom-autoland-in-vielen-deutschen-werken-geht-die-angst-um-ld.10009395",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Abschied vom Autoland? In vielen deutschen Werken geht die Angst um»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Zu teuer und zu wenig ausgelastet: Viele Autofabriken in Deutschland sind kaum noch wettbewerbsfähig"
+          "text": "Dieser Artikel zeigt: Die Firma um CEO Patrizia Laeri will Frauen zum Investieren animieren  und damit Geld verdienen. Der"
         },
         {
           "phase": "UE",
@@ -788,19 +851,19 @@
       ]
     },
     {
-      "id": "art-20260607-07",
-      "date": "06.06.",
-      "title": "Babymilch-Skandal: Nach dem Tod eines St. Galler Säuglings drohten in der Schweiz halb leere Regale",
+      "id": "art-20260621-06",
+      "date": "20.06.",
+      "title": "Der Goldstrom hat gedreht: Jetzt könnte die Schweiz von den USA Zoll verlangen",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/babymilch-skandal-nach-dem-tod-eines-st-galler-saeuglings-drohten-in-der-schweiz-halb-leere-regale-ld.10009326",
+      "url": "https://www.nzz.ch/wirtschaft/schweizer-zoll-verhandlungen-mit-usa-das-gold-sorgt-jetzt-fuer-ein-defizit-ld.10010923",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Babymilch-Skandal: Nach dem Tod eines St. Galler Säuglings drohten in der Schweiz halb leere Regale»?"
+          "text": "Was denkst du zu: «Der Goldstrom hat gedreht: Jetzt könnte die Schweiz von den USA Zoll verlangen»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: In der Affäre um verunreinigte Säuglingsnahrung reagierte der Lebensmittelkonzern Danone sehr zögerl"
+          "text": "Dieser Artikel zeigt: Der Handelsbilanzüberschuss mit den USA hat sich in ein Defizit verwandelt. Trump verliert ein Druck"
         },
         {
           "phase": "UE",
@@ -809,40 +872,19 @@
       ]
     },
     {
-      "id": "art-20260606-02",
-      "date": "06.06.",
-      "title": "«Realitätsfern» und «scheingenau»: Der US-Handelsbeauftragte liest den Ökonomen die Leviten – und bricht eine Lanze für Zölle",
+      "id": "art-20260620-00",
+      "date": "13.06.",
+      "title": "Europa findet bei kritischen Rohstoffen kaum Wege aus der chinesischen Knechtschaft – das ist ein Risiko für die Verteidigung",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/realitaetsfern-und-scheingenau-der-us-handelsbeauftragte-liest-den-oekonomen-die-leviten-und-bricht-eine-lanze-fuer-zoelle-ld.10009672",
+      "url": "https://www.nzz.ch/wirtschaft/kritische-rohstoffe-mit-ihrer-bisherigen-strategie-bleibt-die-eu-vom-chinesischen-wohlwollen-abhaengig-ld.10010419",
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn Produkte billiger wären, wenn sie hier statt in Asien hergestellt würden – würde das euch interessieren, auch wenn sie dann teurer sind?"
+          "text": "Was denkst du zu: «Europa findet bei kritischen Rohstoffen kaum Wege aus der chinesischen Knechtschaft – das ist ein Risiko für die Verteidigung»?"
         },
         {
           "phase": "TH",
-          "text": "Der Artikel zeigt den Konflikt zwischen Globalisierung (billige Importe) und nationaler Wirtschaftspolitik (Zölle zum Schutz). Lernende erkennen, dass wirtschaftliche Entscheidungen politische Wertungen sind, nicht nur rationale Kalkulationen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert ein Produkt, das ihr regelmässig nutzt (Handy, Kleidung, Lebensmittel): Wo wird es hergestellt, was würde ein 25%-Zoll kosten, wer profitiert/verliert? Erstellt ein einseitiges Faktenblatt."
-        }
-      ]
-    },
-    {
-      "id": "art-20260606-04",
-      "date": "06.06.",
-      "title": "Fast jeder neue Fed-Chef musste schwere Börsen-Crashs meistern. Auch für Kevin Warsh ist die Gefahr einer Krise sehr real",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/fast-jeder-neue-fed-chef-musste-schwere-boersen-crashs-meistern-auch-fuer-kevin-warsh-ist-die-gefahr-einer-krise-sehr-real-ld.10009454",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Fast jeder neue Fed-Chef musste schwere Börsen-Crashs meistern. Auch für Kevin Warsh ist die Gefahr einer Krise sehr real»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die US-Notenbank ist regelmässig mit grossen Marktturbulenzen konfrontiert. Alan Greenspan hatte den"
+          "text": "Dieser Artikel zeigt: Für Europas Verteidigung und die Industrie ist das Reich der Mitte der mit Abstand wichtigste Liefer"
         },
         {
           "phase": "UE",
@@ -851,36 +893,36 @@
       ]
     },
     {
-      "id": "art-20260606-06",
-      "date": "05.06.",
-      "title": "DIE NEUESTEN ENTWICKLUNGEN - Zollverhandlungen Schweiz-USA: Schweiz verhandelt trotz neuen Zusatzzöllen weiter",
+      "id": "art-20260620-03",
+      "date": "20.06.",
+      "title": "Ladenschluss bei Galeria? Der Warenhauskonzern kämpft erneut um seine Zukunft",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/zollschock-fuer-die-schweiz-antworten-auf-die-wichtigsten-fragen-ld.1896220",
+      "url": "https://www.nzz.ch/wirtschaft/ladenschluss-bei-galeria-der-warenhauskonzern-kaempft-erneut-um-seine-zukunft-ld.10011594",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «DIE NEUESTEN ENTWICKLUNGEN - Zollverhandlungen Schweiz-USA: Schweiz verhandelt trotz neuen Zusatzzöllen weiter»?"
+          "text": "Warum verschwinden traditionsreiche Kaufhäuser wie Galeria aus unseren Innenstädten, obwohl es sie seit Jahrzehnten gibt?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Nach schwierigen Verhandlungen mit den USA liegen die US-Zölle auf Schweizer Importgüter seit Mitte "
+          "text": "Lernziel: Schüler*innen verstehen, wie wirtschaftliche Faktoren (Konkurrenz, Konsumverhalten, Digitalisierung) zum Scheitern von Unternehmen führen. Dies zeigt die Dynamik von Märkten und die Notwendigkeit von Anpassung in der modernen Wirtschaft."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Recherchiert, welche Galeria-Filialen in eurer Region betroffen sind und interviewt eine Person, die dort gerne einkauft oder arbeitete – was fehlte dem Laden im Vergleich zu anderen Einkaufsorten?"
         }
       ]
     },
     {
-      "id": "art-20260605-01",
-      "date": "05.06.",
-      "title": "KURZMELDUNGEN - Wirtschaft: KI-Unternehmen Anthropic schlägt Pause im KI-Wettbewerb vor",
+      "id": "art-20260619-06",
+      "date": "18.06.",
+      "title": "KURZMELDUNGEN - Wirtschaft: Mehrheit der Bevölkerung für strengere Kapitalauflagen für UBS",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-die-neusten-meldungen-ld.10006777",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-mehrheit-der-bevoelkerung-fuer-strengere-kapitalauflagen-fuer-ubs-ld.10010807",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: KI-Unternehmen Anthropic schlägt Pause im KI-Wettbewerb vor»?"
+          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Mehrheit der Bevölkerung für strengere Kapitalauflagen für UBS»?"
         },
         {
           "phase": "TH",
@@ -893,42 +935,19 @@
       ]
     },
     {
-      "id": "art-20260605-07",
-      "date": "04.06.",
-      "title": "Elon Musk strebt beim Börsengang von SpaceX eine Bewertung von 1,8 Billionen Dollar an – und spielt einmal mehr nach eigenen Regeln",
+      "id": "art-20260619-08",
+      "date": "18.06.",
+      "title": "Die Schweiz und Deutschland fallen bei der globalen Wettbewerbsfähigkeit zurück. Doch zwischen den Ländern liegen Welten",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/elon-musk-strebt-beim-boersengang-von-spacex-eine-bewertung-von-18-billionen-dollar-an-und-spielt-einmal-mehr-nach-eigenen-regeln-ld.10009810",
+      "url": "https://www.nzz.ch/wirtschaft/die-schweiz-und-deutschland-fallen-bei-der-globalen-wettbewerbsfaehigkeit-zurueck-doch-zwischen-den-laendern-liegen-welten-ld.10011505",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Elon Musk strebt beim Börsengang von SpaceX eine Bewertung von 1,8 Billionen Dollar an – und spielt einmal mehr nach eigenen Regeln»?"
+          "text": "Was denkst du zu: «Die Schweiz und Deutschland fallen bei der globalen Wettbewerbsfähigkeit zurück. Doch zwischen den Ländern liegen Welten»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Beim IPO von SpaceX setzt Elon Musk neue Massstäbe. Doch die spektakulärste Zahl könnte am Ende sein"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    }
-  ],
-  "7": [
-    {
-      "id": "art-20260610-00",
-      "date": "10.06.",
-      "title": "Florentino Pérez ist Präsident von Real Madrid, Bauunternehmer und der heimliche König in der spanischen Hauptstadt",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/florentino-perez-ist-praesident-von-real-madrid-bauunternehmer-und-der-heimliche-koenig-in-der-spanischen-hauptstadt-ld.10010499",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Florentino Pérez ist Präsident von Real Madrid, Bauunternehmer und der heimliche König in der spanischen Hauptstadt»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Pérez ist mehr als nur Präsident eines legendären Fussballvereins. Er ist einer der grössten Bauunte"
+          "text": "Dieser Artikel zeigt: Im globalen Vergleich gehört die Schweiz zu den konkurrenzfähigsten Standorten der Welt, für Deutsch"
         },
         {
           "phase": "UE",
@@ -937,7 +956,198 @@
       ]
     },
     {
-      "id": "art-20260610-01",
+      "id": "art-20260618-06",
+      "date": "18.06.",
+      "title": "Der bodenständige Rene Haas: CEO des Chipdesigners ARM, Ingenieur, Stratege und dank Superbonus wohl bald Milliardär",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/der-bodenstaendige-rene-haas-ingenieur-stratege-und-dank-superbonus-wohl-bald-milliardaer-ld.10009861",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Warum kennt ihr den CEO von ARM nicht, obwohl seine Chips in fast jedem Smartphone stecken – während ihr Elon Musk oder Steve Jobs kennt?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernziel: Unterschied zwischen sichtbarer und unsichtbarer Wirtschaftsmacht verstehen. Konzept: Nicht jeder erfolgreiche Unternehmer muss ein bekanntes Gesicht sein – manche arbeiten im Hintergrund und prägen trotzdem unser Leben."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche ARM-Chips findet ihr in euren eigenen Geräten (Handy, Tablet, Smart-Watch)? Notiert 3 Beispiele und erklärt, warum ARM trotzdem unbekannt bleibt."
+        }
+      ]
+    }
+  ],
+  "7": [
+    {
+      "id": "art-20260622-03",
+      "date": "22.06.",
+      "title": "Fleisch produzieren, ohne Tiere zu töten: Ein niederländischer Bauer will als Erster dieses Zukunftsgeschäft betreiben",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/fleisch-produzieren-ohne-tiere-zu-toeten-ein-niederlaendischer-bauer-will-als-erster-dieses-zukunftsgeschaeft-betreiben-ld.10010624",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Fleisch produzieren, ohne Tiere zu töten: Ein niederländischer Bauer will als Erster dieses Zukunftsgeschäft betreiben»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Seit Jahren forschen Startup-Firmen an Verfahren, Laborfleisch herzustellen. In den Niederlanden hat"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260622-08",
+      "date": "20.06.",
+      "title": "Der lange Arm der Bullshit-Jobs: Warum uns sinnbefreite Arbeit bis ins Bett verfolgt",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/der-lange-arm-der-bullshit-jobs-warum-uns-sinnbefreite-arbeit-bis-ins-bett-verfolgt-ld.10011562",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Der lange Arm der Bullshit-Jobs: Warum uns sinnbefreite Arbeit bis ins Bett verfolgt»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Mehr als jeder Dritte ist zu erschöpft, um in der Freizeit noch etwas auf die Beine zu stellen. Zu h"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260620-09",
+      "date": "18.06.",
+      "title": "Hitzewelle in der Schweiz: Gibt es bald mehr Klimaanlagen? Das fordert ein GLP-Nationalrat",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/hitzewelle-in-der-schweiz-gibt-es-bald-mehr-klimaanlagen-das-fordert-ein-glp-nationalrat-ld.10011878",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Hitzewelle in der Schweiz: Gibt es bald mehr Klimaanlagen? Das fordert ein GLP-Nationalrat»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Patrick Hässig will, dass gerade vulnerable Personen in Zukunft besser vor extrem hohen Temperaturen"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260617-00",
+      "date": "17.06.",
+      "title": "Uber und WeRide planen Einführung von kommerziellen Robotaxis in der Region Zürich",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/uber-und-weride-planen-einfuehrung-von-kommerziellen-robotaxis-in-der-region-zuerich-ld.10011680",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Uber und WeRide planen Einführung von kommerziellen Robotaxis in der Region Zürich»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der Start soll noch in diesem Jahr in Zusammenarbeit mit den Behörden erfolgen. Die Fahrten soll man"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260615-04",
+      "date": "14.06.",
+      "title": "Die Aktie, die den Investoren um die Ohren fliegen könnte: Der Hype um Musk, KI und Raumfahrt trägt alle Züge einer Spekulationsblase",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-aktie-die-vom-himmel-fallen-koennte-der-hype-um-musk-ki-und-raumfahrt-traegt-alle-zuege-einer-spekulationsblase-ld.10010688",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Die Aktie, die den Investoren um die Ohren fliegen könnte: Der Hype um Musk, KI und Raumfahrt trägt alle Züge einer Spekulationsblase»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der fulminante Börsengang verschafft SpaceX eine Bewertung, die selbst Musk-gläubige Anleger ins Grü"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260615-05",
+      "date": "14.06.",
+      "title": "Der Königsmacher platziert sich selbst: Der Headhunter Björn Johansson verkauft seine Firma an seinen liebsten Konkurrenten",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/der-koenigsmacher-platziert-sich-selbst-der-headhunter-bjoern-johansson-verkauft-seine-firma-an-seinen-liebsten-konkurrenten-ld.10010685",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Der Königsmacher platziert sich selbst: Der Headhunter Björn Johansson verkauft seine Firma an seinen liebsten Konkurrenten»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Spencer Stuart übernimmt das Office von Björn Johansson. Mit dem Deal kehrt der schillerndste Person"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260615-06",
+      "date": "14.06.",
+      "title": "Keynes, KI und die Stempeluhr: Kommt nun die 15-Stunden-Woche?",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/keynes-ki-und-die-stempeluhr-verhilft-uns-die-kuenstliche-intelligenz-zur-15-stunden-wochen-ld.10010684",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Würdet ihr lieber 15 Stunden pro Woche arbeiten und dafür weniger verdienen, oder lieber 40 Stunden für mehr Geld?"
+        },
+        {
+          "phase": "TH",
+          "text": "Die Lernenden erkennen, dass technologischer Fortschritt (KI) Arbeitszeit und Lebensqualität grundlegend verändern kann. Sie verstehen, dass Prognosen über die Zukunft der Arbeitswelt sich irren können und dass ihre eigene Karriere von solchen Megatrends beeinflusst wird."
+        },
+        {
+          "phase": "UE",
+          "text": "Schreib auf, welche drei Tätigkeiten in deinem Lehrberuf könnten durch KI automatisiert werden – und welche drei bleiben unverzichtbar menschlich?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260611-07",
+      "date": "10.06.",
+      "title": "Florentino Pérez ist Präsident von Real Madrid, Bauunternehmer und der heimliche König in der spanischen Hauptstadt",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/florentino-perez-ist-praesident-von-real-madrid-bauunternehmer-und-der-heimliche-koenig-in-der-spanischen-hauptstadt-ld.10010499",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Kann man wirklich erfolgreich sein, wenn man sich nur auf eine Sache konzentriert – oder braucht es mehrere «Standbeine» wie Pérez?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernziel: Diversifikation und Unternehmertum verstehen. Der Artikel zeigt, wie erfolgreiche Menschen ihre Fähigkeiten und ihr Kapital in verschiedene Bereiche investieren, um Risiken zu minimieren und Chancen zu nutzen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere eine Person aus deiner Branche oder deinem Interesse (Sport, Handwerk, Technologie), die ähnlich wie Pérez mehrere erfolgreiche Projekte verfolgt. Notiere: Welche 2–3 Geschäftsfelder hat sie? Was sind die Vorteile davon?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260611-08",
       "date": "10.06.",
       "title": "Nvidia will sich mit einer Partnerschaft in Südkorea die Zukunft sichern. Die Firma braucht Nachschub bei Hochleistungsspeichern",
       "source": "NZZ",
@@ -975,27 +1185,6 @@
         {
           "phase": "UE",
           "text": "Erstelle ein Porträt einer Person aus deinem Umfeld, die ihre berufliche Richtung gewechselt hat, und analysiere, welche Fähigkeiten sie vom alten zum neuen Job mitgenommen hat."
-        }
-      ]
-    },
-    {
-      "id": "art-20260603-09",
-      "date": "01.06.",
-      "title": "Nvidia drängt mit KI-Chips in den Markt für Windows-Notebooks",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/nvidia-draengt-mit-ki-chips-in-den-markt-fuer-windows-notebooks-ld.10009297",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Nvidia drängt mit KI-Chips in den Markt für Windows-Notebooks»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Chiphersteller drängt in den PC-Markt und nimmt damit Intel und AMD direkt ins Visier. Die Visio"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     }
