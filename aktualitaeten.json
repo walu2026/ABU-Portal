@@ -66,7 +66,7 @@
   ],
   "2": [
     {
-      "id": "art-20260622-05",
+      "id": "art-20260623-09",
       "date": "21.06.",
       "title": "INTERVIEW - Kieler Forscher: «Wir sollten Chinas Subventionen ausbeuten. Wenn uns China seine Produkte billig anbietet, sollten wir dieses Geschenk annehmen»",
       "source": "NZZ",
@@ -74,15 +74,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «INTERVIEW - Kieler Forscher: «Wir sollten Chinas Subventionen ausbeuten. Wenn uns China seine Produkte billig anbietet, sollten wir dieses Geschenk annehmen»»?"
+          "text": "Freut ihr euch, wenn eure Lieblingsklamotten aus China super günstig sind – oder sollte der Staat sie teurer machen, um einheimische Fabriken zu schützen?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Konjunkturchef des Kieler Instituts für Weltwirtschaft, Stefan Kooths, warnt davor, Schutzzölle "
+          "text": "Lernende verstehen, wie Importe ihre persönlichen Ausgaben beeinflussen und welche wirtschaftlichen Zielkonflikte entstehen (günstige Preise vs. Arbeitsplätze). Sie reflektieren, wer von Billigimporten profitiert und wer verliert."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Vergleicht drei Produkte (z.B. T-Shirt, Smartphone, Sportschuh) in einem Geschäft und online: Notiert den Preis und das Herkunftsland. Diskutiert: Wäre der Preis billiger oder teurer ohne Importe aus China?"
         }
       ]
     },
@@ -343,6 +343,48 @@
   ],
   "4": [
     {
+      "id": "art-20260623-00",
+      "date": "23.06.",
+      "title": "INTERVIEW - «Liebe EU, liebe Schweizer, wir haben ein Problem», ruft Konrad Hummler. Der liberale Publizist fordert eine positive Erschütterung des Landes",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/liebe-eu-liebe-schweizer-wir-haben-ein-problem-ruft-konrad-hummler-der-liberale-publizist-fordert-eine-positive-erschuetterung-des-landes-ld.10011830",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «INTERVIEW - «Liebe EU, liebe Schweizer, wir haben ein Problem», ruft Konrad Hummler. Der liberale Publizist fordert eine positive Erschütterung des Landes»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die 10-Millionen-Initiative hat gezeigt, dass die Schweiz bei der Zuwanderung gespalten ist. Hummler"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260623-01",
+      "date": "23.06.",
+      "title": "Der Schweizer Zahnbürstenhersteller Curaden kämpft gegen Riesen wie Colgate",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/zahnbuersten-curaden-muss-sich-gegen-colgate-palmolive-behaupten-ld.10010888",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Der Schweizer Zahnbürstenhersteller Curaden kämpft gegen Riesen wie Colgate»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Familienfirma Curaden hat sich eine treue Kundschaft aufgebaut. Aber die neue Chefin Christine B"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260622-06",
       "date": "20.06.",
       "title": "Bauernaufstand gegen Parmelin: Die Schweizer Landwirte lassen ihren engsten Verbündeten im Bundesrat im Stich",
@@ -509,53 +551,32 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260616-08",
-      "date": "15.06.",
-      "title": "INTERVIEW - «Wenn wir länger arbeiten würden, könnten wir die Zuwanderung reduzieren», sagt die Direktorin von Economiesuisse nach dem Nein zur 10-Millionen-Schweiz",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wenn-wir-laenger-arbeiten-wuerden-koennten-wir-die-zuwanderung-reduzieren-sagt-die-direktorin-von-economiesuisse-nach-dem-nein-zur-10-millionen-schweiz-ld.10011115",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «INTERVIEW - «Wenn wir länger arbeiten würden, könnten wir die Zuwanderung reduzieren», sagt die Direktorin von Economiesuisse nach dem Nein zur 10-Millionen-Schweiz»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Monika Rühl will die Abhängigkeit von ausländischen Arbeitskräften verringern und wirft dem Bundesra"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260615-03",
-      "date": "14.06.",
-      "title": "Er hat die Ökonomie vermenschlicht und das Fach an der Uni Zürich an die Spitze geführt. Jetzt sagt Ernst Fehr: «Ich sorge mich um die Resilienz der Demokratie»",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/er-hat-die-oekonomie-vermenschlicht-und-das-fach-an-der-uni-zuerich-an-die-spitze-gefuehrt-jetzt-sagt-ernst-fehr-ich-sorge-mich-um-die-resilienz-der-demokratie-ld.10010839",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Er hat die Ökonomie vermenschlicht und das Fach an der Uni Zürich an die Spitze geführt. Jetzt sagt Ernst Fehr: «Ich sorge mich um die Resilienz der Demokratie»»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der im deutschsprachigen Raum meistzitierte Ökonom vermittelt eine positive Botschaft: Der Mensch is"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "5": [
     {
-      "id": "art-20260622-01",
+      "id": "art-20260623-02",
+      "date": "22.06.",
+      "title": "Der ehemalige Fed-Chef Alan Greenspan ist im Alter von 100 Jahren verstorben",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/der-ehemalige-fed-chef-alan-greenspan-ist-im-alter-von-100-jahren-verstorben-ld.10012414",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Der ehemalige Fed-Chef Alan Greenspan ist im Alter von 100 Jahren verstorben»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Greenspan leitete die amerikanische Notenbank von 1987 bis 2006 und prägte die amerikanische Geldpol"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260623-05",
       "date": "22.06.",
       "title": "Was schafft tatsächlich mehr Wohnungen – und was ist reine Symbolpolitik? Das Rating zu den laufenden Massnahmen",
       "source": "NZZ",
@@ -563,15 +584,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn eine Stadt mehr Wohnungen bauen will – warum dauert das so lange und wer blockiert das eigentlich?"
+          "text": "Wenn immer mehr Menschen in die Stadt ziehen, aber kaum neue Wohnungen gebaut werden – wer sollte dann entscheiden, wer eine günstige Wohnung bekommt?"
         },
         {
           "phase": "TH",
-          "text": "Lernende verstehen, dass gesellschaftliche Probleme (Wohnungsmangel) nicht einfach durch Abstimmungen gelöst werden, sondern komplexe Umsetzungsprozesse brauchen. Sie erkennen die Spannung zwischen Mehrheitswille und praktischer Machbarkeit in der Demokratie."
+          "text": "Die Lernenden erkennen, dass es bei Wohnraum um Interessenskonflikte zwischen verschiedenen Gruppen geht (Mieter, Vermieter, Umweltschutz, Bauentwicklung). Sie verstehen, dass politische Entscheidungen und Abstimmungen (wie die SVP-Initiative) direkte Auswirkungen auf das alltägliche Zusammenleben haben."
         },
         {
           "phase": "UE",
-          "text": "Recherchiert: Welche drei Gründe können Bauprojekte in eurer Stadt verzögern? (z.B. Einsprachen, Behördengänge, Finanzierung). Notiert sie und diskutiert, ob diese Gründe sinnvoll sind oder eher Blockaden darstellen."
+          "text": "Erstelle eine Pro-Contra-Liste: Welche Gründe sprechen für schnelleres Bauen neuer Wohnungen, welche dagegen? Nutze dazu den Artikel und dein eigenes Wissen (Umwelt, Kosten, Nachbarschaft, etc.)."
         }
       ]
     },
@@ -742,32 +763,32 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
+    }
+  ],
+  "6": [
     {
-      "id": "art-20260607-08",
-      "date": "06.06.",
-      "title": "Kari Voutilainen baut nur siebzig Uhren im Jahr – und nimmt keine Bestellungen mehr an",
+      "id": "art-20260623-03",
+      "date": "22.06.",
+      "title": "Führungswechsel in London: Zehn Jahre nach dem Brexit-Votum erlebt die Wirtschaft erneut eine Bewährungsprobe",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/kari-voutilainen-baut-nur-70-uhren-im-jahr-und-nimmt-keine-bestellungen-mehr-an-ld.10009788",
+      "url": "https://www.nzz.ch/wirtschaft/fuehrungswechsel-in-london-zehn-jahre-nach-dem-brexit-votum-erlebt-die-wirtschaft-erneut-eine-bewaehrungsprobe-ld.10012368",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Kari Voutilainen baut nur siebzig Uhren im Jahr – und nimmt keine Bestellungen mehr an»?"
+          "text": "Was denkst du zu: «Führungswechsel in London: Zehn Jahre nach dem Brexit-Votum erlebt die Wirtschaft erneut eine Bewährungsprobe»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Auf einem Felssporn hoch über dem Val-de-Travers entstehen einige der begehrtesten Uhren der Welt. D"
+          "text": "Dieser Artikel zeigt: Die britische Politik steht vor einem Linksrutsch. Der wahrscheinliche neue Premierminister Andy Bur"
         },
         {
           "phase": "UE",
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    }
-  ],
-  "6": [
+    },
     {
-      "id": "art-20260622-00",
+      "id": "art-20260623-04",
       "date": "22.06.",
       "title": "In der Biotechnologiebranche grassiert das Übernahmefieber",
       "source": "NZZ",
@@ -775,20 +796,20 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Wenn eine grosse Pharmafirma eine kleinere Biotechfirma kauft – gewinnen wir Patienten dann bessere Medikamente, oder verlieren die innovativen Köpfe ihre Freiheit?"
+          "text": "Warum kaufen große Pharmafirmen wie Roche und Novartis kleinere Biotechunternehmen auf – können sie nicht einfach selbst neue Medikamente erfinden?"
         },
         {
           "phase": "TH",
-          "text": "Lernziel: Verstehen, wie Wirtschaftsmacht funktioniert und warum Unternehmen fusionieren. Das Konzept zeigt, dass Innovation oft mit Kapital verbunden ist und dass Konzerne ihre Marktposition durch Übernahmen sichern oder ausbauen."
+          "text": "Der Artikel zeigt, wie Unternehmen durch Übernahmen (M&A) wachsen und ihre Produktpalette erweitern – ein zentrales Konzept der Betriebswirtschaft. Dies verdeutlicht auch, wie der globale Markt funktioniert: Starke Konzerne nutzen ihre Finanzkraft, um Innovation und Konkurrenzfähigkeit zu sichern."
         },
         {
           "phase": "UE",
-          "text": "Recherchiert: Was macht eine Biotechfirma? Erstellt eine einfache Tabelle mit Vor- und Nachteilen, wenn Roche oder Novartis eine kleinere Biotechfirma aufkauft (z.B. mehr Geld für Forschung vs. Verlust von Unabhängigkeit)."
+          "text": "Recherchiert online nach einer Übernahme durch Roche oder Novartis und erklärt in 5 Sätzen: Was war das Ziel der Übernahme? Welche Vorteile brachte sie dem Konzern?"
         }
       ]
     },
     {
-      "id": "art-20260622-02",
+      "id": "art-20260623-06",
       "date": "22.06.",
       "title": "«Zu anspruchsvoll und anstrengend»: Die Generation Z interessiert sich immer weniger für technische Berufe. Jetzt schlagen Experten Alarm",
       "source": "NZZ",
@@ -796,15 +817,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: ««Zu anspruchsvoll und anstrengend»: Die Generation Z interessiert sich immer weniger für technische Berufe. Jetzt schlagen Experten Alarm»?"
+          "text": "Würdet ihr einen technischen Beruf ergreifen, auch wenn er schwierig ist – oder würdet ihr lieber etwas Leichteres wählen?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die deutschsprachigen Länder galten als Hochburg der «Tüftler und Erfinder». Doch die Jungen meiden "
+          "text": "Das Lernziel ist das Verständnis von Berufswahlentscheidungen und deren wirtschaftlichen Folgen. Hier zeigt sich, wie individuelle Entscheidungen von Millionen Jugendlichen strukturelle Probleme für die ganze Gesellschaft schaffen können."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Befragt drei Personen (Klassenkameraden, Eltern, Bekannte) nach ihrer Berufswahl und den Gründen dafür. Notiert: War Schwierigkeit/Anstrengung ein Faktor? Fasst eure Erkenntnisse zusammen."
         }
       ]
     },
@@ -954,32 +975,11 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260618-06",
-      "date": "18.06.",
-      "title": "Der bodenständige Rene Haas: CEO des Chipdesigners ARM, Ingenieur, Stratege und dank Superbonus wohl bald Milliardär",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/der-bodenstaendige-rene-haas-ingenieur-stratege-und-dank-superbonus-wohl-bald-milliardaer-ld.10009861",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Warum kennt ihr den CEO von ARM nicht, obwohl seine Chips in fast jedem Smartphone stecken – während ihr Elon Musk oder Steve Jobs kennt?"
-        },
-        {
-          "phase": "TH",
-          "text": "Lernziel: Unterschied zwischen sichtbarer und unsichtbarer Wirtschaftsmacht verstehen. Konzept: Nicht jeder erfolgreiche Unternehmer muss ein bekanntes Gesicht sein – manche arbeiten im Hintergrund und prägen trotzdem unser Leben."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Welche ARM-Chips findet ihr in euren eigenen Geräten (Handy, Tablet, Smart-Watch)? Notiert 3 Beispiele und erklärt, warum ARM trotzdem unbekannt bleibt."
-        }
-      ]
     }
   ],
   "7": [
     {
-      "id": "art-20260622-03",
+      "id": "art-20260623-07",
       "date": "22.06.",
       "title": "Fleisch produzieren, ohne Tiere zu töten: Ein niederländischer Bauer will als Erster dieses Zukunftsgeschäft betreiben",
       "source": "NZZ",
