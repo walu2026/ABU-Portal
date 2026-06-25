@@ -1,6 +1,27 @@
 {
   "1": [
     {
+      "id": "art-20260625-01",
+      "date": "25.06.",
+      "title": "«Ein Vehikel für Schwarzgeld»: Professoren greifen den Trinkgeld-Entscheid des Ständerats an",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/ein-vehikel-fuer-schwarzgeld-professoren-greifen-den-trinkgeld-entscheid-des-staenderats-an-ld.10012538",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Würdet ihr ein Trinkgeld geben, wenn der Chef es sich später in die eigene Tasche steckt statt es an die Angestellten weiterzugeben?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernziel: Verständnis von Steuergerechtigkeit und fairen Arbeitsbedingungen. Der Artikel zeigt, wie Gesetze Arbeitnehmer schützen und vor Ausbeutung bewahren sollen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Was verdient eine Serviceangestellte in der Gastronomie und wie wichtig sind Trinkgelder für ihr Einkommen? Erstellt eine kurze Stellungnahme, ob Trinkgelder steuerfrei sein sollten."
+        }
+      ]
+    },
+    {
       "id": "art-20260621-02",
       "date": "20.06.",
       "title": "Wer Katastrophenrisiken auf der Blockchain rückversichert, verdient kräftig",
@@ -65,6 +86,27 @@
     }
   ],
   "2": [
+    {
+      "id": "art-20260625-03",
+      "date": "24.06.",
+      "title": "«Nicht die Schweizer Mentalität»: Die UBS-Vorschläge zur Reform der Altersvorsorge sorgen für Kritik",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/schweizer-altersvorsorge-ubs-schlaegt-tiefgreifende-aenderungen-am-system-vor-ld.10012655",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: ««Nicht die Schweizer Mentalität»: Die UBS-Vorschläge zur Reform der Altersvorsorge sorgen für Kritik»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Ökonomen der Grossbank raten, das Dreisäulensystem komplett zu überarbeiten. Branchenexperten ge"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260623-09",
       "date": "21.06.",
@@ -253,32 +295,11 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260617-09",
-      "date": "16.06.",
-      "title": "Die SNB geht eigene Wege. Sie wird sich der Zinswende der EZB kaum anschliessen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-snb-geht-eigene-wege-sie-wird-sich-der-zinswende-der-ezb-kaum-anschliessen-ld.10011027",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Die SNB geht eigene Wege. Sie wird sich der Zinswende der EZB kaum anschliessen»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Angst vor einer neuen Inflationswelle geht um. Nicht so bei der Schweizerischen Nationalbank. Fü"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "3": [
     {
-      "id": "art-20260624-05",
+      "id": "art-20260625-08",
       "date": "23.06.",
       "title": "Personen mit niedrigen Einkommen gehen häufiger zum Arzt – einen grossen Teil der Kosten bezahlen die Reichen",
       "source": "NZZ",
@@ -286,15 +307,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Personen mit niedrigen Einkommen gehen häufiger zum Arzt – einen grossen Teil der Kosten bezahlen die Reichen»?"
+          "text": "Warum gehen arme Menschen öfter zum Arzt, obwohl sie weniger Geld haben – ist Armut ungesund?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: In der Schweiz beziehen Arme deutlich mehr Gesundheitsleistungen als Reiche. Das zeigt eine Helsana-"
+          "text": "Gesundheit ist nicht nur eine persönliche Verantwortung, sondern wird stark durch soziale und wirtschaftliche Faktoren beeinflusst. Dieses Konzept der \"sozialen Determinanten von Gesundheit\" zeigt, dass Ungleichheit und Gesundheit eng miteinander verflochten sind."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Sammelt in Zweierteams auf, welche Gründe dafür sprechen könnten, dass ärmere Menschen häufiger zum Arzt gehen (z.B. Ernährung, Wohnung, Stress, Prävention). Präsentiert eine These."
         }
       ]
     },
@@ -364,7 +385,7 @@
   ],
   "4": [
     {
-      "id": "art-20260624-00",
+      "id": "art-20260625-05",
       "date": "24.06.",
       "title": "Warum sich Risikokapitalgeber aus dem Silicon Valley plötzlich für Schweizer Startups interessieren",
       "source": "NZZ",
@@ -372,20 +393,20 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Warum könnte es für die Schweiz ein Vorteil sein, dass amerikanische Investoren plötzlich nicht mehr nur Apps und Internet-Startups finanzieren wollen?"
+          "text": "Was denkst du zu: «Warum sich Risikokapitalgeber aus dem Silicon Valley plötzlich für Schweizer Startups interessieren»?"
         },
         {
           "phase": "TH",
-          "text": "Die Schweiz positioniert sich als Innovations- und Technologiestandort mit Schwerpunkten in Naturwissenschaften und Ingenieurskunst. Dieses Lernziel zeigt, wie geografische Lage, Bildungssystem und wirtschaftliche Spezialisierung einen Standort attraktiv für globale Investitionen machen."
+          "text": "Dieser Artikel zeigt: Internet und Software waren gestern. Venture-Tech-Fonds fokussieren jetzt auf Hochtechnologie wie Bi"
         },
         {
           "phase": "UE",
-          "text": "Recherchiert online ein Schweizer Startup aus Biotech, Robotik oder Raumfahrt und präsentiert in 3 Sätzen: Was macht es? Warum könnte ein Silicon-Valley-Investor daran interessiert sein?"
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     },
     {
-      "id": "art-20260624-04",
+      "id": "art-20260625-07",
       "date": "23.06.",
       "title": "«Es hat eine Normalisierung der Exzesse stattgefunden», sagt der Chef von Ethos zu den Löhnen von Schweizer Topmanagern",
       "source": "NZZ",
@@ -393,15 +414,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Würdet ihr es fair finden, wenn ein CEO in einem Jahr so viel verdient wie 100 normale Arbeitnehmer in ihrem ganzen Leben?"
+          "text": "Würdet ihr euch gerecht behandelt fühlen, wenn euer Chef 400-mal mehr verdient als ihr?"
         },
         {
           "phase": "TH",
-          "text": "Das Thema zeigt die Einkommensungleichheit in der Schweiz und wie Löhne von Führungskräften gesellschaftlich umstritten sind. Lernende erkennen, wie wirtschaftliche Strukturen und Verteilungsfragen die Schweiz prägen."
+          "text": "Das Konzept der Lohngerechtigkeitsprinzipien zeigt, wie unterschiedlich Verdienste in der Wirtschaft verteilt sein können. Hier lernen Lernende, gesellschaftliche Ungleichheiten zu erkennen und zu hinterfragen."
         },
         {
           "phase": "UE",
-          "text": "Recherchiert: Was verdient ein durchschnittlicher Schweizer Arbeitnehmer pro Jahr? Vergleicht diesen Lohn mit den 8,4 Millionen eines SMI-Chefs und erklärt schriftlich, welche Fragen sich dabei für euch stellen."
+          "text": "Recherchiert: Wie viel verdient ein durchschnittlicher Schweizer Arbeitnehmer im Jahr? Berechnet dann das Verhältnis zum Lohn eines SMI-Konzernchefs (8,4 Mio.). Haltet euer Ergebnis fest."
         }
       ]
     },
@@ -576,7 +597,7 @@
   ],
   "5": [
     {
-      "id": "art-20260624-06",
+      "id": "art-20260625-09",
       "date": "23.06.",
       "title": "Drama bei Deutschlands ältester Bank: Die Aufsicht setzt die Führung ab, das Geschäftsmodell gerät unter Druck",
       "source": "NZZ",
@@ -788,6 +809,69 @@
   ],
   "6": [
     {
+      "id": "art-20260625-00",
+      "date": "25.06.",
+      "title": "KURZMELDUNGEN - Wirtschaft: Easyjet lehnt Angebot von US-Investor ab +++ Der SMI erholt sich und erreicht ein Rekordhoch",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-spacex-aktie-stabilisiert-sich-nach-kursrutsch-ld.10010807",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Easyjet lehnt Angebot von US-Investor ab +++ Der SMI erholt sich und erreicht ein Rekordhoch»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260625-02",
+      "date": "25.06.",
+      "title": "Das Bally-Rätsel: Bis auf die Marke ist fast nichts mehr da – wie geht es weiter?",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/das-bally-raetsel-bis-auf-die-marke-ist-fast-nichts-mehr-da-wie-geht-es-weiter-ld.10012477",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn eine 150 Jahre alte Schweizer Schuhmarke nur noch ein Name ist – wann hört ein Unternehmen auf zu existieren?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernziel: Verständnis von Unternehmensstrukturen und wirtschaftlichen Veränderungen in der Globalisierung. Die Schließung von Produktion zeigt, wie traditionelle Industrie durch Finanzinvestitionen und Standortverlagerung transformiert wird."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche Schweizer Schuhfirmen gab es früher in eurer Region? Findet heraus, was mit einer davon passiert ist – und erklärt in 5 Sätzen, warum solche Fabriken heute oft geschlossen werden."
+        }
+      ]
+    },
+    {
+      "id": "art-20260625-04",
+      "date": "24.06.",
+      "title": "Milliardengeschenk für Iran: Die USA heben die Ölsanktionen fast ganz auf und bescheren Teheran neue Einnahmen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/iran-krieg-usa-heben-oel-sanktionen-gegen-teheran-fast-ganz-auf-ld.10012514",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Milliardengeschenk für Iran: Die USA heben die Ölsanktionen fast ganz auf und bescheren Teheran neue Einnahmen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Um die Friedensgespräche zu erleichtern, darf iranisches Erdöl nahezu überall verkauft werden – soga"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260624-01",
       "date": "24.06.",
       "title": "INTERVIEW - «Der Begriff Pauschalreise klingt altmodisch. Dabei ist das ein sehr modernes Produkt», sagt der Chef der deutschen TUI",
@@ -822,27 +906,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260624-03",
-      "date": "23.06.",
-      "title": "Milliardengeschenk für Iran: Die USA heben die Ölsanktionen fast ganz auf und bescheren Teheran neue Einnahmen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/iran-krieg-usa-heben-oel-sanktionen-gegen-teheran-fast-ganz-auf-ld.10012514",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Milliardengeschenk für Iran: Die USA heben die Ölsanktionen fast ganz auf und bescheren Teheran neue Einnahmen»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Um die Friedensgespräche zu erleichtern, darf iranisches Erdöl nahezu überall verkauft werden – soga"
         },
         {
           "phase": "UE",
@@ -948,48 +1011,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Die Firma um CEO Patrizia Laeri will Frauen zum Investieren animieren  und damit Geld verdienen. Der"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260621-06",
-      "date": "20.06.",
-      "title": "Der Goldstrom hat gedreht: Jetzt könnte die Schweiz von den USA Zoll verlangen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/schweizer-zoll-verhandlungen-mit-usa-das-gold-sorgt-jetzt-fuer-ein-defizit-ld.10010923",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Der Goldstrom hat gedreht: Jetzt könnte die Schweiz von den USA Zoll verlangen»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Handelsbilanzüberschuss mit den USA hat sich in ein Defizit verwandelt. Trump verliert ein Druck"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260620-00",
-      "date": "13.06.",
-      "title": "Europa findet bei kritischen Rohstoffen kaum Wege aus der chinesischen Knechtschaft – das ist ein Risiko für die Verteidigung",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/kritische-rohstoffe-mit-ihrer-bisherigen-strategie-bleibt-die-eu-vom-chinesischen-wohlwollen-abhaengig-ld.10010419",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Europa findet bei kritischen Rohstoffen kaum Wege aus der chinesischen Knechtschaft – das ist ein Risiko für die Verteidigung»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Für Europas Verteidigung und die Industrie ist das Reich der Mitte der mit Abstand wichtigste Liefer"
         },
         {
           "phase": "UE",
