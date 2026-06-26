@@ -1,7 +1,7 @@
 {
   "1": [
     {
-      "id": "art-20260626-08",
+      "id": "art-20260626-09",
       "date": "25.06.",
       "title": "«Ein Vehikel für Schwarzgeld»: Professoren greifen den Trinkgeld-Entscheid des Ständerats an",
       "source": "NZZ",
@@ -385,7 +385,28 @@
   ],
   "4": [
     {
-      "id": "art-20260626-02",
+      "id": "art-20260626-00",
+      "date": "26.06.",
+      "title": "Volkswagen will offenbar bis zu 100'000 Stellen abbauen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/volkswagen-will-offenbar-bis-zu-100-000-stellen-abbauen-ld.10013092",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Volkswagen will offenbar bis zu 100'000 Stellen abbauen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Laut Medienberichten plant VW drastische Einschnitte: Vier Werke in Deutschland sind von einer Schli"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260626-03",
       "date": "26.06.",
       "title": "In Dubai konnten Schweizer Unternehmen jahrelang mit boomenden Geschäften rechnen. Nun dominiert die Unsicherheit",
       "source": "NZZ",
@@ -393,20 +414,20 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Warum verlassen Schweizer Firmen ein Land, das vorher so profitabel war – und was bedeutet das für ihre Mitarbeitenden?"
+          "text": "Warum verlassen Schweizer Firmen ein Land, das jahrelang bombensicher war – und was bedeutet das für Arbeitsplätze hier bei uns?"
         },
         {
           "phase": "TH",
-          "text": "Wirtschaftliche Stabilität und politische Sicherheit sind zentrale Faktoren für erfolgreiche Geschäftstätigkeit im Ausland. Dieses Beispiel zeigt, wie schnell externe Krisen (Kriege, politische Instabilität) Geschäftsmodelle gefährden und zur Migration von Fachkräften führen."
+          "text": "Wirtschaftliche Abhängigkeit: Schweizer Unternehmen sind global vernetzt und profitieren von stabilen Märkten im Ausland. Geopolitische Risiken zeigen, dass wirtschaftlicher Erfolg fragil ist und politische Krisen direkte Folgen für Schweizer Arbeitsplätze haben können."
         },
         {
           "phase": "UE",
-          "text": "Recherchiert: Welche Schweizer Unternehmen sind in Dubai/Golfregion tätig? Erstellt eine Liste und überlegt, welche Branchen besonders betroffen sind (Tourismus, Finanzdienstleistungen, Bau?)."
+          "text": "Recherchiert ein Schweizer Unternehmen, das in Dubai tätig ist (z.B. Banken, Hotels, Maschinenindustrie), und dokumentiert in 3-4 Sätzen, welche Risiken es jetzt hat."
         }
       ]
     },
     {
-      "id": "art-20260626-04",
+      "id": "art-20260626-05",
       "date": "25.06.",
       "title": "Der IWF stärkt dem Bundesrat im Streit um die UBS den Rücken",
       "source": "NZZ",
@@ -566,27 +587,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Die Sportschuhfirma On drohte dem Bund mit Klagen und setzte die Behörden unter Druck, um weiterhin "
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260620-06",
-      "date": "19.06.",
-      "title": "Debatte um die Attraktivität des Standorts: Der Bundesrat will bei der OECD-Mindeststeuer nichts überstürzen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/debatte-um-die-attraktivitaet-des-standorts-der-bundesrat-will-bei-der-oecd-mindeststeuer-nichts-ueberstuerzen-ld.10012114",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Debatte um die Attraktivität des Standorts: Der Bundesrat will bei der OECD-Mindeststeuer nichts überstürzen»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Schweiz sei zu attraktiv für ausländische Firmen, sagen Kritiker der Zuwanderung. Der Standort l"
         },
         {
           "phase": "UE",
@@ -809,7 +809,7 @@
   ],
   "6": [
     {
-      "id": "art-20260626-00",
+      "id": "art-20260626-01",
       "date": "26.06.",
       "title": "«Schrödingers Strasse»: Trotz Friedensgesprächen ist die Meerenge von Hormuz gleichzeitig offen und geschlossen",
       "source": "NZZ",
@@ -830,7 +830,7 @@
       ]
     },
     {
-      "id": "art-20260626-01",
+      "id": "art-20260626-02",
       "date": "26.06.",
       "title": "DIE NEUESTEN ENTWICKLUNGEN - Zollverhandlungen Schweiz-USA: Guy Parmelin reist nächste Woche nach Washington",
       "source": "NZZ",
@@ -851,7 +851,7 @@
       ]
     },
     {
-      "id": "art-20260626-03",
+      "id": "art-20260626-04",
       "date": "25.06.",
       "title": "KURZMELDUNGEN - Wirtschaft: Merck kauft US-Laborausrüster für zehn Milliarden +++ Easyjet lehnt Angebot von US-Investor ab",
       "source": "NZZ",
@@ -859,15 +859,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Warum zahlt ein deutsches Pharmaunternehmen zehn Milliarden Dollar für ein US-Laborunternehmen – kann man das nicht einfach selber bauen?"
+          "text": "Warum zahlt ein deutsches Pharmaunternehmen 10 Milliarden Euro für ein anderes Unternehmen – kann man das nicht einfach billiger kaufen?"
         },
         {
           "phase": "TH",
-          "text": "Dieses Beispiel zeigt, wie Unternehmen durch Fusionen und Übernahmen wachsen und neue Märkte erschließen (M&A-Strategie). Dies ist ein zentrales Konzept der globalisierten Wirtschaft und hat Auswirkungen auf Arbeitsplätze, Innovation und Wettbewerb."
+          "text": "Fusionen und Übernahmen sind strategische Geschäftstransaktionen, die Unternehmen nutzen, um zu wachsen, neue Technologien zu akquirieren oder ihre Marktposition zu stärken. Der Kaufpreis hängt von vielen Faktoren ab: Profitabilität, Innovation, Marktposition und zukünftige Gewinnchancen."
         },
         {
           "phase": "UE",
-          "text": "Recherchiert: Was macht Merck, und warum könnte der Kauf eines Laborausrüsters für die Zukunft wichtig sein? Notiert drei Gründe."
+          "text": "Recherchiert: Was macht ein Laborausrüster und welche Vorteile könnte Merck aus diesem Kauf haben? Erstellt eine kurze Liste mit 3–4 Gründen, warum dieser Kauf sinnvoll sein könnte."
         }
       ]
     },
