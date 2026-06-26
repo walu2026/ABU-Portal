@@ -1,7 +1,7 @@
 {
   "1": [
     {
-      "id": "art-20260625-01",
+      "id": "art-20260626-08",
       "date": "25.06.",
       "title": "«Ein Vehikel für Schwarzgeld»: Professoren greifen den Trinkgeld-Entscheid des Ständerats an",
       "source": "NZZ",
@@ -9,15 +9,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Würdet ihr ein Trinkgeld geben, wenn der Chef es sich später in die eigene Tasche steckt statt es an die Angestellten weiterzugeben?"
+          "text": "Was denkst du zu: ««Ein Vehikel für Schwarzgeld»: Professoren greifen den Trinkgeld-Entscheid des Ständerats an»?"
         },
         {
           "phase": "TH",
-          "text": "Lernziel: Verständnis von Steuergerechtigkeit und fairen Arbeitsbedingungen. Der Artikel zeigt, wie Gesetze Arbeitnehmer schützen und vor Ausbeutung bewahren sollen."
+          "text": "Dieser Artikel zeigt: Der Ständerat setzt sich für die Gastronomie ein und will Trinkgelder von Steuern und AHV-Beiträgen "
         },
         {
           "phase": "UE",
-          "text": "Recherchiert: Was verdient eine Serviceangestellte in der Gastronomie und wie wichtig sind Trinkgelder für ihr Einkommen? Erstellt eine kurze Stellungnahme, ob Trinkgelder steuerfrei sein sollten."
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     },
@@ -385,6 +385,48 @@
   ],
   "4": [
     {
+      "id": "art-20260626-02",
+      "date": "26.06.",
+      "title": "In Dubai konnten Schweizer Unternehmen jahrelang mit boomenden Geschäften rechnen. Nun dominiert die Unsicherheit",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/in-dubai-konnten-schweizer-unternehmen-jahrelang-mit-boomenden-geschaeften-rechnen-nun-dominiert-die-unsicherheit-ld.10012560",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Warum verlassen Schweizer Firmen ein Land, das vorher so profitabel war – und was bedeutet das für ihre Mitarbeitenden?"
+        },
+        {
+          "phase": "TH",
+          "text": "Wirtschaftliche Stabilität und politische Sicherheit sind zentrale Faktoren für erfolgreiche Geschäftstätigkeit im Ausland. Dieses Beispiel zeigt, wie schnell externe Krisen (Kriege, politische Instabilität) Geschäftsmodelle gefährden und zur Migration von Fachkräften führen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche Schweizer Unternehmen sind in Dubai/Golfregion tätig? Erstellt eine Liste und überlegt, welche Branchen besonders betroffen sind (Tourismus, Finanzdienstleistungen, Bau?)."
+        }
+      ]
+    },
+    {
+      "id": "art-20260626-04",
+      "date": "25.06.",
+      "title": "Der IWF stärkt dem Bundesrat im Streit um die UBS den Rücken",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/der-iwf-staerkt-dem-bundesrat-im-streit-um-die-ubs-den-ruecken-ld.10012942",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Der IWF stärkt dem Bundesrat im Streit um die UBS den Rücken»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die UBS hofft, dass ihr das Parlament bei den neuen Eigenkapitalregeln entgegenkommt. Ihr Gegenspiel"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260625-05",
       "date": "24.06.",
       "title": "Warum sich Risikokapitalgeber aus dem Silicon Valley plötzlich für Schweizer Startups interessieren",
@@ -545,48 +587,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Die Schweiz sei zu attraktiv für ausländische Firmen, sagen Kritiker der Zuwanderung. Der Standort l"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260620-07",
-      "date": "19.06.",
-      "title": "Sieben Jahre nach dem Untergang der Baselworld: Die MCH Group lanciert eine neue Schmuck- und Uhrenmesse",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/sieben-jahre-nach-dem-untergang-der-baselworld-die-mch-group-lanciert-eine-neue-schmuck-und-uhrenmesse-ld.10011861",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Sieben Jahre nach dem Untergang der Baselworld: Die MCH Group lanciert eine neue Schmuck- und Uhrenmesse»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Basel bekommt mit Basilia wieder eine Messe für Schmuck und Uhren. Die MCH Group holt sich dafür ein"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260618-04",
-      "date": "18.06.",
-      "title": "10-Millionen-Schweiz: Eine freiwillige Abgabe könnte mithelfen, dass Firmen weniger Zuwanderer einstellen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/10-millionen-schweiz-eine-freiwillige-abgabe-koennte-mithelfen-dass-firmen-weniger-zuwanderer-einstellen-ld.10011694",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «10-Millionen-Schweiz: Eine freiwillige Abgabe könnte mithelfen, dass Firmen weniger Zuwanderer einstellen»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Nach der Abstimmung über die 10-Millionen-Schweiz fordern die Wirtschaftsverbände, das inländische A"
         },
         {
           "phase": "UE",
@@ -809,6 +809,69 @@
   ],
   "6": [
     {
+      "id": "art-20260626-00",
+      "date": "26.06.",
+      "title": "«Schrödingers Strasse»: Trotz Friedensgesprächen ist die Meerenge von Hormuz gleichzeitig offen und geschlossen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/strasse-von-hormuz-iran-und-usa-konkurrieren-um-transitwege-fuer-schiffe-ld.10012700",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: ««Schrödingers Strasse»: Trotz Friedensgesprächen ist die Meerenge von Hormuz gleichzeitig offen und geschlossen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Washington und Teheran konkurrieren mit eigenen Transitwegen um die Durchfahrt durch die Meerenge. E"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260626-01",
+      "date": "26.06.",
+      "title": "DIE NEUESTEN ENTWICKLUNGEN - Zollverhandlungen Schweiz-USA: Guy Parmelin reist nächste Woche nach Washington",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/zollschock-fuer-die-schweiz-antworten-auf-die-wichtigsten-fragen-ld.1896220",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «DIE NEUESTEN ENTWICKLUNGEN - Zollverhandlungen Schweiz-USA: Guy Parmelin reist nächste Woche nach Washington»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Schweiz hat im November eine Zolleinigung mit den USA erreicht, die Verhandlungen für ein defini"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260626-03",
+      "date": "25.06.",
+      "title": "KURZMELDUNGEN - Wirtschaft: Merck kauft US-Laborausrüster für zehn Milliarden +++ Easyjet lehnt Angebot von US-Investor ab",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-spacex-aktie-stabilisiert-sich-nach-kursrutsch-ld.10010807",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Warum zahlt ein deutsches Pharmaunternehmen zehn Milliarden Dollar für ein US-Laborunternehmen – kann man das nicht einfach selber bauen?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieses Beispiel zeigt, wie Unternehmen durch Fusionen und Übernahmen wachsen und neue Märkte erschließen (M&A-Strategie). Dies ist ein zentrales Konzept der globalisierten Wirtschaft und hat Auswirkungen auf Arbeitsplätze, Innovation und Wettbewerb."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Was macht Merck, und warum könnte der Kauf eines Laborausrüsters für die Zukunft wichtig sein? Notiert drei Gründe."
+        }
+      ]
+    },
+    {
       "id": "art-20260625-00",
       "date": "25.06.",
       "title": "KURZMELDUNGEN - Wirtschaft: Easyjet lehnt Angebot von US-Investor ab +++ Der SMI erholt sich und erreicht ein Rekordhoch",
@@ -952,69 +1015,6 @@
         {
           "phase": "UE",
           "text": "Recherchiert online nach einer Übernahme durch Roche oder Novartis und erklärt in 5 Sätzen: Was war das Ziel der Übernahme? Welche Vorteile brachte sie dem Konzern?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260623-06",
-      "date": "22.06.",
-      "title": "«Zu anspruchsvoll und anstrengend»: Die Generation Z interessiert sich immer weniger für technische Berufe. Jetzt schlagen Experten Alarm",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/zu-anspruchsvoll-und-anstrengend-die-generation-z-interessiert-sich-immer-weniger-fuer-technische-berufe-jetzt-schlagen-experten-alarm-ld.10011053",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Würdet ihr einen technischen Beruf ergreifen, auch wenn er schwierig ist – oder würdet ihr lieber etwas Leichteres wählen?"
-        },
-        {
-          "phase": "TH",
-          "text": "Das Lernziel ist das Verständnis von Berufswahlentscheidungen und deren wirtschaftlichen Folgen. Hier zeigt sich, wie individuelle Entscheidungen von Millionen Jugendlichen strukturelle Probleme für die ganze Gesellschaft schaffen können."
-        },
-        {
-          "phase": "UE",
-          "text": "Befragt drei Personen (Klassenkameraden, Eltern, Bekannte) nach ihrer Berufswahl und den Gründen dafür. Notiert: War Schwierigkeit/Anstrengung ein Faktor? Fasst eure Erkenntnisse zusammen."
-        }
-      ]
-    },
-    {
-      "id": "art-20260622-04",
-      "date": "22.06.",
-      "title": "Der mächtigste Mann von Siemens in der Schweiz tritt ab",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/der-maechtigste-mann-von-siemens-in-der-schweiz-tritt-ab-ld.10010333",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Der mächtigste Mann von Siemens in der Schweiz tritt ab»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Nach 36 Jahren verlässt Matthias Rebellius den deutschen Industriekonzern. Irgendwann sei auch einfa"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260621-04",
-      "date": "20.06.",
-      "title": "«Zwischen Nahtod und Euphorie»: Das Fintech-Startup Ellexx wehrt sich gegen Untergangsgerüchte",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/zwischen-nahtod-und-euphorie-das-fintech-startup-ellexx-wehrt-sich-gegen-untergangsgeruechte-ld.10011862",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: ««Zwischen Nahtod und Euphorie»: Das Fintech-Startup Ellexx wehrt sich gegen Untergangsgerüchte»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Firma um CEO Patrizia Laeri will Frauen zum Investieren animieren  und damit Geld verdienen. Der"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     }
