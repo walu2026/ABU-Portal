@@ -1,6 +1,27 @@
 {
   "1": [
     {
+      "id": "art-20260627-03",
+      "date": "27.06.",
+      "title": "Liebesaffäre mit juristischem Nachspiel: Der ehemalige CEO Laurent Freixe fordert von Nestlé Millionen zurück",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/liebesaffaere-mit-juristischem-nachspiel-der-ehemalige-ceo-laurent-freixe-fordert-von-nestle-millionen-zurueck-ld.10013078",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Liebesaffäre mit juristischem Nachspiel: Der ehemalige CEO Laurent Freixe fordert von Nestlé Millionen zurück»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Wegen einer verheimlichten Liebesbeziehung verlor Laurent Freixe seinen Job als Nestlé-Konzernchef. "
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260626-09",
       "date": "25.06.",
       "title": "«Ein Vehikel für Schwarzgeld»: Professoren greifen den Trinkgeld-Entscheid des Ständerats an",
@@ -86,6 +107,69 @@
     }
   ],
   "2": [
+    {
+      "id": "art-20260627-00",
+      "date": "27.06.",
+      "title": "In der Strasse von Hormuz geraten die Schiffe zwischen die Fronten – und müssen sich für Iran oder die USA entscheiden",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/strasse-von-hormuz-iran-und-usa-konkurrieren-um-transitwege-fuer-schiffe-ld.10012700",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «In der Strasse von Hormuz geraten die Schiffe zwischen die Fronten – und müssen sich für Iran oder die USA entscheiden»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Washington und Teheran konkurrieren mit eigenen Transitwegen um die Durchfahrt durch die Meerenge. E"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260627-05",
+      "date": "27.06.",
+      "title": "Sich zu bewerben, ist wie eine «Reise nach Jerusalem»: «Wenn kein Stuhl frei ist, bewegt sich niemand», sagt ein Personalvermittler",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/sich-zu-bewerben-ist-wie-eine-reise-nach-jerusalem-wenn-kein-stuhl-frei-ist-bewegt-sich-niemand-sagt-ein-personalvermittler-ld.10010408",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Sich zu bewerben, ist wie eine «Reise nach Jerusalem»: «Wenn kein Stuhl frei ist, bewegt sich niemand», sagt ein Personalvermittler»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Sortiert ein böser Bot meine Bewerbungen aus? Diese Angst haben viele. Ein Besuch bei einem Stellenv"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260627-06",
+      "date": "27.06.",
+      "title": "Der ehemalige Nationalbankchef Hans Meyer ist gestorben. Unter ihm fand die Schweiz zum Wachstum zurück",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/der-ehemalige-nationalbankchef-hans-meyer-ist-gestorben-unter-ihm-fand-die-schweiz-zum-wachstum-zurueck-ld.1835004",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Der ehemalige Nationalbankchef Hans Meyer ist gestorben. Unter ihm fand die Schweiz zum Wachstum zurück»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Er war kein Mann der vielen Worte. Einmal jedoch überraschte der ehemalige SNB-Präsident die ganze S"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260625-03",
       "date": "24.06.",
@@ -232,69 +316,6 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260619-07",
-      "date": "18.06.",
-      "title": "Die Schweizerische Nationalbank bleibt den Nullzinsen treu – und folgt nicht der Zinswende anderer Zentralbanken",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-schweizerische-nationalbank-bleibt-den-nullzinsen-treu-und-folgt-nicht-der-zinswende-anderer-zentralbanken-ld.10011506",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Die Schweizerische Nationalbank bleibt den Nullzinsen treu – und folgt nicht der Zinswende anderer Zentralbanken»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Inflation ist durch den Iran-Krieg zwar auch in der Schweiz gestiegen. Sie liegt aber immer noch"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260619-09",
-      "date": "18.06.",
-      "title": "Auch Kevin Warsh lässt Trump warten: Das Fed belässt den Leitzins unverändert",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/auch-kevin-warsh-laesst-trump-warten-das-fed-behaelt-den-leitzins-unveraendert-ld.10011731",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Auch Kevin Warsh lässt Trump warten: Das Fed belässt den Leitzins unverändert»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die hohe Inflation und der starke Arbeitsmarkt in den USA lassen Zinssenkungen in weite Ferne rücken"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260617-05",
-      "date": "16.06.",
-      "title": "Die Wirtschaftsprüfer geraten zunehmend in eine Vertrauenskrise: Auch KPMG stolpert über Datenlecks",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-wirtschaftspruefer-geraten-zunehmend-in-eine-vertrauenskrise-auch-kpmg-stolpert-ueber-datenlecks-ld.10010878",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Die Wirtschaftsprüfer geraten zunehmend in eine Vertrauenskrise: Auch KPMG stolpert über Datenlecks»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Nach dem PwC-Skandal in Australien steht mit KPMG bereits der nächste Riese der Big Four unter Besch"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "3": [
@@ -384,6 +405,48 @@
     }
   ],
   "4": [
+    {
+      "id": "art-20260627-02",
+      "date": "27.06.",
+      "title": "Warten auf einen Deal mit Trump: Die Wirtschaft fürchtet sich vor einem zweiten Zollhammer",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/warten-auf-einen-zoll-deal-mit-trump-die-wirtschaft-fuerchtet-sich-vor-einem-zweiten-zollhammer-ld.10013157",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Warten auf einen Deal mit Trump: Die Wirtschaft fürchtet sich vor einem zweiten Zollhammer»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Nächste Woche reist Bundespräsident Guy Parmelin für Verhandlungen nach Washington. Ein Abkommen sei"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260627-04",
+      "date": "27.06.",
+      "title": "Klimatisiert die Büros! Warum das Land kühle Köpfe braucht",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/klimatisiert-die-bueros-warum-das-land-kuehle-koepfe-braucht-ld.10012801",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Klimatisiert die Büros! Warum das Land kühle Köpfe braucht»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Ganze Volkswirtschaften verdanken ihren Aufstieg wohltemperierten Arbeitsplätzen. Nur in Schweizer B"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260626-00",
       "date": "26.06.",
@@ -545,48 +608,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Die Familienfirma Curaden hat sich eine treue Kundschaft aufgebaut. Aber die neue Chefin Christine B"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260622-06",
-      "date": "20.06.",
-      "title": "Bauernaufstand gegen Parmelin: Die Schweizer Landwirte lassen ihren engsten Verbündeten im Bundesrat im Stich",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/bauernaufstand-gegen-parmelin-die-schweizer-landwirte-lassen-ihren-engsten-verbuendeten-im-bundesrat-im-stich-ld.10012133",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Warum lehnen Bauern ein Handelsabkommen ab, das eigentlich der ganzen Schweizer Wirtschaft nutzen könnte?"
-        },
-        {
-          "phase": "TH",
-          "text": "Interessenskonflikte und Lobbyismus: In der Schweiz vertreten verschiedene Gruppen unterschiedliche wirtschaftliche Interessen, die sich widersprechen können. Das Mercosur-Beispiel zeigt, wie Berufsverbände politischen Druck ausüben, um ihre Mitglieder zu schützen – auch gegen Bundesräte aus dem eigenen Berufsstand."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Welche Produkte würden durch Mercosur billiger in die Schweiz kommen? Macht eine Pro/Contra-Liste aus der Perspektive eines Schweizer Bauern und eines Schweizer Konsumenten."
-        }
-      ]
-    },
-    {
-      "id": "art-20260621-00",
-      "date": "20.06.",
-      "title": "INTERVIEW - «Das waren keine Drohungen»: Die On-Gründer rechtfertigen ihren harten Kampf um das Schweizerkreuz",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/das-waren-keine-drohungen-die-on-gruender-rechtfertigen-ihren-harten-kampf-um-das-schweizerkreuz-ld.10010109",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «INTERVIEW - «Das waren keine Drohungen»: Die On-Gründer rechtfertigen ihren harten Kampf um das Schweizerkreuz»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Sportschuhfirma On drohte dem Bund mit Klagen und setzte die Behörden unter Druck, um weiterhin "
         },
         {
           "phase": "UE",
@@ -809,6 +830,69 @@
   ],
   "6": [
     {
+      "id": "art-20260627-01",
+      "date": "27.06.",
+      "title": "KURZMELDUNGEN - Wirtschaft: Open AI schränkt nach Verlangen der US-Regierung Zugang zu neuer KI ein +++ Stefan Hartung tritt als Bosch-Chef ab",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-stefan-hartung-tritt-als-bosch-chef-ab-ex-ceo-geht-laut-medienbericht-nach-kuendigung-gegen-nestle-vor-ld.10010807",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Open AI schränkt nach Verlangen der US-Regierung Zugang zu neuer KI ein +++ Stefan Hartung tritt als Bosch-Chef ab»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260627-07",
+      "date": "26.06.",
+      "title": "DIE NEUESTEN ENTWICKLUNGEN - Handelsstreit: Trump droht Europäern mit 100-Prozent-Zöllen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/trump-und-zoelle-aktuelle-news-und-hintergruende-ld.1869433",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «DIE NEUESTEN ENTWICKLUNGEN - Handelsstreit: Trump droht Europäern mit 100-Prozent-Zöllen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Im Februar hat der Supreme Court Trumps Zölle für unrechtmässig erklärt. Doch der amerikanische Präs"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260627-08",
+      "date": "26.06.",
+      "title": "Volkswagen könnte bis zu 100 000 Stellen abbauen und vier Werke schliessen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/volkswagen-will-offenbar-bis-zu-100-000-stellen-abbauen-ld.10013092",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Volkswagen könnte bis zu 100 000 Stellen abbauen und vier Werke schliessen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Ein Konzept der Konzernführung sieht beispiellose Einschnitte vor: In der Folge würde sich der deuts"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260626-01",
       "date": "26.06.",
       "title": "«Schrödingers Strasse»: Trotz Friedensgesprächen ist die Meerenge von Hormuz gleichzeitig offen und geschlossen",
@@ -952,69 +1036,6 @@
         {
           "phase": "UE",
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260624-02",
-      "date": "23.06.",
-      "title": "KURZMELDUNGEN - Wirtschaft: SpaceX-Aktie stabilisiert sich nach Kursrutsch",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-spacex-aktie-stabilisiert-sich-nach-kursrutsch-ld.10010807",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: SpaceX-Aktie stabilisiert sich nach Kursrutsch»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260623-03",
-      "date": "22.06.",
-      "title": "Führungswechsel in London: Zehn Jahre nach dem Brexit-Votum erlebt die Wirtschaft erneut eine Bewährungsprobe",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/fuehrungswechsel-in-london-zehn-jahre-nach-dem-brexit-votum-erlebt-die-wirtschaft-erneut-eine-bewaehrungsprobe-ld.10012368",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Führungswechsel in London: Zehn Jahre nach dem Brexit-Votum erlebt die Wirtschaft erneut eine Bewährungsprobe»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die britische Politik steht vor einem Linksrutsch. Der wahrscheinliche neue Premierminister Andy Bur"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260623-04",
-      "date": "22.06.",
-      "title": "In der Biotechnologiebranche grassiert das Übernahmefieber",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/biotechsektor-auch-roche-und-novartis-sind-auf-einkaufstour-ld.10011953",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Warum kaufen große Pharmafirmen wie Roche und Novartis kleinere Biotechunternehmen auf – können sie nicht einfach selbst neue Medikamente erfinden?"
-        },
-        {
-          "phase": "TH",
-          "text": "Der Artikel zeigt, wie Unternehmen durch Übernahmen (M&A) wachsen und ihre Produktpalette erweitern – ein zentrales Konzept der Betriebswirtschaft. Dies verdeutlicht auch, wie der globale Markt funktioniert: Starke Konzerne nutzen ihre Finanzkraft, um Innovation und Konkurrenzfähigkeit zu sichern."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert online nach einer Übernahme durch Roche oder Novartis und erklärt in 5 Sätzen: Was war das Ziel der Übernahme? Welche Vorteile brachte sie dem Konzern?"
         }
       ]
     }
