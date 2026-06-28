@@ -108,7 +108,28 @@
   ],
   "2": [
     {
-      "id": "art-20260627-00",
+      "id": "art-20260628-01",
+      "date": "28.06.",
+      "title": "Warum Sie noch vor den Sommerferien Ihr Risiko an der Börse zurückfahren sollten",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wieso-es-angezeigt-ist-vor-den-sommerferien-sein-risiko-an-der-boerse-zurueckzufahren-ld.10013228",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Warum Sie noch vor den Sommerferien Ihr Risiko an der Börse zurückfahren sollten»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Wenn sehr hohe Aktienbewertungen auf ausserordentliche Risiken treffen, wird die Lage brenzlig. Es w"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260628-08",
       "date": "27.06.",
       "title": "In der Strasse von Hormuz geraten die Schiffe zwischen die Fronten – und müssen sich für Iran oder die USA entscheiden",
       "source": "NZZ",
@@ -293,27 +314,6 @@
         {
           "phase": "UE",
           "text": "Recherchiert eine Branche, die unter weniger Konsum leidet (z.B. Gastronomie, Einzelhandel), und notiert drei konkrete Folgen für Arbeitnehmende dort."
-        }
-      ]
-    },
-    {
-      "id": "art-20260619-03",
-      "date": "18.06.",
-      "title": "Der neue Fed-Chef Kevin Warsh tritt selbstbewusst auf – und macht klar, dass er kein Befehlsempfänger von Trump ist",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/der-neue-fed-chef-kevin-warsh-tritt-selbstbewusst-auf-und-macht-klar-dass-er-kein-befehlsempfaenger-von-trump-ist-ld.10011915",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Der neue Fed-Chef Kevin Warsh tritt selbstbewusst auf – und macht klar, dass er kein Befehlsempfänger von Trump ist»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der Kampf gegen die Inflation soll unter Kevin Warsh klare Priorität haben. Der wichtigste Zentralba"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     }
@@ -618,6 +618,69 @@
   ],
   "5": [
     {
+      "id": "art-20260628-00",
+      "date": "27.06.",
+      "title": "Ein Investor aus der Schweiz will den Batteriehersteller Varta retten. Doch seine Geschäftspraktiken werfen Fragen auf",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/ein-investor-aus-der-schweiz-will-den-batteriehersteller-varta-retten-doch-seine-geschaeftspraktiken-werfen-fragen-auf-ld.10012670",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Ein Investor aus der Schweiz will den Batteriehersteller Varta retten. Doch seine Geschäftspraktiken werfen Fragen auf»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Varta ist vom Apple-Zulieferer zum Sanierungsfall geworden. Nun will der Unternehmer Pino Sergio dem"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260628-02",
+      "date": "28.06.",
+      "title": "Wenn KI-Tools die Wohnungsmiete festlegen: Vor Gericht hat Chat-GPT keine Chance",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wenn-ki-tools-die-wohnungsmiete-festlegen-vor-gericht-hat-chat-gpt-keine-chance-ld.10012876",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Wenn KI-Tools die Wohnungsmiete festlegen: Vor Gericht hat Chat-GPT keine Chance»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Wer eine Wohnung als Kapitalanlage vermietet, steht schnell vor einer heiklen Frage: Was darf die Mi"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260628-04",
+      "date": "28.06.",
+      "title": "Mistral ist die letzte europäische Firma, die grosse Sprachmodelle entwickelt. Sie gilt Warnern als Symbol für eine katastrophale Fehleinschätzung",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/mistral-die-letzte-europaeische-ki-firma-die-grosse-sprachmodelle-entwickelt-gilt-warnern-als-symbol-fuer-eine-katastrophale-fehleinschaetzung-ld.10012716",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Mistral ist die letzte europäische Firma, die grosse Sprachmodelle entwickelt. Sie gilt Warnern als Symbol für eine katastrophale Fehleinschätzung»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Wird der alte Kontinent ein amerikanisches Protektorat, weil er die KI verschläft? In «Europe 2031» "
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260625-09",
       "date": "23.06.",
       "title": "Drama bei Deutschlands ältester Bank: Die Aufsicht setzt die Führung ab, das Geschäftsmodell gerät unter Druck",
@@ -763,74 +826,53 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260611-09",
-      "date": "10.06.",
-      "title": "Die Millionärsmaschine: Der SpaceX-Börsengang macht auch Handwerker und Ingenieurinnen reich – und die Banken liegen auf der Lauer",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-millionaersmaschine-der-spacex-boersengang-macht-auch-handwerker-und-ingenieurinnen-reich-und-die-banken-liegen-auf-der-lauer-ld.10010417",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn eine Firma an die Börse geht und plötzlich normale Angestellte Millionäre werden – ist das gerecht oder nur Glück?"
-        },
-        {
-          "phase": "TH",
-          "text": "Wirtschaftliche Chancenverteilung und soziale Mobilität: Wie entstehen Vermögensunterschiede in modernen Gesellschaften? Das Konzept zeigt, dass Wohlstand nicht nur durch Arbeit, sondern auch durch Kapitalbesitz und Unternehmertum entsteht."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Welche Voraussetzungen brauchte es, dass SpaceX-Mitarbeiter reich werden konnten? Erstellt eine Liste mit 5 Faktoren (Bildung, Risiko, Glück, Timing, Branche) und diskutiert, welche davon jeder beeinflussen kann."
-        }
-      ]
-    },
-    {
-      "id": "art-20260610-08",
-      "date": "09.06.",
-      "title": "Übernahmewelle auf dem Höhepunkt: Der italienische Finanzplatz setzt zum grossen Showdown an",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/showdown-um-monte-dei-paschi-italiens-finanzplatz-vor-umbruch-ld.10010349",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Übernahmewelle auf dem Höhepunkt: Der italienische Finanzplatz setzt zum grossen Showdown an»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Banken Intesa und BPM buhlen um Monte dei Paschi di Siena (MPS), die älteste Bank der Welt. Ein "
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260609-06",
-      "date": "08.06.",
-      "title": "«Unsere Ehe mit der EU war toxisch, und darauf folgte eine teure Scheidung», sagt der ehemalige Speaker des britischen Unterhauses John Bercow zum Brexit",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/ex-parlamentssprecher-john-bercow-interview-zu-brexit-labour-starmer-farage-ld.10009380",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: ««Unsere Ehe mit der EU war toxisch, und darauf folgte eine teure Scheidung», sagt der ehemalige Speaker des britischen Unterhauses John Bercow zum Brexit»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Finanzmärkte und die hohen Lebenshaltungskosten setzen die britische Labour-Regierung unter Druc"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "6": [
     {
-      "id": "art-20260627-01",
+      "id": "art-20260628-03",
+      "date": "28.06.",
+      "title": "Historische Abbaupläne bei VW: Oliver Blume ist der radikalste Manager Europas",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/historische-abbauplaene-bei-vw-oliver-blume-ist-der-radikalste-manager-europas-ld.10012743",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Historische Abbaupläne bei VW: Oliver Blume ist der radikalste Manager Europas»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der frühere Porsche-Manager will bei VW 100 000 Stellen streichen. Er bringt eine ganze Nation gegen"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260628-06",
+      "date": "28.06.",
+      "title": "Die Anmassung des Wissens, das Bündner Autoverbot und die Zukunft der Atomtechnologie",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/die-anmassung-des-wissens-das-buendner-autoverbot-und-die-zukunft-der-atomtechnologie-ld.10012706",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Sollten wir Technologien verbieten, die wir nicht vollständig verstehen oder die Risiken bergen?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernziel: Unterscheidung zwischen rational begründeter Skepsis und voreiligem Verbot als Gestaltungsmittel. Die Lernenden erkennen, dass Angst vor Neuem ein natürliches Gefühl ist, aber Verbote komplexe Probleme nicht automatisch lösen."
+        },
+        {
+          "phase": "UE",
+          "text": "Sammelt in Gruppen Pro- und Contra-Argumente zum Bündner Autoverbot. Überlegt: Welche Argumente basieren auf Fakten, welche auf Angst? Präsentiert eure Erkenntnisse."
+        }
+      ]
+    },
+    {
+      "id": "art-20260628-09",
       "date": "27.06.",
       "title": "KURZMELDUNGEN - Wirtschaft: Open AI schränkt nach Verlangen der US-Regierung Zugang zu neuer KI ein +++ Stefan Hartung tritt als Bosch-Chef ab",
       "source": "NZZ",
@@ -996,51 +1038,30 @@
           "text": "Recherchiert: Welche Schweizer Schuhfirmen gab es früher in eurer Region? Findet heraus, was mit einer davon passiert ist – und erklärt in 5 Sätzen, warum solche Fabriken heute oft geschlossen werden."
         }
       ]
-    },
-    {
-      "id": "art-20260625-04",
-      "date": "24.06.",
-      "title": "Milliardengeschenk für Iran: Die USA heben die Ölsanktionen fast ganz auf und bescheren Teheran neue Einnahmen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/iran-krieg-usa-heben-oel-sanktionen-gegen-teheran-fast-ganz-auf-ld.10012514",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Milliardengeschenk für Iran: Die USA heben die Ölsanktionen fast ganz auf und bescheren Teheran neue Einnahmen»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Um die Friedensgespräche zu erleichtern, darf iranisches Erdöl nahezu überall verkauft werden – soga"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260624-01",
-      "date": "24.06.",
-      "title": "INTERVIEW - «Der Begriff Pauschalreise klingt altmodisch. Dabei ist das ein sehr modernes Produkt», sagt der Chef der deutschen TUI",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/der-begriff-pauschalreise-ist-altmodisch-dabei-ist-das-ein-sehr-modernes-produkt-sagt-der-chef-der-deutschen-tui-ld.10011546",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «INTERVIEW - «Der Begriff Pauschalreise klingt altmodisch. Dabei ist das ein sehr modernes Produkt», sagt der Chef der deutschen TUI»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Pauschalreise gilt vielen als Relikt aus einer anderen Zeit. Doch gerade jetzt erlebe sie ein Co"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "7": [
+    {
+      "id": "art-20260628-07",
+      "date": "28.06.",
+      "title": "Der Klub der Star-Managerinnen: Warum Frauen die Männer bei den Top-Jobs abhängen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/der-klub-der-star-managerinnen-warum-frauen-die-maenner-bei-den-top-jobs-abhaengen-ld.10012257",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Braucht es eine Frauenquote, damit Frauen in Führungspositionen gleichberechtigt sind – oder ist das unfair gegenüber Männern?"
+        },
+        {
+          "phase": "TH",
+          "text": "Lernziel: Schüler:innen verstehen, wie strukturelle Massnahmen (Quoten) Chancengleichheit fördern und gesellschaftliche Veränderungen beschleunigen können. Sie reflektieren die Balance zwischen Förderung und Leistungsprinzip."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: In welchen Schweizer Betrieben/Branchen gibt es Frauenquoten? Erstellt eine Vor-Nachteil-Liste aus Sicht von Unternehmen und aus Sicht von Frauen und Männern."
+        }
+      ]
+    },
     {
       "id": "art-20260623-07",
       "date": "22.06.",
@@ -1227,27 +1248,6 @@
         {
           "phase": "UE",
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260606-05",
-      "date": "06.06.",
-      "title": "Dieser Mann will Deutschland zum KI-Weltmeister machen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/dieser-mann-will-deutschland-zum-ki-weltmeister-machen-ld.10009077",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn ein ehemaliger Waschmaschinen-Verkäufer plötzlich entscheidet, sein Land zu verändern – was hätte dich bewogen, einen so radikalen Karriereschritt zu machen?"
-        },
-        {
-          "phase": "TH",
-          "text": "Karrierewechsel und berufliche Neuorientierung sind möglich und können durch gesellschaftliche Veränderungen (hier: Digitalisierung) ausgelöst werden. Dieses Beispiel zeigt, dass die eigene Zukunftsgestaltung nicht linear verläuft und dass Fachkompetenz in einem Bereich transferierbar ist."
-        },
-        {
-          "phase": "UE",
-          "text": "Erstelle ein Porträt einer Person aus deinem Umfeld, die ihre berufliche Richtung gewechselt hat, und analysiere, welche Fähigkeiten sie vom alten zum neuen Job mitgenommen hat."
         }
       ]
     }
