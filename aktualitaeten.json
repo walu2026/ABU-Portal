@@ -406,6 +406,27 @@
   ],
   "4": [
     {
+      "id": "art-20260629-02",
+      "date": "29.06.",
+      "title": "An der Schweizer Börse tummeln sich zunehmend «Untote». Hoffnung auf baldige Kursgewinne können sie sich kaum machen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/trotz-rekordjagd-an-den-boersen-vor-allem-schweizer-maschinenbauer-leiden-ld.10012903",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Warum kaufen Investoren Aktien von Firmen, die sie eigentlich nicht mehr haben wollen?"
+        },
+        {
+          "phase": "TH",
+          "text": "Die Schweizer Börse ist ein zentraler Ort für Kapitalanlage und wirtschaftliche Teilhabe. Der Artikel zeigt, dass nicht alle börsennotierten Unternehmen gleich erfolgreich sind – es gibt Gewinner und 'Untote', die wirtschaftlich stagnieren."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert online: Was ist der Swiss Performance Index (SPI) und warum ist sein Anstieg auf 20'000 Punkte für die Schweizer Wirtschaft wichtig? Fasst eure Erkenntnisse in 3 Sätzen zusammen."
+        }
+      ]
+    },
+    {
       "id": "art-20260627-02",
       "date": "27.06.",
       "title": "Warten auf einen Deal mit Trump: Die Wirtschaft fürchtet sich vor einem zweiten Zollhammer",
@@ -593,53 +614,11 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260623-01",
-      "date": "23.06.",
-      "title": "Der Schweizer Zahnbürstenhersteller Curaden kämpft gegen Riesen wie Colgate",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/zahnbuersten-curaden-muss-sich-gegen-colgate-palmolive-behaupten-ld.10010888",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Der Schweizer Zahnbürstenhersteller Curaden kämpft gegen Riesen wie Colgate»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Familienfirma Curaden hat sich eine treue Kundschaft aufgebaut. Aber die neue Chefin Christine B"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "5": [
     {
-      "id": "art-20260628-00",
-      "date": "27.06.",
-      "title": "Ein Investor aus der Schweiz will den Batteriehersteller Varta retten. Doch seine Geschäftspraktiken werfen Fragen auf",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/ein-investor-aus-der-schweiz-will-den-batteriehersteller-varta-retten-doch-seine-geschaeftspraktiken-werfen-fragen-auf-ld.10012670",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Ein Investor aus der Schweiz will den Batteriehersteller Varta retten. Doch seine Geschäftspraktiken werfen Fragen auf»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Varta ist vom Apple-Zulieferer zum Sanierungsfall geworden. Nun will der Unternehmer Pino Sergio dem"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260628-02",
+      "id": "art-20260629-06",
       "date": "28.06.",
       "title": "Wenn KI-Tools die Wohnungsmiete festlegen: Vor Gericht hat Chat-GPT keine Chance",
       "source": "NZZ",
@@ -660,7 +639,7 @@
       ]
     },
     {
-      "id": "art-20260628-04",
+      "id": "art-20260629-08",
       "date": "28.06.",
       "title": "Mistral ist die letzte europäische Firma, die grosse Sprachmodelle entwickelt. Sie gilt Warnern als Symbol für eine katastrophale Fehleinschätzung",
       "source": "NZZ",
@@ -668,11 +647,32 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Mistral ist die letzte europäische Firma, die grosse Sprachmodelle entwickelt. Sie gilt Warnern als Symbol für eine katastrophale Fehleinschätzung»?"
+          "text": "Wenn die USA und China die künstliche Intelligenz beherrschen, verliert Europa dann seine Unabhängigkeit?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Wird der alte Kontinent ein amerikanisches Protektorat, weil er die KI verschläft? In «Europe 2031» "
+          "text": "Das Lernziel ist, zu verstehen, wie wirtschaftliche und technologische Macht die Machtverhältnisse zwischen Staaten verschiebt und damit unser Zusammenleben prägt. Schüler erkennen, dass globale Abhängigkeiten nicht nur Wohlstand, sondern auch politische Kontrolle bedeuten können."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche wichtigen Technologien oder Dienste nutzen wir täglich, die nicht aus Europa kommen? Erstellt eine Liste und diskutiert, welche Folgen es hätte, wenn diese Firmen ihre Dienste einstellen würden."
+        }
+      ]
+    },
+    {
+      "id": "art-20260628-00",
+      "date": "27.06.",
+      "title": "Ein Investor aus der Schweiz will den Batteriehersteller Varta retten. Doch seine Geschäftspraktiken werfen Fragen auf",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/ein-investor-aus-der-schweiz-will-den-batteriehersteller-varta-retten-doch-seine-geschaeftspraktiken-werfen-fragen-auf-ld.10012670",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Ein Investor aus der Schweiz will den Batteriehersteller Varta retten. Doch seine Geschäftspraktiken werfen Fragen auf»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Varta ist vom Apple-Zulieferer zum Sanierungsfall geworden. Nun will der Unternehmer Pino Sergio dem"
         },
         {
           "phase": "UE",
@@ -830,7 +830,49 @@
   ],
   "6": [
     {
-      "id": "art-20260628-03",
+      "id": "art-20260629-00",
+      "date": "29.06.",
+      "title": "Ärger über die EU-Zölle: In Brüssel lobbyieren der Bundesrat und andere Regierungen gegen neue Handelsbeschränkungen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/aerger-ueber-die-eu-zoelle-in-bruessel-lobbyieren-der-bundesrat-und-andere-regierungen-gegen-neue-handelsbeschraenkungen-ld.10013166",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Ärger über die EU-Zölle: In Brüssel lobbyieren der Bundesrat und andere Regierungen gegen neue Handelsbeschränkungen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Neue Stahlzölle und «Buy European»: Auf die Handelspartner der EU kommen neue Handelsbeschränkungen "
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260629-03",
+      "date": "29.06.",
+      "title": "INTERVIEW - «Die Bevölkerungsdichte in Afrika entsprach bis vor kurzem jener Europas vor 500 Jahren. Deshalb ist der Kontinent noch immer arm»",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/joe-studwell-warum-afrikas-bevoelkerungswachstum-chancen-birgt-ld.10012418",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn Afrika bald 40% der Weltbevölkerung hat – ist das eine Katastrophe oder eine Chance?"
+        },
+        {
+          "phase": "TH",
+          "text": "Die Lernenden verstehen, dass wirtschaftliche Entwicklung nicht primär von der Bevölkerungsgröße abhängt, sondern von historischen, strukturellen und politischen Faktoren. Das Konzept der Bevölkerungsdichte als Entwicklungsindikator wird hinterfragt."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: In welchen Ländern ist die Bevölkerungsdichte höher als in Afrika – und sind diese Länder reicher oder ärmer? Erstellt eine kleine Tabelle und diskutiert, was Reichtum wirklich bestimmt."
+        }
+      ]
+    },
+    {
+      "id": "art-20260629-07",
       "date": "28.06.",
       "title": "Historische Abbaupläne bei VW: Oliver Blume ist der radikalste Manager Europas",
       "source": "NZZ",
@@ -996,21 +1038,23 @@
           "text": "Recherchiert: Was macht ein Laborausrüster und welche Vorteile könnte Merck aus diesem Kauf haben? Erstellt eine kurze Liste mit 3–4 Gründen, warum dieser Kauf sinnvoll sein könnte."
         }
       ]
-    },
+    }
+  ],
+  "7": [
     {
-      "id": "art-20260625-00",
-      "date": "25.06.",
-      "title": "KURZMELDUNGEN - Wirtschaft: Easyjet lehnt Angebot von US-Investor ab +++ Der SMI erholt sich und erreicht ein Rekordhoch",
+      "id": "art-20260629-04",
+      "date": "28.06.",
+      "title": "Die Bank der Zentralbanken sieht grosses Potenzial in der künstlichen Intelligenz – und eine wachsende Gefahr für einen Crash",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-spacex-aktie-stabilisiert-sich-nach-kursrutsch-ld.10010807",
+      "url": "https://www.nzz.ch/wirtschaft/boom-and-bust-die-bank-der-zentralbanken-sieht-grosses-potenzial-in-der-kuenstlichen-intelligenz-und-eine-wachsende-gefahr-fuer-einen-finanz-crash-ld.10012750",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Easyjet lehnt Angebot von US-Investor ab +++ Der SMI erholt sich und erreicht ein Rekordhoch»?"
+          "text": "Was denkst du zu: «Die Bank der Zentralbanken sieht grosses Potenzial in der künstlichen Intelligenz – und eine wachsende Gefahr für einen Crash»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
+          "text": "Dieser Artikel zeigt: Der finanzielle Wettlauf um die Vorherrschaft im KI-Sektor bereitet der Bank für Internationalen Zah"
         },
         {
           "phase": "UE",
@@ -1018,29 +1062,6 @@
         }
       ]
     },
-    {
-      "id": "art-20260625-02",
-      "date": "25.06.",
-      "title": "Das Bally-Rätsel: Bis auf die Marke ist fast nichts mehr da – wie geht es weiter?",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/das-bally-raetsel-bis-auf-die-marke-ist-fast-nichts-mehr-da-wie-geht-es-weiter-ld.10012477",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn eine 150 Jahre alte Schweizer Schuhmarke nur noch ein Name ist – wann hört ein Unternehmen auf zu existieren?"
-        },
-        {
-          "phase": "TH",
-          "text": "Lernziel: Verständnis von Unternehmensstrukturen und wirtschaftlichen Veränderungen in der Globalisierung. Die Schließung von Produktion zeigt, wie traditionelle Industrie durch Finanzinvestitionen und Standortverlagerung transformiert wird."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Welche Schweizer Schuhfirmen gab es früher in eurer Region? Findet heraus, was mit einer davon passiert ist – und erklärt in 5 Sätzen, warum solche Fabriken heute oft geschlossen werden."
-        }
-      ]
-    }
-  ],
-  "7": [
     {
       "id": "art-20260628-07",
       "date": "28.06.",
@@ -1227,27 +1248,6 @@
         {
           "phase": "UE",
           "text": "Recherchiere eine Person aus deiner Branche oder deinem Interesse (Sport, Handwerk, Technologie), die ähnlich wie Pérez mehrere erfolgreiche Projekte verfolgt. Notiere: Welche 2–3 Geschäftsfelder hat sie? Was sind die Vorteile davon?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260611-08",
-      "date": "10.06.",
-      "title": "Nvidia will sich mit einer Partnerschaft in Südkorea die Zukunft sichern. Die Firma braucht Nachschub bei Hochleistungsspeichern",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/nvidia-will-sich-mit-einer-partnerschaft-in-suedkorea-die-zukunft-sichern-die-firma-braucht-nachschub-bei-hochleistungsspeichern-ld.10010483",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Nvidia will sich mit einer Partnerschaft in Südkorea die Zukunft sichern. Die Firma braucht Nachschub bei Hochleistungsspeichern»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Nvidia gilt als grosser Gewinner des KI-Booms. Doch der Erfolg des Konzerns hängt auch von Lieferket"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     }
