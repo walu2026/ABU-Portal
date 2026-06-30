@@ -406,7 +406,28 @@
   ],
   "4": [
     {
-      "id": "art-20260629-02",
+      "id": "art-20260630-03",
+      "date": "30.06.",
+      "title": "Bundespräsident Parmelin setzt im Zollstreit mit Trump auf eine unilaterale Erklärung – und auf das Prinzip Hoffnung",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/bundespraesident-parmelin-setzt-im-zollstreit-mit-trump-auf-eine-unilaterale-erklaerung-und-auf-das-prinzip-hoffnung-ld.10013456",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Bundespräsident Parmelin setzt im Zollstreit mit Trump auf eine unilaterale Erklärung – und auf das Prinzip Hoffnung»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Schweiz setzt die Absichtserklärung mit den USA vom November weiter um – und erwartet, dass auch"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260630-07",
       "date": "29.06.",
       "title": "An der Schweizer Börse tummeln sich zunehmend «Untote». Hoffnung auf baldige Kursgewinne können sie sich kaum machen",
       "source": "NZZ",
@@ -414,15 +435,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Warum kaufen Investoren Aktien von Firmen, die sie eigentlich nicht mehr haben wollen?"
+          "text": "Was denkst du zu: «An der Schweizer Börse tummeln sich zunehmend «Untote». Hoffnung auf baldige Kursgewinne können sie sich kaum machen»?"
         },
         {
           "phase": "TH",
-          "text": "Die Schweizer Börse ist ein zentraler Ort für Kapitalanlage und wirtschaftliche Teilhabe. Der Artikel zeigt, dass nicht alle börsennotierten Unternehmen gleich erfolgreich sind – es gibt Gewinner und 'Untote', die wirtschaftlich stagnieren."
+          "text": "Dieser Artikel zeigt: Der Swiss-Performance-Index ist erstmals auf über 20 000 Punkte gestiegen. Doch es gibt Firmen, mit "
         },
         {
           "phase": "UE",
-          "text": "Recherchiert online: Was ist der Swiss Performance Index (SPI) und warum ist sein Anstieg auf 20'000 Punkte für die Schweizer Wirtschaft wichtig? Fasst eure Erkenntnisse in 3 Sätzen zusammen."
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
     },
@@ -593,30 +614,30 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260623-00",
-      "date": "23.06.",
-      "title": "INTERVIEW - «Liebe EU, liebe Schweizer, wir haben ein Problem», ruft Konrad Hummler. Der liberale Publizist fordert eine positive Erschütterung des Landes",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/liebe-eu-liebe-schweizer-wir-haben-ein-problem-ruft-konrad-hummler-der-liberale-publizist-fordert-eine-positive-erschuetterung-des-landes-ld.10011830",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «INTERVIEW - «Liebe EU, liebe Schweizer, wir haben ein Problem», ruft Konrad Hummler. Der liberale Publizist fordert eine positive Erschütterung des Landes»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die 10-Millionen-Initiative hat gezeigt, dass die Schweiz bei der Zuwanderung gespalten ist. Hummler"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
     }
   ],
   "5": [
+    {
+      "id": "art-20260630-04",
+      "date": "29.06.",
+      "title": "Der Supreme Court entscheidet: Die Entlassung der Fed-Gouverneurin Lisa Cook war unzulässig",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/der-supreme-court-entscheidet-die-entlassung-von-fed-gouverneurin-lisa-cook-war-unzulaessig-ld.10013345",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Sollte der Präsident eines Landes einfach Leute aus wichtigen Positionen entlassen dürfen, wenn sie ihm nicht passen – oder braucht es da Regeln?"
+        },
+        {
+          "phase": "TH",
+          "text": "Der Artikel zeigt die Gewaltenteilung in Aktion: Ein Gericht muss überprüfen, ob der Präsident die Grenzen seiner Macht respektiert. Dies ist zentral für ein funktionierendes Zusammenleben, da Macht kontrolliert werden muss."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert in Gruppen: Welche Kontrollmechanismen gibt es bei uns in der Schweiz, damit kein Politiker zu viel Macht bekommt? Erstellt ein Plakat mit 3 Beispielen."
+        }
+      ]
+    },
     {
       "id": "art-20260629-06",
       "date": "28.06.",
@@ -805,32 +826,53 @@
           "text": "Recherchiere: Welche Jobs in der Schweiz könnten leiden, wenn iPhones teurer werden? (z.B. Einzelhandel, Reparatur) Diskutiert anschliessend: Wer trägt die Verantwortung – Hersteller, Konsumenten oder Politik?"
         }
       ]
-    },
+    }
+  ],
+  "6": [
     {
-      "id": "art-20260615-09",
-      "date": "13.06.",
-      "title": "Zu wenige AKW-Fachleute: Bleibt das Neubauverbot bestehen, wackelt auch der Langzeitbetrieb von Gösgen und Leibstadt",
+      "id": "art-20260630-00",
+      "date": "30.06.",
+      "title": "Selbst in Moskau kein Benzin: Die Erdölnation Russland kämpft mit Knappheit",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/zu-wenige-akw-arbeiter-bleibt-das-neubauverbot-bestehen-wackelt-auch-der-langzeitbetrieb-von-goesgen-und-leibstadt-ld.10011099",
+      "url": "https://www.nzz.ch/wirtschaft/ukraine-krieg-putin-sieht-probleme-bei-benzinversorgung-in-russland-und-moskau-ld.10013317",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Zu wenige AKW-Fachleute: Bleibt das Neubauverbot bestehen, wackelt auch der Langzeitbetrieb von Gösgen und Leibstadt»?"
+          "text": "Wie kann es sein, dass ein Land, das Öl unter die ganze Welt verkauft, selbst nicht genug Benzin an der Tankstelle hat?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Kernenergie-Spezialisten sind bereits heute rar. Fehlt dem Nachwuchs in der Schweiz die Perspektive,"
+          "text": "Dieses Beispiel zeigt, wie Länder durch Spezialisierung und Export wirtschaftlich abhängig werden können. Gleichzeitig wird sichtbar, wie Konflikte und Sabotage globale Lieferketten unterbrechen und sogar reiche Rohstoff-Länder treffen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiert: Welche Rohstoffe exportiert die Schweiz? Würde uns ein ähnliches Problem treffen, wenn unsere Export-Fabriken zerstört würden? Notiert eure Antwort in Stichworten."
+        }
+      ]
+    },
+    {
+      "id": "art-20260630-01",
+      "date": "30.06.",
+      "title": "Frau Okonjo-Iweala, warum sind die USA nach wie vor WTO-Mitglied? «Fragen Sie das die USA. Offenbar profitiert das Land nach wie vor davon»",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/umstrittener-freihandel-es-gibt-sowohl-menschen-in-reichen-laendern-als-auch-ganze-volkswirtschaften-die-nur-begrenzt-profitiert-haben-ld.10013141",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Frau Okonjo-Iweala, warum sind die USA nach wie vor WTO-Mitglied? «Fragen Sie das die USA. Offenbar profitiert das Land nach wie vor davon»»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die WTO-Chefin Ngozi Okonjo-Iweala sagt im Interview, weshalb der globale Handel nicht für alle Fehl"
         },
         {
           "phase": "UE",
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    }
-  ],
-  "6": [
+    },
     {
-      "id": "art-20260629-00",
+      "id": "art-20260630-05",
       "date": "29.06.",
       "title": "Ärger über die EU-Zölle: In Brüssel lobbyieren der Bundesrat und andere Regierungen gegen neue Handelsbeschränkungen",
       "source": "NZZ",
@@ -996,21 +1038,23 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
+    }
+  ],
+  "7": [
     {
-      "id": "art-20260626-02",
-      "date": "26.06.",
-      "title": "DIE NEUESTEN ENTWICKLUNGEN - Zollverhandlungen Schweiz-USA: Guy Parmelin reist nächste Woche nach Washington",
+      "id": "art-20260630-02",
+      "date": "30.06.",
+      "title": "«Irrweg», «Katastrophe», «Risiko für den Rechtsstaat»: Darum geht es im Kampf um die deutschen Minijobs",
       "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/zollschock-fuer-die-schweiz-antworten-auf-die-wichtigsten-fragen-ld.1896220",
+      "url": "https://www.nzz.ch/wirtschaft/irrweg-katastrophe-risiko-fuer-den-rechtsstaat-darum-geht-es-im-kampf-um-die-deutschen-minijobs-ld.10012913",
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «DIE NEUESTEN ENTWICKLUNGEN - Zollverhandlungen Schweiz-USA: Guy Parmelin reist nächste Woche nach Washington»?"
+          "text": "Was denkst du zu: ««Irrweg», «Katastrophe», «Risiko für den Rechtsstaat»: Darum geht es im Kampf um die deutschen Minijobs»?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die Schweiz hat im November eine Zolleinigung mit den USA erreicht, die Verhandlungen für ein defini"
+          "text": "Dieser Artikel zeigt: Die Reformkommission zur Rente will, dass auch geringfügig Beschäftigte künftig in die Rentenkasse e"
         },
         {
           "phase": "UE",
@@ -1019,30 +1063,7 @@
       ]
     },
     {
-      "id": "art-20260626-04",
-      "date": "25.06.",
-      "title": "KURZMELDUNGEN - Wirtschaft: Merck kauft US-Laborausrüster für zehn Milliarden +++ Easyjet lehnt Angebot von US-Investor ab",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-spacex-aktie-stabilisiert-sich-nach-kursrutsch-ld.10010807",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Warum zahlt ein deutsches Pharmaunternehmen 10 Milliarden Euro für ein anderes Unternehmen – kann man das nicht einfach billiger kaufen?"
-        },
-        {
-          "phase": "TH",
-          "text": "Fusionen und Übernahmen sind strategische Geschäftstransaktionen, die Unternehmen nutzen, um zu wachsen, neue Technologien zu akquirieren oder ihre Marktposition zu stärken. Der Kaufpreis hängt von vielen Faktoren ab: Profitabilität, Innovation, Marktposition und zukünftige Gewinnchancen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Was macht ein Laborausrüster und welche Vorteile könnte Merck aus diesem Kauf haben? Erstellt eine kurze Liste mit 3–4 Gründen, warum dieser Kauf sinnvoll sein könnte."
-        }
-      ]
-    }
-  ],
-  "7": [
-    {
-      "id": "art-20260629-04",
+      "id": "art-20260630-09",
       "date": "28.06.",
       "title": "Die Bank der Zentralbanken sieht grosses Potenzial in der künstlichen Intelligenz – und eine wachsende Gefahr für einen Crash",
       "source": "NZZ",
@@ -1050,15 +1071,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Die Bank der Zentralbanken sieht grosses Potenzial in der künstlichen Intelligenz – und eine wachsende Gefahr für einen Crash»?"
+          "text": "Wenn künstliche Intelligenz euer Berufsleben in 10 Jahren komplett verändern könnte – würdet ihr lieber heute schon wissen, wie, oder lieber überrascht werden?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Der finanzielle Wettlauf um die Vorherrschaft im KI-Sektor bereitet der Bank für Internationalen Zah"
+          "text": "Technologische Veränderungen prägen die Arbeitswelt und erfordern Anpassungsfähigkeit sowie kritisches Denken. Lernende sollen verstehen, dass wirtschaftliche Machtkämpfe (hier: KI-Wettlauf) auch persönliche Konsequenzen für ihre berufliche Zukunft haben können."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Recherchiert drei Berufsfelder, die durch KI in den nächsten 5 Jahren stark verändert werden könnten – und überlegt für jeden, welche neuen Fähigkeiten ihr dann brauchtet."
         }
       ]
     },
@@ -1227,27 +1248,6 @@
         {
           "phase": "UE",
           "text": "Schreib auf, welche drei Tätigkeiten in deinem Lehrberuf könnten durch KI automatisiert werden – und welche drei bleiben unverzichtbar menschlich?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260611-07",
-      "date": "10.06.",
-      "title": "Florentino Pérez ist Präsident von Real Madrid, Bauunternehmer und der heimliche König in der spanischen Hauptstadt",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/florentino-perez-ist-praesident-von-real-madrid-bauunternehmer-und-der-heimliche-koenig-in-der-spanischen-hauptstadt-ld.10010499",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Kann man wirklich erfolgreich sein, wenn man sich nur auf eine Sache konzentriert – oder braucht es mehrere «Standbeine» wie Pérez?"
-        },
-        {
-          "phase": "TH",
-          "text": "Lernziel: Diversifikation und Unternehmertum verstehen. Der Artikel zeigt, wie erfolgreiche Menschen ihre Fähigkeiten und ihr Kapital in verschiedene Bereiche investieren, um Risiken zu minimieren und Chancen zu nutzen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere eine Person aus deiner Branche oder deinem Interesse (Sport, Handwerk, Technologie), die ähnlich wie Pérez mehrere erfolgreiche Projekte verfolgt. Notiere: Welche 2–3 Geschäftsfelder hat sie? Was sind die Vorteile davon?"
         }
       ]
     }
