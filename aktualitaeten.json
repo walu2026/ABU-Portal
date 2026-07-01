@@ -406,6 +406,69 @@
   ],
   "4": [
     {
+      "id": "art-20260701-02",
+      "date": "01.07.",
+      "title": "Vermögensrangliste zeigt: Die Schweizer sind mit 900 000 Dollar weltweit am reichsten – Europäer und Deutsche erreichen im Schnitt nur ein Drittel davon",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/vermoegensrangliste-zeigt-die-schweizer-sind-mit-900-000-dollar-weltweit-am-reichsten-europaeer-und-deutsche-erreichen-im-schnitt-nur-ein-drittel-davon-ld.10013538",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Vermögensrangliste zeigt: Die Schweizer sind mit 900 000 Dollar weltweit am reichsten – Europäer und Deutsche erreichen im Schnitt nur ein Drittel davon»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die globalen Vermögen sind in nur einem Jahr um über 10 Prozent gestiegen. Allein in der Schweiz leb"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260701-03",
+      "date": "01.07.",
+      "title": "In Bern brach Ben Ganz die Schule ab, in New York entwirft er Kampagnen für Prada",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/in-bern-brach-ben-ganz-die-schule-ab-in-new-york-entwirft-er-kampagnen-fuer-prada-ld.10010636",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «In Bern brach Ben Ganz die Schule ab, in New York entwirft er Kampagnen für Prada»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Wer nach Amerika auswandert, entdeckt neue Talente in sich. Viele Schweizer Grafiker würde man hier "
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260701-06",
+      "date": "30.06.",
+      "title": "INTERVIEW - Kein Zolldeal mit den USA – doch der Handelskammer-Chef sagt: «Die Schweiz hat das Maximum herausgeholt»",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/kein-zolldeal-mit-den-usa-doch-der-handelskammer-chef-sagt-die-schweiz-hat-das-maximum-herausgeholt-ld.10013465",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «INTERVIEW - Kein Zolldeal mit den USA – doch der Handelskammer-Chef sagt: «Die Schweiz hat das Maximum herausgeholt»»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Schweiz kann den USA im Zollstreit keine Zusicherung abringen. Rahul Sahgal, Chef der Schweizeri"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260630-03",
       "date": "30.06.",
       "title": "Bundespräsident Parmelin setzt im Zollstreit mit Trump auf eine unilaterale Erklärung – und auf das Prinzip Hoffnung",
@@ -545,69 +608,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Die UBS hofft, dass ihr das Parlament bei den neuen Eigenkapitalregeln entgegenkommt. Ihr Gegenspiel"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260625-05",
-      "date": "24.06.",
-      "title": "Warum sich Risikokapitalgeber aus dem Silicon Valley plötzlich für Schweizer Startups interessieren",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/warum-sich-risikokapitalgeber-aus-dem-silicon-valley-ploetzlich-fuer-schweizer-startups-interessieren-ld.10012245",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Warum sich Risikokapitalgeber aus dem Silicon Valley plötzlich für Schweizer Startups interessieren»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Internet und Software waren gestern. Venture-Tech-Fonds fokussieren jetzt auf Hochtechnologie wie Bi"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260625-07",
-      "date": "23.06.",
-      "title": "«Es hat eine Normalisierung der Exzesse stattgefunden», sagt der Chef von Ethos zu den Löhnen von Schweizer Topmanagern",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/es-hat-eine-normalisierung-der-exzesse-stattgefunden-sagt-der-chef-von-ethos-zu-den-loehnen-von-schweizer-topmanagern-ld.10012543",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Würdet ihr euch gerecht behandelt fühlen, wenn euer Chef 400-mal mehr verdient als ihr?"
-        },
-        {
-          "phase": "TH",
-          "text": "Das Konzept der Lohngerechtigkeitsprinzipien zeigt, wie unterschiedlich Verdienste in der Wirtschaft verteilt sein können. Hier lernen Lernende, gesellschaftliche Ungleichheiten zu erkennen und zu hinterfragen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert: Wie viel verdient ein durchschnittlicher Schweizer Arbeitnehmer im Jahr? Berechnet dann das Verhältnis zum Lohn eines SMI-Konzernchefs (8,4 Mio.). Haltet euer Ergebnis fest."
-        }
-      ]
-    },
-    {
-      "id": "art-20260624-07",
-      "date": "23.06.",
-      "title": "INTERVIEW - «Liebe EU, liebe Schweizer, wir haben ein Problem», ruft der Publizist Konrad Hummler. Er ist eine der führenden liberalen Stimmen der Schweiz und fordert eine positive Erschütterung des Landes",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/liebe-eu-liebe-schweizer-wir-haben-ein-problem-ruft-konrad-hummler-der-liberale-publizist-fordert-eine-positive-erschuetterung-des-landes-ld.10011830",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «INTERVIEW - «Liebe EU, liebe Schweizer, wir haben ein Problem», ruft der Publizist Konrad Hummler. Er ist eine der führenden liberalen Stimmen der Schweiz und fordert eine positive Erschütterung des Landes»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die 10-Millionen-Initiative hat gezeigt, dass die Schweiz bei der Zuwanderung gespalten ist. Hummler"
         },
         {
           "phase": "UE",
@@ -830,6 +830,69 @@
   ],
   "6": [
     {
+      "id": "art-20260701-00",
+      "date": "01.07.",
+      "title": "KURZMELDUNGEN - Wirtschaft: Keine Einigung im Millionenstreit zwischen Investor Remo Stoffel und der Bündner Kantonalbank",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-keine-einigung-im-millionenstreit-zwischen-investor-remo-stoffel-und-der-buendner-kantonalbank-ld.10013650",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Keine Einigung im Millionenstreit zwischen Investor Remo Stoffel und der Bündner Kantonalbank»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260701-04",
+      "date": "01.07.",
+      "title": "INTERVIEW - «Das schiesst uns Deutschland als Wirtschaftsstandort kaputt»",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/das-schiesst-uns-deutschland-als-wirtschaftsstandort-kaputt-ld.10013174",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Wenn ein Land zu viele Regeln hat und die Menschen weniger arbeiten, wird es dann automatisch ärmer?"
+        },
+        {
+          "phase": "TH",
+          "text": "Der Artikel zeigt die Spannung zwischen Wirtschaftseffizienz und Sozialschutz – ein zentrales Thema der Wirtschaftspolitik. Lernende erkennen, dass politische Entscheidungen (Regulierung, Arbeitszeit, Sozialleistungen) direkte Auswirkungen auf die Wettbewerbsfähigkeit eines Landes haben."
+        },
+        {
+          "phase": "UE",
+          "text": "Sammelt in 2er-Teams: Was sind die Vorteile von vielen Regeln am Arbeitsplatz für euch? Was sind die Nachteile für Arbeitgeber? Notiert beide Seiten und diskutiert, wo die Grenze liegen sollte."
+        }
+      ]
+    },
+    {
+      "id": "art-20260701-05",
+      "date": "30.06.",
+      "title": "Stahlzölle der EU: Die Schweizer Hersteller würden massiv eingeschränkt, klagt Swissmem",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/stahlzoelle-der-eu-die-schweizer-hersteller-wuerden-massiv-eingeschraenkt-klagt-swissmem-ld.10013523",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Stahlzölle der EU: Die Schweizer Hersteller würden massiv eingeschränkt, klagt Swissmem»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Ab Juli gelten in der EU höhere Zölle und niedrige Quoten für Stahlimporte. Das ist nicht nur schlec"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260630-00",
       "date": "30.06.",
       "title": "Selbst in Moskau kein Benzin: Die Erdölnation Russland kämpft mit Knappheit",
@@ -969,69 +1032,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260627-07",
-      "date": "26.06.",
-      "title": "DIE NEUESTEN ENTWICKLUNGEN - Handelsstreit: Trump droht Europäern mit 100-Prozent-Zöllen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/trump-und-zoelle-aktuelle-news-und-hintergruende-ld.1869433",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «DIE NEUESTEN ENTWICKLUNGEN - Handelsstreit: Trump droht Europäern mit 100-Prozent-Zöllen»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Im Februar hat der Supreme Court Trumps Zölle für unrechtmässig erklärt. Doch der amerikanische Präs"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260627-08",
-      "date": "26.06.",
-      "title": "Volkswagen könnte bis zu 100 000 Stellen abbauen und vier Werke schliessen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/volkswagen-will-offenbar-bis-zu-100-000-stellen-abbauen-ld.10013092",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Volkswagen könnte bis zu 100 000 Stellen abbauen und vier Werke schliessen»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Ein Konzept der Konzernführung sieht beispiellose Einschnitte vor: In der Folge würde sich der deuts"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260626-01",
-      "date": "26.06.",
-      "title": "«Schrödingers Strasse»: Trotz Friedensgesprächen ist die Meerenge von Hormuz gleichzeitig offen und geschlossen",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/strasse-von-hormuz-iran-und-usa-konkurrieren-um-transitwege-fuer-schiffe-ld.10012700",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: ««Schrödingers Strasse»: Trotz Friedensgesprächen ist die Meerenge von Hormuz gleichzeitig offen und geschlossen»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Washington und Teheran konkurrieren mit eigenen Transitwegen um die Durchfahrt durch die Meerenge. E"
         },
         {
           "phase": "UE",
