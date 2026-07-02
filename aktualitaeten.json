@@ -108,6 +108,69 @@
   ],
   "2": [
     {
+      "id": "art-20260702-01",
+      "date": "02.07.",
+      "title": "Streit um UBS-Kapital: Die SNB bezeichnet die Forderungen des Bundesrates als «zielgerichtet und verhältnismässig»",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/streit-um-ubs-kapital-die-snb-bezeichnet-die-forderungen-des-bundesrates-als-zielgerichtet-und-verhaeltnismaessig-ld.10013763",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Streit um UBS-Kapital: Die SNB bezeichnet die Forderungen des Bundesrates als «zielgerichtet und verhältnismässig»»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Nationalbank kommt dem Bundesrat zu Hilfe. Beim Streit um die Kapitalisierung der UBS fordert si"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260702-06",
+      "date": "01.07.",
+      "title": "Alarmzeichen für den Wohlstand: Viele Unternehmen scheuen Zukunftsinvestitionen in Deutschland",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/alarmzeichen-fuer-den-wohlstand-viele-unternehmen-scheuen-zukunftsinvestitionen-in-deutschland-ld.10013651",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Alarmzeichen für den Wohlstand: Viele Unternehmen scheuen Zukunftsinvestitionen in Deutschland»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Deutschlands Wirtschaft leidet nicht nur unter einer schwachen Konjunktur. Das eigentliche Problem l"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260702-07",
+      "date": "01.07.",
+      "title": "Der Goldpreis ist abgestürzt – trotzdem gibt es gute Gründe, warum der Boom beim Edelmetall weitergeht",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/der-goldpreis-ist-abgestuerzt-trotzdem-gibt-es-gute-gruende-warum-der-boom-beim-edelmetall-weitergeht-ld.10013658",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Der Goldpreis ist abgestürzt – trotzdem gibt es gute Gründe, warum der Boom beim Edelmetall weitergeht»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die Aktienmärkte schiessen nach oben, doch das Gold enttäuscht. Wie es weitergeht, entscheidet sich "
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260628-01",
       "date": "28.06.",
       "title": "Warum Sie noch vor den Sommerferien Ihr Risiko an der Börse zurückfahren sollten",
@@ -253,69 +316,6 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260621-08",
-      "date": "20.06.",
-      "title": "Gutes Timing oder Glück? Der Benzinpreis fällt rechtzeitig zur amerikanischen Feriensaison",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/gutes-timing-oder-glueck-der-benzinpreis-faellt-rechtzeitig-zur-amerikanischen-feriensaison-ld.10012135",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Würdet ihr für eure Ferien eine lange Autofahrt machen, wenn das Benzin plötzlich günstiger wird – oder spart ihr das Geld lieber?"
-        },
-        {
-          "phase": "TH",
-          "text": "Lernende verstehen, wie Rohstoffpreise (Benzin) ihre persönlichen Ausgaben und Entscheidungen beeinflussen. Sie erkennen den Zusammenhang zwischen globalen Ereignissen (politische Konflikte, Energiemärkte) und ihrem Portemonnaie."
-        },
-        {
-          "phase": "UE",
-          "text": "Berechnet: Wie viel Euro spart eine Familie mit einem 60-Liter-Tank, wenn der Liter Benzin um 20 Rappen sinkt? Überlegt, wofür ihr dieses gesparte Geld ausgeben würdet."
-        }
-      ]
-    },
-    {
-      "id": "art-20260621-09",
-      "date": "20.06.",
-      "title": "Trump geht in Sachen Medikamentenpreise gegen Deutschland vor – für die Schweiz sind das keine guten Nachrichten",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/trump-geht-in-sachen-medikamentenpreise-gegen-deutschland-vor-fuer-die-schweiz-sind-das-keine-guten-nachrichten-ld.10012078",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «Trump geht in Sachen Medikamentenpreise gegen Deutschland vor – für die Schweiz sind das keine guten Nachrichten»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die USA erhöhen den Druck auf die anderen Industrieländer und fordern eine höhere Beteiligung an den"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260620-05",
-      "date": "19.06.",
-      "title": "Die neue Sparsamkeit der Deutschen gefährdet die Konjunktur",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-neue-sparsamkeit-der-deutschen-gefaehrdet-die-konjunktur-ld.10012061",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn du weniger Geld ausgibst, tust du etwas Gutes für deine Ersparnisse – aber schadet das gleichzeitig der ganzen Wirtschaft?"
-        },
-        {
-          "phase": "TH",
-          "text": "Hier zeigt sich das Spannungsfeld zwischen persönlicher Sparsamkeit (Mikro) und gesamtwirtschaftlichen Folgen (Makro). Lernende verstehen, dass ihre Ausgabenentscheidungen Teil eines grösseren Systems sind und Konsequenzen für Arbeitsplätze und Wirtschaft haben."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiert eine Branche, die unter weniger Konsum leidet (z.B. Gastronomie, Einzelhandel), und notiert drei konkrete Folgen für Arbeitnehmende dort."
-        }
-      ]
     }
   ],
   "3": [
@@ -406,7 +406,7 @@
   ],
   "4": [
     {
-      "id": "art-20260701-02",
+      "id": "art-20260702-09",
       "date": "01.07.",
       "title": "Vermögensrangliste zeigt: Die Schweizer sind mit 900 000 Dollar weltweit am reichsten – Europäer und Deutsche erreichen im Schnitt nur ein Drittel davon",
       "source": "NZZ",
@@ -414,15 +414,15 @@
       "varianten": [
         {
           "phase": "E",
-          "text": "Was denkst du zu: «Vermögensrangliste zeigt: Die Schweizer sind mit 900 000 Dollar weltweit am reichsten – Europäer und Deutsche erreichen im Schnitt nur ein Drittel davon»?"
+          "text": "Wenn die Schweizer im Durchschnitt dreimal reicher sind als Deutsche – verdienen sie auch dreimal härter, oder stimmt da etwas nicht?"
         },
         {
           "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die globalen Vermögen sind in nur einem Jahr um über 10 Prozent gestiegen. Allein in der Schweiz leb"
+          "text": "Das Lernziel ist das Verständnis von Wohlstandsunterschieden und deren Ursachen (Wirtschaftssystem, Löhne, Steuern, Lebenshaltungskosten). Lernende erkennen, dass nationale Statistiken komplex sind und mehrere Faktoren eine Rolle spielen."
         },
         {
           "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+          "text": "Recherchiert: Welche drei Faktoren könnten erklären, warum Schweizer durchschnittlich vermögender sind als Deutsche? (Bruttolohn, Immobilienpreise, Steuersystem – findet Zahlen dazu.)"
         }
       ]
     },
@@ -618,6 +618,27 @@
   ],
   "5": [
     {
+      "id": "art-20260702-04",
+      "date": "02.07.",
+      "title": "Kryptowährungen sind Donald Trumps neue Goldgrube: warum die Einkünfte des US-Präsidenten letztes Jahr explodiert sind",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/kryptowaehrungen-sind-donald-trumps-neue-goldgrube-warum-die-einkuenfte-des-us-praesidenten-letztes-jahr-explodiert-sind-ld.10013701",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Kryptowährungen sind Donald Trumps neue Goldgrube: warum die Einkünfte des US-Präsidenten letztes Jahr explodiert sind»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Der amerikanische Präsident und seine Entourage haben 2025 mehr als 1,4 Milliarden Dollar mit Krypto"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
       "id": "art-20260630-04",
       "date": "29.06.",
       "title": "Der Supreme Court entscheidet: Die Entlassung der Fed-Gouverneurin Lisa Cook war unzulässig",
@@ -805,30 +826,51 @@
           "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
         }
       ]
-    },
-    {
-      "id": "art-20260619-05",
-      "date": "18.06.",
-      "title": "Apple fehlen die Chips: iPhones werden bald auch in der Schweiz massiv teurer",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/apple-fehlen-die-chips-iphones-werden-bald-auch-in-der-schweiz-massiv-teurer-ld.10011880",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Wenn dein liebstes Smartphone plötzlich 200 Franken mehr kostet – zahlst du einfach, oder suchst du dir ein anderes Gerät?"
-        },
-        {
-          "phase": "TH",
-          "text": "Wirtschaftliche Entscheidungen beeinflussen unser Zusammenleben: Wenn Preise steigen, müssen wir Prioritäten setzen und das beeinflusst auch unsere sozialen Beziehungen (Freunde mit gleichem Handy, finanzielle Ungleichheit). Globale Lieferketten zeigen, wie verflochten unsere Wirtschaft ist und wie Engpässe in fernen Ländern unser Leben in der Schweiz direkt treffen."
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Jobs in der Schweiz könnten leiden, wenn iPhones teurer werden? (z.B. Einzelhandel, Reparatur) Diskutiert anschliessend: Wer trägt die Verantwortung – Hersteller, Konsumenten oder Politik?"
-        }
-      ]
     }
   ],
   "6": [
+    {
+      "id": "art-20260702-00",
+      "date": "02.07.",
+      "title": "Niederlage vor EuGH: Google muss EU-Rekordstrafe zahlen",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/niederlage-vor-eugh-google-muss-eu-rekordstrafe-zahlen-ld.10013841",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «Niederlage vor EuGH: Google muss EU-Rekordstrafe zahlen»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Warum sind manche Google-Apps auf Android-Handys Standard? Der Tech-Gigant muss eine milliardenschwe"
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
+    {
+      "id": "art-20260702-05",
+      "date": "01.07.",
+      "title": "KURZMELDUNGEN - Wirtschaft: Google muss schwedischem Unternehmen Pricerunner 1,3 Milliarden Euro zahlen +++ Hengde Qin wird neuer Chef von Syngenta",
+      "source": "NZZ",
+      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-keine-einigung-im-millionenstreit-zwischen-investor-remo-stoffel-und-der-buendner-kantonalbank-ld.10013650",
+      "varianten": [
+        {
+          "phase": "E",
+          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Google muss schwedischem Unternehmen Pricerunner 1,3 Milliarden Euro zahlen +++ Hengde Qin wird neuer Chef von Syngenta»?"
+        },
+        {
+          "phase": "TH",
+          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
+        },
+        {
+          "phase": "UE",
+          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
+        }
+      ]
+    },
     {
       "id": "art-20260701-00",
       "date": "01.07.",
@@ -990,48 +1032,6 @@
         {
           "phase": "TH",
           "text": "Dieser Artikel zeigt: Der frühere Porsche-Manager will bei VW 100 000 Stellen streichen. Er bringt eine ganze Nation gegen"
-        },
-        {
-          "phase": "UE",
-          "text": "Recherchiere: Welche Auswirkungen hat das auf deinen Alltag?"
-        }
-      ]
-    },
-    {
-      "id": "art-20260628-06",
-      "date": "28.06.",
-      "title": "Die Anmassung des Wissens, das Bündner Autoverbot und die Zukunft der Atomtechnologie",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/die-anmassung-des-wissens-das-buendner-autoverbot-und-die-zukunft-der-atomtechnologie-ld.10012706",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Sollten wir Technologien verbieten, die wir nicht vollständig verstehen oder die Risiken bergen?"
-        },
-        {
-          "phase": "TH",
-          "text": "Lernziel: Unterscheidung zwischen rational begründeter Skepsis und voreiligem Verbot als Gestaltungsmittel. Die Lernenden erkennen, dass Angst vor Neuem ein natürliches Gefühl ist, aber Verbote komplexe Probleme nicht automatisch lösen."
-        },
-        {
-          "phase": "UE",
-          "text": "Sammelt in Gruppen Pro- und Contra-Argumente zum Bündner Autoverbot. Überlegt: Welche Argumente basieren auf Fakten, welche auf Angst? Präsentiert eure Erkenntnisse."
-        }
-      ]
-    },
-    {
-      "id": "art-20260628-09",
-      "date": "27.06.",
-      "title": "KURZMELDUNGEN - Wirtschaft: Open AI schränkt nach Verlangen der US-Regierung Zugang zu neuer KI ein +++ Stefan Hartung tritt als Bosch-Chef ab",
-      "source": "NZZ",
-      "url": "https://www.nzz.ch/wirtschaft/wirtschaft-stefan-hartung-tritt-als-bosch-chef-ab-ex-ceo-geht-laut-medienbericht-nach-kuendigung-gegen-nestle-vor-ld.10010807",
-      "varianten": [
-        {
-          "phase": "E",
-          "text": "Was denkst du zu: «KURZMELDUNGEN - Wirtschaft: Open AI schränkt nach Verlangen der US-Regierung Zugang zu neuer KI ein +++ Stefan Hartung tritt als Bosch-Chef ab»?"
-        },
-        {
-          "phase": "TH",
-          "text": "Dieser Artikel zeigt: Die neuesten Meldungen."
         },
         {
           "phase": "UE",
